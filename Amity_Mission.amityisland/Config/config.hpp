@@ -3,5 +3,6 @@ class Amity {
             modules = {
                   "ClientModules_Example"
             };
+            loopTick = 60;
       };
 };
