@@ -5,4 +5,15 @@ class Amity {
             };
             loopTick = 60;
       };
+      class Custamization {
+            class Functions {
+                  domsg = "";
+                  progressBar = "";
+                  addAction = "";
+            };
+            class Dialogs {
+                  atm = "";
+                  interaction = "";
+            };
+      };
 };

@@ -7,6 +7,8 @@
 //init loop
 [] spawn Client_fnc_loop;
 
+//call the server
+
 //init modules
 [] call Client_fnc_initModules;
 amity_var_inited = true;
