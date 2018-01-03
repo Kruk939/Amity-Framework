@@ -1,0 +1,15 @@
+{
+      "module": "kruk/example",
+      "namespace": "ClientModules_Example",
+      "version": "0.1",
+      "require": {
+            "amity-framework": ">=0.0.1"
+      },
+      "provides": {
+            "config": "Config/Config.hpp",
+            "Functions": "Config/Functions.hpp",
+            "Dialogs": "Config/Dialogs.hpp",
+            "RscTitles": "Config/RscTitles.hpp"
+      },
+      "stringtable": "stringtable.xml"
+}
