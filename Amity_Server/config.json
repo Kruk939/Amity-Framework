@@ -1,0 +1,11 @@
+{
+      "exclude": [
+            "json",
+            "ini"
+      ],
+      "version": "0.0.1",
+      "name": "amity-framework",
+      "modules": {
+            "dir": "Functions\\Modules"
+      }
+}

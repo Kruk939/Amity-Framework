@@ -1,0 +1,13 @@
+{
+      "module": "Example",
+      "namespace": "ServerModules_Example",
+      "version": "0.1",
+      "require": {
+            "amity-framework": ">=0.0.1"
+      },
+      "provides": {
+            "Functions": "Functions.hpp",
+            "Config": "Config.hpp",
+            "db_ini": "amityframework.ini"
+      }
+}

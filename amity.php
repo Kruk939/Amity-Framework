@@ -49,6 +49,11 @@ class Module {
             if($this->checkProvider("stringtable")) $string = file_get_contents($this->path . DIRECTORY_SEPARATOR . $this->provides->stringtable);
             return $string;
       }
+      public function getINI() {
+            $string = "";
+            if($this->checkProvider("db_ini")) $string = file_get_contents($this->path . DIRECTORY_SEPARATOR . $this->provides->db_ini);
+            return $string;
+      }
       public function getProvider($name) {
             $str = '#include "\\' . $this->dir . "\\" . $this->name;
             return ($this->checkProvider($name)) ? $str . "\\" . $this->provides->$name . '"' : "";
@@ -63,6 +68,8 @@ class Amity {
       private $config;
       private $modules;
       private $mission_modules = array();
+      private $extDB;
+      private $server_modules = array();
 
 
       public function __construct($config_file) {
@@ -72,6 +79,70 @@ class Amity {
             $this->server = $this->path . DIRECTORY_SEPARATOR . $this->config->server;
             $this->output = $this->path . DIRECTORY_SEPARATOR . $this->config->output;
             $this->addons = $this->path . DIRECTORY_SEPARATOR . $this->config->addons;
+            $this->extDB_dir = $this->path . DIRECTORY_SEPARATOR . $this->config->extDB->dir;
+            $this->extDB_ini = $this->config->extDB->ini;
+      }
+      private function createAddons() {
+            $folder = $this->output . DIRECTORY_SEPARATOR . "addons";
+            if(is_dir($folder)) $this->clearFolder($folder);
+            mkdir($folder);
+      }
+      private function compile_extdb() {
+            $extDB_out = $this->output . DIRECTORY_SEPARATOR . $this->config->extDB->dir;
+            $this->createAddons();
+            if(is_dir($extDB_out)) {
+                  echo "Clearing extDB directory" . PHP_EOL;
+                  $this->clearFolder($extDB_out);
+            }
+            echo "Creating extDB Folder" . PHP_EOL;
+            mkdir($extDB_out);
+            $this->copyFiles($this->extDB_dir, $extDB_out);
+      }
+      public function compile_server($extDB = false) {
+            $server_out = $this->output . DIRECTORY_SEPARATOR . $this->config->server;
+            echo "Setting output to:" . PHP_EOL;
+            echo $server_out . PHP_EOL;
+
+            $server_config = json_decode(file_get_contents($this->server  . DIRECTORY_SEPARATOR . "config.json"));
+            if(is_dir($server_out)) {
+                  echo "Clearing Server directory" . PHP_EOL;
+                  $this->clearFolder($server_out);
+            }
+            echo "Creating Server Folder" . PHP_EOL;
+            mkdir($server_out);
+
+            echo "Scaning for modules" . PHP_EOL;
+            $jsons = $this->scan_files($this->server . DIRECTORY_SEPARATOR . $server_config->modules->dir, array("json"));
+            foreach($jsons as $j) {
+                  $module = new Module(pathinfo($j, PATHINFO_DIRNAME), $server_out, $server_config->modules->dir);
+                  array_push($this->server_modules, $module);
+                  echo $module->namespace . PHP_EOL;
+            }
+
+            //copying files
+            echo "Copying files" . PHP_EOL;
+            $this->copyFiles($this->server, $server_out, $server_config->exclude);
+
+            //autoloading Modules
+            echo "Putting Includes into .hpp files" . PHP_EOL;
+            $server_folder = $server_out . DIRECTORY_SEPARATOR . $server_config->modules->dir;
+            foreach($this->server_modules as $m) {
+                  file_put_contents($server_folder . DIRECTORY_SEPARATOR . "Config.hpp", $m->getProvider("Config") . PHP_EOL, FILE_APPEND | LOCK_EX);
+                  file_put_contents($server_folder . DIRECTORY_SEPARATOR . "Functions.hpp", $m->getProvider("Functions") . PHP_EOL, FILE_APPEND | LOCK_EX);
+            }
+
+            //crafting INI
+            if($extDB) {
+                  echo "Compiling extDB" . PHP_EOL;
+                  $this->compile_extdb();
+                  echo "Preparing .ini file" . PHP_EOL;
+                  $this->appendINI($this->output . DIRECTORY_SEPARATOR . $this->config->extDB->dir . DIRECTORY_SEPARATOR . "sql_custom" . DIRECTORY_SEPARATOR . $this->extDB_ini, $this->server_modules);
+            }
+
+            //adding modules to settings
+            echo "Adding modules to mission serverConfig.cpp" . PHP_EOL;
+            $this->autoloadFunction($server_out . DIRECTORY_SEPARATOR . 'serverConfig.cpp', $this->server_modules);
+
       }
       public function compile_mission() {
             //prepare output
@@ -81,7 +152,7 @@ class Amity {
 
             $mission_config = json_decode(file_get_contents($this->mission  . DIRECTORY_SEPARATOR . "config.json"));
             if(is_dir($mission_out)) {
-                  echo "Clearing Output directory" . PHP_EOL;
+                  echo "Clearing Mission directory" . PHP_EOL;
                   $this->clearFolder($mission_out);
             }
             echo "Creating Mission Folder" . PHP_EOL;
@@ -185,6 +256,12 @@ class Amity {
             $string = '</Package>' . PHP_EOL . '</Project>' . PHP_EOL;
             file_put_contents($file, $string, FILE_APPEND | LOCK_EX);
       }
+      private function appendINI($file, $modules) {
+            file_put_contents($file, file_get_contents($this->extDB_dir . DIRECTORY_SEPARATOR . "sql_custom" . DIRECTORY_SEPARATOR . $this->extDB_ini), FILE_APPEND | LOCK_EX);
+            foreach($modules as $m) {
+                  file_put_contents($file, $m->getINI(), FILE_APPEND | LOCK_EX);
+            }
+      }
 }
 
 
@@ -194,6 +271,7 @@ class Amity {
 //program
 $amity = new Amity($config_file);
 $amity->compile_mission();
+$amity->compile_server(true);
 
 
 ?>

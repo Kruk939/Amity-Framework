@@ -22,3 +22,4 @@ class CfgFunctions {
 	};
       #include "Functions\Modules\Functions.hpp"
 };
+#include "serverConfig.cpp"
