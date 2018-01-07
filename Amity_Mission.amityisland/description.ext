@@ -1,0 +1,19 @@
+//include configs
+#include "Config/Config.hpp"
+#include "Functions/Modules/Config.hpp"
+
+//include Functions
+class CfgFunctions {
+      class Client {
+            #include "Config/Functions.hpp"
+      };
+      class ClientModules {
+            #include "Functions/Modules/Functions.hpp"
+      };
+};
+
+//include sounds
+class CfgSounds {
+      #include "Config/Sounds.hpp"
+      #include "Functions/Modules/Sounds.hpp"
+};
