@@ -1,5 +1,5 @@
-<Container name="AMITI_CORE">
-	<Key ID="STR_TEST">
+<Container name="GENERIC_JOBS">
+	<Key ID="STR_RPF_MODULES_GENERIC_JOBS_FIXING">
 		<Original>Fixing</Original>
 		<English>Fixing</English>
 		<Polish>Naprawiam</Polish>
