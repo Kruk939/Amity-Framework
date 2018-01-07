@@ -1,6 +1,7 @@
 {
       "mission": "Amity_Mission.amityisland",
       "server": "Amity_Server",
+      "extdb": "addons\\@extDB_Amity",
       "output": "output",
       "addons": "addons"
 }
