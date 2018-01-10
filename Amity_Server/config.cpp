@@ -8,8 +8,11 @@ class CfgPatches {
 };
 class CfgFunctions {
       class Server {
-
-
+            class Init {
+                  class init {};
+                  class initModules {};
+                  class initPlayer {};
+            };
       };
 	class ExternalS {
 		class ExtDB {
