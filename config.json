@@ -2,9 +2,16 @@
       "mission": "Amity_Mission.amityisland",
       "server": "Amity_Server",
       "extDB": {
-            "dir": "addons\\@extDB_Amity",
+            "dir": "@extDB_Amity",
             "ini": "rpframework.ini"
       },
       "output": "output",
-      "addons": "addons"
+      "addons": "addons",
+      "environment": {
+            "local": {
+                  "arma3": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Arma 3",
+                  "arma3Tools": "G:\\SteamLibrary\\steamapps\\common\\Arma 3 Tools",
+                  "temp": "C:\\Users\\kajet\\AppData\\Local\\Temp"
+            }
+      }
 }

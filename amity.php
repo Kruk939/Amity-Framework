@@ -1,22 +1,27 @@
 <?php
 //settings default
 $config_file = "config.json";
-
+$start = false;
+$build = false;
 
 
 //options
 $shortopts  = "";
 $shortopts .= "c:";  // Required value
-$shortopts .= ""; // Optional value
-$shortopts .= ""; // These options do not accept values
+$shortopts .= "::"; // Optional value
+$shortopts .= "bs"; // These options do not accept values
 $longopts  = array(
-      "config:"
+      "config:",
+      "build",
+      "start"
 );
 $options = getopt($shortopts, $longopts);
 
 //assiginig values
 if(isset($options["c"])) $config_file = $options["c"];
 if(isset($options["config"])) $config_file = $options["config"];
+if(isset($options["s"]) || isset($options["start"])) $start = true;
+if(isset($options["b"]) || isset($options["build"])) $build = true;
 
 class Module {
       private $name;
@@ -24,9 +29,9 @@ class Module {
       private $version;
       private $require;
       private $provides;
-      public $namespace;
       private $out;
       private $dir;
+      public $namespace;
       public function __construct($path, $out, $dir) {
             $this->path = $path;
             $this->out = $out;
@@ -55,7 +60,7 @@ class Module {
             return $string;
       }
       public function getProvider($name) {
-            $str = '#include "\\' . $this->dir . "\\" . $this->name;
+            $str = '#include "' . $this->name;
             return ($this->checkProvider($name)) ? $str . "\\" . $this->provides->$name . '"' : "";
       }
 }
@@ -70,6 +75,7 @@ class Amity {
       private $mission_modules = array();
       private $extDB;
       private $server_modules = array();
+      private $environment;
 
 
       public function __construct($config_file) {
@@ -81,6 +87,44 @@ class Amity {
             $this->addons = $this->path . DIRECTORY_SEPARATOR . $this->config->addons;
             $this->extDB_dir = $this->path . DIRECTORY_SEPARATOR . $this->config->extDB->dir;
             $this->extDB_ini = $this->config->extDB->ini;
+            $this->environment = $this->config->environment;
+      }
+      public function start() {
+            $server_out = $this->output . DIRECTORY_SEPARATOR . $this->config->server;
+            $extDB_out = $this->output . DIRECTORY_SEPARATOR . $this->config->extDB->dir;
+            $mission_out = $this->output . DIRECTORY_SEPARATOR . $this->config->mission;
+            $MPMissions = $this->environment->local->arma3 . DIRECTORY_SEPARATOR . "MPmissions";
+
+            $this->clearFolder($MPMissions. DIRECTORY_SEPARATOR . $this->config->mission);
+            $this->clearFolder($this->environment->local->temp . DIRECTORY_SEPARATOR . $this->config->server);
+            $this->clearFolder($this->environment->local->arma3 . DIRECTORY_SEPARATOR . $this->config->extDB->dir);
+
+            $this->copyFiles($server_out, $this->environment->local->temp . DIRECTORY_SEPARATOR. $this->config->server);
+            $this->copyFiles($mission_out, $MPMissions. DIRECTORY_SEPARATOR. $this->config->mission);
+            $this->copyFiles($extDB_out, $this->environment->local->arma3 . DIRECTORY_SEPARATOR . $this->config->extDB->dir);
+            $server_folder = $this->environment->local->arma3 . DIRECTORY_SEPARATOR . "@" . $this->config->server;
+            $server_addons = $server_folder . DIRECTORY_SEPARATOR . "addons";
+            if(!is_dir($server_folder)) {
+                  mkdir($server_folder);
+                  mkdir($server_addons);
+            }
+            $this->makePBO($server_out, $server_addons);
+
+      }
+      private function makePBO($from, $to) {
+            echo "Make PBO" . PHP_EOL;
+            echo "From: " . $from . PHP_EOL;
+            echo "To: " . $to . PHP_EOL;
+            if(is_dir($from) && (is_dir($to) || is_file($to))) {
+                  $run = '"' . $this->environment->local->arma3Tools . "\AddonBuilder\AddonBuilder.exe" . '" ';
+                  $run .= '"' . $from . '" "' . $to . '"';
+                  echo $run . PHP_EOL;
+                  shell_exec($run);
+            }
+      }
+      private function startServer() {
+            $this->environment->local->arma3;
+            shell_exec("start /b");
       }
       private function createAddons() {
             $folder = $this->output . DIRECTORY_SEPARATOR . "addons";
@@ -127,7 +171,6 @@ class Amity {
             echo "Putting Includes into .hpp files" . PHP_EOL;
             $server_folder = $server_out . DIRECTORY_SEPARATOR . $server_config->modules->dir;
             foreach($this->server_modules as $m) {
-                  file_put_contents($server_folder . DIRECTORY_SEPARATOR . "Config.hpp", $m->getProvider("Config") . PHP_EOL, FILE_APPEND | LOCK_EX);
                   file_put_contents($server_folder . DIRECTORY_SEPARATOR . "Functions.hpp", $m->getProvider("Functions") . PHP_EOL, FILE_APPEND | LOCK_EX);
             }
 
@@ -141,7 +184,7 @@ class Amity {
 
             //adding modules to settings
             echo "Adding modules to mission serverConfig.cpp" . PHP_EOL;
-            $this->autoloadFunction($server_out . DIRECTORY_SEPARATOR . 'serverConfig.cpp', $this->server_modules);
+            $this->autoloadFunction($server_out . DIRECTORY_SEPARATOR . "Functions" . DIRECTORY_SEPARATOR . "Core" . DIRECTORY_SEPARATOR . "Init" . DIRECTORY_SEPARATOR . 'initModules.sqf', $this->server_modules, '/[ \t]{0,}(modules)[ \t]{0,}[=]{1}[ \t]{0,}[\[]/', "];");
 
       }
       public function compile_mission() {
@@ -190,14 +233,14 @@ class Amity {
             echo "Adding modules to mission Config.hpp" . PHP_EOL;
             $this->autoloadFunction($mission_out . DIRECTORY_SEPARATOR . 'Config' . DIRECTORY_SEPARATOR . "Config.hpp", $this->mission_modules);
       }
-      private function autoloadFunction($file, $modules) {
+      private function autoloadFunction($file, $modules, $regex = '/[ \t]{0,}(modules)[ \t]{0,}[=]{1}[ \t]{0,}[\{]/', $brace = "};") {
             $str = file_get_contents($file);
             $index = -1;
-            if(preg_match('/[ \t]{0,}(modules)[ \t]{0,}[=]{1}[ \t]{0,}[\{]/', $str, $matches, PREG_OFFSET_CAPTURE)) {
+            if(preg_match($regex, $str, $matches, PREG_OFFSET_CAPTURE)) {
                   $index = $matches[0][1];
                   $length = strlen($matches[0][0]);
                   $newIndex = $index + $length;
-                  $end = strpos($str, "};", $newIndex);
+                  $end = strpos($str, $brace, $newIndex);
 
                   $before = substr($str, 0, $newIndex);
                   $after = "\t\t" . substr($str, $end);
@@ -211,6 +254,7 @@ class Amity {
       }
       private function copyFiles($from, $to, $exclude = array()) {
             if(is_file($from)) return copy($from, $to);
+            if(!is_dir($from)) return false;
             if(!is_dir($to)) mkdir($to);
             $dir = dir($from);
             while (false !== $entry = $dir->read()) {
@@ -237,11 +281,14 @@ class Amity {
             return $array;
       }
       private function clearFolder($dir) {
-            $files = array_diff(scandir($dir), array('.','..'));
-            foreach ($files as $file) {
-                  (is_dir("$dir/$file")) ? $this->clearFolder("$dir/$file") : unlink("$dir/$file");
+            if(file_exists($dir)) {
+                  $files = array_diff(scandir($dir), array('.','..'));
+                  foreach ($files as $file) {
+                        (is_dir("$dir/$file")) ? $this->clearFolder("$dir/$file") : unlink("$dir/$file");
+                  }
+                  return rmdir($dir);
             }
-            return rmdir($dir);
+            return false;
       }
       private function appendXML($file, $modules) {
             $string = '<?xml version="1.0" encoding="utf-8" ?>' . PHP_EOL;
@@ -270,8 +317,10 @@ class Amity {
 
 //program
 $amity = new Amity($config_file);
-$amity->compile_mission();
-$amity->compile_server(true);
-
+if($build) {
+      $amity->compile_mission();
+      $amity->compile_server(true);
+}
+if($start) $amity->start();
 
 ?>

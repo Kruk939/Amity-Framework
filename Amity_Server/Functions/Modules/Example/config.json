@@ -7,7 +7,6 @@
       },
       "provides": {
             "Functions": "Functions.hpp",
-            "Config": "Config.hpp",
             "db_ini": "amityframework.ini"
       }
 }
