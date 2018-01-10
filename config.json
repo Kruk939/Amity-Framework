@@ -3,7 +3,7 @@
       "server": "Amity_Server",
       "extDB": {
             "dir": "@extDB_Amity",
-            "ini": "rpframework.ini"
+            "ini": "amity_framework.ini"
       },
       "output": "output",
       "addons": "addons",
