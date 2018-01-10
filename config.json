@@ -5,7 +5,7 @@
             "dir": "@extDB_Amity",
             "ini": "amity_framework.ini"
       },
-      "output": "output",
+      "output": "C:\\Users\\kajet\\Desktop\\Mission_output",
       "addons": "addons",
       "environment": {
             "local": {

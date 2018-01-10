@@ -83,7 +83,7 @@ class Amity {
             $this->config = json_decode(file_get_contents($config_file));
             $this->mission = $this->path . DIRECTORY_SEPARATOR . $this->config->mission;
             $this->server = $this->path . DIRECTORY_SEPARATOR . $this->config->server;
-            $this->output = $this->path . DIRECTORY_SEPARATOR . $this->config->output;
+            $this->output = $this->config->output;
             $this->addons = $this->path . DIRECTORY_SEPARATOR . $this->config->addons;
             $this->extDB_dir = $this->path . DIRECTORY_SEPARATOR . $this->config->extDB->dir;
             $this->extDB_ini = $this->config->extDB->ini;
@@ -112,9 +112,6 @@ class Amity {
 
       }
       private function makePBO($from, $to) {
-            echo "Make PBO" . PHP_EOL;
-            echo "From: " . $from . PHP_EOL;
-            echo "To: " . $to . PHP_EOL;
             if(is_dir($from) && (is_dir($to) || is_file($to))) {
                   $run = '"' . $this->environment->local->arma3Tools . "\AddonBuilder\AddonBuilder.exe" . '" ';
                   $run .= '"' . $from . '" "' . $to . '"';
