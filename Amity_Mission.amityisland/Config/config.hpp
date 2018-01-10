@@ -12,8 +12,9 @@ class Amity {
                   addAction = "";
             };
             class Dialogs {
-                  atm = "";
-                  interaction = "";
+                  atm = "client_atm"; //idd = 1010;
+                  interaction = "client_interaction"; //idd 1020;
+                  profile = "client_profile"; //idd = 1000;
             };
       };
 };
