@@ -1,5 +1,7 @@
 private _tick = getNumber (missionConfigFile >> "Amity" >> "Setup" >> "loopTick");
+private _count = 0;
 while{true} do {
       uiSleep _tick;
-      ["onTick", [player]] call Client_fnc_eventCall;
+      _count = _count + 1;
+      ["onTick", [player, _count]] call Client_fnc_eventCall;
 };

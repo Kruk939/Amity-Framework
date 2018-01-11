@@ -8,7 +8,7 @@ if(_name != "") then {
                   if(isNil "_target") then {
                         // call localy on player
                         {
-                              if(typeOf _x == "STRING") then {
+                              if(typeName _x == "STRING") then {
                                     _params call (call compile _x);
                               } else {
                                     _params call _x;
@@ -18,7 +18,7 @@ if(_name != "") then {
                   } else {
                         if(!_local) then {
                               {
-                                    if(typeOf _x == "STRING") then {
+                                    if(typeName _x == "STRING") then {
                                           if(!isNil _x) then {
                                                 _params remoteExecCall [_x, _target];
                                           };
