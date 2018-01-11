@@ -1,14 +1,14 @@
 class EventHandler {
-      file="EventHandler";
+      file="Functions\Core\EventHandler";
       class eventAdd {};
       class eventCall {};
       class eventRegister {};
 };
 class Factions {
-      file="Factions";
+      file="Functions\Core\Factions";
 };
 class Init {
-      file="Init";
+      file="Functions\Core\Init";
       class initEventhandlers {};
       class initModules {};
       class initProfile {};
@@ -16,7 +16,7 @@ class Init {
       class miscVariables {};
 };
 class Misc {
-      file="Misc";
+      file="Functions\Core\Misc";
       class addAction {};
       class doMsg {};
       class getVariable {};
@@ -27,21 +27,21 @@ class Misc {
       class setVariable {};
 };
 class Money {
-      file="Misc";
+      file="Functions\Core\Money";
       class addCash {};
       class checkMoney {};
       class removeCash {};
 };
 class Profile {
-      file="Profile";
+      file="Functions\Core\Profile";
       class chooseProfile_action {};
       class chooseProfile {};
       class createProfile_action {};
       class createProfile {};
 };
 class UsableItem {
-      file="UsableItem";
+      file="Functions\Core\UsableItem";
 };
 class Vehicle {
-      file="Vehicle";
+      file="Functions\Core\Vehicle";
 };

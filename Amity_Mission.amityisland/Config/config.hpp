@@ -1,6 +1,6 @@
 class Amity {
       class Setup {
-            modules = {
+            modules[] = {
                   "ClientModules_Example"
             };
             loopTick = 60;

@@ -1,3 +1,8 @@
+diag_log "------------------------";
+diag_log "Amity Server: Starting Up";
+diag_log "------------------------";
+secret_variable = true;
+publicVariable "secret_variable";
 Amity_Server_Inited = false;
 ["amity_framework", "SQL_CUSTOM", "amity_framework.ini"] spawn ExternalS_fnc_ExtDBinit;
 sleep 3;

@@ -9,6 +9,7 @@ class CfgPatches {
 class CfgFunctions {
       class Server {
             class Init {
+                  file = "Amity_Server\Functions\Core\Init"
                   class init {};
                   class initModules {};
                   class initPlayer {};
@@ -16,7 +17,7 @@ class CfgFunctions {
       };
 	class ExternalS {
 		class ExtDB {
-                  file = "Functions\Core\ExtDB";
+                  file = "Amity_Server\Functions\Core\ExtDB";
                   class ExtDBasync {};
                   class ExtDBinit {};
 			class ExtDBstrip {};

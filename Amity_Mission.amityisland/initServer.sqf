@@ -1,1 +1,1 @@
-[] remoteExec ["Server_fnc_init", 2];
+[] call Server_fnc_init;

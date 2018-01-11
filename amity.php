@@ -110,18 +110,31 @@ class Amity {
             }
             $this->makePBO($server_out, $server_addons);
 
+            $this->startServer();
+
       }
       private function makePBO($from, $to) {
             if(is_dir($from) && (is_dir($to) || is_file($to))) {
                   $run = '"' . $this->environment->local->arma3Tools . "\AddonBuilder\AddonBuilder.exe" . '" ';
                   $run .= '"' . $from . '" "' . $to . '"';
                   echo $run . PHP_EOL;
-                  shell_exec($run);
+                  echo shell_exec($run) . PHP_EOL;
             }
       }
       private function startServer() {
-            $this->environment->local->arma3;
-            shell_exec("start /b");
+            $server = $this->environment->local->server;
+            $str = "start /b " . '"" ' . '"' . $server->exe . '" ';
+            $str .= "'";
+            $str .= "-port=" . $server->port . " ";
+            $str .= '"-config=' . $server->config . '" ';
+            $str .= '"-cfg=' . $server->cfg . '" ';
+            $str .= '"-profiles=' . $server->profiles . '" ';
+            $str .= "-name=" . $server->name . " ";
+            $str .= '"-mod=' . $server->mod . '" ';
+            $str .= "-autoInit -malloc=tbbmalloc";
+            $str .= "'";
+            //echo $str . PHP_EOL;
+            shell_exec($str);
       }
       private function createAddons() {
             $folder = $this->output . DIRECTORY_SEPARATOR . "addons";
@@ -181,7 +194,7 @@ class Amity {
 
             //adding modules to settings
             echo "Adding modules to mission serverConfig.cpp" . PHP_EOL;
-            $this->autoloadFunction($server_out . DIRECTORY_SEPARATOR . "Functions" . DIRECTORY_SEPARATOR . "Core" . DIRECTORY_SEPARATOR . "Init" . DIRECTORY_SEPARATOR . 'initModules.sqf', $this->server_modules, '/[ \t]{0,}(modules)[ \t]{0,}[=]{1}[ \t]{0,}[\[]/', "];");
+            $this->autoloadFunction($server_out . DIRECTORY_SEPARATOR . "Functions" . DIRECTORY_SEPARATOR . "Core" . DIRECTORY_SEPARATOR . "Init" . DIRECTORY_SEPARATOR . 'fn_initModules.sqf', $this->server_modules, '/[ \t]{0,}(modules)[ \t]{0,}[=]{1}[ \t]{0,}[\[]/', "];");
 
       }
       public function compile_mission() {
@@ -230,7 +243,7 @@ class Amity {
             echo "Adding modules to mission Config.hpp" . PHP_EOL;
             $this->autoloadFunction($mission_out . DIRECTORY_SEPARATOR . 'Config' . DIRECTORY_SEPARATOR . "Config.hpp", $this->mission_modules);
       }
-      private function autoloadFunction($file, $modules, $regex = '/[ \t]{0,}(modules)[ \t]{0,}[=]{1}[ \t]{0,}[\{]/', $brace = "};") {
+      private function autoloadFunction($file, $modules, $regex = '/[ \t]{0,}(modules\[\])[ \t]{0,}[=]{1}[ \t]{0,}[\{]/', $brace = "};") {
             $str = file_get_contents($file);
             $index = -1;
             if(preg_match($regex, $str, $matches, PREG_OFFSET_CAPTURE)) {
@@ -301,7 +314,6 @@ class Amity {
             file_put_contents($file, $string, FILE_APPEND | LOCK_EX);
       }
       private function appendINI($file, $modules) {
-            file_put_contents($file, file_get_contents($this->extDB_dir . DIRECTORY_SEPARATOR . "sql_custom" . DIRECTORY_SEPARATOR . $this->extDB_ini), FILE_APPEND | LOCK_EX);
             foreach($modules as $m) {
                   file_put_contents($file, $m->getINI(), FILE_APPEND | LOCK_EX);
             }

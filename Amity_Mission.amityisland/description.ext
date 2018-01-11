@@ -1,34 +1,22 @@
-//include configs
-#include "Config/Config.hpp"
-#include "Functions/Modules/Config.hpp"
+#include "includes.hpp"
 
-//include dialogs
-#include "Dialogs/Dialogs.hpp"
-#include "Functions/Modules/Dialogs.hpp"
+enableDebugConsole = 1;
 
-//include dialogs
-#include "Dialogs/Dialogs.hpp"
-#include "Functions/Modules/Dialogs.hpp"
+respawn = "BASE";
+disabledAI = 1;
+author = "AmityRP Dev";
+onLoadName = "AmityRP";
+onLoadMission = "AmityRP v.2";
+loadScreen =  "openrp.paa";
+respawndelay = 1;
 
+wreckLimit = 5;
+wreckRemovalMaxTime = 300;
+wreckRemovalMinTime = 120;
 
-//include Functions
-class CfgFunctions {
-      class Client {
-            #include "Functions/Core/Functions.hpp"
-      };
-      class ClientModules {
-            #include "Functions/Modules/Functions.hpp"
-      };
-};
-
-//include sounds
-class CfgSounds {
-      #include "Config/Sounds.hpp"
-      #include "Functions/Modules/Sounds.hpp"
-};
-
-//include RscTitles
-class RscTitles {
-      #include "RscTitles/RscTitles.hpp"
-      #include "Functions/Modules/RscTitles.hpp"
+class Header
+{
+	gameType = RPG;
+	minPlayers = 1;
+	maxPlayers = 120;
 };

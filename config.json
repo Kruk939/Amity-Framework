@@ -11,7 +11,16 @@
             "local": {
                   "arma3": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Arma 3",
                   "arma3Tools": "G:\\SteamLibrary\\steamapps\\common\\Arma 3 Tools",
-                  "temp": "C:\\Users\\kajet\\AppData\\Local\\Temp"
+                  "temp": "C:\\Users\\kajet\\AppData\\Local\\Temp",
+                  "server": {
+                        "exe": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Arma 3\\arma3server.exe",
+                        "config": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Arma 3\\TADST\\Amity_test\\TADST_config.cfg",
+                        "cfg": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Arma 3\\TADST\\Amity_test\\TADST_basic.cfg",
+                        "profiles": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Arma 3\\TADST\\Amity_test",
+                        "name": "Amity_test",
+                        "port": 2302,
+                        "mod": "@AmityRP;@Amity_Server;@extDB_Amity"
+                  }
             }
       }
 }
