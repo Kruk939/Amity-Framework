@@ -25,6 +25,7 @@ class Misc {
       class progressBar {};
       class save {};
       class setVariable {};
+      class spawn {};
 };
 class Money {
       file="Functions\Core\Money";

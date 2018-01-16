@@ -10,6 +10,7 @@ class Amity {
                   domsg = "";
                   progressBar = "";
                   addAction = "";
+                  spawn = "";
             };
             class Dialogs {
                   atm = "client_atm"; //idd = 1010;
