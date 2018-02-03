@@ -26,6 +26,7 @@ class Misc {
       class save {};
       class setVariable {};
       class spawn {};
+      class generateString {};
 };
 class Money {
       file="Functions\Core\Money";
@@ -38,6 +39,7 @@ class Profile {
       class chooseProfile_action {};
       class chooseProfile {};
       class createProfile_action {};
+      class createProfile_receive {};
       class createProfile {};
 };
 class UsableItem {

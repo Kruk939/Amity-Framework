@@ -14,6 +14,16 @@ class CfgFunctions {
                   class initModules {};
                   class initPlayer {};
             };
+            class Money {
+                  file = "Amity_Server\Functions\Core\Money"
+                  class handleCash {};
+            };
+            class Profile {
+                  file = "Amity_Server\Functions\Core\Profile"
+                  class createProfile {};
+                  class resetConnection {};
+                  class setConnection {};
+            };
       };
 	class ExternalS {
 		class ExtDB {

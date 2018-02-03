@@ -55,6 +55,7 @@ class client_profile_create {
             };
             class button_create: RscButton {
                   idc = 1600;
+                  action = "['CREATE'] call Client_fnc_createProfile_action";
                   text = "Create"; //--- ToDo: Localize;
                   x = 9 * GUI_GRID_W + GUI_GRID_X;
                   y = 6.5 * GUI_GRID_H + GUI_GRID_Y;
@@ -63,6 +64,7 @@ class client_profile_create {
             };
             class button_exit: RscButton {
                   idc = 1601;
+                  action = "['EXIT'] call Client_fnc_createProfile_action";
                   text = "Exit"; //--- ToDo: Localize;
                   x = 9 * GUI_GRID_W + GUI_GRID_X;
                   y = 7.5 * GUI_GRID_H + GUI_GRID_Y;

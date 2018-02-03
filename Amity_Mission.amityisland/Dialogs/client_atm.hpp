@@ -1,5 +1,5 @@
 class client_atm {
-      idd = 1002;
+      idd = 1010;
       class controls {
             class text_title: RscText {
                   idc = 1000;
