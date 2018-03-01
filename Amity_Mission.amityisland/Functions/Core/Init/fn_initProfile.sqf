@@ -24,8 +24,6 @@ if(!_first) then {
       //load items
 } else {
       ["onPlayerFirstConnect", [player, _profile_id, _user_id]] call Client_fnc_eventCall;
-
-
 };
 [player] remoteExec ["Server_fnc_resetConnection", 2];
 [] call Client_fnc_spawn;
