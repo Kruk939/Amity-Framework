@@ -22,6 +22,9 @@ class Misc {
       class getVariable {};
       class getVariableGet {};
       class getVariableSend {};
+      class getPlayerByID {};
+      class getPlayerByProfile {};
+      class getPlayerByUID {};
       class progressBar {};
       class save {};
       class setVariable {};
