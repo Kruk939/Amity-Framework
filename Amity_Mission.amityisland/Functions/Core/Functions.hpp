@@ -11,6 +11,7 @@ class Init {
       file="Functions\Core\Init";
       class initEventhandlers {};
       class initModules {};
+      class initListeners {};
       class initProfile {};
       class loop {};
       class miscVariables {};
@@ -30,6 +31,9 @@ class Misc {
       class setVariable {};
       class spawn {};
       class generateString {};
+      class getItems {};
+      class loadItems {};
+      class removeItems {};
 };
 class Money {
       file="Functions\Core\Money";
