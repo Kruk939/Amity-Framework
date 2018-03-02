@@ -14,7 +14,8 @@ if(_exists) then {
       private _profiles = [format["core_get_profiles:%1", _id], 2] call ExternalS_fnc_ExtDBasync;
       if(count _profiles > 0) then {
             if((count _profiles) == 1) then {
-                  [_profiles select 0] remoteExec["Client_fnc_initProfile", _player];
+                  //[_profiles select 0] remoteExec["Client_fnc_initProfile", _player];
+                  [_profiles] remoteExec ["Client_fnc_chooseProfile", _player];
             } else {
                   [_profiles] remoteExec ["Client_fnc_chooseProfile", _player];
             };

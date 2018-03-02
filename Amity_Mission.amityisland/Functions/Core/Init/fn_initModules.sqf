@@ -7,39 +7,49 @@ private _format = {
       _ret;
 };
 
+diag_log "--------------------- Loading modules";
+diag_log "----------- Loading variables";
 //init variables
 {
       private _fnc = [_x, "initVariables"] call _format;
       if(!(isNil _fnc)) then {
+      diag_log _fnc;
             [] call (call compile _fnc);
       };
 } forEach _modules;
 
+diag_log "----------- Loading menu";
 //init menu
 {
       _fnc = [_x, "initMenu"] call _format;
       if(!(isNil _fnc)) then {
+      diag_log _fnc;
             [] call (call compile _fnc);
       };
 } forEach _modules;
 
 
+diag_log "----------- Loading eventHandlers";
 //init eventHandlers
 {
       _fnc = [_x, "initEventHandlers"] call _format;
       if(!(isNil _fnc)) then {
+      diag_log _fnc;
             [] call (call compile _fnc);
       };
 } forEach _modules;
 
+diag_log "----------- Loading listeners";
 //init listeners
 {
       _fnc = [_x, "initListeners"] call _format;
       if(!(isNil _fnc)) then {
+      diag_log _fnc;
             [] call (call compile _fnc);
       };
 } forEach _modules;
 
+diag_log "----------- Loading player";
 //init player
 {
       _fnc = [_x, "initPlayer"] call _format;
@@ -47,3 +57,4 @@ private _format = {
             [] call (call compile _fnc);
       };
 } forEach _modules;
+diag_log "--------------------- Modules loaded";

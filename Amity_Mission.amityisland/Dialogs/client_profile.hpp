@@ -37,6 +37,7 @@ class client_profile {
             class button_create: RscButton {
             	idc = 1601;
             	text = "Create"; //--- ToDo: Localize;
+                  action = " [] call Client_fnc_createProfile; ";
             	x = 13 * GUI_GRID_W + GUI_GRID_X;
             	y = 15 * GUI_GRID_H + GUI_GRID_Y;
             	w = 7 * GUI_GRID_W;
