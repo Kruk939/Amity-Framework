@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Czas generowania: 02 Mar 2018, 16:26
+-- Czas generowania: 02 Mar 2018, 20:25
 -- Wersja serwera: 5.7.13
 -- Wersja PHP: 7.0.11
 
