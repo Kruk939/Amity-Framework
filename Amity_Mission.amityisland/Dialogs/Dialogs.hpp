@@ -1,1 +1,5 @@
 #include "common.hpp"
+#include "client_atm.hpp"
+//#include "client_interaction.hpp"
+#include "client_profile_create.hpp"
+#include "client_profile.hpp"

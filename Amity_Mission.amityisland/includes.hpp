@@ -6,10 +6,6 @@
 #include "Dialogs\Dialogs.hpp"
 #include "Functions\Modules\Dialogs.hpp"
 
-//include dialogs
-#include "Dialogs\Dialogs.hpp"
-#include "Functions\Modules\Dialogs.hpp"
-
 
 //include Functions
 class CfgFunctions {

@@ -3,6 +3,7 @@ class client_profile {
       class controls {
             class text_details: RscText {
                   idc = 1000;
+                  style = ST_CENTER;
                   x = 20.5 * GUI_GRID_W + GUI_GRID_X;
                   y = 4 * GUI_GRID_H + GUI_GRID_Y;
                   w = 14.5 * GUI_GRID_W;
@@ -11,6 +12,7 @@ class client_profile {
             };
             class title_count: RscText {
                   idc = 1001;
+                  style = ST_RIGHT;
                   text = "1/3"; //--- ToDo: Localize;
                   x = 16 * GUI_GRID_W + GUI_GRID_X;
                   y = 3 * GUI_GRID_H + GUI_GRID_Y;
@@ -20,6 +22,7 @@ class client_profile {
             };
             class list_profiles: RscListBox {
                   idc = 1500;
+                  onLBSelChanged = "['LB'] call Client_fnc_chooseProfile_action";
             	text = "Select"; //--- ToDo: Localize;
             	x = 5 * GUI_GRID_W + GUI_GRID_X;
             	y = 4 * GUI_GRID_H + GUI_GRID_Y;
@@ -28,7 +31,8 @@ class client_profile {
             };
             class button_choose: RscButton {
             	idc = 1600;
-                  action = "[] call Client_fnc_chooseProfile_action";
+                  text = "Choose";
+                  action = "['CHOOSE'] call Client_fnc_chooseProfile_action";
             	x = 5 * GUI_GRID_W + GUI_GRID_X;
             	y = 15 * GUI_GRID_H + GUI_GRID_Y;
             	w = 8 * GUI_GRID_W;
@@ -37,7 +41,7 @@ class client_profile {
             class button_create: RscButton {
             	idc = 1601;
             	text = "Create"; //--- ToDo: Localize;
-                  action = " [] call Client_fnc_createProfile; ";
+                  action = " ['CREATE'] call Client_fnc_chooseProfile_action; ";
             	x = 13 * GUI_GRID_W + GUI_GRID_X;
             	y = 15 * GUI_GRID_H + GUI_GRID_Y;
             	w = 7 * GUI_GRID_W;

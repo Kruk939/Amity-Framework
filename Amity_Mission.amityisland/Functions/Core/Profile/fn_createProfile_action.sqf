@@ -1,4 +1,5 @@
 params[["_type", ""]];
+disableSerialization;
 if(_type == "CREATE") exitWith {
       private _first_name = ctrlText 1400;
       private _last_name = ctrlText 1401;

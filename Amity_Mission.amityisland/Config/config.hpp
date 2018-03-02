@@ -8,6 +8,7 @@ class Amity {
                   {"Male", "0"},
                   {"Female", "1"}
             };
+            profiles = 3;
       };
       class Custamization {
             class Functions {

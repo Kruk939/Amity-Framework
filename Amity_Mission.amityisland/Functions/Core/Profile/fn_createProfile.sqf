@@ -1,5 +1,6 @@
 if(dialog) then { closeDialog 0; };
-private _dialog = getText (missionConfigFile >> "Amity" >> "Custamization" >> "Dialogs" >> "profileCreate");
+disableSerialization;
+private _dialog = getText (missionConfigFile >> "Amity" >> "Custamization" >> "Dialogs" >> "createProfile");
 private _ok = createDialog _dialog;
 if(!_ok) exitWith {};
 private _genders = getArray (missionConfigFile >> "Amity" >> "Custamization" >> "Setup" >> "genders");

@@ -1,4 +1,5 @@
 params[["_message", ""]];
+disableSerialization;
 if(_message == "OK") exitWith {
       closeDialog 0;
       [player] remoteExec ["Server_fnc_initPlayer", 2];
