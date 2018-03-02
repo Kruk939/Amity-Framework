@@ -111,6 +111,10 @@ class Amity {
             $this->makePBO($server_out, $server_addons);
 
             $this->startServer();
+            $wait = 60;
+            echo "Waiting " . $wait . " seconds for server to load." . PHP_EOL;
+            sleep($wait);
+            $this->openRPT();
 
       }
       private function makePBO($from, $to) {
@@ -133,8 +137,20 @@ class Amity {
             $str .= '"-mod=' . $server->mod . '" ';
             $str .= "-autoInit -malloc=tbbmalloc";
             $str .= "'";
-            //echo $str . PHP_EOL;
-            shell_exec($str);
+            popen($str, 'r');
+      }
+      private function openRPT() {
+            $this->openLastModifiedFile($this->environment->local->arma3_rpt, "rpt");
+            $this->openLastModifiedFile($this->environment->local->server->profiles, "rpt");
+      }
+      private function openLastModifiedFile($dir, $ext) {
+            $notepad = $this->environment->local->notepad;
+            $files = glob($dir . DIRECTORY_SEPARATOR . "*." . $ext);
+            $files = array_combine($files, array_map("filemtime", $files));
+            arsort($files);
+            $latest_file = key($files);
+            echo "Opening: " . $latest_file . PHP_EOL;
+            shell_exec('"' . $notepad . '"' . ' "' . $latest_file . '"');
       }
       private function createAddons() {
             $folder = $this->output . DIRECTORY_SEPARATOR . "addons";
