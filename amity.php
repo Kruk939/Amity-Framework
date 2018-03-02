@@ -137,6 +137,7 @@ class Amity {
             $str .= '"-mod=' . $server->mod . '" ';
             $str .= "-autoInit -malloc=tbbmalloc";
             $str .= "'";
+            echo "Starting server in background" . PHP_EOL;
             popen($str, 'r');
       }
       private function openRPT() {
@@ -144,13 +145,17 @@ class Amity {
             $this->openLastModifiedFile($this->environment->local->server->profiles, "rpt");
       }
       private function openLastModifiedFile($dir, $ext) {
-            $notepad = $this->environment->local->notepad;
             $files = glob($dir . DIRECTORY_SEPARATOR . "*." . $ext);
             $files = array_combine($files, array_map("filemtime", $files));
             arsort($files);
             $latest_file = key($files);
-            echo "Opening: " . $latest_file . PHP_EOL;
-            shell_exec('"' . $notepad . '"' . ' "' . $latest_file . '"');
+            $this->openInNotepad($latest_file);
+
+      }
+      private function openInNotepad($file) {
+            $notepad = $this->environment->local->notepad;
+            echo "Opening: " . $file . PHP_EOL;
+            shell_exec('"' . $notepad . '"' . ' "' . $file . '"');
       }
       private function createAddons() {
             $folder = $this->output . DIRECTORY_SEPARATOR . "addons";
