@@ -24,6 +24,7 @@ class CfgFunctions {
                   class createProfile {};
                   class resetConnection {};
                   class setConnection {};
+                  class saveProfile {};
             };
       };
 	class ExternalS {
