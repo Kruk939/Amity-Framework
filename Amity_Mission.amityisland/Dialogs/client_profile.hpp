@@ -3,7 +3,7 @@ class client_profile {
       class controls {
             class text_details: RscText {
                   idc = 1000;
-                  style = ST_CENTER;
+                  style = ST_MULTI;
                   x = 20.5 * GUI_GRID_W + GUI_GRID_X;
                   y = 4 * GUI_GRID_H + GUI_GRID_Y;
                   w = 14.5 * GUI_GRID_W;
