@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Czas generowania: 01 Mar 2018, 12:21
+-- Czas generowania: 02 Mar 2018, 16:26
 -- Wersja serwera: 5.7.13
 -- Wersja PHP: 7.0.11
 
@@ -114,7 +114,7 @@ CREATE TABLE `core_profiles` (
   `weapons` text NOT NULL,
   `hunger` int(11) NOT NULL DEFAULT '0',
   `thirst` int(11) NOT NULL DEFAULT '0',
-  `position` varchar(255) NOT NULL,
+  `position` varchar(255) NOT NULL DEFAULT '[]',
   `connected` tinyint(1) NOT NULL DEFAULT '0',
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
@@ -125,7 +125,7 @@ CREATE TABLE `core_profiles` (
 --
 
 INSERT INTO `core_profiles` (`id`, `player_id`, `profile_uid`, `first_name`, `last_name`, `female`, `cash`, `items`, `clothes`, `weapons`, `hunger`, `thirst`, `position`, `connected`, `created_at`, `updated_at`) VALUES
-(1, 1, 'adfafsasd12451241', 'John', 'Raven', 0, 0, '', '', '', 0, 0, '', 0, '2018-01-10 17:08:09', '2018-02-03 14:06:59');
+(3, 1, 'AZJMNCEVY', 'John', 'Raven', 0, 0, '[]', '[]', '[]', 0, 0, '[]', 0, '2018-03-02 16:25:34', '2018-03-02 16:25:34');
 
 -- --------------------------------------------------------
 
@@ -278,7 +278,7 @@ ALTER TABLE `core_items`
 -- AUTO_INCREMENT dla tabeli `core_profiles`
 --
 ALTER TABLE `core_profiles`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT dla tabeli `core_users`
 --

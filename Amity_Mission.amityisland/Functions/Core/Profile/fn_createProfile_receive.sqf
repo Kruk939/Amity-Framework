@@ -6,5 +6,5 @@ if(_message == "OK") exitWith {
 };
 if(_message == "EXISTS") exitWith {
       ["Name already exists. Choose different one.", true] call Client_fnc_doMsg;
-      ctrlEnable[1601, true];
+      ctrlEnable[1600, true];
 };

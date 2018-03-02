@@ -8,7 +8,7 @@ private _uid = getPlayerUID _player;
 private _exists = (([format["exists_player:%1", _uid], 2] call ExternalS_fnc_ExtDBasync) select 0) select 0;
 if(_exists) then {
       private _id = (([format["core_get_user:%1", _uid], 2] call ExternalS_fnc_ExtDBasync) select 0) select 0;
-      player setVariable ["core_user_id", _id, true];
+      _player setVariable ["core_user_id", _id, true];
 
       //check if player has at least one profile
       private _profiles = [format["core_get_profiles:%1", _id], 2] call ExternalS_fnc_ExtDBasync;
