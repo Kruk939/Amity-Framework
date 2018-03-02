@@ -36,6 +36,9 @@ class Money {
       class addCash {};
       class checkMoney {};
       class removeCash {};
+      class removeBank {};
+      class addBank {};
+      class atmWithdraw {};
 };
 class Profile {
       file="Functions\Core\Profile";

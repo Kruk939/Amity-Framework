@@ -17,6 +17,7 @@ class CfgFunctions {
             class Money {
                   file = "Amity_Server\Functions\Core\Money"
                   class handleCash {};
+                  class handleBank {};
             };
             class Profile {
                   file = "Amity_Server\Functions\Core\Profile"

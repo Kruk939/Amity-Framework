@@ -10,7 +10,6 @@ player setVariable ["name", format["%1 %2", _first_name, _last_name], true];
 player setVariable ["female", _female, true];
 player setVariable ["first_name", _first_name];
 player setVariable ["last_name", _last_name];
-player setVariable ["cash", _cash];
 
 if(!amity_var_inited) then {
       [] spawn Client_fnc_loop;
