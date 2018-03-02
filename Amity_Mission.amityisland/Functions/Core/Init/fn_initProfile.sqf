@@ -23,7 +23,7 @@ if(!amity_var_inited) then {
       ["onPlayerProfileChange", [player, _profile_id, _user_id]] call Client_fnc_eventCall;
 };
 if(!_first) then {
-      //load items
+      [[_items, _clothes, _weapons]] call Client_fnc_loadItems;
 } else {
       ["onPlayerFirstConnect", [player, _profile_id, _user_id]] call Client_fnc_eventCall;
 };
