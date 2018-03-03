@@ -1,6 +1,7 @@
 params[["_name", ""], "_params", "_target"];
 private _ret = false;
 if(isNil "_params") then { _params = []; };
+diag_log format["--------- Call %1: params: %2", _name, _params];
 if(_name != "") then {
       {
             _x params["_event", "_local", "_listeners"];

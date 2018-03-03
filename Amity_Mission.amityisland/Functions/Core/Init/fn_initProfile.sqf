@@ -14,7 +14,7 @@ player setVariable ["first_name", _first_name];
 player setVariable ["last_name", _last_name];
 
 
-if((count _items) == 0 && (count _weapons) == 0 && (count _clothes)) then {
+if((count _items) == 0 && (count _weapons) == 0 && (count _clothes) == 0) then {
       _first = true;
 };
 
