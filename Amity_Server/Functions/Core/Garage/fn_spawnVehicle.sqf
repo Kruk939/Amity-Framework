@@ -9,7 +9,5 @@ _vehicle setVariable ["plate", _plate];
 _vehicle setVariable ["profile_id", _profile_id];
 _vehicle setVariable ["faction_id", _faction_id];
 
-
-if(!isNull _player && _function != "") then {
-      [_vehicle, _data] remoteExec[_function, _player];
-};
+["onVehicleSpawn", [_vehicle, _data]] call Client_fnc_eventCall;
+["onVehicleSpawn", [_vehicle, _data], _player] call Client_fnc_eventCall;

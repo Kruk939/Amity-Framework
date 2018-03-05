@@ -21,7 +21,7 @@ if(_name != "") then {
                               {
                                     if(typeName _x == "STRING") then {
                                           if(!isNil _x) then {
-                                                _params remoteExecCall [_x, _target];
+                                                [_name, _params] remoteExecCall ["Client_fnc_eventCall", _target];
                                           };
                                     }
                               } foreach _listeners;

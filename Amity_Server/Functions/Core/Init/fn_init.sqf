@@ -8,5 +8,6 @@ Amity_Server_Inited = false;
 sleep 3;
 
 [] call Server_fnc_resetConnection;
+[] call Server_fnc_initEventHandlers;
 [] call Server_fnc_initModules;
 Amity_Server_Inited = true;

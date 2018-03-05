@@ -13,6 +13,7 @@ class CfgFunctions {
                   class init {};
                   class initModules {};
                   class initPlayer {};
+                  class initEventHandlers {};
             };
             class Money {
                   file = "Amity_Server\Functions\Core\Money"
