@@ -2,13 +2,13 @@ params[["_player", objNull], ["_data", []], ["_faction", objNull]];
 
 //basic check
 if(isNull _player) exitWith {};
-if(count _data == 0) exitWith {};
-private _player_id = player getVariable["profile_id", -1];
+if((count _data) == 0) exitWith {};
+private _player_id = _player getVariable["profile_id", -1];
 if(_player_id == -1) exitWith {};
 
 private _query = "core_garage_insert_class";
 _data params["_class", ["_color", ""], ["_material", ""], ["_rims", ""], ["_windows", 0], ["_lights", 0]];
-if(typeName _class == "NUMBER") then { _query = "core_garage_insert_id"; };
+if(typeName _class == "SCALAR") then { _query = "core_garage_insert_id"; };
 
 private _vin = "AF45Z-";
 private _i = 0;
@@ -25,7 +25,8 @@ for [{}, {_i < 3}, {_i = _i + 1}] do {
             _vin = format["%1%2%3%4%5", _vin, (_sum % 5), floor(_sum / 10), round(_sum / 6), (_sum % 3)];
       };
 };
-private _plate = format["%1%2","ZS", [5] call Client_fnc_generateString];
+if(isNull _faction) then { _faction = ""; } else { _player_id = ""; };
+private _plate = toUpper format["%1%2","ZS", [5] call Client_fnc_generateString];
 _query = format["%1:%2:%3:%4:%5:%6", _query, _player_id, _faction, _class, _vin, _plate];
 _query = format["%1:%2:%3:%4:%5:%6", _query, _color, _material, _rims, _windows, _lights];
 [_query, 0] call ExternalS_fnc_ExtDBquery;

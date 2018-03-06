@@ -3,17 +3,19 @@
 $config_file = "config.json";
 $start = false;
 $build = false;
+$rpt = false;
 
 
 //options
 $shortopts  = "";
 $shortopts .= "c:";  // Required value
 $shortopts .= "::"; // Optional value
-$shortopts .= "bs"; // These options do not accept values
+$shortopts .= "bsr"; // These options do not accept values
 $longopts  = array(
       "config:",
       "build",
-      "start"
+      "start",
+      "rpt"
 );
 $options = getopt($shortopts, $longopts);
 
@@ -22,6 +24,7 @@ if(isset($options["c"])) $config_file = $options["c"];
 if(isset($options["config"])) $config_file = $options["config"];
 if(isset($options["s"]) || isset($options["start"])) $start = true;
 if(isset($options["b"]) || isset($options["build"])) $build = true;
+if(isset($options["r"]) || isset($options["rpt"])) $rpt = true;
 
 class Module {
       private $name;
@@ -140,7 +143,7 @@ class Amity {
             echo "Starting server in background" . PHP_EOL;
             popen($str, 'r');
       }
-      private function openRPT() {
+      public function openRPT() {
             $this->openLastModifiedFile($this->environment->local->arma3_rpt, "rpt");
             $this->openLastModifiedFile($this->environment->local->server->profiles, "rpt");
       }
@@ -352,5 +355,5 @@ if($build) {
       $amity->compile_server(true);
 }
 if($start) $amity->start();
-
+if($rpt) $amity->openRPT();
 ?>

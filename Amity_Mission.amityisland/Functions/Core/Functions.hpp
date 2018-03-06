@@ -57,4 +57,6 @@ class UsableItem {
 };
 class Vehicle {
       file="Functions\Core\Vehicle";
+      class vehicleHitGet {};
+      class vehicleHitLoad {};
 };

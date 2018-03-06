@@ -8,6 +8,11 @@ _vehicle setVariable ["vin", _vin];
 _vehicle setVariable ["plate", _plate];
 _vehicle setVariable ["profile_id", _profile_id];
 _vehicle setVariable ["faction_id", _faction_id];
+_vehicle setFuel _fuel;
+
+clearMagazineCargoGlobal _vehicle;
+clearWeaponCargoGlobal _vehicle;
+clearItemCargoGlobal _vehicle;
 
 ["onVehicleSpawn", [_vehicle, _data]] call Client_fnc_eventCall;
 ["onVehicleSpawn", [_vehicle, _data], _player] call Client_fnc_eventCall;

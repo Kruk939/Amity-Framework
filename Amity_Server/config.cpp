@@ -14,6 +14,7 @@ class CfgFunctions {
                   class initModules {};
                   class initPlayer {};
                   class initEventHandlers {};
+                  class resetConnection {};
             };
             class Money {
                   file = "Amity_Server\Functions\Core\Money"
@@ -23,7 +24,6 @@ class CfgFunctions {
             class Profile {
                   file = "Amity_Server\Functions\Core\Profile"
                   class createProfile {};
-                  class resetConnection {};
                   class setConnection {};
                   class saveProfile {};
             };
