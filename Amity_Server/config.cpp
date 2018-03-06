@@ -27,12 +27,14 @@ class CfgFunctions {
                   class setConnection {};
                   class saveProfile {};
             };
-            class Garage {
-                  file = "Amity_Server\Functions\Core\Garage"
-                  class garageGet {};
+            class Vehicle {
+                  file = "Amity_Server\Functions\Core\Vehicle"
+                  class getGarage {};
                   class insertGarage {};
                   class getVehicle {};
                   class spawnVehicle {};
+                  class saveVehicle {};
+                  class storeVehicle {};
 
             };
       };

@@ -17,7 +17,7 @@ _licenseArr resize 7;
       private _licenseChar = _licenseArr select _forEachIndex;
       if(isNil "_licenseChar") then { _licenseChar = ""; };
       private _img = "";
-      if(_licenseChar IN _allowedArr) then {
+      if(toLower(_licenseChar) IN _allowedArr) then {
             _img = format["ivory_data\license\%1.paa", toLower(_licenseChar)];
       };
       _vehicle setObjectTextureGlobal [_x, _img];
