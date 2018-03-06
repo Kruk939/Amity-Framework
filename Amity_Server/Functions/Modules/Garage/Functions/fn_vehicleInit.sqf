@@ -2,8 +2,7 @@ params[["_vehicle", objNull], ["_data", []]];
 if(isNull _vehicle) exitWith {};
 if((count _data) == 0) exitWith {};
 
-_data params ["_id", "_profile_id", "_faction_id", "_vehicle_id", "_class", "_vin", "_plate", "_status", "_hit", "_damage", "_fuel", "_color", "_material", "_rims", "_windows", "_lights", "_access_level"];
-
+_data params ["_id", "_profile_id", "_faction_id", "_vehicle_id", "_class", "_vin", "_plate", "_status", "_hit", "_damage", "_fuel", "_color", "_material", "_rims", "_windows", "_lights", "_pos", "_inventory", "_access_level"];
 private _type = switch(true) do {
       case (((toLower _class) find "adm") > -1): {"jonzie"};
       case (((toLower _class) find "jonzie_") > -1): {"jonzie"};

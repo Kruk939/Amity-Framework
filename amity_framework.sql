@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Czas generowania: 02 Mar 2018, 20:25
+-- Czas generowania: 06 Mar 2018, 15:14
 -- Wersja serwera: 5.7.13
 -- Wersja PHP: 7.0.11
 
@@ -52,6 +52,13 @@ CREATE TABLE `core_factions` (
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Zrzut danych tabeli `core_factions`
+--
+
+INSERT INTO `core_factions` (`id`, `profile_id`, `short_name`, `full_name`, `type`, `bank`, `created_at`, `updated_at`) VALUES
+(1, 3, 'Ecie', 'Pecie', 'company', 0, '2018-03-06 13:55:53', '2018-03-06 13:55:53');
+
 -- --------------------------------------------------------
 
 --
@@ -68,16 +75,27 @@ CREATE TABLE `core_garage` (
   `status` tinyint(1) NOT NULL DEFAULT '0',
   `stealer_id` int(11) DEFAULT NULL,
   `hit` text NOT NULL,
+  `access_level` int(11) DEFAULT NULL,
   `damage` float NOT NULL DEFAULT '0',
-  `fuel` float NOT NULL DEFAULT '0',
+  `fuel` float NOT NULL DEFAULT '1',
   `color` varchar(31) NOT NULL DEFAULT '',
   `material` varchar(31) NOT NULL DEFAULT '',
   `rims` varchar(31) NOT NULL DEFAULT '',
   `windows` int(1) NOT NULL DEFAULT '1',
   `lights` int(1) NOT NULL DEFAULT '1',
+  `position` text NOT NULL,
+  `inventory` text NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Zrzut danych tabeli `core_garage`
+--
+
+INSERT INTO `core_garage` (`id`, `profile_id`, `faction_id`, `vehicle_id`, `vin`, `plate`, `status`, `stealer_id`, `hit`, `access_level`, `damage`, `fuel`, `color`, `material`, `rims`, `windows`, `lights`, `position`, `inventory`, `created_at`, `updated_at`) VALUES
+(1, 3, NULL, 1, 'AF45Z-5399-2843-3471', 'ZSEQX11', 0, NULL, '[]', NULL, 0, 0, '', '', '', 1, 2, '[]', '[]', '2018-03-06 13:27:08', '2018-03-06 15:12:14'),
+(3, 3, NULL, 1, 'AF45Z-5869-7792-3592', 'ZSNXE4C', 0, NULL, '[]', NULL, 0, 1, '', '', '', 1, 2, '[]', '[]', '2018-03-06 14:11:38', '2018-03-06 15:12:17');
 
 -- --------------------------------------------------------
 
@@ -125,7 +143,7 @@ CREATE TABLE `core_profiles` (
 --
 
 INSERT INTO `core_profiles` (`id`, `player_id`, `profile_uid`, `first_name`, `last_name`, `female`, `cash`, `items`, `clothes`, `weapons`, `hunger`, `thirst`, `position`, `connected`, `created_at`, `updated_at`) VALUES
-(3, 1, 'AZJMNCEVY', 'John', 'Raven', 0, 0, '[]', '[]', '[]', 0, 0, '[]', 0, '2018-03-02 16:25:34', '2018-03-02 16:25:34');
+(3, 1, 'AZJMNCEVY', 'John', 'Raven', 0, 0, '[[],[],[],["ItemMap","ItemCompass","TFAR_microdagr"]]', '["U_C_Poloshirt_burgundy","","","H_Bandanna_khk",""]', '[[],[],[]]', 0, 0, '[502.832,365.665,1.20261]', 0, '2018-03-02 16:25:34', '2018-03-06 14:54:14');
 
 -- --------------------------------------------------------
 
@@ -163,6 +181,13 @@ CREATE TABLE `core_vehicles` (
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Zrzut danych tabeli `core_vehicles`
+--
+
+INSERT INTO `core_vehicles` (`id`, `class_name`, `type`, `name`, `description`, `created_at`, `updated_at`) VALUES
+(1, 'pop_bmwm4', 'car', 'BMW 4', '', '2018-03-05 17:53:15', '2018-03-05 17:53:15');
 
 -- --------------------------------------------------------
 
@@ -263,12 +288,12 @@ ALTER TABLE `core_bank`
 -- AUTO_INCREMENT dla tabeli `core_factions`
 --
 ALTER TABLE `core_factions`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT dla tabeli `core_garage`
 --
 ALTER TABLE `core_garage`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT dla tabeli `core_items`
 --
@@ -288,7 +313,7 @@ ALTER TABLE `core_users`
 -- AUTO_INCREMENT dla tabeli `core_vehicles`
 --
 ALTER TABLE `core_vehicles`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- Ograniczenia dla zrzutów tabel
 --
