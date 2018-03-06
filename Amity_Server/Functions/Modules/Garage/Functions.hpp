@@ -5,8 +5,7 @@ class ServerModules_Garage {
       };
       class Functions {
             file = "Amity_Server\Functions\Modules\Garage\Functions"
-            class jonzieInit {};
-            class ivoryInit {};
+            class vehicleInit {};
             class numberPlate {};
       };
 

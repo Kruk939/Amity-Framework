@@ -29,4 +29,4 @@ if(isNull _faction) then { _faction = ""; } else { _player_id = ""; };
 private _plate = toUpper format["%1%2","ZS", [5] call Client_fnc_generateString];
 _query = format["%1:%2:%3:%4:%5:%6", _query, _player_id, _faction, _class, _vin, _plate];
 _query = format["%1:%2:%3:%4:%5:%6", _query, _color, _material, _rims, _windows, _lights];
-[_query, 0] call ExternalS_fnc_ExtDBquery;
+[0, _query] call ExternalS_fnc_ExtDBquery;

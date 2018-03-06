@@ -18,13 +18,7 @@ if(_name != "") then {
                         _ret = true;
                   } else {
                         if(!_local) then {
-                              {
-                                    if(typeName _x == "STRING") then {
-                                          if(!isNil _x) then {
-                                                [_name, _params] remoteExecCall ["Client_fnc_eventCall", _target];
-                                          };
-                                    }
-                              } foreach _listeners;
+                              [_name, _params] remoteExecCall ["Client_fnc_eventCall", _target];
                               _ret = true;
                         };
                   };
