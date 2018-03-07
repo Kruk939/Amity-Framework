@@ -35,6 +35,7 @@ class CfgFunctions {
                   class spawnVehicle {};
                   class saveVehicle {};
                   class storeVehicle {};
+                  class deleteVehicle {};
 
             };
       };
