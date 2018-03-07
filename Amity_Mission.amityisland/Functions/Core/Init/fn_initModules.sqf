@@ -13,7 +13,7 @@ diag_log "----------- Loading variables";
 {
       private _fnc = [_x, "initVariables"] call _format;
       if(!(isNil _fnc)) then {
-      diag_log _fnc;
+            diag_log _fnc;
             [] call (call compile _fnc);
       };
 } forEach _modules;
@@ -23,7 +23,7 @@ diag_log "----------- Loading menu";
 {
       _fnc = [_x, "initMenu"] call _format;
       if(!(isNil _fnc)) then {
-      diag_log _fnc;
+            diag_log _fnc;
             [] call (call compile _fnc);
       };
 } forEach _modules;
@@ -34,7 +34,7 @@ diag_log "----------- Loading eventHandlers";
 {
       _fnc = [_x, "initEventHandlers"] call _format;
       if(!(isNil _fnc)) then {
-      diag_log _fnc;
+            diag_log _fnc;
             [] call (call compile _fnc);
       };
 } forEach _modules;
@@ -44,7 +44,7 @@ diag_log "----------- Loading listeners";
 {
       _fnc = [_x, "initListeners"] call _format;
       if(!(isNil _fnc)) then {
-      diag_log _fnc;
+            diag_log _fnc;
             [] call (call compile _fnc);
       };
 } forEach _modules;
@@ -54,6 +54,7 @@ diag_log "----------- Loading player";
 {
       _fnc = [_x, "initPlayer"] call _format;
       if(!(isNil _fnc)) then {
+            diag_log _fnc;
             [] call (call compile _fnc);
       };
 } forEach _modules;

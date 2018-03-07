@@ -25,12 +25,12 @@ if(!amity_var_inited) then {
       [] call Client_fnc_initModules;
       amity_var_inited = true;
 } else {
-      ["onPlayerProfileChange", [player, _profile_id, _user_id]] call Client_fnc_eventCall;
+      ["onPlayerProfileChange", [player, _data]] call Client_fnc_eventCall;
 };
 if(!_first) then {
       [[_items, _clothes, _weapons]] call Client_fnc_loadItems;
 } else {
-      ["onPlayerFirstConnect", [player, _profile_id, _user_id]] call Client_fnc_eventCall;
+      ["onPlayerFirstConnect", [player, _data]] call Client_fnc_eventCall;
 };
-[player] remoteExec ["Server_fnc_resetConnection", 2];
+[player] remoteExec ["Server_fnc_setConnection", 2];
 [] call Client_fnc_spawn;
