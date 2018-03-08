@@ -50,11 +50,12 @@ class CfgFunctions {
                   class factionChangeOwner {};
                   class factionCreate {};
                   class factionGet {};
-                  class factionGetMember {};
+                  class factionGetMembers {};
                   class factionRemove {};
                   class factionRemoveMember {};
                   class factionUpdate {};
                   class memberGetFactions {};
+                  class memberGet {};
             };
       };
 	class ExternalS {
