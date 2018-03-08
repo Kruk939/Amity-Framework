@@ -20,6 +20,10 @@ class CfgFunctions {
                   file = "Amity_Server\Functions\Core\Money"
                   class handleCash {};
                   class handleBank {};
+                  class bankCreate {};
+                  class bankGetID {};
+                  class bankGetProfile {};
+                  class bankRemove {};
             };
             class Profile {
                   file = "Amity_Server\Functions\Core\Profile"
@@ -36,7 +40,19 @@ class CfgFunctions {
                   class saveVehicle {};
                   class storeVehicle {};
                   class deleteVehicle {};
-
+            };
+            class Faction {
+                  file = "Amity_Server\Functions\Core\Factions"
+                  class factionAddMember {};
+                  class factionBankTransfer {};
+                  class factionChangeOwner {};
+                  class factionCreate {};
+                  class factionGet {};
+                  class factionGetMember {};
+                  class factionRemove {};
+                  class factionRemoveMember {};
+                  class factionUpdate {};
+                  class memberGetFactions {};
             };
       };
 	class ExternalS {
