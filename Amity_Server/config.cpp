@@ -24,6 +24,8 @@ class CfgFunctions {
                   class bankGetID {};
                   class bankGetProfile {};
                   class bankRemove {};
+                  class bankTransfer {};
+                  class bankGetAccount {};
             };
             class Profile {
                   file = "Amity_Server\Functions\Core\Profile"
