@@ -34,6 +34,8 @@ class Misc {
       class getItems {};
       class loadItems {};
       class removeItems {};
+      class keyHandler {};
+      class surrenderAction {};
 };
 class Money {
       file="Functions\Core\Money";
@@ -59,4 +61,5 @@ class Vehicle {
       file="Functions\Core\Vehicle";
       class vehicleHitGet {};
       class vehicleHitLoad {};
+      class lock {};
 };

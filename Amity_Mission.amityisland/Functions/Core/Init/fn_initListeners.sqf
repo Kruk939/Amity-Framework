@@ -5,3 +5,6 @@ private _save = {
       };
 };
 ["onTick", _save] call Client_fnc_eventAdd;
+
+waitUntil {!(isNull (findDisplay 46))};
+(findDisplay 46) displayAddEventHandler ["KeyDown", "_this call Client_fnc_keyHandler"];
