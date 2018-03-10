@@ -23,7 +23,7 @@ if(typeName _text != "STRING") exitWith {
       };
 };
 if(_custom_fnc != "" && !isNil _custom_fnc) then {
-      _this call (call compile _custom_fnc);
+      [_text, _sound] call (call compile _custom_fnc);
 } else {
       //do custom message here
       if(_sound) then {
