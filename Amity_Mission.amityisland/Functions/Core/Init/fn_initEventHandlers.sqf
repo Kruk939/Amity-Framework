@@ -7,3 +7,6 @@
 ["onPlayerFirstConnect"] call Client_fnc_eventRegister;
 ["onPlayerProfileChange"] call Client_fnc_eventRegister;
 ["onVehicleSpawn"] call Client_fnc_eventRegister;
+["onFactionWorkingChange"] call Client_fnc_eventRegister;
+["onFactionWorkingStart"] call Client_fnc_eventRegister;
+["onFactionWorkingStop"] call Client_fnc_eventRegister;

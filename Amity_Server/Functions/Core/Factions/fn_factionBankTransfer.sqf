@@ -1,4 +1,4 @@
-params[["_type", ""], ["_faction_id", -1], ["_amount", 0]];
+params[["_faction_id", -1], ["_type", ""], ["_amount", 0]];
 private _query = "";
 if(_type == "" || _faction_id == -1 || _amount == 0) exitWith {};
 _query = switch(_type) do {

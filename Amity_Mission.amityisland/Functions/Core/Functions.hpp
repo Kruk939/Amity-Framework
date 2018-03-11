@@ -6,6 +6,8 @@ class EventHandler {
 };
 class Factions {
       file="Functions\Core\Factions";
+      class startWorking {};
+      class stopWorking {};
 };
 class Init {
       file="Functions\Core\Init";
