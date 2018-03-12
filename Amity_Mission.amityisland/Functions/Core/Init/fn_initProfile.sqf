@@ -1,6 +1,5 @@
-[] call Client_fnc_miscVariables;
-
 params[["_data", []], ["_first", false]];
+private _time = time;
 _data params["_profile_id", "_user_id", "_profile_uid", "_first_name", "_last_name", "_female", "_cash", "_items", "_clothes", "_weapons", "_hunger", "_thirst", "_position"];
 
 player setVariable ["cash", _cash, true];
@@ -19,6 +18,7 @@ if((count _items) == 0 && (count _weapons) == 0 && (count _clothes) == 0) then {
 };
 
 if(!amity_var_inited) then {
+      [] call Client_fnc_miscVariables;
       [] spawn Client_fnc_loop;
       [] call Client_fnc_initEventHandlers;
       [] call Client_fnc_initListeners;
@@ -33,4 +33,9 @@ if(!_first) then {
       ["onPlayerFirstConnect", [player, _data]] call Client_fnc_eventCall;
 };
 [player] remoteExec ["Server_fnc_setConnection", 2];
+private _took = time - _time;
+private _minutes = floor (_took / 60);
+private _seconds = floor(_took) % 60;
+private _miliseconds = round((_took - (_minutes * 60) - _seconds) * 1000);
+diag_log format["----------- Loaded, elapsed: %1:%2:%3", _minutes, _seconds, _miliseconds];
 [] call Client_fnc_spawn;

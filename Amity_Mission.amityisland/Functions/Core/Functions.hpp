@@ -3,6 +3,9 @@ class EventHandler {
       class eventAdd {};
       class eventCall {};
       class eventRegister {};
+      class keyHandler {};
+      class keyHandlerAdd {};
+      class keyHandlerRemove {};
 };
 class Factions {
       file="Functions\Core\Factions";
@@ -36,7 +39,6 @@ class Misc {
       class getItems {};
       class loadItems {};
       class removeItems {};
-      class keyHandler {};
       class surrenderAction {};
 };
 class Money {
