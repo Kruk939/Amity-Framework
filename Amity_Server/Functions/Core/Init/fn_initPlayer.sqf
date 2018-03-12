@@ -23,7 +23,7 @@ if(_exists) then {
             [] remoteExec["Client_fnc_createProfile", _player];
       };
 } else {
-      [format["core_insert_user:%1", _uid], 0] call ExternalS_fnc_ExtDBquery;
+      [0, format["core_insert_user:%1", _uid]] call ExternalS_fnc_ExtDBquery;
       uiSleep 2;
       [_player] spawn Server_fnc_initPlayer;
 };
