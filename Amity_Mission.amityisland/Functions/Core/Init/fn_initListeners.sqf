@@ -21,6 +21,7 @@ private _paycheck = {
       };
 };
 ["onTick", _paycheck] call Client_fnc_eventAdd;
+["onVehicleSpawn", "Client_fnc_handleVehicle"] call Client_fnc_eventAdd;
 
 waitUntil {!(isNull (findDisplay 46))};
 (findDisplay 46) displayAddEventHandler ["KeyDown", "_this call Client_fnc_keyHandler"];

@@ -3,3 +3,4 @@
 //#include "client_interaction.hpp"
 #include "client_profile_create.hpp"
 #include "client_profile.hpp"
+#include "client_garage.hpp"

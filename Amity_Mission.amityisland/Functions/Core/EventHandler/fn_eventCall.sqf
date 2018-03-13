@@ -7,19 +7,23 @@ if(_name != "") then {
             _x params["_event", "_local", "_listeners"];
             if(_event == _name) exitWith {
                   if(isNil "_target") then {
-                        // call localy on player
                         {
+                              private _temp = objNull;
                               if(typeName _x == "STRING") then {
-                                    _params call (call compile _x);
+                                    _temp = _params call (call compile _x);
                               } else {
-                                    _params call _x;
+                                    _temp = _params call _x;
+                              };
+                              if(!isNil "_temp") then {
+                                    if(typeName _temp == "BOOL" && !_ret) then {
+                                          _ret = _temp;
+                                    };
                               };
                         } foreach _listeners;
-                        _ret = true;
                   } else {
                         if(!_local) then {
                               [_name, _params] remoteExecCall ["Client_fnc_eventCall", _target];
-                              _ret = true;
+                              _ret = false;
                         };
                   };
             };

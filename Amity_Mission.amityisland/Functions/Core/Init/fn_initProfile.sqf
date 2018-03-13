@@ -34,8 +34,9 @@ if(!_first) then {
 };
 [player] remoteExec ["Server_fnc_setConnection", 2];
 private _took = time - _time;
+
 private _minutes = floor (_took / 60);
 private _seconds = floor(_took) % 60;
-private _miliseconds = round((_took - (_minutes * 60) - _seconds) * 1000);
+private _miliseconds = round((_took - (_minutes * 60) - _seconds) * 100);
 diag_log format["----------- Loaded, elapsed: %1:%2:%3", _minutes, _seconds, _miliseconds];
 [] call Client_fnc_spawn;

@@ -18,10 +18,14 @@ if(_status == 0 || _force) then {
       [_vehicle, _hit] call Client_fnc_vehicleHitLoad;
       [_vehicle, true] remoteExec ["lock", 0];
 
-      ["onVehicleSpawn", [_vehicle, _data]] call Client_fnc_eventCall;
+      private _handle = ["onVehicleSpawn", [_vehicle, _data]] call Client_fnc_eventCall;
       if(!isNull _player) then {
             _vehicle setVariable ["owner", _player, true];
-            ["onVehicleSpawn", [_vehicle, _data], _player] call Client_fnc_eventCall;
+            if(typeName _handle == "BOOL") then {
+                  if(!_handle) then {
+                        ["onVehicleSpawn", [_vehicle, _data], _player] call Client_fnc_eventCall;
+                  };
+            };
       } else {
             private _owner = [_profile_id] call Client_fnc_getPlayerByProfile;
             if(!isNull _owner) then {

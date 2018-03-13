@@ -26,9 +26,11 @@ private _check = {
                               _function = call compile _function;
                         };
                         _ret = _this call _function;
-                        if(typeName _ret == "BOOL") then {
-                              if(!_handle) then {
-                                    _handle = _ret;
+                        if(!isNil "_ret") then {
+                              if(typeName _ret == "BOOL") then {
+                                    if(!_handle) then {
+                                          _handle = _ret;
+                                    };
                               };
                         };
                   };

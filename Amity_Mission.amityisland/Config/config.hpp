@@ -22,6 +22,7 @@ class Amity {
                   interaction = "client_interaction"; //idd 1020;
                   profile = "client_profile"; //idd = 1000;
                   createProfile = "client_profile_create"; //idd = 1001;
+                  garage = "client_garage"; //idd = 1005;
             };
       };
 };

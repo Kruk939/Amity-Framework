@@ -12,6 +12,13 @@ class Factions {
       class startWorking {};
       class stopWorking {};
 };
+class Garage {
+      file="Functions\Core\Garage";
+      class garage_action {};
+      class garage_open {};
+      class garage_receive {};
+      class handleVehicle {};
+};
 class Init {
       file="Functions\Core\Init";
       class initEventhandlers {};
@@ -66,4 +73,7 @@ class Vehicle {
       class vehicleHitGet {};
       class vehicleHitLoad {};
       class lock {};
+      class attachCheck {};
+      class attachVehicle {};
+      class detachVehicle {};
 };
