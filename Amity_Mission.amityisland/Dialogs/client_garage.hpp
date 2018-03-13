@@ -25,15 +25,25 @@ class client_garage {
                   action = "['SPAWN'] call Client_fnc_garage_action";
                   x = 20 * GUI_GRID_W + GUI_GRID_X;
                   y = 21 * GUI_GRID_H + GUI_GRID_Y;
-                  w = 12 * GUI_GRID_W;
+                  w = 7 * GUI_GRID_W;
+                  h = 1.5 * GUI_GRID_H;
+            };
+            class button_take: RscButton {
+                  idc = 1601;
+                  text = "Repair"; //--- ToDo: Localize;
+                  action = "['REPAIR'] call Client_fnc_garage_action";
+                  x = 27 * GUI_GRID_W + GUI_GRID_X;
+                  y = 21 * GUI_GRID_H + GUI_GRID_Y;
+                  w = 7 * GUI_GRID_W;
                   h = 1.5 * GUI_GRID_H;
             };
             class button_exit: RscButton {
-                  idc = 1601;
+                  idc = 1602;
                   text = "Exit"; //--- ToDo: Localize;
-                  x = 32 * GUI_GRID_W + GUI_GRID_X;
+                  action = " closeDialog 0; ";
+                  x = 34 * GUI_GRID_W + GUI_GRID_X;
                   y = 21 * GUI_GRID_H + GUI_GRID_Y;
-                  w = 8 * GUI_GRID_W;
+                  w = 6 * GUI_GRID_W;
                   h = 1.5 * GUI_GRID_H;
             };
             class title_garage: RscText {

@@ -42,6 +42,7 @@ class CfgFunctions {
                   class saveVehicle {};
                   class storeVehicle {};
                   class deleteVehicle {};
+                  class vehicleFullRepair {};
             };
             class Faction {
                   file = "Amity_Server\Functions\Core\Factions"
