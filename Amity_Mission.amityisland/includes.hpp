@@ -12,9 +12,7 @@ class CfgFunctions {
       class Client {
             #include "Functions\Core\Functions.hpp"
       };
-      class ClientModules {
-            #include "Functions\Modules\Functions.hpp"
-      };
+      #include "Functions\Modules\Functions.hpp"
 };
 
 //include sounds
