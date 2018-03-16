@@ -28,7 +28,7 @@ class client_garage {
                   w = 7 * GUI_GRID_W;
                   h = 1.5 * GUI_GRID_H;
             };
-            class button_take: RscButton {
+            class button_repair: RscButton {
                   idc = 1601;
                   text = "Repair"; //--- ToDo: Localize;
                   action = "['REPAIR'] call Client_fnc_garage_action";

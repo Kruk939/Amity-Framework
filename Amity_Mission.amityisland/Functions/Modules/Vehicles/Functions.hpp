@@ -7,4 +7,11 @@ class ClientModules_Vehicles {
             class initPlayer {};
             class initVariables {};
       };
+      class Sirens {
+            file="Functions\Modules\Vehicles\Functions\Sirens";
+            class sirenCreate {};
+            class sirenDestroy {};
+            class sirenKeyDown {};
+            class sirenKeyUp {};
+      }
 };

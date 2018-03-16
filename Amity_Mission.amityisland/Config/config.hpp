@@ -19,10 +19,14 @@ class Amity {
             };
             class Dialogs {
                   atm = "client_atm"; //idd = 1010;
-                  interaction = "client_interaction"; //idd 1020;
+                  interaction = "client_interaction"; //idd = 1020;
                   profile = "client_profile"; //idd = 1000;
                   createProfile = "client_profile_create"; //idd = 1001;
                   garage = "client_garage"; //idd = 1005;
+                  factionCreate = "client_faction_create"; //idd = 1030
+                  factionSign = "client_faction_sign"; //idd = 1031
+                  factionMembers = "client_faction_members"; //idd = 1032
+                  factionMemberEdit = "client_faction_member_edit"; //idd = 1033
             };
       };
 };

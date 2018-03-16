@@ -4,3 +4,7 @@
 #include "client_profile_create.hpp"
 #include "client_profile.hpp"
 #include "client_garage.hpp"
+#include "client_faction_create.hpp"
+#include "client_faction_member_edit.hpp"
+#include "client_faction_members.hpp"
+#include "client_faction_sign.hpp"
