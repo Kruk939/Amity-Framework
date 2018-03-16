@@ -224,8 +224,12 @@ class Amity {
       public function compile_mission() {
             //prepare output
             $mission_out = $this->output . DIRECTORY_SEPARATOR . $this->config->mission;
+            if(!is_dir($this->output)) {
+                  mkdir($this->output);
+            }
             echo "Setting output to:" . PHP_EOL;
             echo $mission_out . PHP_EOL;
+
 
             $mission_config = json_decode(file_get_contents($this->mission  . DIRECTORY_SEPARATOR . "config.json"));
             if(is_dir($mission_out)) {

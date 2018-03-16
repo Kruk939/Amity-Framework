@@ -5,20 +5,20 @@
             "dir": "@extDB_Amity",
             "ini": "amity_framework.ini"
       },
-      "output": "C:\\Users\\kajet\\Desktop\\Mission_output",
+      "output": "E:\\Temp\\Mission_output",
       "addons": "addons",
       "environment": {
             "local": {
-                  "arma3": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Arma 3",
-                  "arma3Tools": "G:\\SteamLibrary\\steamapps\\common\\Arma 3 Tools",
+                  "arma3": "G:\\Steam\\steamapps\\common\\Arma 3",
+                  "arma3Tools": "G:\\Steam\\steamapps\\common\\Arma 3 Tools",
                   "temp": "C:\\Users\\kajet\\AppData\\Local\\Temp",
                   "arma3_rpt": "C:\\Users\\kajet\\AppData\\Local\\Arma 3",
                   "notepad": "D:\\Program Files (x86)\\Notepad++\\notepad++.exe",
                   "server": {
-                        "exe": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Arma 3\\arma3server.exe",
-                        "config": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Arma 3\\TADST\\Amity_test\\TADST_config.cfg",
-                        "cfg": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Arma 3\\TADST\\Amity_test\\TADST_basic.cfg",
-                        "profiles": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Arma 3\\TADST\\Amity_test",
+                        "exe": "G:\\Steam\\steamapps\\common\\Arma 3\\arma3server.exe",
+                        "config": "G:\\Steam\\steamapps\\common\\Arma 3\\TADST\\Amity_test\\TADST_config.cfg",
+                        "cfg": "G:\\Steam\\steamapps\\common\\Arma 3\\TADST\\Amity_test\\TADST_basic.cfg",
+                        "profiles": "G:\\Steam\\steamapps\\common\\Arma 3\\TADST\\Amity_test",
                         "name": "Amity_test",
                         "port": 2302,
                         "mod": "@AmityRP;@Amity_Server;@extDB_Amity"
