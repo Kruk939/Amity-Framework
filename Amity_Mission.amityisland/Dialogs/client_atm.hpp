@@ -95,6 +95,7 @@ class client_atm {
             class button_withdraw: RscButton {
                   idc = 1600;
                   text = "Withdraw"; //--- ToDo: Localize;
+                  action = "['WITHDRAW'] call Client_fnc_atm_action";
                   x = 19 * GUI_GRID_W + GUI_GRID_X;
                   y = 6 * GUI_GRID_H + GUI_GRID_Y;
                   w = 10 * GUI_GRID_W;
@@ -104,6 +105,7 @@ class client_atm {
             {
                   idc = 1601;
                   text = "Pay In"; //--- ToDo: Localize;
+                  action = "['DEPOSIT'] call Client_fnc_atm_action";
                   x = 9 * GUI_GRID_W + GUI_GRID_X;
                   y = 6 * GUI_GRID_H + GUI_GRID_Y;
                   w = 10 * GUI_GRID_W;
@@ -112,6 +114,7 @@ class client_atm {
             class button_transfer: RscButton {
                   idc = 1602;
                   text = "Transfer"; //--- ToDo: Localize;
+                  action = "['TRANSFER'] call Client_fnc_atm_action";
                   x = 9 * GUI_GRID_W + GUI_GRID_X;
                   y = 9.5 * GUI_GRID_H + GUI_GRID_Y;
                   w = 20 * GUI_GRID_W;
@@ -120,6 +123,7 @@ class client_atm {
             class button_exit: RscButton {
                   idc = 1603;
                   text = "Exit"; //--- ToDo: Localize;
+                  action = " closeDialog 0; ";
                   x = 9 * GUI_GRID_W + GUI_GRID_X;
                   y = 11 * GUI_GRID_H + GUI_GRID_Y;
                   w = 20 * GUI_GRID_W;
@@ -127,6 +131,7 @@ class client_atm {
             };
             class combo_accounts: RscCombo {
                   idc = 2100;
+                  onLBSelChanged = "['LB'] call Client_fnc_atm_action";
                   x = 9 * GUI_GRID_W + GUI_GRID_X;
                   y = 2.5 * GUI_GRID_H + GUI_GRID_Y;
                   w = 20 * GUI_GRID_W;

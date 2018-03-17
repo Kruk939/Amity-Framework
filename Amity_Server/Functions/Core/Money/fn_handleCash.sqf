@@ -2,7 +2,7 @@ params[["_player", objNull], ["_type", ""], ["_amount", 0]];
 if(isNull _player || _type == "") exitWith {};
 if(_amount < 0) then { _amount = 0 - _amount; };
 
-private _profile_id = player getVariable["profile_id", 0];
+private _profile_id = _player getVariable["profile_id", 0];
 private _query = switch(_type) do {
       case "ADD": {format["core_cash_add:%1:%2", _profile_id, _amount]};
       case "SUB": {format["core_cash_remove:%1:%2", _profile_id, _amount]};

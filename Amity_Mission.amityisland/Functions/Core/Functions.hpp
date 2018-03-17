@@ -57,7 +57,9 @@ class Money {
       class removeCash {};
       class removeBank {};
       class addBank {};
-      class atmWithdraw {};
+      class atm_action {};
+      class atm_open {};
+      class atm_receive {};
 };
 class Profile {
       file="Functions\Core\Profile";
