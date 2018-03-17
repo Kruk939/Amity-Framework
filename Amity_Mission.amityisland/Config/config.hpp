@@ -29,4 +29,12 @@ class Amity {
                   factionMemberEdit = "client_faction_member_edit"; //idd = 1033
             };
       };
+      class Misc {
+            class Faction {
+                  price[] = {
+                        {"STR_FACTION_NAME_COMPANY", "company", 10000},
+                        {"STR_FACTION_NAME_GANG", "gang", 50000}
+                  };
+            };
+      };
 };

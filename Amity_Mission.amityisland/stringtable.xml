@@ -1,7 +1,17 @@
-<Container name="AMITI_CORE">
+<Container name="AMITY_CORE">
 	<Key ID="STR_TEST">
 		<Original>Fixing</Original>
 		<English>Fixing</English>
 		<Polish>Naprawiam</Polish>
 	</Key>
+	<key ID="STR_FACTION_NAME_COMPANY">
+		<Original>Company</Original>
+		<English>Company</English>
+		<Polish>Firma</Polish>
+	</key>
+	<key ID="STR_FACTION_NAME_GANG">
+		<Original>Gang</Original>
+		<English>Gang</English>
+		<Polish>Gang</Polish>
+	</key>
 </Container>

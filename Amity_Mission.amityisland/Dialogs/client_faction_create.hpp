@@ -44,6 +44,7 @@ class client_faction_create {
 		};
 		class combo_type: RscCombo {
 			idc = 2100;
+                  onLBSelChanged = "['LB'] call Client_fnc_faction_create_action";
 			x = 10 * GUI_GRID_W + GUI_GRID_X;
 			y = 7.5 * GUI_GRID_H + GUI_GRID_Y;
 			w = 20 * GUI_GRID_W;
