@@ -28,6 +28,7 @@ class client_faction_create {
 		};
 		class button_exit: RscButton {
 			idc = 1600;
+                  action = " closeDialog 0; ";
 			text = "Exit"; //--- ToDo: Localize;
 			x = 24 * GUI_GRID_W + GUI_GRID_X;
 			y = 10.5 * GUI_GRID_H + GUI_GRID_Y;
@@ -36,6 +37,7 @@ class client_faction_create {
 		};
 		class button_create: RscButton {
 			idc = 1601;
+                  action = " ['CREATE'] call Client_fnc_faction_create_action; ";
 			text = "Create"; //--- ToDo: Localize;
 			x = 16 * GUI_GRID_W + GUI_GRID_X;
 			y = 10.5 * GUI_GRID_H + GUI_GRID_Y;
@@ -44,7 +46,7 @@ class client_faction_create {
 		};
 		class combo_type: RscCombo {
 			idc = 2100;
-                  onLBSelChanged = "['LB'] call Client_fnc_faction_create_action";
+                  onLBSelChanged = " ['LB'] call Client_fnc_faction_create_action; ";
 			x = 10 * GUI_GRID_W + GUI_GRID_X;
 			y = 7.5 * GUI_GRID_H + GUI_GRID_Y;
 			w = 20 * GUI_GRID_W;

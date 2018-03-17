@@ -4,14 +4,35 @@
 		<English>Fixing</English>
 		<Polish>Naprawiam</Polish>
 	</Key>
-	<key ID="STR_FACTION_NAME_COMPANY">
+</Container>
+<Container name="AMITY_CORE_FACTION">
+	<Key ID="STR_FACTION_NAME_COMPANY">
 		<Original>Company</Original>
 		<English>Company</English>
 		<Polish>Firma</Polish>
-	</key>
-	<key ID="STR_FACTION_NAME_GANG">
+	</Key>
+	<Key ID="STR_FACTION_NAME_GANG">
 		<Original>Gang</Original>
 		<English>Gang</English>
 		<Polish>Gang</Polish>
-	</key>
+	</Key>
+	<Key ID="STR_FACTION_CREATE_SUCCESSFULL">
+		<Original>You created a new faction!</Original>
+		<English>You created a new faction!</English>
+		<Polish>Utworzyłeś nową fakcje!</Polish>
+	</Key>
+	<Key ID="STR_FACTION_CREATE_NOT_ENOUGH_MONEY">
+		<Original>You don't have enough money in your bank account.</Original>
+		<English>You don't have enough money in your bank account.</English>
+		<Polish>Nie masz wystarczająco pieniędzy aby utworzyć fakcję.</Polish>
+	</Key>
+	<Key ID="STR_FACTION_CREATE_EXISTS">
+		<Original>Faction with this name already exists. Change short or long name of the faction.</Original>
+		<English>Faction with this name already exists. Change short or long name of the faction.</English>
+		<Polish>Frakcja, którą próbujesz stworzyć już istnieje. Zmień skrót lub pełną nazwę.</Polish>
+	</Key>
+
+
+
+
 </Container>

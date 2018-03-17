@@ -1,4 +1,4 @@
-class client_faction_sign {
+class client_faction_members {
       idd = 1032;
       class controls {
             class text_info: RscText {

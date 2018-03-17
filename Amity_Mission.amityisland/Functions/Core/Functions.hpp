@@ -11,6 +11,8 @@ class Factions {
       file="Functions\Core\Factions";
       class startWorking {};
       class stopWorking {};
+      class faction_create_action {};
+      class faction_create_open {};
 };
 class Garage {
       file="Functions\Core\Garage";

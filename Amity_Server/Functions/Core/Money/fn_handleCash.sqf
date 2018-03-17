@@ -1,6 +1,3 @@
-#define ADD 1
-#define REMOVE 0
-
 params[["_player", objNull], ["_type", ""], ["_amount", 0]];
 if(isNull _player || _type == "") exitWith {};
 if(_amount < 0) then { _amount = 0 - _amount; };

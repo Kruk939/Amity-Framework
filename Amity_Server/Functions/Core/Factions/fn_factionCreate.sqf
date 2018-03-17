@@ -22,7 +22,7 @@ if(_ret) then {
             private _exists = (([format["core_faction_exists:%1:%2", _short_name, _full_name], 2] call ExternalS_fnc_ExtDBasync) select 0) select 0;
             if(!_exists) then {
                   _selected params["", "", "_price"];
-                  private _banks = [_profile_id] call Server_fnc_banksGetProfile;
+                  private _banks = [_profile_id] call Server_fnc_bankGetProfile;
                   {
                         _x params["", "_account", "", "_cash"];
                         if(_price <= _cash) exitWith {
@@ -30,8 +30,20 @@ if(_ret) then {
                               private _query = format["core_faction_insert:%1:%2:%3:%4", _profile_id, _type, _short_name, _full_name];
                               [0, _query] call ExternalS_fnc_ExtDBquery;
                               _ret = true;
+
                         };
                   } foreach _banks;
+                  if(!isNull _player) then {
+                        if(_ret) then {
+                              ["STR_FACTION_CREATE_SUCCESSFULL", true] remoteExec["Client_fnc_domsg", _player];
+                        } else {
+                              ["STR_FACTION_CREATE_NOT_ENOUGH_MONEY", true] remoteExec["Client_fnc_domsg", _player];
+                        };
+                  };
+            } else {
+                  if(!isNull _player) then {
+                        ["STR_FACTION_CREATE_EXISTS", true] remoteExec["Client_fnc_domsg", _player];
+                  };
             };
       };
 };
