@@ -57,6 +57,7 @@ class CfgFunctions {
                   class factionUpdate {};
                   class memberGetFactions {};
                   class memberGet {};
+                  class memberUpdate {};
                   class factionPayCheck {};
             };
       };

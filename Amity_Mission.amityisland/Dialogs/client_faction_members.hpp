@@ -3,6 +3,8 @@ class client_faction_members {
       class controls {
             class text_info: RscText {
                   idc = 1000;
+                  style = ST_MULTI;
+                  text = "";
                   x = 20 * GUI_GRID_W + GUI_GRID_X;
                   y = 2 * GUI_GRID_H + GUI_GRID_Y;
                   w = 20 * GUI_GRID_W;
@@ -11,6 +13,7 @@ class client_faction_members {
             };
             class listbox_members: RscListbox {
                   idc = 1500;
+                  onLBSelChanged = " ['LB'] call Client_fnc_faction_members_action; ";
                   x = 0 * GUI_GRID_W + GUI_GRID_X;
                   y = 2 * GUI_GRID_H + GUI_GRID_Y;
                   w = 19.5 * GUI_GRID_W;
@@ -19,6 +22,7 @@ class client_faction_members {
             };
             class button_exit: RscButton {
                   idc = 1600;
+                  action = " closeDialog 0; ";
                   text = "Exit"; //--- ToDo: Localize;
                   x = 34 * GUI_GRID_W + GUI_GRID_X;
                   y = 18 * GUI_GRID_H + GUI_GRID_Y;
@@ -27,6 +31,7 @@ class client_faction_members {
             };
             class button_edit: RscButton {
                   idc = 1601;
+                  action = " ['EDIT'] call Client_fnc_faction_members_action; ";
                   text = "Edit Member"; //--- ToDo: Localize;
                   x = 26 * GUI_GRID_W + GUI_GRID_X;
                   y = 18 * GUI_GRID_H + GUI_GRID_Y;
@@ -46,7 +51,7 @@ class client_faction_members {
                   idc = -1;
                   text = "Member information"; //--- ToDo: Localize;
                   x = 20 * GUI_GRID_W + GUI_GRID_X;
-                  y = 1 * GUI_GRID_H + GUI_GRID_Y;
+                  y = 0.5 * GUI_GRID_H + GUI_GRID_Y;
                   w = 20 * GUI_GRID_W;
                   h = 1 * GUI_GRID_H;
                   colorBackground[] = {0,0,0,0.5};

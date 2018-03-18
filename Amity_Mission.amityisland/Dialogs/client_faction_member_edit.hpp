@@ -3,6 +3,7 @@ class client_faction_member_edit {
       class controls {
             class text_info: RscText {
                   idc = 1000;
+                  style = ST_MULTI;
                   x = 0 * GUI_GRID_W + GUI_GRID_X;
                   y = 2 * GUI_GRID_H + GUI_GRID_Y;
                   w = 20 * GUI_GRID_W;
@@ -29,6 +30,7 @@ class client_faction_member_edit {
             };
             class edit_access_level: RscEdit {
                   idc = 1400;
+                  onKeyDown = " ['ACCESS'] call Client_fnc_faction_member_edit_action; ";
                   x = 29 * GUI_GRID_W + GUI_GRID_X;
                   y = 2 * GUI_GRID_H + GUI_GRID_Y;
                   w = 11 * GUI_GRID_W;
@@ -37,6 +39,7 @@ class client_faction_member_edit {
             };
             class edit_salary: RscEdit {
                   idc = 1401;
+                  onKeyDown = " ['SALARY'] call Client_fnc_faction_member_edit_action; ";
                   x = 29 * GUI_GRID_W + GUI_GRID_X;
                   y = 4 * GUI_GRID_H + GUI_GRID_Y;
                   w = 11 * GUI_GRID_W;
@@ -45,6 +48,8 @@ class client_faction_member_edit {
             };
             class edit_description: RscEdit {
                   idc = 1402;
+                  style = ST_MULTI;
+                  onKeyDown = " ['DESC'] call Client_fnc_faction_member_edit_action; ";
                   x = 20.5 * GUI_GRID_W + GUI_GRID_X;
                   y = 8 * GUI_GRID_H + GUI_GRID_Y;
                   w = 19.5 * GUI_GRID_W;
@@ -54,6 +59,7 @@ class client_faction_member_edit {
             class button_exit: RscButton {
                   idc = 1600;
                   text = "Exit"; //--- ToDo: Localize;
+                  action = " ['EXIT'] call Client_fnc_faction_member_edit_action; ";
                   x = 34 * GUI_GRID_W + GUI_GRID_X;
                   y = 14 * GUI_GRID_H + GUI_GRID_Y;
                   w = 6 * GUI_GRID_W;
@@ -61,8 +67,18 @@ class client_faction_member_edit {
             };
             class button_save: RscButton {
                   idc = 1601;
+                  action = " ['EDIT'] call Client_fnc_faction_member_edit_action; ";
                   text = "Save"; //--- ToDo: Localize;
                   x = 26 * GUI_GRID_W + GUI_GRID_X;
+                  y = 14 * GUI_GRID_H + GUI_GRID_Y;
+                  w = 8 * GUI_GRID_W;
+                  h = 1 * GUI_GRID_H;
+            };
+            class button_remove: RscButton {
+                  idc = 1602;
+                  action = " ['REMOVE'] call Client_fnc_faction_member_edit_action; ";
+                  text = "Remove member"; //--- ToDo: Localize;
+                  x = 12 * GUI_GRID_W + GUI_GRID_X;
                   y = 14 * GUI_GRID_H + GUI_GRID_Y;
                   w = 8 * GUI_GRID_W;
                   h = 1 * GUI_GRID_H;
@@ -89,7 +105,7 @@ class client_faction_member_edit {
                   idc = -1;
                   text = "Member information"; //--- ToDo: Localize;
                   x = 0 * GUI_GRID_W + GUI_GRID_X;
-                  y = 1 * GUI_GRID_H + GUI_GRID_Y;
+                  y = 0.5 * GUI_GRID_H + GUI_GRID_Y;
                   w = 20 * GUI_GRID_W;
                   h = 1 * GUI_GRID_H;
                   colorBackground[] = {0,0,0,0.5};

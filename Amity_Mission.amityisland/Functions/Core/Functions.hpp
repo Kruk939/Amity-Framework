@@ -13,6 +13,11 @@ class Factions {
       class stopWorking {};
       class faction_create_action {};
       class faction_create_open {};
+      class faction_member_edit_action {};
+      class faction_member_edit_open {};
+      class faction_members_action {};
+      class faction_members_open {};
+      class faction_members_receive {};
 };
 class Garage {
       file="Functions\Core\Garage";

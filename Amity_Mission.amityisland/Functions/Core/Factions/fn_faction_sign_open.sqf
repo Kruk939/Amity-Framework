@@ -1,3 +1,6 @@
+if(dialog) then {
+      closeDialog 0;
+};
 disableSerialization;
 private _dialog = getText (missionConfigFile >> "Amity" >> "Custamization" >> "Dialogs" >> "factionSign");
 private _ok = createDialog _dialog;
