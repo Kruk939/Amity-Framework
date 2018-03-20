@@ -1,0 +1,11 @@
+params[["_faction", []]];
+if((count _faction) == 0) exitWith {};
+disableSerialization;
+if(!dialog) exitWith {};
+private _display = findDisplay 1034;
+if(isNull _display) exitWith {};
+_display setVariable ["faction", _faction];
+_faction params ["_id", "_profile_id", "_short_name", "_full_name", "_type", "_bank", "_upkeep"];
+if(typeName _upkeep == "OBJECT") then { _upkeep = 0; };
+private _text = format["ID: %1\nShort name: %2\nFull name: %3\nBank $%4\nUpkeep: $%5", _id, _short_name, _full_name, _bank, _upkeep];
+ctrlSetText[1000, _text];

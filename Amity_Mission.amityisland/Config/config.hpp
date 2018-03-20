@@ -27,6 +27,8 @@ class Amity {
                   factionSign = "client_faction_sign"; //idd = 1031
                   factionMembers = "client_faction_members"; //idd = 1032
                   factionMemberEdit = "client_faction_member_edit"; //idd = 1033
+                  factionView = "client_faction_view"; //idd = 1034
+                  factionManageGarage = "client_faction_manage_garage"; //idd 1035
             };
       };
       class Misc {

@@ -18,6 +18,12 @@ class Factions {
       class faction_members_action {};
       class faction_members_open {};
       class faction_members_receive {};
+      class faction_manage_garage_action {};
+      class faction_manage_garage_open {};
+      class faction_manage_garage_receive {};
+      class faction_view_action {};
+      class faction_view_open {};
+      class faction_view_receive {};
 };
 class Garage {
       file="Functions\Core\Garage";

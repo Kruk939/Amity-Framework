@@ -22,7 +22,7 @@ class client_faction_members {
             };
             class button_exit: RscButton {
                   idc = 1600;
-                  action = " closeDialog 0; ";
+                  action = " ['EXIT'] call Client_fnc_faction_members_action; ";
                   text = "Exit"; //--- ToDo: Localize;
                   x = 34 * GUI_GRID_W + GUI_GRID_X;
                   y = 18 * GUI_GRID_H + GUI_GRID_Y;

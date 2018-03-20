@@ -9,6 +9,7 @@ if((count _member) == 0) exitWith {
 };
 
 private _fnc_desc = {
+      disableSerialization;
       private _txt = ctrlText 1402;
       _txt = (_txt splitString ":") joinString "";
       if(count _txt > 199) then {
@@ -17,12 +18,14 @@ private _fnc_desc = {
       _txt;
 };
 private _fnc_access = {
+      disableSerialization;
       private _access = parseNumber(ctrlText 1400);
       if(_access < 0) then { _access = 0; };
       if(_access > 10) then { _access = 10; };
       _access;
 };
 private _fnc_salary = {
+      disableSerialization;
       private _salary = parseNumber(ctrlText 1401);
       if(_salary < 0) then { _salary = 0; };
       if(_salary > 999999) then { _salary = 999999; };
@@ -56,7 +59,5 @@ if(_type == "REMOVE") exitWith {
       [(_display getVariable["faction_id", -1])] call Client_fnc_faction_members_open;
 };
 if(_type == "EXIT") exitWith {
-      private _id = _member select 0;
-      [_id] remoteExec ["Server_fnc_factionRemoveMember", 2];
       [(_display getVariable["faction_id", -1])] call Client_fnc_faction_members_open;
 };

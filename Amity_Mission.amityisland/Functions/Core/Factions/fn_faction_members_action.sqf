@@ -31,3 +31,6 @@ if(_type == "EDIT") exitWith {
             [_member, (_display getVariable["faction_id", -1])] call Client_fnc_faction_member_edit_open;
       };
 };
+if(_type == "EXIT") exitWith {
+      [(_display getVariable["faction_id", -1])] call Client_fnc_faction_view_open;
+};

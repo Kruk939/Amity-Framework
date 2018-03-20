@@ -59,6 +59,9 @@ class CfgFunctions {
                   class memberGet {};
                   class memberUpdate {};
                   class factionPayCheck {};
+                  class factionGetGarage {};
+                  class factionSaveVehicle {};
+                  class factionViewData {};
             };
       };
 	class ExternalS {
