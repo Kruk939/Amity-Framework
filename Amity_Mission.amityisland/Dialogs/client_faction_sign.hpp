@@ -3,6 +3,7 @@ class client_faction_sign {
       class controls {
             class text_info: RscText {
                   idc = 1000;
+                  style = ST_MULTI;
                   x = 20 * GUI_GRID_W + GUI_GRID_X;
                   y = 2 * GUI_GRID_H + GUI_GRID_Y;
                   w = 20 * GUI_GRID_W;
@@ -11,6 +12,7 @@ class client_faction_sign {
             };
             class listbox_list: RscListbox {
                   idc = 1500;
+                  onLBSelChanged = " ['LB'] call Client_fnc_faction_sign_action; ";
                   x = 0 * GUI_GRID_W + GUI_GRID_X;
                   y = 2 * GUI_GRID_H + GUI_GRID_Y;
                   w = 19.5 * GUI_GRID_W;
@@ -19,6 +21,7 @@ class client_faction_sign {
             };
             class button_exit: RscButton {
                   idc = 1600;
+                  action = " ['EXIT'] call Client_fnc_faction_sign_action; ";
                   text = "Exit"; //--- ToDo: Localize;
                   x = 34 * GUI_GRID_W + GUI_GRID_X;
                   y = 18 * GUI_GRID_H + GUI_GRID_Y;
@@ -27,6 +30,7 @@ class client_faction_sign {
             };
             class button_sign: RscButton {
                   idc = 1601;
+                  action = " ['SIGN'] call Client_fnc_faction_sign_action; ";
                   text = "Sign in"; //--- ToDo: Localize;
                   x = 26 * GUI_GRID_W + GUI_GRID_X;
                   y = 18 * GUI_GRID_H + GUI_GRID_Y;

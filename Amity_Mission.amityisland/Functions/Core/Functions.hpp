@@ -24,6 +24,9 @@ class Factions {
       class faction_view_action {};
       class faction_view_open {};
       class faction_view_receive {};
+      class faction_sign_action {};
+      class faction_sign_open {};
+      class faction_sign_receive {};
 };
 class Garage {
       file="Functions\Core\Garage";

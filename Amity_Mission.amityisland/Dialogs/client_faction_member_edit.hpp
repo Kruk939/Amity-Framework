@@ -14,7 +14,7 @@ class client_faction_member_edit {
                   idc = 1001;
                   text = "Edit member: "; //--- ToDo: Localize;
                   x = 0 * GUI_GRID_W + GUI_GRID_X;
-                  y = 0 * GUI_GRID_H + GUI_GRID_Y;
+                  y = -1 * GUI_GRID_H + GUI_GRID_Y;
                   w = 40 * GUI_GRID_W;
                   h = 1 * GUI_GRID_H;
                   colorBackground[] = {0,0,0,0.7};

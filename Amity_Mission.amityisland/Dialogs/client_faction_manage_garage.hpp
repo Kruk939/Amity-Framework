@@ -41,7 +41,7 @@ class client_faction_manage_garage {
             class button_edit: RscButton {
                   idc = 1601;
                   action = " ['SAVE'] call Client_fnc_faction_manage_garage_action; ";
-                  text = "Edit"; //--- ToDo: Localize;
+                  text = "Save"; //--- ToDo: Localize;
                   x = 21 * GUI_GRID_W + GUI_GRID_X;
                   y = 18.5 * GUI_GRID_H + GUI_GRID_Y;
                   w = 9 * GUI_GRID_W;
