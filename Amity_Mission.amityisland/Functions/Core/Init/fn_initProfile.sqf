@@ -9,8 +9,8 @@ player setVariable ["hunger", _hunger];
 player setVariable ["thirst", _thirst];
 player setVariable ["name", format["%1 %2", _first_name, _last_name], true];
 player setVariable ["female", _female, true];
-player setVariable ["first_name", _first_name];
-player setVariable ["last_name", _last_name];
+player setVariable ["first_name", _first_name, true];
+player setVariable ["last_name", _last_name, true];
 
 
 if((count _items) == 0 && (count _weapons) == 0 && (count _clothes) == 0) then {

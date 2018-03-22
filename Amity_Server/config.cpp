@@ -16,6 +16,10 @@ class CfgFunctions {
                   class initEventHandlers {};
                   class resetConnection {};
             };
+            class Logs {
+                  file = "Amity_Server\Functions\Core\Logs"
+                  class logEvent {};
+            };
             class Money {
                   file = "Amity_Server\Functions\Core\Money"
                   class handleCash {};

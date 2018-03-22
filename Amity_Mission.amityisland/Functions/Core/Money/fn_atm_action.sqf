@@ -31,6 +31,7 @@ if(_type == "WITHDRAW") exitWith {
                   [_account_number,"SUB",_amount] remoteExecCall ["Server_fnc_handleBank", 2];
                   [player, "ADD", _amount] remoteExec ["Server_fnc_handleCash", 2];
                   [] remoteExec ["client_fnc_atm_open",player];
+                  [player,format ["Withdrawn %1 from %2 bank account",_amount,_account_number]] remoteExec ["Server_fnc_logevent", 2];
             } else {
                   ["You dont have that much money to withdraw", true] call Client_fnc_domsg;
             };
@@ -45,16 +46,19 @@ if(_type == "DEPOSIT") exitWith {
                   [_amount] remoteExecCall ["Client_fnc_removeCash", 2];
                   [player, "SUB", _amount] remoteExec ["Server_fnc_handleCash", 2];
                   [] remoteExec ["client_fnc_atm_open",player];
+                  [player,format ["Deposited %1 to %2 bank account",_amount,_account_number]] remoteExec ["Server_fnc_logevent", 2];
             } else {
                   ["You dont have enough money to deposit", true] call Client_fnc_domsg;
             };
       };
-};if(_type == "TRANSFER") exitWith {
+};
+if(_type == "TRANSFER") exitWith {
       if((count _data) != 0) then {
             _data params["_id", "_account_number","_profile_id","_cash"];
             private _amount = parseNumber(ctrlText 1402);
             private _toAccount = ctrlText 1401;
             [_account_number,_toAccount,_amount] remoteExecCall ["Server_fnc_bankTransfer", 2];
             [] remoteExec ["client_fnc_atm_open",player];
+            [player,format ["Transfered %1 from %2 bank account to %3 bank account",_amount,_account_number,_toAccount]] remoteExec ["Server_fnc_logevent", 2];
       };
 };
