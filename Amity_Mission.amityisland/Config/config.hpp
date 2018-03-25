@@ -13,7 +13,7 @@ class Amity {
             class Functions {
                   domsg = "";
                   progressBar = "";
-                  addAction = "ClientModules_ACE_fnc_addAceInteraciton";
+                  addAction = "ClientModules_ACE_fnc_addAceInteraction";
                   spawn = "";
             };
             class Dialogs {
