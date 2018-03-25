@@ -1,7 +1,6 @@
 class Amity {
       class Setup {
             modules[] = {
-                  "ClientModules_Example"
             };
             loopTick = 60;
             genders[] = {
@@ -14,7 +13,7 @@ class Amity {
             class Functions {
                   domsg = "";
                   progressBar = "";
-                  addAction = "";
+                  addAction = "ClientModules_ACE_fnc_addAceInteraciton";
                   spawn = "";
             };
             class Dialogs {

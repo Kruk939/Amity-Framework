@@ -1,0 +1,15 @@
+{
+      "module": "ACE",
+      "namespace": "ClientModules_ACE",
+      "version": "0.1",
+      "require": {
+            "amity-framework": ">=0.0.1"
+      },
+      "provides": {
+            "Config": "Config.hpp",
+            "Functions": "Functions.hpp",
+            "Dialogs": "Dialogs.hpp",
+            "RscTitles": "RscTitles.hpp",
+            "stringtable": "stringtable.xml"
+      }
+}
