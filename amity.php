@@ -27,7 +27,7 @@ if(isset($options["config"])) $config_file = $options["config"];
 if(isset($options["s"]) || isset($options["start"])) $start = true;
 if(isset($options["b"]) || isset($options["build"])) $build = true;
 if(isset($options["r"]) || isset($options["rpt"])) $rpt = true;
-if(isset($options["m"]) || isset($options["move"])) $rpt = true;
+if(isset($options["m"]) || isset($options["move"])) $move = true;
 
 class Module {
       private $name;
