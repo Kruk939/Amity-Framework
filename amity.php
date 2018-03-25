@@ -4,17 +4,19 @@ $config_file = "config.json";
 $start = false;
 $build = false;
 $rpt = false;
+$move = false;
 
 
 //options
 $shortopts  = "";
 $shortopts .= "c:";  // Required value
 $shortopts .= "::"; // Optional value
-$shortopts .= "bsr"; // These options do not accept values
+$shortopts .= "bsrm"; // These options do not accept values
 $longopts  = array(
       "config:",
       "build",
       "start",
+      "move",
       "rpt"
 );
 $options = getopt($shortopts, $longopts);
@@ -25,6 +27,7 @@ if(isset($options["config"])) $config_file = $options["config"];
 if(isset($options["s"]) || isset($options["start"])) $start = true;
 if(isset($options["b"]) || isset($options["build"])) $build = true;
 if(isset($options["r"]) || isset($options["rpt"])) $rpt = true;
+if(isset($options["m"]) || isset($options["move"])) $rpt = true;
 
 class Module {
       private $name;
@@ -93,6 +96,15 @@ class Amity {
             $this->environment = $this->config->environment;
       }
       public function start() {
+
+            $this->startServer();
+            $wait = 60;
+            echo "Waiting " . $wait . " seconds for server to load." . PHP_EOL;
+            sleep($wait);
+            $this->openRPT();
+
+      }
+      public function move() {
             $server_out = $this->output . DIRECTORY_SEPARATOR . $this->config->server;
             $extDB_out = $this->output . DIRECTORY_SEPARATOR . $this->config->extDB->dir;
             $mission_out = $this->output . DIRECTORY_SEPARATOR . $this->config->mission;
@@ -112,13 +124,6 @@ class Amity {
                   mkdir($server_addons);
             }
             $this->makePBO($server_out, $server_addons);
-
-            $this->startServer();
-            $wait = 60;
-            echo "Waiting " . $wait . " seconds for server to load." . PHP_EOL;
-            sleep($wait);
-            $this->openRPT();
-
       }
       private function makePBO($from, $to) {
             if(is_dir($from) && (is_dir($to) || is_file($to))) {
@@ -358,6 +363,7 @@ if($build) {
       $amity->compile_mission();
       $amity->compile_server(true);
 }
+if($move) $amity->move();
 if($start) $amity->start();
 if($rpt) $amity->openRPT();
 ?>
