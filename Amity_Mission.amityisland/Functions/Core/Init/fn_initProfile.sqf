@@ -33,6 +33,10 @@ if(!_first) then {
       ["onPlayerFirstConnect", [player, _data]] call Client_fnc_eventCall;
 };
 [player] remoteExec ["Server_fnc_setConnection", 2];
+
+[_profile_id, "PROFILE", player, player] remoteExec ["Server_fnc_variableSet", 2];
+
+
 private _took = time - _time;
 
 private _minutes = floor (_took / 60);

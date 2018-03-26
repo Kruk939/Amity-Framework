@@ -17,8 +17,11 @@ player setVariable["faction_salary", _salary];
 
 if(_changed) then {
       ["onFactionWorkingChange", [_data, _prev]] call Client_fnc_eventCall;
+      [_prev select 1, "FACTION", player, player] remoteExecCall ["Server_fnc_variableUnSet", 2];
+      [_faction_id, "FACTION", player, player] remoteExecCall ["Server_fnc_variableSet", 2];
 } else {
       ["onFactionWorkingStart", [_data]] call Client_fnc_eventCall;
+      [_faction_id, "FACTION", player, player] remoteExecCall ["Server_fnc_variableSet", 2];
 };
 amity_var_faction = _data;
 [["You have started working for [%1] %2", _faction_short_name, _faction_full_name], true] call Client_fnc_domsg;

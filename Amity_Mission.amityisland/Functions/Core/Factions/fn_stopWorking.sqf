@@ -1,5 +1,5 @@
 params[["_change", false]];
-
+[player getVariable["faction_id", -1], "FACTION", player, player] remoteExecCall ["Server_fnc_variableUnSet", 2];
 player setVariable["faction_id", nil, true];
 player setVariable["faction_member_id", nil, true];
 player setVariable["faction_access_level", nil];

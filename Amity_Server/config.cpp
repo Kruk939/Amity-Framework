@@ -67,6 +67,12 @@ class CfgFunctions {
                   class factionSaveVehicle {};
                   class factionViewData {};
             };
+            class Variables {
+                  file = "Amity_Server\Functions\Core\Variables"
+                  class variableSet {};
+                  class variableUnSet {};
+                  class variableInsert {};
+            };
       };
 	class ExternalS {
 		class ExtDB {
