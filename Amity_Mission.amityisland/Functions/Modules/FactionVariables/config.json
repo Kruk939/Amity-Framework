@@ -1,0 +1,12 @@
+{
+      "module": "FactionVariables",
+      "namespace": "ClientModules_FactionVariables",
+      "version": "0.1",
+      "require": {
+            "amity-framework": ">=0.0.1"
+      },
+      "provides": {
+            "Functions": "Functions.hpp",
+            "stringtable": "stringtable.xml"
+      }
+}

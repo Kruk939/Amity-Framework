@@ -1,4 +1,4 @@
-params[["_faction", []]];
+params[["_faction", []], ["_avialable", []], ["_bought", []]];
 if((count _faction) == 0) exitWith {};
 disableSerialization;
 if(!dialog) exitWith {};
