@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Czas generowania: 25 Mar 2018, 18:48
+-- Czas generowania: 26 Mar 2018, 18:04
 -- Wersja serwera: 5.7.13
 -- Wersja PHP: 7.0.11
 
@@ -35,14 +35,6 @@ CREATE TABLE `core_bank` (
   `update_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Zrzut danych tabeli `core_bank`
---
-
-INSERT INTO `core_bank` (`id`, `account_number`, `profile_id`, `cash`, `created_at`, `update_at`) VALUES
-(1, 'PL11174627', 3, 2000, '2018-03-08 14:49:29', '2018-03-25 17:24:51'),
-(2, 'PL60918677', 3, 0, '2018-03-08 14:50:01', '2018-03-08 15:07:02');
-
 -- --------------------------------------------------------
 
 --
@@ -61,15 +53,6 @@ CREATE TABLE `core_factions` (
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Zrzut danych tabeli `core_factions`
---
-
-INSERT INTO `core_factions` (`id`, `profile_id`, `short_name`, `full_name`, `type`, `bank`, `upkeep`, `delete_at`, `created_at`, `updated_at`) VALUES
-(2, 3, 'John', 'Raven', 'company', 0, NULL, NULL, '2018-03-08 15:23:22', '2018-03-08 15:29:12'),
-(7, 3, 'Ecie', 'Pecie', 'gang', 0, NULL, NULL, '2018-03-08 15:24:51', '2018-03-08 15:24:51'),
-(8, 3, 'Ecie Pecie', 'Tesacasdasdasd', 'company', 0, NULL, NULL, '2018-03-18 18:39:25', '2018-03-18 18:39:25');
 
 -- --------------------------------------------------------
 
@@ -100,16 +83,6 @@ CREATE TABLE `core_garage` (
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Zrzut danych tabeli `core_garage`
---
-
-INSERT INTO `core_garage` (`id`, `profile_id`, `faction_id`, `vehicle_id`, `vin`, `plate`, `status`, `stealer_id`, `hit`, `access_level`, `damage`, `fuel`, `color`, `material`, `rims`, `windows`, `lights`, `position`, `inventory`, `created_at`, `updated_at`) VALUES
-(1, 3, NULL, 1, 'AF45Z-5399-2843-3471', 'ZSEQX11', 1, NULL, '[]', NULL, 0, 0, '', '', '', 1, 2, '[]', '[]', '2018-03-06 13:27:08', '2018-03-25 17:57:02'),
-(3, 3, NULL, 1, 'AF45Z-5869-7792-3592', 'ZSNXE4C', 0, NULL, '[1,1,1,0,0,0.741032,0,0.284574,1,0.786679,0.291752,0,0,0,0,0,0,0,0,0,0.0775372,0.0775372,0.0279634,0.0279634]', NULL, 0, 1, '', '', '', 1, 2, '[495.655,358.52,-0.10254]', '[]', '2018-03-06 14:11:38', '2018-03-13 13:46:47'),
-(4, NULL, 8, 1, 'AF45Z-5869-7192-3592', 'ZSNXE1C', 0, NULL, '[1,1,1,0,0,0.741032,0,0.284574,1,0.786679,0.291752,0,0,0,0,0,0,0,0,0,0.0775372,0.0775372,0.0279634,0.0279634]', NULL, 0, 1, '', '', '', 1, 2, '[495.655,358.52,-0.10254]', '[]', '2018-03-06 14:11:38', '2018-03-20 15:31:14'),
-(5, 3, 8, 1, 'AF45Z-5861-7192-3592', 'ZSNEE1C', 0, NULL, '[1,1,1,0,0,0.741032,0,0.284574,1,0.786679,0.291752,0,0,0,0,0,0,0,0,0,0.0775372,0.0775372,0.0279634,0.0279634]', 10, 0, 1, '', '', '', 1, 2, '[495.655,358.52,-0.10254]', '[]', '2018-03-06 14:11:38', '2018-03-20 15:57:09');
 
 -- --------------------------------------------------------
 
@@ -152,17 +125,6 @@ CREATE TABLE `core_profiles` (
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Zrzut danych tabeli `core_profiles`
---
-
-INSERT INTO `core_profiles` (`id`, `player_id`, `profile_uid`, `first_name`, `last_name`, `female`, `cash`, `items`, `clothes`, `weapons`, `hunger`, `thirst`, `position`, `connected`, `created_at`, `updated_at`) VALUES
-(3, 1, 'AZJMNCEVY', 'John', 'Raven', 0, 1000, '[["ACE_fieldDressing","ACE_fieldDressing","ACE_morphine","16Rnd_9x21_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag"],["Rangefinder","16Rnd_9x21_Mag","16Rnd_9x21_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","RH_30Rnd_556x45_M855A1","RH_30Rnd_556x45_M855A1"],["ACE_Clacker","ACE_Clacker","ACE_M26_Clacker","ACE_M26_Clacker","16Rnd_9x21_Mag","16Rnd_9x21_Mag","CUP_PipeBomb_M","CUP_PipeBomb_M","CUP_PipeBomb_M","RH_20Rnd_556x45_Mk318","RH_20Rnd_556x45_Mk318","RH_20Rnd_556x45_Mk318","RH_20Rnd_556x45_Mk318","RH_20Rnd_556x45_Mk318","RH_20Rnd_556x45_Mk318","RH_20Rnd_556x45_Mk318","RH_20Rnd_556x45_Mk318","RH_20Rnd_556x45_Mk318","RH_20Rnd_556x45_Mk318","RH_20Rnd_556x45_Mk318","ACE_PreloadedMissileDummy_Stinger_CUP"],["ItemMap","ItemCompass","Itemwatch","TFAR_anprc154_2","ItemGPS","CUP_NVG_HMNVS"]]', '["TRYK_U_B_BLKBLK_CombatUniform","TRYK_V_ArmorVest_Delta2","DRPG_PoliceBelt","TRYK_H_PASGT_BLK","G_Balaclava_blk"]', '[["RH_M4_ris_m",["RH_30Rnd_556x45_M855A1"],["RH_fa556","CUP_acc_Flashlight","optic_ACO_grn","bipod_02_F_blk"],24],["launch_RPG7_F",[],["","","",""],0],["hgun_P07_F",["16Rnd_9x21_Mag"],["muzzle_snds_L","","",""],17]]', 0, 0, '[4935.27,1981.54,0.1275]', 1, '2018-03-02 16:25:34', '2018-03-25 17:53:19'),
-(4, 3, 'AZBCLBRJF', 'Jack', 'Davis', 0, 0, '[[],[],["SmokeShellRed","SmokeShellRed","SmokeShellRed","SmokeShellRed","SmokeShellRed","SmokeShellRed","SmokeShellRed","SmokeShellRed","SmokeShellRed","SmokeShellRed","SmokeShellRed","SmokeShellRed","SmokeShellRed"],["ItemMap","ItemCompass","TFAR_microdagr"]]', '["CG_EMS6","V_PlateCarrier2_blk","invisible_bergen","H_Hat_brown","G_Bandanna_aviator"]', '[[],[],[]]', 0, 0, '[2468.02,4363.59,0.161273]', 0, '2018-03-08 17:44:38', '2018-03-12 12:28:04'),
-(5, 2, 'AZKSZZGDG', 'Karol', 'Zadymka', 0, 0, '[[],[],["CUP_30Rnd_762x39_AK47_M","CUP_30Rnd_762x39_AK47_M","CUP_30Rnd_762x39_AK47_M","CUP_30Rnd_762x39_AK47_M","CUP_30Rnd_762x39_AK47_M","CUP_30Rnd_762x39_AK47_M","CUP_30Rnd_762x39_AK47_M","CUP_30Rnd_762x39_AK47_M","CUP_30Rnd_762x39_AK47_M"],["ItemMap","ItemCompass","TFAR_microdagr","Rangefinder"]]', '["U_BasicBody_FS","","invisible_viperharness","Gorb_PlaidHat3","G_Bandanna_beast"]', '[["CUP_arifle_AKS_Gold",["CUP_30Rnd_762x39_AK47_M"],["","","CUP_optic_Kobra",""],30],[],[]]', 0, 0, '[5642.18,4365.58,0]', 0, '2018-03-08 17:44:44', '2018-03-12 12:28:04'),
-(6, 4, 'AZXJNARRQ', 'Aleks', 'Herbatka', 0, 0, '[]', '[]', '[]', 0, 0, '[]', 0, '2018-03-08 17:46:15', '2018-03-08 17:46:15'),
-(7, 4, 'AZFVWZFWA', '', '', 0, 0, '[["ACE_EarPlugs"],[],[],["ItemMap","ItemCompass","TFAR_microdagr","ACE_Yardage450"]]', '["silver_lake_fbi","","invisible_kitbag","","TRYK_headset_Glasses"]', '[[],[],[]]', 0, 0, '[3247.97,5223.14,2.54564]', 0, '2018-03-08 17:46:20', '2018-03-12 12:28:04');
-
 -- --------------------------------------------------------
 
 --
@@ -177,15 +139,26 @@ CREATE TABLE `core_users` (
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+-- --------------------------------------------------------
+
 --
--- Zrzut danych tabeli `core_users`
+-- Struktura tabeli dla tabeli `core_variables`
 --
 
-INSERT INTO `core_users` (`id`, `uid`, `subscriber`, `created_at`, `updated_at`) VALUES
-(1, '76561198015862132', 0, '2018-01-10 16:53:59', '2018-01-10 16:53:59'),
-(2, '76561198006925322', 0, '2018-03-08 17:44:20', '2018-03-08 17:44:20'),
-(3, '76561198105460465', 0, '2018-03-08 17:44:24', '2018-03-08 17:44:24'),
-(4, '76561198107918085', 0, '2018-03-08 17:46:02', '2018-03-08 17:46:02');
+CREATE TABLE `core_variables` (
+  `id` int(10) NOT NULL,
+  `faction_id` int(10) DEFAULT NULL,
+  `profile_id` int(10) DEFAULT NULL,
+  `user_id` int(10) DEFAULT NULL,
+  `garage_id` int(10) DEFAULT NULL,
+  `name` varchar(255) NOT NULL,
+  `value` varchar(255) NOT NULL,
+  `type` enum('STRING','SCALAR','CODE','ARRAY') NOT NULL DEFAULT 'STRING',
+  `public` tinyint(1) NOT NULL DEFAULT '0',
+  `server` tinyint(1) NOT NULL DEFAULT '0',
+  `start_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `end_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -203,12 +176,17 @@ CREATE TABLE `core_vehicles` (
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+-- --------------------------------------------------------
+
 --
--- Zrzut danych tabeli `core_vehicles`
+-- Struktura tabeli dla tabeli `faction_assigned_modules`
 --
 
-INSERT INTO `core_vehicles` (`id`, `class_name`, `type`, `name`, `description`, `created_at`, `updated_at`) VALUES
-(1, 'pop_bmwm4', 'car', 'BMW 4', '', '2018-03-05 17:53:15', '2018-03-05 17:53:15');
+CREATE TABLE `faction_assigned_modules` (
+  `id` int(11) NOT NULL,
+  `faction_id` int(11) NOT NULL,
+  `module_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -227,14 +205,20 @@ CREATE TABLE `faction_members` (
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+-- --------------------------------------------------------
+
 --
--- Zrzut danych tabeli `faction_members`
+-- Struktura tabeli dla tabeli `faction_modules`
 --
 
-INSERT INTO `faction_members` (`id`, `faction_id`, `profile_id`, `access_level`, `salary`, `description`, `created_at`, `updated_at`) VALUES
-(5, 2, 3, 1, NULL, '', '2018-03-08 15:25:52', '2018-03-08 15:25:52'),
-(6, 7, 3, 1, NULL, '', '2018-03-17 17:40:47', '2018-03-17 17:40:47'),
-(7, 8, 3, 10, 1000, 'Jest zajebisty', '2018-03-18 18:39:25', '2018-03-20 15:54:50');
+CREATE TABLE `faction_modules` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `price` int(11) NOT NULL,
+  `variable` varchar(255) NOT NULL,
+  `type` enum('company','gang','permanent') NOT NULL,
+  `visible` tinyint(1) NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Indeksy dla zrzutów tabel
@@ -290,11 +274,29 @@ ALTER TABLE `core_users`
   ADD UNIQUE KEY `uid` (`uid`);
 
 --
+-- Indexes for table `core_variables`
+--
+ALTER TABLE `core_variables`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `faction_id` (`faction_id`),
+  ADD KEY `profile_id` (`profile_id`),
+  ADD KEY `user_id` (`user_id`),
+  ADD KEY `garage_id` (`garage_id`);
+
+--
 -- Indexes for table `core_vehicles`
 --
 ALTER TABLE `core_vehicles`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `class_name` (`class_name`);
+
+--
+-- Indexes for table `faction_assigned_modules`
+--
+ALTER TABLE `faction_assigned_modules`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `faction_id` (`faction_id`),
+  ADD KEY `module_id` (`module_id`);
 
 --
 -- Indexes for table `faction_members`
@@ -304,6 +306,12 @@ ALTER TABLE `faction_members`
   ADD UNIQUE KEY `unique` (`faction_id`,`profile_id`) USING BTREE,
   ADD KEY `faction_id` (`faction_id`),
   ADD KEY `profile_id` (`profile_id`);
+
+--
+-- Indexes for table `faction_modules`
+--
+ALTER TABLE `faction_modules`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -340,15 +348,30 @@ ALTER TABLE `core_profiles`
 ALTER TABLE `core_users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
+-- AUTO_INCREMENT dla tabeli `core_variables`
+--
+ALTER TABLE `core_variables`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
 -- AUTO_INCREMENT dla tabeli `core_vehicles`
 --
 ALTER TABLE `core_vehicles`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT dla tabeli `faction_assigned_modules`
+--
+ALTER TABLE `faction_assigned_modules`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT dla tabeli `faction_members`
 --
 ALTER TABLE `faction_members`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+--
+-- AUTO_INCREMENT dla tabeli `faction_modules`
+--
+ALTER TABLE `faction_modules`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- Ograniczenia dla zrzutów tabel
 --
@@ -379,6 +402,22 @@ ALTER TABLE `core_garage`
 --
 ALTER TABLE `core_profiles`
   ADD CONSTRAINT `core_profiles_ibfk_1` FOREIGN KEY (`player_id`) REFERENCES `core_users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Ograniczenia dla tabeli `core_variables`
+--
+ALTER TABLE `core_variables`
+  ADD CONSTRAINT `core_variables_ibfk_1` FOREIGN KEY (`faction_id`) REFERENCES `core_factions` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `core_variables_ibfk_2` FOREIGN KEY (`profile_id`) REFERENCES `core_profiles` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `core_variables_ibfk_3` FOREIGN KEY (`user_id`) REFERENCES `core_users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `core_variables_ibfk_4` FOREIGN KEY (`garage_id`) REFERENCES `core_garage` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Ograniczenia dla tabeli `faction_assigned_modules`
+--
+ALTER TABLE `faction_assigned_modules`
+  ADD CONSTRAINT `faction_assigned_modules_ibfk_1` FOREIGN KEY (`faction_id`) REFERENCES `core_factions` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `faction_assigned_modules_ibfk_2` FOREIGN KEY (`module_id`) REFERENCES `faction_modules` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Ograniczenia dla tabeli `faction_members`
