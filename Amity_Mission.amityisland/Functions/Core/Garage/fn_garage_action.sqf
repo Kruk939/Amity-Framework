@@ -34,12 +34,14 @@ if(_type == "LB") exitWith {
       };
 };
 if(_type == "SPAWN") exitWith {
-      if((count _data) != 0) then {
-            _data params["_id", "_profile_id", "_faction_id", "_vehicle_id", "_class", "_vin", "_plate", "_status", "_hit", "_damage", "_fuel", "_color", "_material", "_rims", "_windows", "_lights", "_position", "_inventory", "_access_level"];
-            if(_damage < 0.8) then {
-                  [_id, player] remoteExec["Server_fnc_spawnVehicle", 2];
-            } else {
-                  ["Your vehicle it is too damage", true] call Client_fnc_domsg;
+      if(isNull amity_var_attachedVehicle) then {
+            if((count _data) != 0) then {
+                  _data params["_id", "_profile_id", "_faction_id", "_vehicle_id", "_class", "_vin", "_plate", "_status", "_hit", "_damage", "_fuel", "_color", "_material", "_rims", "_windows", "_lights", "_position", "_inventory", "_access_level"];
+                  if(_damage < 0.8) then {
+                        [_id, player] remoteExec["Server_fnc_spawnVehicle", 2];
+                  } else {
+                        ["Your vehicle it is too damage", true] call Client_fnc_domsg;
+                  };
             };
       };
 };
