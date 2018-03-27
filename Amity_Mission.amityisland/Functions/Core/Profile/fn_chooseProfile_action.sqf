@@ -7,6 +7,7 @@ if(_type == "CHOOSE") exitWith {
       if(_index > -1) then {
             private _data = call compile (lbData[1500, _index]);
             [_data] call Client_fnc_initProfile;
+            amity_var_profile_choose = false;
             closeDialog 0;
       };
 };
@@ -25,6 +26,13 @@ if(_type == "CREATE") exitWith {
       if((count _profiles) >= _max) then {
             ["You reached max profile count.", true] call Client_fnc_domsg;
       } else {
+            amity_var_profile_choose = false;
             [] call Client_fnc_createProfile;
+      };
+};
+if(_type == "EXIT") exitWith {
+      if(amity_var_profile_choose) then {
+            amity_var_profile_choose = false;
+            [player] remoteExec ["Server_fnc_initPlayer", 2];
       };
 };

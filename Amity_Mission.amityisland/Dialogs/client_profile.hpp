@@ -1,5 +1,6 @@
 class client_profile {
       idd = 1000;
+      onUnload = " ['EXIT'] call Client_fnc_chooseProfile_action; ";
       class controls {
             class text_details: RscText {
                   idc = 1000;

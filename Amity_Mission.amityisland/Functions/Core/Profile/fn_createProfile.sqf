@@ -1,4 +1,6 @@
 if(dialog) then { closeDialog 0; };
+if(amity_var_profile_creating || amity_var_profile_choose) exitWith {};
+amity_var_profile_creating = true;
 disableSerialization;
 private _dialog = getText(missionConfigFile >> "Amity" >> "Custamization" >> "Dialogs" >> "createProfile");
 private _ok = createDialog _dialog;

@@ -16,18 +16,14 @@ Documentation for actions:
 private _actions = _this;
 if(count _this == 0) exitWith {};
 {
-      diag_log _x;
       if(count _x != 0) then {
             _x params["_action_array", "_settings"];
-            diag_log _action_array;
-            diag_log _settings;
             _settings params["_type", "_add_options"];
             private _action = _action_array call ace_interact_menu_fnc_createAction;
             if(count _add_options == 4) then {
                         _add_options set[4, _add_options select 3];
             };
             _add_options set[3, _action];
-            diag_log _add_options;
             switch(_type) do {
                   case "class": {
                         _add_options call ace_interact_menu_fnc_addActionToClass;

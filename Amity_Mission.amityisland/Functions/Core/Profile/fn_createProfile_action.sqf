@@ -9,6 +9,9 @@ if(_type == "CREATE") exitWith {
       ctrlEnable[1600, false];
 };
 if(_type == "EXIT") exitWith {
-      closeDialog 0;
-      [player] remoteExec ["Server_fnc_initPlayer", 2];
+      if(dialog) exitWith { closeDialog 0; ["EXIT"] spawn Client_fnc_createProfile_action; };
+      if(amity_var_profile_creating) then {
+            amity_var_profile_creating = false;
+            [player] remoteExec ["Server_fnc_initPlayer", 2];
+      };
 };

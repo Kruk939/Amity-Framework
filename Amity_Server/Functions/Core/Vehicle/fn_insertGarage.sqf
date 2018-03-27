@@ -25,7 +25,7 @@ for [{}, {_i < 3}, {_i = _i + 1}] do {
             _vin = format["%1%2%3%4%5", _vin, (_sum % 5), floor(_sum / 10), round(_sum / 6), (_sum % 3)];
       };
 };
-if(isNull _faction) then { _faction = ""; } else { _player_id = ""; };
+if(typeName _faction == "OBJECT") then { _faction = ""; } else { _player_id = ""; };
 private _plate = toUpper format["%1%2","ZS", [5] call Client_fnc_generateString];
 _query = format["%1:%2:%3:%4:%5:%6", _query, _player_id, _faction, _class, _vin, _plate];
 _query = format["%1:%2:%3:%4:%5:%6", _query, _color, _material, _rims, _windows, _lights];
