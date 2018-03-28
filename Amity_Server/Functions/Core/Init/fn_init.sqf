@@ -4,6 +4,7 @@ diag_log "------------------------";
 secret_variable = true;
 publicVariable "secret_variable";
 amity_var_events = [];
+amity_var_vehicles = [];
 Amity_Server_Inited = false;
 ["amity_framework", "SQL_CUSTOM", "amity_framework.ini"] spawn ExternalS_fnc_ExtDBinit;
 sleep 3;
