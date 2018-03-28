@@ -26,7 +26,7 @@ if(_faction_id == -1) then {
             } forEach _banks;
             if(_paid) then {
                   _data params[["_color", ""], ["_material", ""], ["_rims", ""], ["_windows", 0], ["_lights", 0]];
-                  if(!_allow_skin) then {
+                  if(_allow_skin == 0) then {
                         _color = "";
                         _material = "";
                         _rims = "";
@@ -57,7 +57,7 @@ if(_faction_id == -1) then {
       };
       [_faction_id, "SUB", _price] call Server_fnc_factionBankTransfer;
       _data params[["_color", ""], ["_material", ""], ["_rims", ""], ["_windows", 0], ["_lights", 0]];
-      if(!_allow_skin) then {
+      if(_allow_skin == 0) then {
             _color = "";
             _material = "";
             _rims = "";

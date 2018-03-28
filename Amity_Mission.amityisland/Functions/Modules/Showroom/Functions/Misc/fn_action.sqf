@@ -145,9 +145,9 @@ if(_type == "buyCompany") exitWith {
       private _lights = 0;
       if(_allow_skin == 1) then {
             private _index = lbCurSel (1501);
-            _color = call compile (lbData[1501, _index]);
+            _color = (lbData[1501, _index]);
             _index = lbCurSel (1502);
-            _material = call compile (lbData[1502, _index]);
+            _material = (call compile (lbData[1502, _index])) select 0;
       };
       [_id, _faction_id, [_color, _material, _rims, _windows, _lights], player, "ClientModules_Showroom_fnc_action"] remoteExec ["ServerModules_Showroom_fnc_buy", 2];
       ctrlEnable[1600, false];
@@ -166,9 +166,13 @@ if(_type == "buyPlayer") exitWith {
       private _lights = 0;
       if(_allow_skin == 1) then {
             private _index = lbCurSel (1501);
-            _color = call compile (lbData[1501, _index]);
+            if(_index != -1) then {
+                  _color = (lbData[1501, _index]);
+            };
             _index = lbCurSel (1502);
-            _material = call compile (lbData[1502, _index]);
+            if(_index != -1) then {
+                  _material = (call compile (lbData[1502, _index])) select 0;
+            };
       };
       [_id, -1, [_color, _material, _rims, _windows, _lights], player, "ClientModules_Showroom_fnc_action"] remoteExec ["ServerModules_Showroom_fnc_buy", 2];
       ctrlEnable[1600, false];
