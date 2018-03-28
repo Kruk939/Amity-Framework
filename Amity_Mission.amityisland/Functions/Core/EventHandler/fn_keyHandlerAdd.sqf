@@ -13,6 +13,6 @@ private _found = false;
       };
 } forEach amity_var_keys;
 if(!_found) then {
-      amity_var_keys pushBack [_key, [_name, [[_shift, _ctrl, _alt, _disp], _function]]];
+      amity_var_keys pushBack [_key, [[_name, [_shift, _ctrl, _alt, _disp], _function]]];
 };
 _name;

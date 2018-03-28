@@ -32,5 +32,6 @@ if(_status == 0 || _force) then {
                   _vehicle setVariable ["owner", _owner, true];
             };
       };
+      amity_var_vehicles pushBack _vehicle;
       private _query = [format["core_garage_set_status:%1:%2", _id, 1], 2] call ExternalS_fnc_ExtDBasync;
 };

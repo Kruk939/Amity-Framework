@@ -34,5 +34,4 @@ if(count _this == 0) exitWith {};
             };
             amity_var_actions pushBack _x;
       };
-      diag_log "Next";
 } foreach _actions;
