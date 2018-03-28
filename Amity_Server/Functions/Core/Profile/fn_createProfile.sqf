@@ -8,7 +8,9 @@ if(_exists) then {
       private _id = _player getVariable["core_user_id", -1];
       private _uid = format["AZ%1", [7, "ABCDEFGHIJKLMNOPQRSTUVWXYZ"] call Client_fnc_generateString];
       if(_id != -1) then {
-            [0, format["core_insert_profile:%1:%2:%3:%4:%5", _id, _uid, _first_name, _last_name, _female]] call ExternalS_fnc_ExtDBquery;
+            private _ret = [0, format["core_insert_profile:%1:%2:%3:%4:%5", _id, _uid, _first_name, _last_name, _female]] call ExternalS_fnc_ExtDBquery;
+            private _profile_id = ((_ret select 0) select 0);
+            [_profile_id] call Server_fnc_bankCreate;
       };
       ["OK"] remoteExec ["Client_fnc_createProfile_receive", _player];
 };
