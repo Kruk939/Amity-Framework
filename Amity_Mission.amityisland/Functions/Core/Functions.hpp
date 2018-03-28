@@ -42,6 +42,7 @@ class Init {
       class initListeners {};
       class initProfile {};
       class loop {};
+      class init {};
       class miscVariables {};
 };
 class Misc {

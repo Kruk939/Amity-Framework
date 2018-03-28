@@ -1,6 +1,6 @@
 {
-      "module": "#Example",
-      "namespace": "ClientModules_Example",
+      "module": "Vehicles",
+      "namespace": "ClientModules_Vehicles",
       "version": "0.1",
       "require": {
             "amity-framework": ">=0.0.1"

@@ -7,6 +7,7 @@ class ServerModules_Garage {
             file = "Amity_Server\Functions\Modules\Garage\Functions"
             class vehicleInit {};
             class numberPlate {};
+            class getPlayerVehicles {};
       };
 
 };

@@ -14,4 +14,8 @@ class ClientModules_Vehicles {
             class sirenKeyDown {};
             class sirenKeyUp {};
       }
+      class Misc {
+            file="Functions\Modules\Vehicles\Functions\Misc";
+            class receive {};
+      };
 };
