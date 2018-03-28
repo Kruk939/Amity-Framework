@@ -18,7 +18,7 @@ private _array = [
             ["class",["openrp_vendor_jobs", 0, ["ACE_MainActions"]]]
       ],
       [
-            ["ARP_FACTION_VIEW","Manage Faction", "", { [] spawn Client_fnc_faction_view_open; },{count company_var_active_data != 0},{},"","screenloc",2],
+            ["ARP_FACTION_VIEW","Manage Faction", "", { [player getVariable["faction_id", -1]] spawn Client_fnc_faction_view_open; },{count amity_var_faction != 0},{},"","screenloc",2],
             ["class",["openrp_vendor_jobs", 0, ["ACE_MainActions"]]]
       ],
       [

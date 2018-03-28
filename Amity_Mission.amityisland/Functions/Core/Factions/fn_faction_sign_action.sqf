@@ -24,6 +24,7 @@ if(_type == "LB") exitWith {
 };
 if(_type == "SIGN") exitWith {
       [_faction] call Client_fnc_startWorking;
+      closeDialog 0;
 };
 if(_type == "EXIT") exitWith {
       closeDialog 0;
