@@ -44,6 +44,7 @@ class Init {
       class loop {};
       class init {};
       class miscVariables {};
+      class fetchItemType {};
 };
 class Misc {
       file="Functions\Core\Misc";

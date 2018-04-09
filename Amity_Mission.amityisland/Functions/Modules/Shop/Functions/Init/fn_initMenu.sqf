@@ -1,16 +1,12 @@
-private _array = [
-			// Company Garage
-      [
-            ["SHOWROOM_OPEN_CAR","Showroom", "", {["car"] call ClientModules_Showroom_fnc_open;},{true},{},"","screenloc",3],
-            ["class",["openrp_vendor_carshop", 0, ["ACE_MainActions"]]]
-      ],
-      [
-            ["SHOWROOM_OPEN_SHIP","Showroom", "", {["ship"] call ClientModules_Showroom_fnc_open;},{true},{},"","screenloc",3],
-            ["class",["openrp_vendor_boatshop", 0, ["ACE_MainActions"]]]
-      ],
-      [
-            ["SHOWROOM_OPEN_AIR","Showroom", "", {["air"] call ClientModules_Showroom_fnc_open;},{true},{},"","screenloc",3],
-            ["class",["openrp_vendor_airshop", 0, ["ACE_MainActions"]]]
-      ]
-];
-//_array call Client_fnc_addAction;
+private _basic = getArray(missionConfigFile >> "Shop" >> "basic");
+private _array = [];
+{
+      params["_name", "_id", "_class"];
+      private _code = format["[%1] call ClientModules_Shop_fnc_open;", _id];
+      _code = compile _code;
+      _array pushBack [
+            [format["SHOP_BASIC_%1", _forEachIndex], _name, "", _code,{true},{},"","screenloc",3],
+            ["class", [_class, 0, ["ACE_MainActions"]]]
+      ];
+} forEach _basic;
+_array call Client_fnc_addAction;
