@@ -1,6 +1,6 @@
-class ClientModules_Showroom {
+class ClientModules_Shop {
       class Init {
-            file="Functions\Modules\Showroom\Functions\Init";
+            file="Functions\Modules\Shop\Functions\Init";
             class initEventHandlers {};
             class initListeners {};
             class initMenu {};
@@ -8,10 +8,15 @@ class ClientModules_Showroom {
             class initVariables {};
       };
       class Misc {
-            file="Functions\Modules\Showroom\Functions\Misc";
-            class action {};
-            class camera {};
-            class receive {};
+            file="Functions\Modules\Shop\Functions\Misc";
+            class preview {};
+            class setupCamera {};
+            class terminateCamera {};
+      };
+      class Dialog {
+            file="Functions\Modules\Shop\Functions\Dialog";
             class open {};
+            class receive {};
+            class action {};
       };
 };

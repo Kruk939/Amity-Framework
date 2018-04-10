@@ -1,6 +1,6 @@
 {
-      "module": "Showroom",
-      "namespace": "ClientModules_Showroom",
+      "module": "Shop",
+      "namespace": "ClientModules_Shop",
       "version": "0.1",
       "require": {
             "amity-framework": ">=0.0.1"

@@ -27,7 +27,7 @@ class Amity_store {
             class _CT_LISTNBOX_LEFT;
 		class combobox_shop: RscCombo {
 			idc = 2100;
-                  onLBSelChanged = "[""CB""] spawn ClientModules_ShopSystem_fnc_action; ";
+                  onLBSelChanged = "[""CB""] spawn ClientModules_Shop_fnc_action; ";
 			x = 1.84 * GUI_GRID_W + GUI_GRID_X;
 			y = 3.85 * GUI_GRID_H + GUI_GRID_Y;
 			w = 30.34 * GUI_GRID_W;
@@ -36,7 +36,7 @@ class Amity_store {
 		class listbox_itemlist: Company_RscListBox {
 			idc = 1500;
                   type = CT_LISTNBOX;
-                  onLBSelChanged = "[""LB""] spawn ClientModules_ShopSystem_fnc_action; ";
+                  onLBSelChanged = "[""LB""] spawn ClientModules_Shop_fnc_action; ";
                   drawSideArrows = 0;
                   idcLeft = 67; // Left button IDC
 			idcRight = 66; // Right button IDC
@@ -63,7 +63,7 @@ class Amity_store {
 		};
 		class button_cart_sell_remove: Company_HideButton {
 			idc = 1700;
-                  action = "[""SELL_REM""] spawn ClientModules_ShopSystem_fnc_action; ";
+                  action = "[""SELL_REM""] spawn ClientModules_Shop_fnc_action; ";
 			x = 35.53 * GUI_GRID_W + GUI_GRID_X;
 			y = 19.5 * GUI_GRID_H + GUI_GRID_Y;
 			w = 13.17 * GUI_GRID_W;
@@ -71,7 +71,7 @@ class Amity_store {
 		};
 		class button_cart_payout: Company_HideButton {
 			idc = 1701;
-                  action = "[""PAY_OUT""] spawn ClientModules_ShopSystem_fnc_action; ";
+                  action = "[""PAY_OUT""] spawn ClientModules_Shop_fnc_action; ";
 			x = 35.5 * GUI_GRID_W + GUI_GRID_X;
 			y = 22.8 * GUI_GRID_H + GUI_GRID_Y;
 			w = 13.17 * GUI_GRID_W;
@@ -79,7 +79,7 @@ class Amity_store {
 		};
 		class button_store_buy: Company_HideButton {
 			idc = 1702;
-                  action = "[""BUY_ADD""] spawn ClientModules_ShopSystem_fnc_action; ";
+                  action = "[""BUY_ADD""] spawn ClientModules_Shop_fnc_action; ";
 			x = 20.65 * GUI_GRID_W + GUI_GRID_X;
 			y = 19.5 * GUI_GRID_H + GUI_GRID_Y;
 			w = 11.5 * GUI_GRID_W;
@@ -87,7 +87,7 @@ class Amity_store {
 		};
 		class button_store_sell: Company_HideButton {
 			idc = 1703;
-                  action = "[""SELL_ADD""] spawn ClientModules_ShopSystem_fnc_action; ";
+                  action = "[""SELL_ADD""] spawn ClientModules_Shop_fnc_action; ";
 			x = 20.65 * GUI_GRID_W + GUI_GRID_X;
 			y = 21 * GUI_GRID_H + GUI_GRID_Y;
 			w = 11.5 * GUI_GRID_W;
@@ -103,7 +103,7 @@ class Amity_store {
 		};
 		class button_cart_buy_remove: Company_HideButton {
 			idc = 1705;
-                  action = "[""BUY_REM""] spawn ClientModules_ShopSystem_fnc_action; ";
+                  action = "[""BUY_REM""] spawn ClientModules_Shop_fnc_action; ";
 			x = 35.5 * GUI_GRID_W + GUI_GRID_X;
 			y = 9 * GUI_GRID_H + GUI_GRID_Y;
 			w = 13.17 * GUI_GRID_W;

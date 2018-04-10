@@ -23,6 +23,6 @@ if(_type == "head") exitWith {
 };
 
 if(_type == "vest") exitWith {
-      //removeHeadgear player;
-      //player addHeadgear _class;
+      removeVest player;
+      player addVest _class;
 };

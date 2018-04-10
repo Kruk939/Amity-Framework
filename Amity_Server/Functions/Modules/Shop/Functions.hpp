@@ -4,7 +4,7 @@ class ServerModules_Shop {
             class init {};
       };
       class Functions {
-            file = "Amity_Server\Functions\Modules\Shop\Functions"
+            file = "Amity_Server\Functions\Modules\Shop\Functions\Misc"
             class getItem {};
             class getShop {};
             class handleItem {};
