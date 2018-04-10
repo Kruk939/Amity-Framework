@@ -1,5 +1,7 @@
 params[["_shop_id", -1], ["_toBuy", []], ["_toSell", []], ["_player", objNull], ["_function", ""]];
 if(_shop_id == -1 || isNull _player) exitWith {};
+if(player getVariable["shop_var_inprogress", false]) exitWith {};
+player setVariable["shop_var_inprogress", true, true];
 if((count _toBuy == 0) && (count _toSell == 0)) exitWith {};
 private _toPay = 0;
 private _remove = [];
@@ -54,3 +56,4 @@ if(_toPay <= _cash) then {
       _remove = [];
 };
 [_add, _remove, _message] remoteExec [_function, _player];
+player setVariable["shop_var_inprogress", false, true];

@@ -18,5 +18,6 @@ class ClientModules_Shop {
             class open {};
             class receive {};
             class action {};
+            class finishTransaction {};
       };
 };

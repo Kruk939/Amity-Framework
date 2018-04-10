@@ -197,37 +197,19 @@ if(_type == "SELL_REM") exitWith {
       };
 };
 if(_type == "PAY_OUT") exitWith {
-      if(player getVariable["shopsystem_transaction", 0] != 0) exitWith {};
+      if(player getVariable["shop_var_inprogress", false]) exitWith {};
       private _buy = _cart select 0;
       private _sell = _cart select 1;
+      if((count _buy == 0) && (count _sell == 0)) exitWith {
+            ["You have to sell/buy something", true] call Client_fnc_domsg;
+      };
       ctrlEnable [1701, false];
-      private _send = [];
-      {
-            private _tBuy = [];
-            private _tSell = [];
-            private _id = _x select 0;
-            {
-                  if(_id == (_x select 3)) then {
-                        _tBuy pushBack [(_x select 0), (_x select 1)];
-                  };
-            } foreach _buy;
-            {
-                  if(_id == (_x select 3)) then {
-                        _tSell pushBack [(_x select 0), (_x select 1)];
-                  };
-            } foreach _sell;
-            if((count _tBuy) != 0 || (count _tSell) != 0) then {
-                  _send pushBack [_id, [_tBuy, _tSell], player];
+      [_shop select 0, _buy, _sell, player, "ClientModules_Shop_fnc_finishTransaction"] remoteExec ["ServerModules_Shopsystem_fnc_transaction", 2];
+      [_display] spawn {
+            params["_display"];
+            waitUntil {!(player getVariable["shop_var_inprogress", false])};
+            if(dialog && !isNull _display) then {
+                  ctrlEnable [1701, true];
             };
-      } foreach _shops;
-      diag_log _send;
-      player setVariable["shopsystem_transaction", (count _send)];
-      {
-            _x remoteExec ["ServerModules_Shopsystem_fnc_transaction", 2];
-      } forEach _send;
-      [_send] spawn {
-            params["_send"];
-            uiSleep (5 * _send);
-            player setVariable["shopsystem_transaction", 0];
       };
 };
