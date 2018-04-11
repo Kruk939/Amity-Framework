@@ -9,8 +9,12 @@ class ClientModules_Crafting {
       };
       class Misc {
             file="Functions\Modules\Crafting\Functions\Misc";
+            class craftingMax {};
+            class craftItem {};
       };
       class Dialog {
             file="Functions\Modules\Crafting\Functions\Dialog";
+            class action {};
+            class open {};
       };
 };
