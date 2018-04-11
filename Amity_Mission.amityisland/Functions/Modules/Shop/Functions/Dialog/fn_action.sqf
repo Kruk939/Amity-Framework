@@ -204,8 +204,10 @@ if(_type == "PAY_OUT") exitWith {
             ["You have to sell/buy something", true] call Client_fnc_domsg;
       };
       ctrlEnable [1701, false];
-      [_shop select 0, _buy, _sell, player, "ClientModules_Shop_fnc_finishTransaction"] remoteExec ["ServerModules_Shopsystem_fnc_transaction", 2];
+      diag_log format["%1 %2 %3", _shop select 0, _buy, _sell];
+      [_shop select 0, _buy, _sell, player, "ClientModules_Shop_fnc_finishTransaction"] remoteExec ["ServerModules_Shop_fnc_transaction", 2];
       [_display] spawn {
+            disableSerialization;
             params["_display"];
             waitUntil {!(player getVariable["shop_var_inprogress", false])};
             if(dialog && !isNull _display) then {
