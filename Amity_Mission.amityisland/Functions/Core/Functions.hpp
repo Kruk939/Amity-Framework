@@ -47,6 +47,7 @@ class Init {
 };
 class Misc {
       file="Functions\Core\Misc";
+      class countItems {};
       class addAction {};
       class doMsg {};
       class getVariable {};
@@ -64,6 +65,7 @@ class Misc {
       class loadItems {};
       class removeItems {};
       class surrenderAction {};
+      class fetchItem {};
 };
 class Money {
       file="Functions\Core\Money";
