@@ -16,6 +16,14 @@ class ClientModules_Phone {
             class getOffer {};
             class getRingtone {};
       };
+      class Contacts {
+            file="Functions\Modules\Phone\Functions\Contacts";
+            class addContact {};
+            class findContact {};
+            class receiveContact {};
+            class removeContact {};
+            class updateContact {};
+      };
       class Dialog {
             file="Functions\Modules\Phone\Functions\Dialog";
       };

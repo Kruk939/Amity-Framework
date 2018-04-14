@@ -3,9 +3,15 @@ class ServerModules_Phone {
             file = "Amity_Server\Functions\Modules\Phone"
             class init {};
       };
-      class Functions {
+      class Misc {
             file = "Amity_Server\Functions\Modules\Phone\Functions\Misc"
             class load {};
             class initPlayer {};
+      };
+      class Contacts {
+            file = "Amity_Server\Functions\Modules\Phone\Functions\Contacts"
+            class addContact {};
+            class removeContact {};
+            class updateContact {};
       };
 };
