@@ -5,5 +5,7 @@ class ServerModules_Phone {
       };
       class Functions {
             file = "Amity_Server\Functions\Modules\Phone\Functions\Misc"
+            class load {};
+            class initPlayer {};
       };
 };
