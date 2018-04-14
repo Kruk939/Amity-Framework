@@ -12,7 +12,7 @@ class Amity {
       class Custamization {
             class Functions {
                   domsg = "";
-                  progressBar = "";
+                  progressBar = "ace_common_fnc_progressBar";
                   addAction = "ClientModules_ACE_fnc_addAceInteraction";
                   spawn = "";
             };
