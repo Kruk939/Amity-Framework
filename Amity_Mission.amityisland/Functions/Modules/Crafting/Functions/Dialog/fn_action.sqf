@@ -27,13 +27,13 @@ if(_type == "LB") exitWith {
       private _i = [_class] call Client_fnc_fetchItem;
       if(count _i == 0) exitWith {};
       _i params["", "_display", "", ""];
-      private _text = format["Name: %1\n Amount: %2\n Time: %3s\nNeeded:\n", _display, _amount, _time];
+      private _text = format["Name: %1\nAmount: %2\nTime: %3s\nNeeded:\n", _display, _amount, _time];
 
       {
             _x params["", "_class", "", "_amount"];
             private _i = [_class] call Client_fnc_fetchItem;
             private _count = [_class] call Client_fnc_countItems;
-            _text = format["%1%2x %3(%4)\n        ", _text, _amount, (_i select 1), _count];
+            _text = format["%1        %2x %3(%4)\n", _text, _amount, (_i select 1), _count];
       } forEach _needed;
       _text = format["%1\nYou can craft: %2", _text, [_needed] call ClientModules_Crafting_fnc_craftingMax];
       ctrlSetText[1300, _text];
@@ -48,10 +48,10 @@ if(_type == "AMOUNT") exitWith {
       _item params["", "", "", "_amount", "", "", "_needed"];
       private _max = [_needed] call ClientModules_Crafting_fnc_craftingMax;
       private _amount = parseNumber(ctrlText 1400);
-      if(_amount <= 0) then { _amount; };
+      if(_amount <= 0) then { _amount = 0; };
       _amount = floor(_amount);
       if(_amount > _max) then { _amount = _max; };
-      ctrlSetText[1400, str(_max)];
+      ctrlSetText[1400, str(_amount)];
 };
 if(_type == "CRAFT") exitWith {
       private _index = lbCurSel 1500;

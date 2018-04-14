@@ -14,13 +14,13 @@ if(_max < _amount) then { _amount = _max; };
 
 private _onFinish = {
       (_this select 0) params["_item", "_amount"];
-      _item params["_id", "_class", "_type", "_a", "_time", "_faction_id", "_needed"];
-      private _i = [_class] call client_fnc_fetchItem;
+      _item params["_id", "_class_name", "_type", "_am", "_time", "_faction_id", "_needed"];
+      private _i = [_class_name] call client_fnc_fetchItem;
       _i params ["", "_display", "", "_desc"];
       private _max = [_needed] call ClientModules_Crafting_fnc_craftingMax;
       if(_max < _amount) then { _amount = _max; };
       if(_amount > 0) then {
-            if(isNull Shop_var_holder) then {
+            if(isNull Crafting_var_holder) then {
                   Crafting_var_holder = "plp_ct_woodboxlightsmall" createVehicleLocal (getpos player);
                   player disableCollisionWith Crafting_var_holder;
             } else {
@@ -32,17 +32,31 @@ private _onFinish = {
                   };
             };
             {
-                  _x params["", "_class", "", "_a"];
+                  _x params["", "_class", "_t", "_a"];
                   private _count = (_a * _amount);
-                  for [{_i=0}, {_i < _count}, {_i=_i+1}] do {
-                        player removeItem _class;
+                  if(_t != "backpack") then {
+                        for [{_i=0}, {_i < _count}, {_i=_i+1}] do {
+                              player removeItem _class;
+                        };
+                  } else {
+                        private _backpack = backpackContainer player;
+                        [_backpack, _class, _count] call CBA_fnc_removeBackpackCargo;
                   };
             } forEach _needed;
             if(_type != "backpack") then {
-                  Crafting_var_holder addItemCargo [_class, _a * _amount];
+                  Crafting_var_holder addItemCargo [_class_name, _am * _amount];
             } else {
-                  Crafting_var_holder addBackpackCargo [_class, _a * _amount];
+                  Crafting_var_holder addBackpackCargo [_class_name, _am * _amount];
             };
+            player allowDamage false;
+            private _pos = getPosATL player;
+            private _dir = getDir player;
+            private _distance = 3;
+            _pos set[0, (_pos select 0) + (sin _dir) * _distance];
+            _pos set[1, (_pos select 1) + (cos _dir) * _distance];
+            Crafting_var_holder setDir _dir;
+            Crafting_var_holder setPosATL _pos;
+            player allowDamage true;
       };
       [["You have crafted %1x %2", _amount, _display], true] call Client_fnc_domsg;
       Crafting_var_crafting = false;

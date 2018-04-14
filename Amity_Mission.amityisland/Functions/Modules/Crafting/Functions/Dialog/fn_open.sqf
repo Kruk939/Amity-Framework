@@ -25,7 +25,7 @@ private _added = [];
 
 {
       _x params["_id", "_class", "_type", "_amount", "_time", "_faction_id", "_needed"];
-      if(typename _faction_id == "OBJECT") then {_faction_id == -1};
+      if(typename _faction_id == "OBJECT") then { _faction_id = -1; };
       if(_faction_id == _faction || _faction_id == -1) then {
             private _item = [_class] call Client_fnc_fetchItem;
             if(count _item != 0) then {
