@@ -14,4 +14,8 @@ class ServerModules_Phone {
             class removeContact {};
             class updateContact {};
       };
+      class Messages {
+            file = "Amity_Server\Functions\Modules\Phone\Functions\Messages"
+            class insertMessage {};
+      };
 };

@@ -15,6 +15,8 @@ class ClientModules_Phone {
             class getFrame {};
             class getOffer {};
             class getRingtone {};
+            class getPlayerByNumber {};
+            class loadSim {};
       };
       class Contacts {
             file="Functions\Modules\Phone\Functions\Contacts";
@@ -23,6 +25,10 @@ class ClientModules_Phone {
             class receiveContact {};
             class removeContact {};
             class updateContact {};
+      };
+      class Messages {
+            file="Functions\Modules\Phone\Functions\Messages";
+            class addMessage {};
       };
       class Dialog {
             file="Functions\Modules\Phone\Functions\Dialog";
