@@ -21,3 +21,48 @@ private _fail = {
       ["You couldn't sand message!", true] call Client_fnc_domsg;
 };
 ["onMessageFail", _fail] call Client_fnc_eventAdd;
+
+
+private _busy = {
+      params["_receiver", "_callGroup", "_player", "_freq", "_target"];
+      ["Target is busy!", true] call Client_fnc_domsg;
+};
+["onReceiverBusy", _busy] call Client_fnc_eventAdd;
+
+private _failed = {
+      params["_receiver", "_callGroup", "_player", "_freq", "_target"];
+      ["Target not found!", true] call Client_fnc_domsg;
+};
+["onCallPlayerFoundFailed", _failed] call Client_fnc_eventAdd;
+
+["onCalling", "ClientModules_Phone_fnc_receiveCall"] call Client_fnc_eventAdd;
+["onCallPlayerFound", "ClientModules_Phone_fnc_receiveTarget"] call Client_fnc_eventAdd;
+
+private _onJoin = {
+      params["_target", "_number"];
+      private _group = player getVariable["phone_call_group", []];
+      if(count _group == 1) then {
+            //start call
+            private _freq = player getVariable["phone_current_freq", ""];
+            [_freq] call ClientModules_Phone_fnc_call_loop;
+      } else {
+            //target joined call
+
+      };
+      _group pushBack _target;
+      player setVariable["phone_call_group", []];
+};
+["onJoin", _onJoin] call Client_fnc_eventAdd;
+
+private _onReject = {
+      params["_target", "_number"];
+      private _group = player getVariable["phone_call_group", []];
+      if(count _group == 1) then {
+            [] call ClientModules_Phone_fnc_reset_status;
+      } else {
+            player setVariable["phone_calling", false];
+            phone_var_caller = objNull;
+      };
+      hint format["%1 didn't answer", _number];
+};
+["onReceiverReject", _onReject] call Client_fnc_eventAdd;

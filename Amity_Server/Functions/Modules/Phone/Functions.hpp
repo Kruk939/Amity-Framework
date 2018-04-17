@@ -8,6 +8,10 @@ class ServerModules_Phone {
             class load {};
             class initPlayer {};
       };
+      class Calls {
+            file = "Amity_Server\Functions\Modules\Phone\Functions\Calls"
+            class call {};
+      };
       class Contacts {
             file = "Amity_Server\Functions\Modules\Phone\Functions\Contacts"
             class addContact {};

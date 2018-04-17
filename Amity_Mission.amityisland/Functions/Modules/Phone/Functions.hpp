@@ -17,6 +17,7 @@ class ClientModules_Phone {
             class getRingtone {};
             class getPlayerByNumber {};
             class loadSim {};
+            class checkNumber {};
       };
       class Contacts {
             file="Functions\Modules\Phone\Functions\Contacts";
@@ -29,6 +30,25 @@ class ClientModules_Phone {
       class Messages {
             file="Functions\Modules\Phone\Functions\Messages";
             class addMessage {};
+      };
+      class Caller {
+            file="Functions\Modules\Phone\Functions\Calls\Caller";
+            class call {};
+            class receiveTarget {};
+      };
+      class Calls_misc {
+            file="Functions\Modules\Phone\Functions\Calls\Misc";
+            class call_loop {};
+            class checkGroup {};
+            class generateFreq {};
+            class getAllUsedFreq {};
+            class reset_status {};
+      };
+      class Target {
+            file="Functions\Modules\Phone\Functions\Calls\Target";
+            class acceptCall {};
+            class receiveCall {};
+            class rejectCall {};   
       };
       class Dialog {
             file="Functions\Modules\Phone\Functions\Dialog";
