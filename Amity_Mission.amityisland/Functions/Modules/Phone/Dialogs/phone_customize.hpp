@@ -19,7 +19,7 @@ class phone_customize {
 		};
 		class ReturnPicture: TReturnPicture {};
 		class ReturnButton: TReturnButton {
-			action = "[] call ClientModules_Phone_fnc_phone_open;";
+			action = "['unload'] call ClientModules_Phone_fnc_customize_action; [] call ClientModules_Phone_fnc_phone_open;";
 		};
 
 		//mute button

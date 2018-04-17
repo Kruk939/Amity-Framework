@@ -1,7 +1,7 @@
 params["_receiver", "_callGroup", "_player", "_freq", "_target"];
 
 if(isNull _player) exitWith {};
-if(player getVariable["phone_in_call", false] || player getVariable["phone_disabled", false] || player getVariable["phone_calling", false]) exitWith {
+if(player getVariable["phone_in_call", false] || player getVariable["phone_disabled", false] || player getVariable["phone_calling", false] || (count (player call TFAR_fnc_radiosList) isEqualTo 0)) exitWith {
       ["onReceiverBusy", false] remoteExec ["Client_fnc_eventCall", _player];
 };
 player setVariable["phone_calling", true];

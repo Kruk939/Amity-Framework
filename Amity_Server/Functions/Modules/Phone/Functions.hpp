@@ -9,6 +9,7 @@ class ServerModules_Phone {
             class initPlayer {};
             class savePhone {};
             class removeSim {};
+            class insertNumber {};
       };
       class Calls {
             file = "Amity_Server\Functions\Modules\Phone\Functions\Calls"

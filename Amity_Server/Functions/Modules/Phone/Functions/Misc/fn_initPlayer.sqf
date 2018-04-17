@@ -9,6 +9,9 @@ if(_exists) then {
       private _data = ([format["phone_get_data_profile:%1", _profile_id], 2] call ExternalS_fnc_ExtDBasync) select 0;
       private _contacts = [format["phone_get_contacts:%1", _profile_id], 2] call ExternalS_fnc_ExtDBasync;
       private _numbers = [format["phone_get_numbers_profile:%1", _profile_id], 2] call ExternalS_fnc_ExtDBasync;
+      if(count _numbers == 0) then {
+            _numbers = [_profile_id] call ServerModules_Phone_fnc_insertNumber;
+      };
       {
             _x params["", "", "_number"];
             private _messages = [format["phone_get_messages:%1", _number], 2] call ExternalS_fnc_ExtDBasync;
@@ -16,7 +19,10 @@ if(_exists) then {
       } forEach _numbers;
       [_data, _numbers, _contacts] remoteExec [_function, _player];
 } else {
-      [0, format["phone_insert_data:%1",_profile_id]] call ExternalS_fnc_ExtDBquery;
+      private _background = getNumber(missionConfigFile >> "Phone" >> "Default" >> "background");
+      private _frame = getNumber(missionConfigFile >> "Phone" >> "Default" >> "frame");
+      private _ring = getNumber(missionConfigFile >> "Phone" >> "Default" >> "ringtone");
+      [0, format["phone_insert_data:%1:%2:%3:%4",_profile_id, _ring, _frame, _background]] call ExternalS_fnc_ExtDBquery;
       uiSleep 2;
       [_player, _function] call ServerModules_Phone_fnc_initPlayer;
 };

@@ -1,4 +1,4 @@
-class phone {
+class phone_main {
 	idd = 1103;
 	class controls {
 		class PhoneFrame: TPhoneFrame {};
