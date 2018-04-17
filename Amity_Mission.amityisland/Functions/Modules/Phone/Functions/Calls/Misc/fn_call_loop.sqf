@@ -19,7 +19,7 @@ playSound "openrp_phone_static";
       private _check = 0;
       while{(player getVariable["phone_in_call", false])} do {
             uiSleep 3;
-            if((count (player call TFAR_fnc_radiosList) isEqualTo 0)) exitWith {};
+            //if((count (player call TFAR_fnc_radiosList) isEqualTo 0)) exitWith {};
             private _group = [] call ClientModules_Phone_fnc_checkGroup;
             if((count _group) < 2) exitWith {};
             _check = _check + 1;

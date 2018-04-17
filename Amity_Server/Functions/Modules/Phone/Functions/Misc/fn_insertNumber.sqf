@@ -4,7 +4,7 @@ if(_offer_id == -1) then {
       _offer_id = getNumber(missionConfigFile >> "Phone" >> "Default" >> "offer");
 };
 private _offer = [_offer_id] call ClientModules_Phone_fnc_getOffer;
-if(count _offer == 0) exitWith {};
+if(count _offer == 0) exitWith { []; };
 private _balance = getNumber(missionConfigFile >> "Phone" >> "Default" >> "balance");
 private _prefix = getText(missionConfigFile >> "Phone" >> "Default" >> "prefix");
 
