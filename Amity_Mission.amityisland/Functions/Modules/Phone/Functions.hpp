@@ -18,6 +18,9 @@ class ClientModules_Phone {
             class getPlayerByNumber {};
             class loadSim {};
             class checkNumber {};
+            class volumeControl {};
+            class disablePhone {};
+            class removeSim {};
       };
       class Contacts {
             file="Functions\Modules\Phone\Functions\Contacts";

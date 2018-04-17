@@ -6,40 +6,40 @@ switch(_type) do {
             private _index = lbCurSel 1500;
             if(_index == -1) exitWith {};
             private _data = call compile (lbData[1500, _index]);
-            _data params["_id", "_path", "_subscriber", "_private", "_name"];
+            _data params["_id", "_path", "_name", "_subscriber", "_private"];
             ctrlSetText[1201, _path];
       };
       case "frame": {
             private _index = lbCurSel 1501;
             if(_index == -1) exitWith {};
             private _data = call compile (lbData[1501, _index]);
-            _data params["_id", "_path", "_subscriber", "_private", "_name"];
+            _data params["_id", "_path", "_name", "_subscriber", "_private"];
             ctrlSetText[1200, _path];
       };
       case "mute": {
             [] call ClientModules_Phone_fnc_disablePhone;
       };
       case "ring": {
-            if(!isNull ORP_current_sound) then { deleteVehicle ORP_current_sound; };
-            if(ORP_phoneDisabled) exitWith {};
+            if(!isNull phone_var_current_sound) then { deleteVehicle phone_var_current_sound; };
+            if((player getVariable["phone_disabled", false])) exitWith {};
             private _index = lbCurSel 1502;
             if(_index == -1) exitWith {};
             private _data = call compile (lbData[1502, _index]);
-            _data params["_id", "_path", "_subscriber", "_private", "_name"];
-            ORP_current_sound = createSoundSource [_path, position player, [], 0];
+            _data params["_id", "_path", "_name", "_subscriber", "_private"];
+            phone_var_current_sound = createSoundSource [_path, position player, [], 0];
             //playe sound
       };
       case "save": {
             private _background = 1;
             private _frame = 1;
             private _ringtone = 1;
-            private _phone_id = player getVariable ["phone_id", 0];
+            private _phone_id = (phone_var_data select 0);
             private _index = lbCurSel 1500;
             private _sub = player getVariable ["subscriber",0];
             private _can_change = true;
             if(_index != -1) then {
                   private _data = call compile (lbData[1500, _index]);
-                  _data params["_id", "_path", "_subscriber", "_private", "_name"];
+                  _data params["_id", "_path", "_name", "_subscriber", "_private"];
                   if(_sub != _subscriber && _subscriber == 1) then {
                         _can_change = false;
                   };
@@ -48,7 +48,7 @@ switch(_type) do {
             _index = lbCurSel 1501;
             if(_index != -1) then {
                   private _data = call compile (lbData[1501, _index]);
-                  _data params["_id", "_path", "_subscriber", "_private", "_name"];
+                  _data params["_id", "_path", "_name", "_subscriber", "_private"];
                   if(_sub != _subscriber && _subscriber == 1) then {
                         _can_change = false;
                   };
@@ -57,17 +57,17 @@ switch(_type) do {
             _index = lbCurSel 1502;
             if(_index != -1) then {
                   private _data = call compile (lbData[1502, _index]);
-                  _data params["_id", "_path", "_subscriber", "_private", "_name"];
+                  _data params["_id", "_path", "_name", "_subscriber", "_private"];
                   if(_sub != _subscriber && _subscriber == 1) then {
                         _can_change = false;
                   };
                   _ringtone = _id;
             };
             if(_can_change) then {
-                  player setVariable ["phone_ring", _ringtone];
-                  player setVariable ["phone_skin", _frame];
-                  player setVariable ["phone_background", _background];
-                  ["phone", [_phone_id, _ringtone, _frame, _background]] remoteExec ["ServerModules_Phone_fnc_update", 2];
+                  phone_var_data set[2, _ringtone];
+                  phone_var_data set[3, _frame];
+                  phone_var_data set[4, _background];
+                  [_phone_id, _ringtone, _frame, _background] remoteExec ["ServerModules_Phone_fnc_savePhone", 2];
             } else {
                   hint format["You cannot change it, because you are not subscriber. Select different customizations."];
             };

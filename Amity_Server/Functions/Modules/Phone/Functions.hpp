@@ -7,6 +7,8 @@ class ServerModules_Phone {
             file = "Amity_Server\Functions\Modules\Phone\Functions\Misc"
             class load {};
             class initPlayer {};
+            class savePhone {};
+            class removeSim {};
       };
       class Calls {
             file = "Amity_Server\Functions\Modules\Phone\Functions\Calls"

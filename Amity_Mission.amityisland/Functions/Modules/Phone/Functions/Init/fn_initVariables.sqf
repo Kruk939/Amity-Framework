@@ -11,6 +11,7 @@ player setVariable["phone_in_call", false];
 player setVariable["phone_calling", false];
 player setVariable["phone_disabled", false];
 player setVariable["phone_call_group", []];
+player setVariable["phone_active_number", []];
 
 //public variables
 player setVariable["phone_number", ""];

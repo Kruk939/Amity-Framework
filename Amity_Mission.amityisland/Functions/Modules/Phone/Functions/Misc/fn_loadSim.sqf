@@ -1,4 +1,5 @@
 params[["_number", []]];
+[] call ClientModules_Phone_fnc_reset_status;
 if(count _number == 0) then {
       player setVariable["phone_number", nil, true];
 } else {
