@@ -26,11 +26,16 @@ private _fail = {
 private _busy = {
       params["_receiver", "_callGroup", "_player", "_freq", "_target"];
       ["Target is busy!", true] call Client_fnc_domsg;
+      if(count _callGroup < 1) then {
+            [] call ClientModules_Phone_fnc_reset_status;
+      } else {
+            player setVariable["phone_calling", false];
+      };
 };
 ["onReceiverBusy", _busy] call Client_fnc_eventAdd;
 
 private _failed = {
-      params["_receiver", "_callGroup", "_player", "_freq", "_target"];
+      //params["_receiver", "_callGroup", "_player", "_freq", "_target"];
       ["Target not found!", true] call Client_fnc_domsg;
 };
 ["onCallPlayerFoundFailed", _failed] call Client_fnc_eventAdd;
@@ -90,11 +95,14 @@ private _onSave = {
 ["onSave", _onSave] call Client_fnc_eventAdd;
 
 private _onTick = {
-      if(!(((([] call TFAR_fnc_activeSwRadio) find "cg_tablet") == -1) && ((([] call TFAR_fnc_activeSwRadio) find "openrp_phone") == -1))) then {
-      	private _channel = (call TFAR_fnc_ActiveSwRadio) call TFAR_fnc_getSwChannel;
-      	_channel = _channel + 1;
-      	[(call TFAR_fnc_activeSwRadio), _channel, getPlayerUID player] call TFAR_fnc_SetChannelFrequency;
-      	player setVariable ["tf_unable_to_use_radio", true];
+      if(((([] call TFAR_fnc_activeSwRadio) find "cg_tablet") == -1) && ((([] call TFAR_fnc_activeSwRadio) find "openrp_phone") == -1)) then {
+            if((count (player call TFAR_fnc_radiosList) isEqualTo 0)) then {
+                  private _channel = (call TFAR_fnc_ActiveSwRadio) call TFAR_fnc_getSwChannel;
+            	_channel = _channel + 1;
+            	[(call TFAR_fnc_activeSwRadio), _channel, getPlayerUID player] call TFAR_fnc_SetChannelFrequency;
+            	player setVariable ["tf_unable_to_use_radio", true];
+            };
+
       };
 };
 ["onTick", _onTick] call Client_fnc_eventAdd;

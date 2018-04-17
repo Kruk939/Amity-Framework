@@ -11,7 +11,6 @@ switch(_type) do {
                   if(_index == -1) exitWith {};
                   private _data = call compile (lbData[1500, _index]);
                   _data params["_id", "", "_name", "_number"];
-                  [_number] call ClientModules_Phone_fnc_call_number;
                   if([_number] call ClientModules_Phone_fnc_checkNumber) then {
                         [_number] call ClientModules_Phone_fnc_call;
                   } else {
