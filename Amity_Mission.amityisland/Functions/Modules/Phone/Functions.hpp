@@ -51,7 +51,55 @@ class ClientModules_Phone {
             class receiveCall {};
             class rejectCall {};
       };
-      class Dialog {
-            file="Functions\Modules\Phone\Functions\Dialog";
-      };
+      class Controllers_contactAdd {
+		file = "Functions\modules\Phone\Functions\Controllers\ContactAdd";
+            class contactAdd_action {};
+            class contactAdd_open {};
+	};
+	class Controllers_contacts {
+		file = "Functions\modules\Phone\Functions\Controllers\Contacts";
+            class contacts_action {};
+            class contacts_open {};
+	};
+	class Controllers_messages {
+		file = "Functions\modules\Phone\Functions\Controllers\Messages";
+            class messages_action {};
+            class messages_open {};
+	};
+	class Controllers_message_new {
+		file = "Functions\modules\Phone\Functions\Controllers\Message_new";
+            class message_new_action {};
+            class message_new_open {};
+	};
+	class Controllers_phone {
+		file = "Functions\modules\Phone\Functions\Controllers\Phone";
+            class phone_action {};
+            class phone_open {};
+            class setBackground {};
+	};
+	class Controllers_changesim {
+		file = "Functions\modules\Phone\Functions\Controllers\ChangeSim";
+            class changeSim_action {};
+            class changeSim_open {};
+	};
+	class Controllers_customize {
+		file = "Functions\modules\Phone\Functions\Controllers\Customize";
+            class customize_action {};
+            class customize_open {};
+	};
+	class Controllers_lastcalls {
+		file = "Functions\modules\Phone\Functions\Controllers\LastCalls";
+            class lastCalls_action {};
+            class lastCalls_open {};
+	};
+	class Controllers_services {
+		file = "Functions\modules\Phone\Functions\Controllers\Services";
+            class services_action {};
+            class services_open {};
+	};
+	class Controllers_add_founds {
+		file = "Functions\modules\Phone\Functions\Controllers\AddFounds";
+            class AddFounds_action {};
+            class AddFounds_open {};
+	};
 };
