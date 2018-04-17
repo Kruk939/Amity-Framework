@@ -30,6 +30,7 @@ class ClientModules_Phone {
       class Messages {
             file="Functions\Modules\Phone\Functions\Messages";
             class addMessage {};
+            class sendMessage {};
       };
       class Caller {
             file="Functions\Modules\Phone\Functions\Calls\Caller";
@@ -48,7 +49,7 @@ class ClientModules_Phone {
             file="Functions\Modules\Phone\Functions\Calls\Target";
             class acceptCall {};
             class receiveCall {};
-            class rejectCall {};   
+            class rejectCall {};
       };
       class Dialog {
             file="Functions\Modules\Phone\Functions\Dialog";
