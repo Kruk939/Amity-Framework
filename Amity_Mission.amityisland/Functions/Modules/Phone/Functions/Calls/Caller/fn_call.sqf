@@ -6,9 +6,9 @@ if(player getVariable["phone_calling", false]) exitWith {};
 if(player getVariable["phone_disabled", false]) exitWith {};
 
 
-private _group = player getVariable["phone_group", []];
+private _group = player getVariable["phone_call_group", []];
 private _freq = player getVariable["phone_current_freq", ""];
-if(count _group == 0) then {
+if((count _group) == 0) then {
       _group pushBack player;
       _freq = [] call ClientModules_Phone_fnc_generateFreq;
 };

@@ -1,3 +1,4 @@
+if(!(player getVariable["phone_calling", false])) exitWith {};
 private _group = player getVariable["phone_call_group", []];
 if(count (player call TFAR_fnc_radiosList) isEqualTo 0) exitWith {
       if((count _group) == 1) then {
