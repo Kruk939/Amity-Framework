@@ -52,10 +52,24 @@ private _onJoin = {
             //target joined call
 
       };
+      player SetVariable["phone_calling", false];
       _group pushBack _target;
       player setVariable["phone_call_group", _group];
 };
 ["onJoin", _onJoin] call Client_fnc_eventAdd;
+
+private _onDisconnect = {
+      params["_target", "_number"];
+      private _group = player getVariable["phone_call_group", []];
+      if(count _group <= 2) then {
+            [] call ClientModules_Phone_fnc_reset_status;
+      } else {
+            _group deleteAt (_group find _target);
+            player setVariable["phone_call_group", []];
+      };
+
+};
+["onDisconnect", _onDisconnect] call Client_fnc_eventAdd;
 
 private _onReject = {
       params["_target", "_number"];
