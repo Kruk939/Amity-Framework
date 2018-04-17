@@ -41,16 +41,19 @@ private _failed = {
 private _onJoin = {
       params["_target", "_number"];
       private _group = player getVariable["phone_call_group", []];
-      if(count _group == 1) then {
+      if(count _group < 2) then {
             //start call
+            hint format["%1 joined your call", name _target];
+            _group = [player, _target];
             private _freq = player getVariable["phone_current_freq", ""];
             [_freq] call ClientModules_Phone_fnc_call_loop;
       } else {
+            hint format["%1 joined your group", name _target];
             //target joined call
 
       };
       _group pushBack _target;
-      player setVariable["phone_call_group", []];
+      player setVariable["phone_call_group", _group];
 };
 ["onJoin", _onJoin] call Client_fnc_eventAdd;
 

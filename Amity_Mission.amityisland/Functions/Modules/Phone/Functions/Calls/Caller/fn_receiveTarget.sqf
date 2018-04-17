@@ -4,7 +4,7 @@ player setVariable["phone_calling", true];
 player setVariable["phone_current_freq", _freq];
 player setVariable["phone_call_group", _callGroup];
 _this spawn {
-      params["_receiver", "_callGroup", "_player", "_target"];
+      params["_receiver", "_callGroup", "_player", "_freq", "_target"];
       private _toEnd = 0;
       while{(player getVariable["phone_calling", false]) && !(isNull phone_var_caller)} do {
             playSound "openrp_phone_call";
