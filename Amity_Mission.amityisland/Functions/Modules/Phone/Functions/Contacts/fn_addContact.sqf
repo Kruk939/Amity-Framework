@@ -1,7 +1,7 @@
 params[["_name", ""], ["_number", ""]];
 if(_name == "" || _number == "") exitWith { false };
 private _exists_name = [_name] call ClientModules_Phone_fnc_findContact;
-private _exists_number = [_name] call ClientModules_Phone_fnc_findContact;
+private _exists_number = [_number] call ClientModules_Phone_fnc_findContact;
 if(count _exists_name != 0) then {
       _exists_name params["_id", "", "_n", ""];
       [_id, _n, _number] call ClientModules_Phone_fnc_updateContact;

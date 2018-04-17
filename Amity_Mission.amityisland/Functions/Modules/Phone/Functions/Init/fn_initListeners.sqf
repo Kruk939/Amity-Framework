@@ -102,7 +102,6 @@ private _onTick = {
             	[(call TFAR_fnc_activeSwRadio), _channel, getPlayerUID player] call TFAR_fnc_SetChannelFrequency;
             	player setVariable ["tf_unable_to_use_radio", true];
             };
-
       };
 };
 ["onTick", _onTick] call Client_fnc_eventAdd;
