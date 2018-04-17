@@ -3,7 +3,7 @@ if(!dialog) exitWith {};
 params[["_type", ""]];
 switch(_type) do {
       case "end": {
-            if((player getVariable["phone_in_call", false]) || (player getVariable["phone_in_call", false])) then {
+            if((player getVariable["phone_in_call", false]) || (player getVariable["phone_calling", false])) then {
                   [] call ClientModules_Phone_fnc_rejectCall;
             } else {
                   [] call ClientModules_Phone_fnc_lastCalls_open;

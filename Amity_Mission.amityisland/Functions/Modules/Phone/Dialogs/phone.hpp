@@ -49,7 +49,7 @@ class phone {
 
 		class SyncPicture: TSyncPicture {};
 		class SyncButton: TSyncButton {
-			action = "[] spawn Client_fnc_syncData;";
+			action = "[] spawn Client_fnc_save;";
 		};
 
 		class CartPicture: TCartPicture {};

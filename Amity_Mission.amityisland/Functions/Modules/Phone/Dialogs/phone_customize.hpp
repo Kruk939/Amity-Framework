@@ -1,6 +1,6 @@
 class phone_customize {
 	idd = 1103;
-	onUnload = "if(!isNull phone_var_current_sound) then { deleteVehicle phone_var_current_sound; };";
+	onUnload = "['unload'] call ClientModules_Phone_fnc_customize_action;";
 	class controls {
 		class PhoneFrame: TPhoneFrame {};
 		class PhoneBackground: TPhoneBackground {};

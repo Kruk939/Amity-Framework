@@ -7,7 +7,7 @@ private _exists = [format["phone_exist_data:%1", _profile_id], 2] call ExternalS
 _exists = (_exists select 0) select 0;
 if(_exists) then {
       private _data = ([format["phone_get_data_profile:%1", _profile_id], 2] call ExternalS_fnc_ExtDBasync) select 0;
-      private _contacts = ([format["phone_get_contacts:%1", _profile_id], 2] call ExternalS_fnc_ExtDBasync) select 0;
+      private _contacts = [format["phone_get_contacts:%1", _profile_id], 2] call ExternalS_fnc_ExtDBasync;
       private _numbers = [format["phone_get_numbers_profile:%1", _profile_id], 2] call ExternalS_fnc_ExtDBasync;
       {
             _x params["", "", "_number"];

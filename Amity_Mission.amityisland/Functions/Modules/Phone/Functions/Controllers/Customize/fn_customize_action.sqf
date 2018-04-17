@@ -29,6 +29,9 @@ switch(_type) do {
             phone_var_current_sound = createSoundSource [_path, position player, [], 0];
             //playe sound
       };
+      case "unload": {
+            if(!isNull phone_var_current_sound) then { deleteVehicle phone_var_current_sound; };
+      };
       case "save": {
             private _background = 1;
             private _frame = 1;
