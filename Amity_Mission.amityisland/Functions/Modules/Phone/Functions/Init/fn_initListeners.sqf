@@ -64,7 +64,7 @@ private _onDisconnect = {
             [] call ClientModules_Phone_fnc_reset_status;
       } else {
             _group deleteAt (_group find _target);
-            player setVariable["phone_call_group", []];
+            player setVariable["phone_call_group", _group];
       };
 
 };
