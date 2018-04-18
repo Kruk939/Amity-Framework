@@ -16,7 +16,6 @@ class ClientModules_Phone {
             class getOffer {};
             class getRingtone {};
             class getPlayerByNumber {};
-            class loadSim {};
             class checkNumber {};
             class volumeControl {};
             class disablePhone {};

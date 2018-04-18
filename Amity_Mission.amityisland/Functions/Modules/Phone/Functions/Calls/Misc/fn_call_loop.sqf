@@ -24,7 +24,7 @@ playSound "openrp_phone_static";
             if((count _group) < 2) exitWith {};
             _check = _check + 1;
             if(_check == 20) then {
-                  private _number = player setVariable["phone_active_number", _number];
+                  private _number = player getVariable["phone_active_number", []];
                   _number params["", "", "", "", "_offer_id"];
                   private _offer = [_offer_id] call ClientModules_Phone_fnc_getOffer;
                   private _minute_price = _offer select 3;
