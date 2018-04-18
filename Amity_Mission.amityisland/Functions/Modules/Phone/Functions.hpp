@@ -20,7 +20,6 @@ class ClientModules_Phone {
             class checkNumber {};
             class volumeControl {};
             class disablePhone {};
-            class removeSim {};
       };
       class Contacts {
             file="Functions\Modules\Phone\Functions\Contacts";
@@ -34,6 +33,13 @@ class ClientModules_Phone {
             file="Functions\Modules\Phone\Functions\Messages";
             class addMessage {};
             class sendMessage {};
+      };
+      class Numbers {
+            file="Functions\Modules\Phone\Functions\Numbers";
+            class addSim {};
+            class loadSim {};
+            class removeSim {};
+            class receiveNumber {};
       };
       class Caller {
             file="Functions\Modules\Phone\Functions\Calls\Caller";
