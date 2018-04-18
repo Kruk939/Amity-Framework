@@ -8,6 +8,7 @@ class ServerModules_Garage {
             class vehicleInit {};
             class numberPlate {};
             class getPlayerVehicles {};
+            class setColor {};
       };
 
 };
