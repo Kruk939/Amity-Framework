@@ -12,7 +12,9 @@ phone_var_caller = objNull;
 if(!(isNull phone_var_current_sound)) then { deleteVehicle phone_var_current_sound; };
 
 if(((([] call TFAR_fnc_activeSwRadio) find "cg_tablet") == -1) && ((([] call TFAR_fnc_activeSwRadio) find "openrp_phone") == -1)) then {
-	[(call TFAR_fnc_activeSwRadio), phone_var_lastFreq] call TFAR_fnc_setSwFrequency;
+      if((count (player call TFAR_fnc_radiosList) != 0)) then {
+            [(call TFAR_fnc_activeSwRadio), phone_var_lastFreq] call TFAR_fnc_setSwFrequency;
+      };
 } else {
 	private _channel = (call TFAR_fnc_ActiveSwRadio) call TFAR_fnc_getSwChannel;
 	_channel = _channel + 1;

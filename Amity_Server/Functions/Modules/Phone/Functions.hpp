@@ -10,6 +10,7 @@ class ServerModules_Phone {
             class savePhone {};
             class removeSim {};
             class insertNumber {};
+            class updateBalance {};
       };
       class Calls {
             file = "Amity_Server\Functions\Modules\Phone\Functions\Calls"

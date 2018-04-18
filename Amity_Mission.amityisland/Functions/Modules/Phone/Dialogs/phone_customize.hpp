@@ -9,7 +9,7 @@ class phone_customize {
 
 		class HomeButtonPicture: THomeButtonPicture {};
 		class HomeButtonButton: THomeButtonButton {
-	      	action = "[] call ClientModules_Phone_fnc_phone_open;";
+	      	action = "['unload'] call ClientModules_Phone_fnc_customize_action; [] call ClientModules_Phone_fnc_phone_open;";
 		};
 
 		//save button

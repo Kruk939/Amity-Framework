@@ -10,6 +10,7 @@ switch(_type) do {
                   hint "Number is incorrect!";
             } else {
                   [_number, _message] call ClientModules_Phone_fnc_sendMessage;
+                  [] call ClientModules_Phone_fnc_messages_open;
             };
       };
 };

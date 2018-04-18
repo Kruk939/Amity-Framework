@@ -7,4 +7,8 @@ class Phone {
             balance = 10;
             prefix = "202";
       };
+      class Limits {
+            group = 4;
+            numbers = 3;
+      }
 };

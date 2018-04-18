@@ -1,7 +1,7 @@
 private _group = player getVariable["phone_call_group", []];
 private _newGroup = [];
 {
-      if(!isNull _x && isPlayer _x) then {
+      if(!isNull _x) then {
             _newGroup pushBack _x;
       };
 } forEach _group;

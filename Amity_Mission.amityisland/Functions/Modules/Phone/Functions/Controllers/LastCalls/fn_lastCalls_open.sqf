@@ -7,10 +7,14 @@ private _ok = createDialog "phone_last_calls";
 if(!_ok) exitWith {}; //couldn't open dialog
 [] call ClientModules_Phone_fnc_setBackground;
 {
-      private _name = [_x] call ClientModules_phone_fnc_getNumber_name;
+      private _contact = [_x] call ClientModules_Phone_fnc_findContact;
+      private _name = _x;
+      if(count _contact != 0) then {
+            _name = _contact select 2;
+      };
       private _index = lbAdd [1500, _name];
       lbSetData [1500, _index, _x];
-} foreach ORP_phoneLastCalls;
-if((count ORP_phoneLastCalls) != 0) then {
+} foreach phone_var_last_calls;
+if((count phone_var_last_calls) != 0) then {
       lbSetCurSel [1500, 0];
 };
