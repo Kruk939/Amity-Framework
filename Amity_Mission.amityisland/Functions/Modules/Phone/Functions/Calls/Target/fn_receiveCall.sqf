@@ -7,6 +7,9 @@ if(player getVariable["phone_in_call", false] || player getVariable["phone_disab
 player setVariable["phone_calling", true];
 player setVariable["phone_call_group", _callGroup];
 player setVariable["phone_current_freq", _freq];
+
+phone_var_last_calls pushBack (_player getVariable["phone_number", ""]);
+
 //start looping sound
 if(!(isNull phone_var_current_sound)) then { deleteVehicle phone_var_current_sound; };
 _this spawn {

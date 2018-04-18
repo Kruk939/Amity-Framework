@@ -40,6 +40,7 @@ class ClientModules_Phone {
             class loadSim {};
             class removeSim {};
             class receiveNumber {};
+            class handleBalance {};
       };
       class Caller {
             file="Functions\Modules\Phone\Functions\Calls\Caller";

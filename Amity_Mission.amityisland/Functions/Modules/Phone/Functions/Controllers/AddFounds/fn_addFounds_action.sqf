@@ -6,6 +6,6 @@ switch(_type) do {
             private _index = lbCurSel 1500;
             if(_index == -1) exitWith {};
             private _data = parseNumber (lbData[1500, _index]);
-            [_data] call ClientModules_Phone_fnc_addFounds;
+            [_data, "ADD"] call ClientModules_Phone_fnc_handleBalance;
       };
 };
