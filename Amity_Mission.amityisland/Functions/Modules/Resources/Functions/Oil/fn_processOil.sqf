@@ -1,3 +1,4 @@
+[] call ClientModules_Resources_fnc_getHolder;
 private _onFinish = {
       (_this select 0) params["_toRemove", "_toAdd"];
       _toRemove params["_toRemove_class", "_toRemove_amount"];

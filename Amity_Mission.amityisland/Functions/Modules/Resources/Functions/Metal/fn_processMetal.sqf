@@ -16,5 +16,7 @@ private _onFailure = {};
       private _amount = [_processed] call Client_fnc_countItems;
       private _item = [_processed] call client_fnc_fetchItem;
       _item params ["", "_name", "", ""];
-      [_amount * 10, [[_processed, _amount], [_result, _count]],_onFinish,_onFailure, format["Processing %1x %2", _amount, _name]] call Client_fnc_progressBar;
+      if(_amount > 0) exitWith {
+            [_amount * 10, [[_processed, _amount], [_result, _count]],_onFinish,_onFailure, format["Processing %1x %2", _amount, _name]] call Client_fnc_progressBar;
+      };
 } forEach _array;

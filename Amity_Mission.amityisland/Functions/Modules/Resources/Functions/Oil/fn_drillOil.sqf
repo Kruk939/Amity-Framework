@@ -8,8 +8,8 @@ if (str _rock find ": stone_small_w" > -1 && player distance [4643.31,3552.4,0.0
       private _chance = (random 100);
       private _array = (getArray(missionConfigFile >> "Resources" >> "Ores" >> "Oil"));
 	_array params["_class", "_ch"];
-      if(_chance <= _class) then {
-		player addItem _ch;
+      if(_chance <= _ch) then {
+		player addItem _class;
 		Resources_var_used_oil pushback _rock;
       	["You found an oil deposit!", true] spawn Client_fnc_domsg;
       };
