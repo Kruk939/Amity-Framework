@@ -1,3 +1,26 @@
+class Medical {
+	class Config {
+		syncTime = 30;
+	};
+	class Defibrylator {
+		item = "CG_ATF_Revival_Kit_i";
+		animation = "AinvPknlMstpSnonWnonDr_medic5";
+		sound = "openrp_client\Sounds\Medic\Defib.ogg";
+		minTime = 10;
+		maxTime = 20;
+		defaultChance = 99;
+		cardiacArrestChance = 50; //on each try add this to next try chance
+	};
+	class CPR {
+		item = "CG_ATF_First_Aid_Kit_i";
+		animation = "AinvPknlMstpSnonWnonDr_medic5";
+		minTime = 120;
+		maxTime = 180;
+		startChance = 10;
+		addChance = 10; //on each try add this to next try chance
+		addTime = 180; //adds random time to player dead count
+	};
+};
 class ACE_Settings {
 	class ace_medical_blood_enabledFor {
 		value = 2;
