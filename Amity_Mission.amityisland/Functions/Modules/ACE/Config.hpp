@@ -1,6 +1,8 @@
 class Medical {
 	class Config {
 		syncTime = 30;
+		requestMedicDelay = 30;
+		minimalDamageToRevive = 0.1;
 	};
 	class Defibrylator {
 		item = "CG_ATF_Revival_Kit_i";
