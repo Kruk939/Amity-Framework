@@ -1,6 +1,6 @@
 {
-      "module": "Crafting",
-      "namespace": "ServerModules_Crafting",
+      "module": "ACE",
+      "namespace": "ServerModules_ACE",
       "version": "0.1",
       "require": {
             "amity-framework": ">=0.0.1"

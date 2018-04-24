@@ -17,7 +17,7 @@ class ClientModules_Mechanic {
             file="Functions\Modules\Mechanic\Functions\Repair";
             class fixSelection {};
             class fullRepair {};
-            class fixSelection {};
+            class repairVehicle {};
       };
       class Dialog {
             file="Functions\Modules\Mechanic\Functions\Dialog";

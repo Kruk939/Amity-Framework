@@ -17,7 +17,7 @@ if(_state) then {
                         uiSleep (getNumber(missionConfigFile >> "Medical" >> "Config" >> "requestMedicDelay"));
                         if(medical_deadPlayer) then {
                               ["onMedicalRequest",[player]] remoteExec["Client_fnc_eventCall", -2];
-                              [true] spawn ClientModules_Medical_fnc_update;
+                              [true] spawn ClientModules_Ace_fnc_update;
                         };
                   };
             };
@@ -27,4 +27,4 @@ if(_state) then {
       player setVariable["tf_voiceVolume", 1, true];
       player setVariable["Unconscious_start", nil];
 };
-[true] spawn ClientModules_Ace_fnc_update;
+[player, _state] remoteExec["ServerModules_ACE_fnc_setDead", 2];
