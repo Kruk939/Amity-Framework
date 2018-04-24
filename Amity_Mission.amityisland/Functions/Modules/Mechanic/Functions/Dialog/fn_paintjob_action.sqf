@@ -20,9 +20,9 @@ if(_type == "material") exitWith {
       };
 };
 if(_type == "apply") exitWith {
-      private _count = ["openrp_mechanic_paint_can"] call Client_fnc_countItems;
+      private _count = [getText(missionConfigFile >> "Mechanic" >> "PaintJob" >> "paintCan")] call Client_fnc_countItems;
       if(_count == 0) exitWith { hint "You don't have paint"; };
-      _count = ["openrp_mechanic_paint_gun"] call Client_fnc_countItems;
+      _count = [getText(missionConfigFile >> "Mechanic" >> "PaintJob" >> "paintGun")] call Client_fnc_countItems;
       if(_count == 0) exitWith { hint "You don't have paint gun"; };
       private _index1500 = lbCurSel 1500;
       private _index1501 = lbCurSel 1501;
@@ -32,14 +32,14 @@ if(_type == "apply") exitWith {
       private _onFinish = {
             (_this select 0) params ["_texture", "_material"];
 
-            private _count = ["openrp_mechanic_paint_can"] call Client_fnc_countItems;
+            private _count = [getText(missionConfigFile >> "Mechanic" >> "PaintJob" >> "paintCan")] call Client_fnc_countItems;
             if(_count == 0) exitWith { hint "You don't have paint"; };
-            _count = ["openrp_mechanic_paint_gun"] call Client_fnc_countItems;
+            _count = [getText(missionConfigFile >> "Mechanic" >> "PaintJob" >> "paintGun")] call Client_fnc_countItems;
             if(_count == 0) exitWith { hint "You don't have paint gun"; };
 
             mechanic_var_previous_texture = getText(configfile >> "CfgIvoryTextures" >> _texture >> "texture");
             mechanic_var_previous_material = getText(configfile >> "CfgIvoryMaterials" >> _material >> "material");
-            [player, "openrp_mechanic_paint_can"] call CBA_fnc_removeItem;
+            [player, getText(missionConfigFile >> "Mechanic" >> "PaintJob" >> "paintCan")] call CBA_fnc_removeItem;
             [mechanic_var_selected_car, _texture, _material] remoteExec ["ServerModules_Garage_fnc_setColor", 2];
             ["You have painted a vehicle", true] spawn Client_fnc_domsg;
             closeDialog 0;

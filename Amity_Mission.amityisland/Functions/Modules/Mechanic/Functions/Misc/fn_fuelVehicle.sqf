@@ -1,6 +1,8 @@
 params[["_target", objNull]];
 if(isNull _target) exitWith {};
-private _count = ["openrp_canister_fuel"] call Client_fnc_countItems;
+
+private _item =  getText(missionConfigFile >> "Mechanic" >> "Items" >> "fuelCanister");
+private _count = [_item] call Client_fnc_countItems;
 if(_count == 0) exitWith {};
 private _fuel = fuel _target;
 if(_fuel == 1) exitWith { ["Vehicle has full tank!", true] spawn Client_fnc_domsg; };
@@ -19,7 +21,7 @@ private _onFinish = {
       [_target, _fuel] remoteExec ["setFuel", 0];
       [player, "openrp_canister_fuel"] call CBA_fnc_removeItem;
       [player, "openrp_canister"] call CBA_fnc_addItem;
-      [format["You refiled vehicle by %1%2", _toRefil, "%"], true] spawn Client_fnc_domsg;
+      [format["You refiled vehicle by %1%2", _toRefil * 100, "%"], true] spawn Client_fnc_domsg;
 };
 
 private _onFailure = {

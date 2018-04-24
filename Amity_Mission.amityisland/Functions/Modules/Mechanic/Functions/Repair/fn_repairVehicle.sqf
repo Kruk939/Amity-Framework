@@ -12,21 +12,30 @@ _name = "";
 private _onFinish = {
       (_this select 0) params ["_target", "_name", "_text", "_remove"];
       [_target,_name] remoteExec ["ClientModules_Mechanic_fnc_fixSelection", 2];
-      [player, "AmovPknlMstpSrasWrflDnon", 1] call ace_common_fnc_doAnimation;
+      private _anim =  getText(missionConfigFile >> "Mechanic" >> "Config" >> "animation");
+      [player, _anim, 1] call ace_common_fnc_doAnimation;
       [_text, true] spawn Client_fnc_domsg;
 };
 
 private _onFailure = {
       Hint "Cancelled";
-      [player, "AmovPknlMstpSrasWrflDnon", 1] call ace_common_fnc_doAnimation;
+      private _anim =  getText(missionConfigFile >> "Mechanic" >> "Config" >> "animation");
+      [player, _anim, 1] call ace_common_fnc_doAnimation;
 };
 
 if(_type IN ["HitLFWheel","HitLF2Wheel","HitRFWheel","HitRF2Wheel"]) exitWith {
-      if(!("CG_wheel" in (magazines player))) exitWith {["You don't have wheel!", true] spawn Client_fnc_domsg;};
+      private _kit = getText(missionConfigFile >> "Mechanic" >> "Items" >> "wheelKit");
+      if(_kit != "" && (([_kit, false] call Client_fnc_countItems) == 0)) exitWith {
+            ["You don't have wheel!", true] spawn Client_fnc_domsg; //does not have item
+      };
+
       [15, [_vehicle, _type, "You changed Tyre!"],_onFinish,_onFailure,"Repairing Tyre"] call Client_fnc_progressBar;
 };
 if(_type == "engine") exitWith {
-      if(!("openrp_mechanic_enigne_part" in (magazines player))) exitWith {["You don't have engine repair kit!", true] spawn Client_fnc_domsg;};
+      private _kit = getText(missionConfigFile >> "Mechanic" >> "Items" >> "engineKit");
+      if(_kit != "" && (([_kit, false] call Client_fnc_countItems) == 0)) exitWith {
+            ["You don't have engine repair kit!", true] spawn Client_fnc_domsg;
+      };
       _tyreArray = ["HitEngine"];
       private _i = 0;
       for[{}, {_i < _count}, {_i = _i + 1}] do {
@@ -45,12 +54,15 @@ if(_type == "engine") exitWith {
             //player removeItem "CG_wheel";
             [15, [_vehicle, _name, "You fixed the engine!"],_onFinish,_onFailure,"Repairing engine"] call Client_fnc_progressBar;
       } else {
-            ["There is nothing to fix!", true] call Client_fnc_progressBar;
+            ["There is nothing to fix!", true] call Client_fnc_domsg;
       };
 
 };
 if(_type == "fuelTank") exitWith {
-      if(!("openrp_mechanic_hull_part" in (magazines player))) exitWith {["You don't have hull part!", true] spawn Client_fnc_domsg;};
+      private _kit = getText(missionConfigFile >> "Mechanic" >> "Items" >> "fuelKit");
+      if(_kit != "" && (([_kit, false] call Client_fnc_countItems) == 0)) exitWith {
+            ["You don't have hull part!", true] spawn Client_fnc_domsg; //does not have item
+      };
       _tyreArray = ["HitFuel"];
       private _i = 0;
       for[{}, {_i < _count}, {_i = _i + 1}] do {
@@ -71,7 +83,10 @@ if(_type == "fuelTank") exitWith {
       };
 };
 if(_type == "hull") exitWith {
-      if(!("openrp_mechanic_hull_part" in (magazines player))) exitWith {["You don't have hull part!", true] spawn Client_fnc_domsg;};
+      private _kit = getText(missionConfigFile >> "Mechanic" >> "Items" >> "hullKit");
+      if(_kit != "" && (([_kit, false] call Client_fnc_countItems) == 0)) exitWith {
+            ["You don't have hull part!", true] spawn Client_fnc_domsg; //does not have item
+      };
       _tyreArray = ["HitBody","HitLBWheel","HitLMWheel","HitRBWheel","HitRMWheel","HitHull"];
       private _i = 0;
       for[{}, {_i < _count}, {_i = _i + 1}] do {
@@ -92,7 +107,10 @@ if(_type == "hull") exitWith {
       };
 };
 if(_type == "glass") exitWith {
-      if(!("openrp_mechanic_glass" in (magazines player))) exitWith {["You don't have car glass!", true] spawn Client_fnc_domsg;};
+      private _kit = getText(missionConfigFile >> "Mechanic" >> "Items" >> "glassKit");
+      if(_kit != "" && (([_kit, false] call Client_fnc_countItems) == 0)) exitWith {
+            ["You don't have car glass!", true] spawn Client_fnc_domsg; //does not have item
+      };
       private _i = 0;
       for[{}, {_i < _count}, {_i = _i + 1}] do {
             _hitpoint = _hitpointsArray select _i;

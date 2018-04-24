@@ -1,0 +1,12 @@
+{
+      "module": "Mechanic",
+      "namespace": "ServerModules_Mechanic",
+      "version": "0.1",
+      "require": {
+            "amity-framework": ">=0.0.1"
+      },
+      "provides": {
+            "Functions": "Functions.hpp",
+            "db_ini": "amityframework.ini"
+      }
+}
