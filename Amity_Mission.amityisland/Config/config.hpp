@@ -14,6 +14,7 @@ class Amity {
                   domsg = "";
                   progressBar = "ace_common_fnc_progressBar";
                   addAction = "ClientModules_ACE_fnc_addAceInteraction";
+                  checkPermission = "ClientModules_Permissions_fnc_checkPermission";
                   spawn = "";
             };
             class Dialogs {

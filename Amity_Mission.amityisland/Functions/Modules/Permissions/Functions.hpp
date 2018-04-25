@@ -13,4 +13,10 @@ class ClientModules_Permissions {
             class load {};
             class receive {};
       };
+      class Dialog {
+            file="Functions\Modules\Permissions\Functions\Dialog";
+            class permissions_action {};
+            class permissions_open {};
+            class permissions_receive {};
+      };
 };

@@ -27,6 +27,7 @@ class Factions {
       class faction_sign_action {};
       class faction_sign_open {};
       class faction_sign_receive {};
+      class factionGetActivePlayers {};
 };
 class Garage {
       file="Functions\Core\Garage";
@@ -66,6 +67,7 @@ class Misc {
       class removeItems {};
       class surrenderAction {};
       class fetchItem {};
+      class checkPermission {};
 };
 class Money {
       file="Functions\Core\Money";

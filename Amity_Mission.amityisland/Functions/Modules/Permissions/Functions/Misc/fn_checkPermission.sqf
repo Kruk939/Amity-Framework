@@ -1,6 +1,6 @@
 params[["_var", ""]];
 private _ret = false;
-if((count permission_var_active) == 0 || (player getVariable["faction_id", -1] == -1)) exitWith { _ret; };
+if((count permissions_var_active) == 0 || (player getVariable["faction_id", -1] == -1)) exitWith { _ret; };
 private _access = player getVariable["faction_access_level", -1];
 if(_access == -1) exitWith { _ret; };
 {
@@ -10,5 +10,5 @@ if(_access == -1) exitWith { _ret; };
                   _ret = true;
             };
       };
-} forEach permission_var_active;
+} forEach permissions_var_active;
 _ret;

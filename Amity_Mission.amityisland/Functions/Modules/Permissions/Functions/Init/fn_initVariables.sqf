@@ -1,1 +1,1 @@
-permission_var_active = [];
+permissions_var_active = [];
