@@ -18,7 +18,7 @@ if(_index != -1) then {
 if(_type == "LB") exitWith {
       if((count _faction) != 0) then {
             _faction params["_id", "", "", "_faction_short_name", "_faction_full_name", "_faction_type", "", "_access_level", "_salary", "", "", ""];
-            private _text = format["ID: %1\nShort name: %2\nFull name: %3\nType: %4\nSalary: $%6\nAccess Level: %7", _id, _faction_short_name, _faction_full_name, _faction_type, _salary, _access_level];
+            private _text = format["ID: %1\nShort name: %2\nFull name: %3\nType: %4\nSalary: $%5\nAccess Level: %6", _id, _faction_short_name, _faction_full_name, _faction_type, _salary, _access_level];
             ctrlSetText[1000, _text];
       };
 };

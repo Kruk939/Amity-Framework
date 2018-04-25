@@ -60,7 +60,7 @@ if(_type == "ACCESS") exitWith {
       ctrlSetText[1400, str(_level)];
       lbClear 1501;
       {
-            _x params["", "", "", "_short", "_full", "", "", "_access", "", "", "", "", ""];
+            _x params["", "", "", "", "", "", "", "_access", "", "", "_first_name", "_last_name"];
             if(_access >= _level) then {
                   lbAdd[1501, format["%1 %2", _short, _full]];
             };
