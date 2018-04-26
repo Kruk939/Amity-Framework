@@ -17,7 +17,7 @@ class license_revoke {
       class controls {
             class listbox_list: Company_RscListbox {
             	idc = 1500;
-                  onLBSelChanged = "['LB'] spawn ClientModules_Licenses_fnc_revoke_action;";
+                  onLBSelChanged = "['LB'] spawn ClientModules_Licenses_fnc_remove_action;";
             	x = 11.33 * GUI_GRID_W + GUI_GRID_X;
             	y = 5.85 * GUI_GRID_H + GUI_GRID_Y;
             	w = 17.5 * GUI_GRID_W;
@@ -41,7 +41,7 @@ class license_revoke {
             };
             class button_revoke: Company_HideButton {
             	idc = 1601;
-                  action = "['REVOKE'] spawn ClientModules_Licenses_fnc_revoke_action;";
+                  action = "['REVOKE'] spawn ClientModules_Licenses_fnc_remove_action;";
             	x = 12.1 * GUI_GRID_W + GUI_GRID_X;
             	y = 21 * GUI_GRID_H + GUI_GRID_Y;
             	w = 15.7 * GUI_GRID_W;

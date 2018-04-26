@@ -16,7 +16,6 @@ class ClientModules_Licenses {
             class removeLicense {};
             class get {};
             class getAvialableLicenses {};
-            class getLicense {};
             class getLicenses {};
       };
       class Dialog {

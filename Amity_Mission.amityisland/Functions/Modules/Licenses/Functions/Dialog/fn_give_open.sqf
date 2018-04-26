@@ -24,10 +24,3 @@ if(isNull _display) exitWith { closeDialog 0; };
 
 //setting varaibles
 _display setVariable["target", _target];
-
-
-
-
-ctrlSetText [1000, (name _target)];
-_display = findDisplay 666600;
-_display setVariable ["target",_target];

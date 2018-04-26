@@ -39,6 +39,6 @@ if(_type == "GIVE") exitWith {
       if(_id == -1) exitWith { ctrlSetText[1401, "0"]; };
       private _days = round(parseNumber(ctrlText 1401));
       private _description = ctrlText 1400;
-      [_target getVariable["profile_id", -1], _id, _description, _days, player getVariable["_faction_id", -1]] remoteExec["ServerModules_Licenses_fnc_giveLicense", 2];
+      [_target getVariable["profile_id", -1], _id, _description, _days, player getVariable["faction_id", -1]] remoteExec["ServerModules_Licenses_fnc_giveLicense", 2];
       closeDialog 0;
 };

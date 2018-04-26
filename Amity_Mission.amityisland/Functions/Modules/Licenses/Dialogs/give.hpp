@@ -52,7 +52,7 @@ class license_give {
 			w = 16 * GUI_GRID_W;
 			h = 1.5 * GUI_GRID_H;
 		};
-		class combobox_licenses: Client_RscCombo {
+		class combobox_licenses: RscCombo {
 			idc = 2100;
                   onLBSelChanged = "['LB'] call ClientModules_Licenses_fnc_give_action;";
 			x = 11.33 * GUI_GRID_W + GUI_GRID_X;
