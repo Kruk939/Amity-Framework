@@ -62,7 +62,7 @@ if(_type == "ACCESS") exitWith {
       {
             _x params["", "", "", "", "", "", "", "_access", "", "", "_first_name", "_last_name"];
             if(_access >= _level) then {
-                  lbAdd[1501, format["%1 %2", _short, _full]];
+                  lbAdd[1501, format["%1 %2", _first_name, _last_name]];
             };
       } forEach _members;
 

@@ -1,13 +1,15 @@
 params[["_faction_id", -1]];
+if(_faction_id == -1) then {
+      _faction_id = player getVariable["faction_id", -1];
+};
+if(_faction_id == -1) exitWith {};
+
 disableSerialization;
 private _ok = createDialog "faction_permissions";
 if(!_ok) exitWith {};
 private _display = findDisplay 3000;
 if(isNull _display) exitWith {};
-if(_faction_id == -1) then {
-      _faction_id = player getVariable["faction_id", -1];
-};
-if(_faction_id == -1) exitWith {};
+      
 _display setVariable["faction_id", _faction_id];
 _display setVariable["changed", []];
 [_faction_id, player, "ClientModules_Permissions_fnc_permissions_receive"] remoteExec ["Server_fnc_factionGetMembers", 2];
