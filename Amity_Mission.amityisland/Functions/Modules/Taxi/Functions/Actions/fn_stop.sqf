@@ -4,6 +4,7 @@ if(_vehicle == player || !(_vehicle getVariable["taxi_vehicle", false])) exitWit
 };
 
 _vehicle setVariable["taxi_fare_running", nil];
+_vehicle setVariable["taxi_wait", nil];
 private _arr = [] call ClientModules_Taxi_fnc_getFareArray;
 if(count _arr != 0) then {
       _arr call ClientModules_Taxi_fnc_taxi_fare_update;
