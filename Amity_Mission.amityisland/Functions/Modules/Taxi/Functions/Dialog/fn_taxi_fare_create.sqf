@@ -1,4 +1,5 @@
 disableSerialization;
+[] call ClientModules_Taxi_fnc_taxi_fare_delete;
 private _layer = getNumber(missionConfigFile >> "Taxi" >> "Config" >> "layer");
 _layer cutRSC ["taxi_fare", "PLAIN", -1];
 if(((vehicle player) getVariable["taxi_j_sum", 0]) == 0) then {

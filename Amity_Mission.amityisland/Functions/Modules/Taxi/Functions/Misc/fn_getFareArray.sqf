@@ -1,7 +1,10 @@
 private _ret = [];
 private _vehicle = vehicle player;
-if(_vehicle == player || !(_vehicle getVariable["taxi_vehicle", false]) || (_vehicle getVariable["taxi_driver", objNull]) != player) exitWith {
+if(_vehicle == player || !(_vehicle getVariable["taxi_vehicle", false])) exitWith {
       [] call ClientModules_Taxi_fnc_taxi_fare_delete;
+      _ret;
+};
+if((_vehicle getVariable["taxi_driver", objNull]) != player) exitWith {
       _ret;
 };
 private _driver = player getVariable ["name", ""];
