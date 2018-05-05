@@ -4,7 +4,7 @@ if(_vehicle == player || !(_vehicle getVariable["taxi_vehicle", false]) || (_veh
       [] call ClientModules_Taxi_fnc_taxi_fare_delete;
       _ret;
 };
-private _driver = "Test 1234";
+private _driver = player getVariable ["name", ""];
 private _fare = [(_vehicle getVariable["taxi_fare_kilometer", 0]), (_vehicle getVariable["taxi_fare_minute", 0])];
 private _kilometers = [(_vehicle getVariable["taxi_j_k_count", 0]), (_vehicle getVariable["taxi_j_k_sum", 0])];
 private _minutes = [(_vehicle getVariable["taxi_j_m_count", 0]), (_vehicle getVariable["taxi_j_m_sum", 0])];

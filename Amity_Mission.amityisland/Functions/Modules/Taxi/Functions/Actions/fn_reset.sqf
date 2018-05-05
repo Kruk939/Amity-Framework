@@ -9,3 +9,11 @@ _vehicle setVariable["taxi_j_sum", nil];
 if(_vehicle == player || !(_vehicle getVariable["taxi_vehicle", false])) exitWith {
       [] call ClientModules_Taxi_fnc_taxi_fare_delete;
 };
+private _arr = [] call ClientModules_Taxi_fnc_getFareArray;
+if(count _arr != 0) then {
+      _arr call ClientModules_Taxi_fnc_taxi_fare_update;
+      private _units = [_vehicle] call ClientModules_Taxi_fnc_vehicleCrew;
+      if(count _units != 0) then {
+            _arr remoteExec["ClientModules_Taxi_fnc_taxi_fare_update", _units];
+      };
+};

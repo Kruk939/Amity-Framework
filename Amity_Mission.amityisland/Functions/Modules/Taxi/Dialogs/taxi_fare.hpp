@@ -3,7 +3,7 @@ class taxi_fare {
       movingEnable = 0;
       enableSimulation = 1;
       duration = 999999999;
-      onLoad = "disableSerialization; taxi_var_display = (_this select 0)";
+      onLoad = " uiNamespace setVariable['taxi_var_display', (_this select 0)]";
       class controls {
             class FareGroup: RscControlsGroup {
             	idc = 2300;

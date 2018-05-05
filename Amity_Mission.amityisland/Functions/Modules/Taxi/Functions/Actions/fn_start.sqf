@@ -12,4 +12,11 @@ _vehicle setVariable["taxi_fare_start", _fare_start];
 
 private _sum = _vehicle getVariable["taxi_j_sum", _fare_start];
 _vehicle setVariable["taxi_j_sum", _sum];
-_vehicle setVariable["taxi_fare_running", true];
+if(!(_vehicle getVariable["taxi_fare_running", false])) then {
+      [] call ClientModules_Taxi_fnc_loop;
+      _vehicle setVariable["taxi_fare_running", true];
+} else {
+      if((_vehicle getVariable["taxi_wait", true])) then {
+            _vehicle setVariable["taxi_wait", false];
+      };
+};
