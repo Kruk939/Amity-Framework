@@ -1,5 +1,6 @@
 amity_var_profile_creating = false;
 amity_var_profile_choose = false;
+amity_var_map_center = [3996.68,4060.04,0.00143909];
 [player] remoteExec ["Server_fnc_initPlayer", 2];
 
 private _time = time;

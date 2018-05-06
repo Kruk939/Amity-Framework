@@ -12,6 +12,11 @@ class ClientModules_PublicJobs {
             class removeVehicle {};
             class spawnVehicle {};
       };
+      class Marker {
+            file="Functions\Modules\PublicJobs\Functions\Marker";
+            class addMarker {};
+            class removeMarker {};
+      };
       class Paycheck {
             file="Functions\Modules\PublicJobs\Functions\Paycheck";
             class addPaycheck {};
@@ -31,6 +36,12 @@ class ClientModules_PublicJobs {
       };
       class Jobs_Taxi {
             file="Functions\Modules\PublicJobs\Functions\Jobs\Taxi";
+      };
+      class Jobs_Mechanic {
+            file="Functions\Modules\PublicJobs\Functions\Jobs\Mechanic";
+            class mechanic_start {};
+            class mechanic_stop {};
+            class mechanic_repair {};
       };
       class Dialog {
             file="Functions\Modules\PublicJobs\Functions\Dialog";

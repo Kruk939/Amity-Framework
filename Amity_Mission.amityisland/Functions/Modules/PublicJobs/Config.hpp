@@ -5,6 +5,11 @@ class PublicJobs {
             vehicleSpawnDelay = 600;
             minDistance = 200;
             paycheckMultiplayer = 1;
+            class Marker {
+                  shape = "ICON";
+                  type = "hd_dot";
+                  color = "ColorRed";
+            };
       };
       class Jobs {
             class Taxi {
@@ -44,9 +49,9 @@ class PublicJobs {
                   show = 1; //show in phone book
                   uniform = "CUP_U_C_Mechanic_01";
                   class Functions {
-                        start = "";
+                        start = "ClientModules_PublicJobs_fnc_mechanic_start";
                         tick = "";
-                        end = "";
+                        end = "ClientModules_PublicJobs_fnc_mechanic_stop";
                   };
                   limits[] = {
                         {2, 30},
@@ -66,6 +71,9 @@ class PublicJobs {
                               };
                               backpack = "";
                         };
+                  };
+                  class Setup {
+                        rapairFee = 200;
                   };
             };
             class TowTruck {

@@ -45,7 +45,5 @@ if(_can) then {
       } else {
             _can = false;
       };
-} else {
-      //set for remove
 };
 _can;

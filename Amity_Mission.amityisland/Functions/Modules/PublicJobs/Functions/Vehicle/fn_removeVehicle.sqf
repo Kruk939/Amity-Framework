@@ -7,5 +7,7 @@ private _minDistance = getNumber(missionConfigFile >> "PublicJobs" >> "Config" >
 {
       if(((_x distance _vehicle < _minDistance) || (vehicle _x == _vehicle)) && _x != player) exitWith { _check = false; };
 } forEach allPlayers;
-if(_check) then { deleteVehicle _vehicle; };
+if(_check) then { deleteVehicle _vehicle; } else {
+      _vehicle setVariable["amity_remove", true, true];
+};
 _check;

@@ -8,7 +8,7 @@ private _array = [
 		["class",["openrp_vendor_jobs", 0, ["ACE_MainActions"]]]
       ],
       [
-            ["PUBLIC_JOBS_VEHICLE","Take Vehicle", "", { [] call ClientModules_PublicJobs_fnc_spawnVehicle; }, {(player getVariable["public_job", ""]) != ""},{},"","screenloc",3],
+            ["PUBLIC_JOBS_VEHICLE","Take Vehicle", "", { [] call ClientModules_PublicJobs_fnc_spawnVehicle; }, {(player getVariable["public_job", ""]) != "" && (isNull public_jobs_var_vehicle || (player distance public_jobs_var_vehicle) > 300)},{},"","screenloc",3],
 		["class",["openrp_vendor_jobs", 0, ["ACE_MainActions"]]]
       ],
       [
