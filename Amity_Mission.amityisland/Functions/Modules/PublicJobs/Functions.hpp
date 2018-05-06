@@ -32,4 +32,9 @@ class ClientModules_PublicJobs {
       class Jobs_Taxi {
             file="Functions\Modules\PublicJobs\Functions\Jobs\Taxi";
       };
+      class Dialog {
+            file="Functions\Modules\PublicJobs\Functions\Dialog";
+            class public_job_action {};
+            class public_job_open {};
+      };
 };

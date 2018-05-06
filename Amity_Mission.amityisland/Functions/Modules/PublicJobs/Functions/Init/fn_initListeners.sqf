@@ -10,6 +10,10 @@ private _onTick = {
                         private _multiplayer = getNumber(missionConfigFile >> "PublicJobs" >> "Config" >> "paycheckMultiplayer");
                         private _additional = getNumber(_config >> "paycheck");
                         private _sum = (_base + _additional) * _multiplayer;
+                        private _uniform = getText(_config >> "uniform");
+                        if(_uniform != "" && (_uniform != uniform player)) then {
+                              _sum = _sum / 2;
+                        };
                         [_sum] call ClientModules_PublicJobs_fnc_addPaycheck;
                   };
             };

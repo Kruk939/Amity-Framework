@@ -1,4 +1,9 @@
 params[["_variable", ""]];
+if(!isNull amity_var_attachedVehicle) exitWith { false; };
+if(_variable == "") then {
+      _variable = player getVariable["public_job", ""];
+};
+if(_variable == "") exitWith { false; };
 private _config = [_variable] call ClientModules_PublicJobs_fnc_getConfig;
 if(isNull _config) exitWith { false; };
 private _can = true;
@@ -18,11 +23,15 @@ if(_can) then {
       private _class = getText(_config >> "vehicleClass");
       if(_class != "") then {
             private _vehicle = _class createVehicle [492.124,356.297,0.0019784];
+            clearWeaponCargoGlobal _vehicle;
+            clearMagazineCargoGlobal _vehicle;
+            clearItemCargoGlobal _vehicle;
+            clearBackpackCargoGlobal _vehicle;
             [_vehicle] call Client_fnc_attachVehicle;
             private _variables = getArray(_config >> "variables");
             {
-                  _x params["_name", "_value", ["_public", false]];
-                  _vehicle setVariable[_name,_value,_public];
+                  _x params["_name", "_value", ["_public", 0], ["_type", ""]];
+                  _vehicle setVariable[_name, if(_type == "BOOL") then { (_value == 1) } else { _value }, (_public == 1)];
             } forEach _variables;
             private _items = getArray(_config >> "Items" >> "items");
             {
@@ -32,10 +41,11 @@ if(_can) then {
             private _backpack = (getText(_config >> "Items" >> "backpack"));
             if(_backpack != "") then { _vehicle addBackpackCargo[_backpack, 1]; };
             amity_var_vehicles pushBack _vehicle;
+            public_jobs_var_vehicle = _vehicle;
       } else {
             _can = false;
       };
 } else {
-
+      //set for remove
 };
 _can;

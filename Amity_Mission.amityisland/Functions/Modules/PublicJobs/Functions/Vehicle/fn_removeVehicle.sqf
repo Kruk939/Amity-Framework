@@ -1,4 +1,5 @@
 params[["_vehicle", objNull]];
+if(isNull _vehicle) then { _vehicle = public_jobs_var_vehicle; };
 private _ret = false;
 if(isNull _vehicle) exitWith { _ret; };
 private _check = true;
