@@ -17,10 +17,10 @@ if(_type == "LB") exitWith {
       private _paycheck = (_base + _additional) * _multiplayer;
       private _limit = [_variable] call ClientModules_PublicJobs_fnc_getCurrentLimit;
       private _active = count([_variable] call ClientModules_PublicJobs_fnc_getActivePlayers);
-      private _vehicle = if(getText(_config >> "Vehicle" >> "vehicleClass") != "") then { "Yes"; } else { "No"; };
-      private _uniform = if(getText(_config >> "uniform") != "") then { "Yes"; } else { "No"; };
+      private _vehicle = if(getText(_config >> "Vehicle" >> "vehicleClass") != "") then { localize "STR_YES"; } else { localize "STR_NO"; };
+      private _uniform = if(getText(_config >> "uniform") != "") then { localize "STR_YES"; } else { localize "STR_NO"; };
       ctrlEnable[1600, (_active < _limit)];
-      private _text = format["Name: %1\nPaycheck $%2\nCurrently: %3/%4\nWork car: %5\nRequired uniform: %6", _display, _paycheck, _active, _limit, _vehicle, _uniform];
+      private _text = format[localize "STR_PUBLIC_JOBS_DIALOG_INFO_LB", _display, _paycheck, _active, _limit, _vehicle, _uniform];
       ctrlSetText[1000, _text];
 };
 

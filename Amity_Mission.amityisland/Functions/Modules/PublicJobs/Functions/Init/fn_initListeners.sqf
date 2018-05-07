@@ -15,6 +15,10 @@ private _onTick = {
                               _sum = _sum / 2;
                         };
                         [_sum] call ClientModules_PublicJobs_fnc_addPaycheck;
+                        private _function = getText(_config >> "Functions" >> "tick");
+                        if(!isNil _function) then {
+                              [] call (call (compile _function));
+                        };
                   };
             };
       };

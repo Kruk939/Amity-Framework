@@ -3,7 +3,7 @@ class public_job {
       class controls {
             class title_main: RscText {
             	idc = -1;
-            	text = "Public Jobs"; //--- ToDo: Localize;
+            	text = $STR_PUBLIC_JOBS_DIALOG_TITLE; //--- ToDo: Localize;
             	x = 0 * GUI_GRID_W + GUI_GRID_X;
             	y = 0 * GUI_GRID_H + GUI_GRID_Y;
             	w = 40 * GUI_GRID_W;
@@ -12,7 +12,7 @@ class public_job {
             };
             class title_list: RscText {
             	idc = -1;
-            	text = "List"; //--- ToDo: Localize;
+            	text = $STR_PUBLIC_JOBS_DIALOG_LIST; //--- ToDo: Localize;
             	x = 0 * GUI_GRID_W + GUI_GRID_X;
             	y = 1.5 * GUI_GRID_H + GUI_GRID_Y;
             	w = 19 * GUI_GRID_W;
@@ -21,7 +21,7 @@ class public_job {
             };
             class title_info: RscText {
             	idc = -1;
-            	text = "Info"; //--- ToDo: Localize;
+            	text = $STR_PUBLIC_JOBS_DIALOG_INFO; //--- ToDo: Localize;
             	x = 19.5 * GUI_GRID_W + GUI_GRID_X;
             	y = 1.5 * GUI_GRID_H + GUI_GRID_Y;
             	w = 20.5 * GUI_GRID_W;
@@ -50,7 +50,7 @@ class public_job {
             class button_take: RscButton {
             	idc = 1600;
                   action = "[""START""] call ClientModules_PublicJobs_fnc_public_job_action;";
-            	text = "Take"; //--- ToDo: Localize;
+            	text = $STR_PUBLIC_JOBS_DIALOG_TAKE; //--- ToDo: Localize;
             	x = 19.5 * GUI_GRID_W + GUI_GRID_X;
             	y = 17.5 * GUI_GRID_H + GUI_GRID_Y;
             	w = 10 * GUI_GRID_W;
@@ -60,7 +60,7 @@ class public_job {
             class button_exit: RscButton {
             	idc = 1601;
                   action = " closeDialog 0; ";
-            	text = "Exit"; //--- ToDo: Localize;
+            	text = $STR_PUBLIC_JOBS_DIALOG_EXIT; //--- ToDo: Localize;
             	x = 30 * GUI_GRID_W + GUI_GRID_X;
             	y = 17.5 * GUI_GRID_H + GUI_GRID_Y;
             	w = 10 * GUI_GRID_W;

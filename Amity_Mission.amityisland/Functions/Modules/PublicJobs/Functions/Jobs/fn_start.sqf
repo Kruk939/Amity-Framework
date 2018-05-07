@@ -20,10 +20,12 @@ private _variables = getArray(_config >> "variables");
       player setVariable[_name,_value,_public];
 } forEach _variables;
 
-private _function = getText(_config >> "Functions" >> "start");
 public_jobs_var_running = true;
 public_jobs_var_start = time;
+private _function = getText(_config >> "Functions" >> "start");
+diag_log _function;
+[["STR_PUBLIC_JOBS_STARTED", localize getText(_config >> "display")], true] call Client_fnc_domsg;
 if(!isNil _function) then {
-      call compile _function;
+      [] call (call (compile _function));
 };
 public_jobs_var_running;

@@ -1,14 +1,14 @@
 params[["_target", objNull], ["_gate", false]];
 if(isNull _target) exitWith {};
 if(player distance public_jobs_var_vehicle > 50) exitWith {
-      ["You are too far away from your car!", true] call Client_fnc_domsg;
+      ["STR_PUBLIC_JOBS_MECHANIC_CAR_TOO_FAR", true] call Client_fnc_domsg;
 };
 
 [player, "AmovPknlMstpSrasWrflDnon", 1] call ace_common_fnc_doAnimation;
 private _onFinish = {
       (_this select 0) params[["_target", objNull], ["_gate", false]];
       if(player distance public_jobs_var_vehicle > 50) exitWith {
-            ["You are too far away from your car!", true] call Client_fnc_domsg;
+            ["STR_PUBLIC_JOBS_MECHANIC_CAR_TOO_FAR", true] call Client_fnc_domsg;
       };
       if(_gate) then {
             private _gates = nearestobjects [position player,["Land_GatedoorA"], 100];
@@ -26,4 +26,4 @@ private _onFinish = {
 private _onFailure = {
       [player, "AmovPknlMstpSrasWrflDnon", 1] call ace_common_fnc_doAnimation;
 };
-[10, [_target,_gate],_onFinish,_onFailure, "Repairing"] call Client_fnc_progressBar;
+[10, [_target,_gate],_onFinish,_onFailure, localize "STR_CORE_REPAIRING"] call Client_fnc_progressBar;

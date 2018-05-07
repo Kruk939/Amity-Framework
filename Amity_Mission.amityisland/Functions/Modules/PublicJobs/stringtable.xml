@@ -1,0 +1,117 @@
+<Container name="PUBLIC_JOBS">
+      <Key ID="STR_PUBLIC_JOBS_START">
+            <Original>Choose Public Job</Original>
+            <English>Choose Public Job</English>
+            <Polish>Rozpocznij pracę publiczną</Polish>
+      </Key>
+      <Key ID="STR_PUBLIC_JOBS_STOP">
+            <Original>Stop Public Job</Original>
+            <English>Stop Public Job</English>
+            <Polish>Zakończ pracę</Polish>
+      </Key>
+      <Key ID="STR_PUBLIC_JOBS_VEHICLE">
+            <Original>Take Vehicle</Original>
+            <English>Take Vehicle</English>
+            <Polish>Wyciągnij samochód</Polish>
+      </Key>
+      <Key ID="STR_PUBLIC_JOBS_PAYCHECK_COLLECT">
+            <Original>Collect paycheck</Original>
+            <English>Collect paycheck</English>
+            <Polish>Pobierz wypłatę</Polish>
+      </Key>
+      <Key ID="STR_PUBLIC_JOBS_STARTED">
+            <Original>You have started working as %1</Original>
+            <English>You have started working as %1</English>
+            <Polish>Rozpocząłeś pracę jako %1</Polish>
+      </Key>
+      <Key ID="STR_PUBLIC_JOBS_ENDED">
+            <Original>You have ended your work as %1</Original>
+            <English>You have ended your work as %1</English>
+            <Polish>Zakończyłes pracę jako %1</Polish>
+      </Key>
+      <Key ID="STR_PUBLIC_JOBS_PAYCHECK_RECEIVED">
+            <Original>You have received $%1, now you have $%2. You can collect it at center link.</Original>
+            <English>You have received $%1, now you have $%2. You can collect it at center link.</English>
+            <Polish>Otrzymałeś $%1 wypłaty, teraz masz już w sumie $%2. Możesz odebrać swoją wypłatę w center linku.</Polish>
+      </Key>
+      <Key ID="STR_PUBLIC_JOBS_PAYCHECK_TAKE">
+            <Original>You have collected $%1</Original>
+            <English>You have collected $%1</English>
+            <Polish>Odebrałeś $%1 wypłaty</Polish>
+      </Key>
+      <Key ID="STR_PUBLIC_JOBS_PAYCHECK_NOTHING_TO_COLLECT">
+            <Original>There is nothing to collect</Original>
+            <English>There is nothing to collect</English>
+            <Polish>Nie masz nic do zabrania</Polish>
+      </Key>
+      <Key ID="STR_PUBLIC_JOBS_VEHICLE_TIME">
+            <Original>You have to wait for %1 seconds for new car!</Original>
+            <English>You have to wait for %1 seconds for new car!</English>
+            <Polish>Musisz poczekać %1 sekund na nowy samochód!</Polish>
+      </Key>
+      <Key ID="STR_PUBLIC_JOBS_VEHICLE_CANT_REMOVE">
+            <Original>System couldn't delete that car, it has been marked to be towed!</Original>
+            <English>System couldn't delete that car, it has been marked to be towed!</English>
+            <Polish>System nie mógł usunąc pojazdu, został on oznaczony jako do odholowania!</Polish>
+      </Key>
+      <Key ID="STR_PUBLIC_JOBS_JOB_TAXI">
+            <Original>Taxi</Original>
+            <English>Taxi</English>
+            <Polish>Taksówkarz</Polish>
+      </Key>
+      <Key ID="STR_PUBLIC_JOBS_JOB_MECHANIC">
+            <Original>Mechanic</Original>
+            <English>Mechanic</English>
+            <Polish>Mechanik</Polish>
+      </Key>
+      <Key ID="STR_PUBLIC_JOBS_JOB_TOW_TRUCK">
+            <Original>Tow Truck</Original>
+            <English>Tow Truck</English>
+            <Polish>Holownik</Polish>
+      </Key>
+      <Key ID="STR_PUBLIC_JOBS_DIALOG_TITLE">
+            <Original>Public Jobs</Original>
+            <English>Public Jobs</English>
+            <Polish>Prace publiczne</Polish>
+      </Key>
+      <Key ID="STR_PUBLIC_JOBS_DIALOG_LIST">
+            <Original>List</Original>
+            <English>List</English>
+            <Polish>Lista</Polish>
+      </Key>
+      <Key ID="STR_PUBLIC_JOBS_DIALOG_INFO">
+            <Original>Info</Original>
+            <English>Info</English>
+            <Polish>Informacja</Polish>
+      </Key>
+      <Key ID="STR_PUBLIC_JOBS_DIALOG_TAKE">
+            <Original>Take</Original>
+            <English>Take</English>
+            <Polish>Wybierz</Polish>
+      </Key>
+      <Key ID="STR_PUBLIC_JOBS_DIALOG_EXIT">
+            <Original>Exit</Original>
+            <English>Exit</English>
+            <Polish>Wyjście</Polish>
+      </Key>
+      <Key ID="STR_PUBLIC_JOBS_DIALOG_INFO_LB">
+            <Original>Name: %1\nPaycheck $%2\nCurrently: %3/%4\nWork car: %5\nRequired uniform: %6</Original>
+            <English>Name: %1\nPaycheck $%2\nCurrently: %3/%4\nWork car: %5\nRequired uniform: %6</English>
+            <Polish>Nazwa: %1\nWypłata $%2\nMiejsce: %3/%4\nSamochód służbowy: %5\nWymagany uniform: %6</Polish>
+      </Key>
+      <Key ID="STR_PUBLIC_JOBS_MECHANIC_CAR_TOO_FAR">
+            <Original>You are too far away from your car!</Original>
+            <English>You are too far away from your car!</English>
+            <Polish>Jesteś zadaleko od swojego pojazdu!</Polish>
+      </Key>
+      <Key ID="STR_PUBLIC_JOBS_MECHANIC_NEW_TASK">
+            <Original>You have new thing to repair, check your map!</Original>
+            <English>You have new thing to repair, check your map!</English>
+            <Polish>Masz nową rzecz do naprawy, sprawdź mapę!</Polish>
+      </Key>
+      <Key ID="STR_PUBLIC_JOBS_MECHANIC_MAP_MARKER">
+            <Original>Fix that thing!</Original>
+            <English>Fix that thing!</English>
+            <Polish>Napraw to!</Polish>
+      </Key>
+</Container>

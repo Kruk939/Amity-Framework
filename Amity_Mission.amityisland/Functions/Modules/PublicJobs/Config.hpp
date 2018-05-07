@@ -74,6 +74,7 @@ class PublicJobs {
                   };
                   class Setup {
                         rapairFee = 200;
+                        minDistance = 300;
                   };
             };
             class TowTruck {

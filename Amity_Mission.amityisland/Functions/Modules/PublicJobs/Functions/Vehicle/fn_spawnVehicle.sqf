@@ -10,12 +10,17 @@ private _can = true;
 
 //checking time
 if(time - public_jobs_var_lastVehicle <= getNumber(missionConfigFile >> "PublicJobs" >> "Config" >> "vehicleSpawnDelay")) then {
+      private _time = getNumber(missionConfigFile >> "PublicJobs" >> "Config" >> "vehicleSpawnDelay") - time + public_jobs_var_lastVehicle;
+      [["STR_PUBLIC_JOBS_VEHICLE_TIME", _time], true] call Client_fnc_domsg;
       _can = false;
 };
 
 //checking existance
 if((!isNull public_jobs_var_vehicle) && _can) then {
       _can = [public_jobs_var_vehicle] call ClientModules_PublicJobs_fnc_removeVehicle;
+      if(!_can) then {
+            ["STR_PUBLIC_JOBS_VEHICLE_CANT_REMOVE", true] call Client_fnc_domsg;
+      };
 };
 
 if(_can) then {
@@ -28,6 +33,10 @@ if(_can) then {
             clearItemCargoGlobal _vehicle;
             clearBackpackCargoGlobal _vehicle;
             [_vehicle] call Client_fnc_attachVehicle;
+            _vehicle setOwner 2;
+            if(!isNil "ClientModules_Mechanic_fnc_addActionsToCar") then {
+                  [_vehicle] remoteExec["ClientModules_Mechanic_fnc_addActionsToCar", -2];
+            };
             private _variables = getArray(_config >> "variables");
             {
                   _x params["_name", "_value", ["_public", 0], ["_type", ""]];
@@ -42,6 +51,7 @@ if(_can) then {
             if(_backpack != "") then { _vehicle addBackpackCargo[_backpack, 1]; };
             amity_var_vehicles pushBack _vehicle;
             public_jobs_var_vehicle = _vehicle;
+            public_jobs_var_lastVehicle = time;
       } else {
             _can = false;
       };

@@ -1,9 +1,24 @@
 <Container name="AMITY_CORE">
-	<Key ID="STR_TEST">
-		<Original>Fixing</Original>
-		<English>Fixing</English>
-		<Polish>Naprawiam</Polish>
-	</Key>
+      <Key ID="STR_YES">
+            <Original>Yes</Original>
+            <English>Yes</English>
+            <Polish>Tak</Polish>
+      </Key>
+      <Key ID="STR_NO">
+            <Original>No</Original>
+            <English>No</English>
+            <Polish>Nie</Polish>
+      </Key>
+      <Key ID="STR_CORE_REPAIRING">
+            <Original>Repairing</Original>
+            <English>Repairing</English>
+            <Polish>Naprawiam</Polish>
+      </Key>
+      <Key ID="STR_CORE_REPAIR">
+            <Original>Repair</Original>
+            <English>Repair</English>
+            <Polish>Napraw</Polish>
+      </Key>
 </Container>
 <Container name="AMITY_CORE_FACTION">
 	<Key ID="STR_FACTION_NAME_COMPANY">
@@ -31,8 +46,4 @@
 		<English>Faction with this name already exists. Change short or long name of the faction.</English>
 		<Polish>Frakcja, którą próbujesz stworzyć już istnieje. Zmień skrót lub pełną nazwę.</Polish>
 	</Key>
-
-
-
-
 </Container>
