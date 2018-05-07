@@ -26,6 +26,5 @@ class ClientModules_Taxi {
             class exit {};
             class getFareArray {};
             class loop {};
-            class vehicleCrew {};
       };
 };

@@ -43,6 +43,12 @@ class ClientModules_PublicJobs {
             class mechanic_stop {};
             class mechanic_repair {};
       };
+      class Jobs_Towtruck {
+            file="Functions\Modules\PublicJobs\Functions\Jobs\Towtruck";
+            class towtruck_start {};
+            class towtruck_stop {};
+            class towtruck_store {};
+      };
       class Dialog {
             file="Functions\Modules\PublicJobs\Functions\Dialog";
             class public_job_action {};

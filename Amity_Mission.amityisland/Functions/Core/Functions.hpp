@@ -68,6 +68,7 @@ class Misc {
       class surrenderAction {};
       class fetchItem {};
       class checkPermission {};
+      class vehicleCrew {};
 };
 class Money {
       file="Functions\Core\Money";

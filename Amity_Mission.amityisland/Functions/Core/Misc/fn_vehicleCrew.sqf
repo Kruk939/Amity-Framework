@@ -4,7 +4,7 @@ if(isNull _vehicle) exitWith { _ret; };
 private _arr = fullCrew _vehicle;
 {
       _x params["_obj"];
-      if(_obj != player || _withPlayer) then {
+      if(_withPlayer || _obj != player) then {
             _ret pushBack _obj;
       };
 } forEach _arr;

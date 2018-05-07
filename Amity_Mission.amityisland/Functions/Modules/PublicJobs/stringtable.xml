@@ -94,6 +94,11 @@
             <English>Exit</English>
             <Polish>Wyjście</Polish>
       </Key>
+      <Key ID="STR_PUBLIC_JOBS_IMPUND">
+            <Original>Impound</Original>
+            <English>Impound</English>
+            <Polish>Odholuj</Polish>
+      </Key>
       <Key ID="STR_PUBLIC_JOBS_DIALOG_INFO_LB">
             <Original>Name: %1\nPaycheck $%2\nCurrently: %3/%4\nWork car: %5\nRequired uniform: %6</Original>
             <English>Name: %1\nPaycheck $%2\nCurrently: %3/%4\nWork car: %5\nRequired uniform: %6</English>
@@ -113,5 +118,15 @@
             <Original>Fix that thing!</Original>
             <English>Fix that thing!</English>
             <Polish>Napraw to!</Polish>
+      </Key>
+      <Key ID="STR_PUBLIC_JOBS_TOWTRUCK_NEW_TASK">
+            <Original>You have new car to tow, check your map!</Original>
+            <English>You have new car to tow, check your map!</English>
+            <Polish>Masz nowy pojazd do odholowania, sprawdź mapę!</Polish>
+      </Key>
+      <Key ID="STR_PUBLIC_JOBS_TOWTRUCK_MAP_MARKER">
+            <Original>Impound!</Original>
+            <English>Impound!</English>
+            <Polish>Odholuj!</Polish>
       </Key>
 </Container>

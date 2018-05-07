@@ -1,0 +1,32 @@
+<Container name="TOW_PARKING">
+      <Key ID="STR_TOW_PARKING_MARKER">
+            <Original>Impound area</Original>
+            <English>Impound area</English>
+            <Polish>Parking odholowanych pojazdów</Polish>
+      </Key>
+      <Key ID="STR_TOW_PARKING_IMPUND">
+            <Original>Set for impound</Original>
+            <English>Set for impound</English>
+            <Polish>Oznacz do odholowania</Polish>
+      </Key>
+      <Key ID="STR_TOW_PARKING_NO_PERMISSION">
+            <Original>You cannot set up for impound!</Original>
+            <English>You cannot set up for impound!</English>
+            <Polish>Nie możesz ustawić znacznika do holowania!</Polish>
+      </Key>
+      <Key ID="STR_TOW_PARKING_SET_FOR_IMPOUND">
+            <Original>You've set car for impound</Original>
+            <English>You've set car for impound</English>
+            <Polish>Ustawiłeś znacznik holowania na pojeździe</Polish>
+      </Key>
+      <Key ID="STR_TOW_PARKING_IMPOUNDED">
+            <Original>Vehicle has been impounded</Original>
+            <English>Vehicle has been impounded</English>
+            <Polish>Pojazd został odholowany</Polish>
+      </Key>
+      <Key ID="STR_TOW_PARKING_UNSET_FOR_IMPOUND">
+            <Original>You've removed car form impound</Original>
+            <English>You've removed car form impound</English>
+            <Polish>Usunąłeś znacznik holowania na pojeździe</Polish>
+      </Key>
+</container>

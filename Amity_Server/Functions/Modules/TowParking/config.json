@@ -1,0 +1,12 @@
+{
+      "module": "TowParking",
+      "namespace": "ServerModules_TowParking",
+      "version": "0.1",
+      "require": {
+            "amity-framework": ">=0.0.1"
+      },
+      "provides": {
+            "Functions": "Functions.hpp",
+            "db_ini": "amityframework.ini"
+      }
+}

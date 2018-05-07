@@ -43,7 +43,7 @@ if(_vehicle == player || !(_vehicle getVariable["taxi_vehicle", false])) exitWit
             _tick = _tick + 1;
             if(_updateEvery < _tick) then {
                   if(count _arr != 0) then {
-                        private _units = [_vehicle] call ClientModules_Taxi_fnc_vehicleCrew;
+                        private _units = [_vehicle] call Client_fnc_vehicleCrew;
                         if(count _units != 0) then {
                               _arr remoteExec["ClientModules_Taxi_fnc_taxi_fare_update", _units];
                         };

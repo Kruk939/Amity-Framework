@@ -1,0 +1,13 @@
+{
+      "module": "TowParking",
+      "namespace": "ClientModules_TowParking",
+      "version": "0.1",
+      "require": {
+            "amity-framework": ">=0.0.1"
+      },
+      "provides": {
+            "Config": "Config.hpp",
+            "Functions": "Functions.hpp",
+            "stringtable": "stringtable.xml"
+      }
+}
