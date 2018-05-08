@@ -18,9 +18,6 @@ class Drugs {
                         {{973.288,7335.59,0.139845}, 2000}
                   };
                   variable = "weed";
-                  variables[] = {
-
-                  };
                   equipment[] = {
                         {"Land_Portable_generator_F", 20, "STR_DRUGS_NO_GENERATOR"},
                         {"Land_PortableLight_double_F", 20, "STR_DRUGS_NO_LIGHT"},
@@ -80,9 +77,6 @@ class Drugs {
                         {{973.288,7335.59,0.139845}, 2000}
                   };
                   variable = "poppy";
-                  variables[] = {
-
-                  };
                   equipment[] = {
                         {"Land_Portable_generator_F", 20, "STR_DRUGS_NO_GENERATOR"},
                         {"Land_PortableLight_double_F", 20, "STR_DRUGS_NO_LIGHT"},
