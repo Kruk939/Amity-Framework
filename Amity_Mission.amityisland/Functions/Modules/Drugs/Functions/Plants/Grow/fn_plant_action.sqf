@@ -2,6 +2,11 @@ params[["_plant", objNull], ["_type", ""]];
 if(isNull _plant || _type == "") exitWith {};
 private _config = [typeOf _plant, "plant"] call ClientModules_Drugs_fnc_plant_getConfig;
 if(isNull _config) exitWith {};
+private _function = getText(_config >> "Grow" >> "Functions" >> "action");
+if(!isNil _function && _function != "") exitWith { _this call (call compile _function); };
+
+
+
 private _actions = getArray(_config >> "Growing" >> "actions");
 private _action = [];
 {
@@ -26,4 +31,4 @@ private _onFailure = {
       [player, "AmovPknlMstpSrasWrflDnon", 1] call ace_common_fnc_doAnimation;
 
 };
-[_time, [_plant, _action], _onFinish, _onFailure, _text call BIS_fnc_localize] call Client_fnc_progressBar;
+[_time, [_plant, _action], _onFinish, _onFailure, format["%1_ACTION",_text] call BIS_fnc_localize] call Client_fnc_progressBar;

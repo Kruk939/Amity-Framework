@@ -1,9 +1,7 @@
-params[["_variable", Drugs_var_plant_variable]];
-if(_variable == "" || isNull Drugs_var_attached) exitWith {};
-if((count Drugs_var_plants) >= getNumber(missionConfigFile >> "Drugs" >> "Config" >> "maxPlants")) exitWith { ["Too many plants", true] call Client_fnc_domsg; };
+if(isNull Drugs_var_attached) exitWith {};
 
-private _config = [_variable] call ClientModules_Drugs_fnc_plant_getConfig;
-if(isNull _config) exitWith {};
+private _config = [typeOf Drugs_var_attached, "plant"] call ClientModules_Drugs_fnc_plant_getConfig;
+if(isNull _config) exitWith {detach Drugs_var_attached; deleteVehicle Drugs_var_attached; Drugs_var_attached = objNull;};
 
 //checking surface
 private _surface = getText(_config >> "surface");
@@ -59,9 +57,9 @@ private _vars = getArray(_config >> "Growing" >> "variables");
       _x params["_name", "_value", ["_public", 0]];
       _plant setVariable[_name, _value, _public == 1];
 } forEach _vars;
-
-private _function = getText(_config >> "function");
-if(!isNil _function) then {
+Drugs_var_plants pushBack _plant;
+private _function = getText(_config >> "Grow" >> "Functions" >> "plant");
+if(!isNil _function && _function != "") then {
       [_plant] spawn (call compile _function);
 } else {
       [_plant] spawn ClientModules_Drugs_fnc_plant_grow;

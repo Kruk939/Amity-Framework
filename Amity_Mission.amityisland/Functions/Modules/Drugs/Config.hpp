@@ -8,7 +8,12 @@ class Drugs {
             class Weed {
                   seed = "openrp_weedseed";
                   plant = "vvv_cannabis1_plan";
+                  class Menu {
+                        name = "Weed";
+                        position[] = {0,0,0.8};
+                  };
                   surface = "#amity_grass_green_Surface";
+                  attach[] = {0, 1.3, -1};
                   positions[] = {
                         {{973.288,7335.59,0.139845}, 2000}
                   };
@@ -22,25 +27,29 @@ class Drugs {
                         {"CamoNet_ghex_F", 20, "You need a camonet. We don't want to get caught now do we?!"}
                   };
                   class Growing {
-                        function = "";
-                        check = "";
+                        class Functions {
+                              grow = "";
+                              check = "";
+                              action = "";
+                              harvest = "";
+                        };
                         harvest[] = {
-
+                              {0, "class", 5}
                         };
                         variables[] = {
                               {'plant_water', 5, 0, 5},
                               {'plant_fertilizer', 0, 0, 10}
                         };
                         actions[] = {
-                              {"water", 10, "WATERING", "plant_water", 10, "openrp_watercan", 1},
-                              {"fertilize", 10, "FERTILIZING", "plant_fertilizer", 10, "openrp_fertilizer", 1}
+                              {"water", 10, "WATER", "plant_water", 10, "openrp_watercan", 1},
+                              {"fertilize", 10, "FERTILIZE", "plant_fertilizer", 10, "openrp_fertilizer", 1}
                         };
                         levels[] = {
                               {"plant_water", {
                                     {0, 10, 1, "NOT_MUCH"},
                                     {10, 20, 0, "GOOD"},
                                     {20, 30, 1, "LITTLE TO MUCH"},
-                                    {20, 40, 3, "TOO MUCH!"}
+                                    {30, 40, 3, "TOO MUCH!"}
                               }},
                               {"plant_fertilizer", {
                                     {0, 10, 1, "NOT_MUCH"},
@@ -60,7 +69,12 @@ class Drugs {
             class Poppy {
                   seed = "openrp_poppyseed";
                   plant = "OpenRP_poppyplant";
+                  class Menu {
+                        name = "Poppy plant";
+                        position[] = {0,0,0.8};
+                  };
                   surface = "#amity_grass_green_Surface";
+                  attach[] = {[0, 1.3, -0.4};
                   positions[] = {
                         {{973.288,7335.59,0.139845}, 2000}
                   };
@@ -74,18 +88,42 @@ class Drugs {
                         {"CamoNet_ghex_F", 20, "You need a camonet. We don't want to get caught now do we?!"}
                   };
                   class Growing {
-                        function = "";
-                        check = "";
+                        class Functions {
+                              grow = "";
+                              check = "";
+                              action = "";
+                              harvest = "";
+                        };
                         harvest[] = {
-
+                              {0, "class", 5}
                         };
                         variables[] = {
-                              {'plant_water', 5, 0},
-                              {'plant_fertilizer', 0, 0}
+                              {'plant_water', 5, 0, 5},
+                              {'plant_fertilizer', 0, 0, 10}
                         };
                         actions[] = {
-                              {"water", "plant_water", 10, "openrp_watercan", 1},
-                              {"fertilize", "plant_fertilizer", 10, "", 0}
+                              {"water", 10, "WATER", "plant_water", 10, "openrp_watercan", 1},
+                              {"fertilize", 10, "FERTILIZE", "plant_fertilizer", 10, "openrp_fertilizer", 1}
+                        };
+                        levels[] = {
+                              {"plant_water", {
+                                    {0, 10, 1, "NOT_MUCH"},
+                                    {10, 20, 0, "GOOD"},
+                                    {20, 30, 1, "LITTLE TO MUCH"},
+                                    {30, 40, 3, "TOO MUCH!"}
+                              }},
+                              {"plant_fertilizer", {
+                                    {0, 10, 1, "NOT_MUCH"},
+                                    {10, 20, 0, "GOOD"},
+                                    {20, 30, 1, "LITTLE TO MUCH"},
+                                    {30, 40, 3, "TOO MUCH!"}
+                              }}
+                        };
+                        class Grow {
+                              every = 30;
+                              remove = 10;
+                              good = 0.14;
+                              bad = 0.07;
                         };
                   };
             };

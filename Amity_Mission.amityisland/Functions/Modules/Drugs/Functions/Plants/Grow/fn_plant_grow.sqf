@@ -9,8 +9,9 @@ private _every = getNumber(_config >> "Growing" >> "Grow" >> "every");
 private _removeEvery = getNumber(_config >> "Growing" >> "Grow" >> "remove");
 private _tickTime = getNumber(missionConfigFile >> "Drugs" >> "Config" >> "tick");
 private _tick = 0;
-while{(getPos _plant select 2) < -0.2 || !isNull _plant} do {
+while{(getPos _plant select 2) < -0.2 && !isNull _plant} do {
       uiSleep _tickTime;
+      _tick = _tick + 1;
 
       //checking equipment
       private _good = true;
@@ -46,17 +47,16 @@ while{(getPos _plant select 2) < -0.2 || !isNull _plant} do {
                   _val = _val - round(random(_remove));
                   if(_val < 0) then { _val = 0; };
                   _plant setVariable[_var, _val, _public == 1];
-                  private _level = [_plant, _var] call ClientModules_Drugs_fnc_getLevel;
+                  private _level = [_plant, _var] call ClientModules_Drugs_fnc_plant_getLevel;
                   private _limit = [_plant, _level] call ClientModules_Drugs_fnc_plant_checkLevel;
                   _limit params["", "", "_qAdd"];
                   _quality = _quality + _qAdd;
             } forEach _variables;
             _plant setVariable["quality", _quality];
       };
-      _tick = _tick + 1;
 };
-if(!isNull _plant) exitWith {};
+if(isNull _plant) exitWith {};
 private _quality = _plant getVariable["quality", 0];
 _plant setVariable["ready", true, true];
 _plant setVariable["quality", _quality, true];
-_plant setVariable["growing", nil, true];
+_plant setVariable["growing", false, true];

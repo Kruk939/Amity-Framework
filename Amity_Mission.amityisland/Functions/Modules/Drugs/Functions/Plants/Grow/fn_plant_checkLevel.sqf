@@ -7,11 +7,11 @@ if(_amount <= 0) then { _amount = 0; };
 
 {
       _x params["_min", "_max", "", ""];
-      if(_min < _amount && _max <= _amount) exitWith {
+      if(_min <= _amount && _amount < _max) exitWith {
             _ret = _x;
       };
 } forEach _levels;
-if(count _ret == 0) then {
+if((count _ret) == 0) then {
       _ret = _levels select (count _levels - 1);
 };
 
