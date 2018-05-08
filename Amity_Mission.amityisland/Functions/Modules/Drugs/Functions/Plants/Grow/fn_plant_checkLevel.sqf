@@ -1,6 +1,6 @@
 params[["_plant", objNull], ["_level", []], ["_monit", false]];
 private _ret = [];
-if(isNull _plant) exitWith { _ret; };
+if(isNull _plant || count _level == 0) exitWith { _ret; };
 _level params["_variable", "_levels"];
 private _amount = _plant getVariable[_variable, 0];
 if(_amount <= 0) then { _amount = 0; };

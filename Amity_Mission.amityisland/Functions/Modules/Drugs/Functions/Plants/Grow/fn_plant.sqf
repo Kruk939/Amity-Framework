@@ -5,7 +5,7 @@ if(isNull _config) exitWith {detach Drugs_var_attached; deleteVehicle Drugs_var_
 
 //checking surface
 private _surface = getText(_config >> "surface");
-if(_surface != "" && (surfaceType (position player) != _surface)) exitWith { ["NOT good surface", true] call Client_fnc_domsg; };
+if(_surface != "" && (surfaceType (position player) != _surface)) exitWith { ["STR_DRUGS_PLANT_NO_GOOD_SURFACE", true] call Client_fnc_domsg; };
 
 //checking equipment
 private _good = true;
@@ -26,7 +26,7 @@ private _plants = [] call ClientModules_Drugs_fnc_plant_getConfigs;
       private _plant = getText(_x >> "plant");
       if(count (nearestObjects [player, [_plant], _proximity]) > 1) exitWith {
             _good = false;
-            ["TOO CLOSE", 2] call Client_fnc_domsg;
+            ["STR_DRUGS_PLANT_TOO_CLOSE", true] call Client_fnc_domsg;
       };
 } forEach _plants;
 if(!_good) exitWith {};
@@ -36,7 +36,7 @@ _good = false;
 private _positions = getArray(_config >> "positions");
 {
       _x params["_pos", "_distance"];
-      if((player distance _pos) <= _distance) exitWith { _good = true; ["NOT ON POSITION", 2] call Client_fnc_domsg; };
+      if((player distance _pos) <= _distance) exitWith { _good = true; ["STR_DRUGS_NO_GOOD_POSITION", true] call Client_fnc_domsg; };
 } forEach _positions;
 if(_good) exitWith {};
 _good = true;

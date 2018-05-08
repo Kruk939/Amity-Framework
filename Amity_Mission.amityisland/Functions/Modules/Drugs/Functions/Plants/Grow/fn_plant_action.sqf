@@ -17,7 +17,7 @@ private _action = [];
 } forEach _actions;
 
 _action params["", "_time", "_text", "", "", "_item"];
-if(_item != "" && (([_item] call Client_fnc_countItems) == 0)) exitWith { ["NO ITEM", true] call Client_fnc_domsg; };
+if(_item != "" && (([_item] call Client_fnc_countItems) == 0)) exitWith { ["STR_DRUGS_NO_ITEM", true] call Client_fnc_domsg; };
 
 private _onFinish = {
       (_this select 0) params["_plant", "_action"];
