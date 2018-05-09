@@ -1,0 +1,77 @@
+<Container name="JAIL">
+      <Key ID="STR_JAIL_SECURITY_MIN">
+            <Original>Minimum security</Original>
+            <English>Minimum security</English>
+            <Polish>Minimum security</Polish>
+      </Key>
+      <Key ID="STR_JAIL_SECURITY_MEDIUM">
+            <Original>Medium security</Original>
+            <English>Medium security</English>
+            <Polish>Medium security</Polish>
+      </Key>
+      <Key ID="STR_JAIL_SECURITY_MAX">
+            <Original>Maximum security</Original>
+            <English>Maximum security</English>
+            <Polish>Maximum security</Polish>
+      </Key>
+      <Key ID="STR_JAIL_SECURITY_SUPER_MAX">
+            <Original>SuperMax security</Original>
+            <English>SuperMax security</English>
+            <Polish>SuperMax security</Polish>
+      </Key>
+      <Key ID="STR_JAIL_LOCKER">
+            <Original>Locker</Original>
+            <English>Locker</English>
+            <Polish>Szafka</Polish>
+      </Key>
+      <Key ID="STR_JAIL_LOCKER_OPEN">
+            <Original>Open</Original>
+            <English>Open</English>
+            <Polish>Otwórz</Polish>
+      </Key>
+      <Key ID="STR_JAIL_LOCKER_CLOSE">
+            <Original>Close</Original>
+            <English>Close</English>
+            <Polish>Zamknij</Polish>
+      </Key>
+      <Key ID="STR_JAIL_LOCKER_BROWSE">
+            <Original>Browse lockers</Original>
+            <English>Browse lockers</English>
+            <Polish>Przeglądaj szafki</Polish>
+      </Key>
+      <Key ID="STR_JAIL_SENTENCES_OPEN">
+            <Original>Browse sentences</Original>
+            <English>Browse sentences</English>
+            <Polish>Przeglądaj wyroki</Polish>
+      </Key>
+      <Key ID="STR_JAIL_SENTENCE_SERVED">
+            <Original>You have served sentence. Reason: %1</Original>
+            <English>You have served sentence. Reason: %1</English>
+            <Polish>Odsiedziałeś wyrok. Powód: %1</Polish>
+      </Key>
+      <Key ID="STR_JAIL_ESCAPED">
+            <Original>You have escaped from prison. Run forest, run!</Original>
+            <English>You have escaped from prison. Run forest, run!</English>
+            <Polish>Uciekłeś z więzienia. Zmykaj stąd póki możesz!</Polish>
+      </Ke>
+      <Key ID="STR_JAIL_FINISH">
+            <Original>You have served all of your sentences. Don't forget to pick your stuff from locker!</Original>
+            <English>You have served all of your sentences. Don't forget to pick your stuff from locker!</English>
+            <Polish>Odsiedziałeś swoje wszystkie wyroki. Nie zapomnij zabrać rzeczy ze swojej szafki!</Polish>
+      </Key>
+      <Key ID="STR_JAIL_SENTENCE_TOO_HIGH_FOR_PRISON">
+            <Original>This sentence is to high for this facility. Maximum sentence is: %1</Original>
+            <English>This sentence is to high for this facility. Maximum sentence is: %1</English>
+            <Polish>Ten wyrok jest za długi dla tej placówki. Maksimum wyrok wynosi: %1</Polish>
+      </Key>
+      <Key ID="STR_JAIL_SENTENCE_TOO_LOW_FOR_PRISON">
+            <Original>This sentence is to low for this facility. Minimum sentence is: %1</Original>
+            <English>This sentence is to low for this facility. Minimum sentence is: %1</English>
+            <Polish>Ten wyrok jest za krótki dla tej placówki. Minimalny wyrok wynosi: %1</Polish>
+      </Key>
+      <Key ID="STR_JAIL_SENTENCE_SECURITY_NOT_MATCH">
+            <Original>This facility does not serve for this kind of prisoners!</Original>
+            <English>This facility does not serve for this kind of prisoners!</English>
+            <Polish>Ta placówka nie obsługuje tego typu więźniów</Polish>
+      </Key>
+</container>
