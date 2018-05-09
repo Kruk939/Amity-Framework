@@ -13,7 +13,8 @@ class Drugs {
                   };
                   fireClass = "test_EmptyObjectForFireBig";
                   moveChance = 40;
-                  moveMaxDistance = 10;
+                  moveMaxDistance = 5;
+                  tick = 0.5;
                   class Time {
                         settingUp = 10;
                         minDelay = 3;
