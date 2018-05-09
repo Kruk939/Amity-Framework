@@ -17,13 +17,12 @@ if(count _harvest == 0) exitWith { deleteVehicle _plant; }; //nothing to do
 private _q = [];
 {
       _x params["_qu"];
-      if(_qu <= _quality) then {
+      if(_quality <= _qu) then {
             _q = _x;
       };
 } forEach _harvest;
 if(count _q == 0) exitWith { deleteVehicle _plant; }; //something went wrong
 _q params["_qu", "_class", ["_amount", 1]];
-if(_qu <= _quality) exitWith { deleteVehicle _plant; }; //bad quality
 
 private _i = 0;
 for [{}, {_i < _amount}, { _i = _i + 1; }] do {

@@ -84,6 +84,11 @@
             <English>Burn plant</English>
             <Polish>Spal plon</Polish>
       </Key>
+      <Key ID="STR_DRUGS_PLANT_BURNING">
+            <Original>Setting up fire</Original>
+            <English>Setting up fire</English>
+            <Polish>Podpalam</Polish>
+      </Key>
       <Key ID="STR_DRUGS_PLANT_REMOVE">
             <Original>Remove plant</Original>
             <English>Remove plant</English>

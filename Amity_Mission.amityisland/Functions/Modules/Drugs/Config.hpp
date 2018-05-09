@@ -4,6 +4,7 @@ class Drugs {
             maxPlants = 7;
             tick = 1;
             class Fire {
+                  enable = 1;
                   burnEquipment[] = {
                         "RPF_Items_Matches",
                         "murshun_cigs_lighter",
@@ -14,6 +15,7 @@ class Drugs {
                   moveChance = 80;
                   moveMaxDistance = 10;
                   class Time {
+                        settingUp = 10;
                         minDelay = 3;
                         maxDelay = 10;
                         minDuration = 50;
@@ -57,34 +59,37 @@ class Drugs {
                               harvest = "";
                         };
                         harvest[] = {
-                              {10, "openrp_weedbag", 3},
-                              {99, "openrp_weedbag", 3}
+                              {10, "openrp_weedbag", 10},
+                              {40, "openrp_weedbag", 5},
+                              {80, "openrp_weedbag", 2}
                         };
                         variables[] = {
-                              {"plant_water", 5, 0, 5},
-                              {"plant_fertilizer", 0, 0, 10}
+                              {"plant_water", 10, 0, 2},
+                              {"plant_fertilizer", 10, 0, 3}
                         };
                         actions[] = {
-                              {"water", 10, "STR_DRUGS_PLANT_ACTION_WATER", "plant_water", 10, "openrp_watercan", 1, ""},
-                              {"fertilize", 10, "STR_DRUGS_PLANT_ACTION_FERTILIZE", "plant_fertilizer", 10, "openrp_fertilizer", 1, ""}
+                              {"water", 7, "STR_DRUGS_PLANT_ACTION_WATER", "plant_water", 10, "openrp_watercan", 1, ""},
+                              {"fertilize", 7, "STR_DRUGS_PLANT_ACTION_FERTILIZE", "plant_fertilizer", 10, "openrp_fertilizer", 1, ""}
                         };
                         levels[] = {
                               {"plant_water", {
                                     {0, 10, 1, "STR_DRUGS_CHECK_NOT_MUCH"},
-                                    {10, 20, 0, "STR_DRUGS_CHECK_GOOD"},
-                                    {20, 30, 1, "STR_DRUGS_CHECK_LITTLE_TOO_MUCH"},
+                                    {10, 15, 0, "STR_DRUGS_CHECK_GOOD"},
+                                    {15, 20, -1, "STR_DRUGS_CHECK_GOOD"},
+                                    {20, 25, 0, "STR_DRUGS_CHECK_GOOD"},
+                                    {25, 30, 1, "STR_DRUGS_CHECK_LITTLE_TOO_MUCH"},
                                     {30, 40, 3, "STR_DRUGS_CHECK_TOO_MUCH"}
                               }},
                               {"plant_fertilizer", {
                                     {0, 10, 1, "STR_DRUGS_CHECK_NOT_MUCH"},
-                                    {10, 20, 0, "STR_DRUGS_CHECK_GOOD"},
+                                    {10, 20, -1, "STR_DRUGS_CHECK_GOOD"},
                                     {20, 30, 1, "STR_DRUGS_CHECK_LITTLE_TOO_MUCH"},
                                     {30, 40, 3, "STR_DRUGS_CHECK_TOO_MUCH"}
                               }},
                         };
                         class Grow {
                               every = 30;
-                              remove = 10;
+                              remove = 20;
                               good = 0.14;
                               bad = 0.07;
                         };

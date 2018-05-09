@@ -11,4 +11,4 @@ private _onFinish = {
 private _onFailure = {
 
 };
-[10, [_target, _force], _onFinish, _onFailure, "STR_DRUGS_PLANT_BURNING" call BIS_fnc_localize] call Client_fnc_progressBar;
+[getNumber(missionConfigFile >> "Drugs" >> "Config" >> "Fire" >> "Time" >> "settingUp"), [_target, _force], _onFinish, _onFailure, "STR_DRUGS_PLANT_BURNING" call BIS_fnc_localize] call Client_fnc_progressBar;

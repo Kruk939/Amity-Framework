@@ -2,6 +2,9 @@ params[["_target", objNull], ["_force", false]];
 if(isNull _target) exitWith {};
 if(!([_target] call ClientModules_Drugs_fnc_is_plant)) exitWith {};
 if(!([] call ClientModules_Drugs_fnc_has_burnEquipment) && !_force) exitWith {};
+private _enabled = getNumber(missionConfigFile >> "Drugs" >> "Config" >> "Fire" >> "Time" >> "enable");
+if(_enabled == 0) exitWith { deleteVehicle _target; };
+
 
 [_target, _force] spawn {
       params[["_target", objNull], ["_force", false]];
@@ -30,7 +33,7 @@ if(!([] call ClientModules_Drugs_fnc_has_burnEquipment) && !_force) exitWith {};
                   private _nearest = nearestObjects[_target, [], _distance];
                   if(count (_nearest) != 0) then {
                         {
-                              if(([_x] call ClientModules_Drugs_fnc_is_plant) && !(_target getVariable["onFire", false])) exitWith {
+                              if(([_x] call ClientModules_Drugs_fnc_is_plant) && !(_x getVariable["onFire", false])) exitWith {
                                     [_x, true] call ClientModules_Drugs_fnc_plant_burn;
                               };
                         } forEach _nearest;
