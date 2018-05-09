@@ -99,12 +99,14 @@ private _onSave = {
 ["onSave", _onSave] call Client_fnc_eventAdd;
 
 private _onTick = {
-      if(((([] call TFAR_fnc_activeSwRadio) find "cg_tablet") == -1) && ((([] call TFAR_fnc_activeSwRadio) find "openrp_phone") == -1)) then {
-            if((count (player call TFAR_fnc_radiosList) isEqualTo 0)) then {
-                  private _channel = (call TFAR_fnc_ActiveSwRadio) call TFAR_fnc_getSwChannel;
+      if((count (player call TFAR_fnc_radiosList) != 0)) then {
+            if(!(((([] call TFAR_fnc_activeSwRadio) find "cg_tablet") == -1) && ((([] call TFAR_fnc_activeSwRadio) find "openrp_phone") == -1))) then {
+            	private _channel = (call TFAR_fnc_ActiveSwRadio) call TFAR_fnc_getSwChannel;
             	_channel = _channel + 1;
             	[(call TFAR_fnc_activeSwRadio), _channel, getPlayerUID player] call TFAR_fnc_SetChannelFrequency;
             	player setVariable ["tf_unable_to_use_radio", true];
+            } else {
+                  player setVariable ["tf_unable_to_use_radio", false];
             };
       };
 };

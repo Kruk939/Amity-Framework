@@ -47,8 +47,8 @@ class Drugs {
                               {"plant_fertilizer", 0, 0, 10}
                         };
                         actions[] = {
-                              {"water", 10, "STR_DRUGS_PLANT_ACTION_WATER", "plant_water", 10, "openrp_watercan", 1},
-                              {"fertilize", 10, "STR_DRUGS_PLANT_ACTION_FERTILIZE", "plant_fertilizer", 10, "openrp_fertilizer", 1}
+                              {"water", 10, "STR_DRUGS_PLANT_ACTION_WATER", "plant_water", 10, "openrp_watercan", 1, ""},
+                              {"fertilize", 10, "STR_DRUGS_PLANT_ACTION_FERTILIZE", "plant_fertilizer", 10, "openrp_fertilizer", 1, ""}
                         };
                         levels[] = {
                               {"plant_water", {
@@ -105,8 +105,8 @@ class Drugs {
                               {"plant_fertilizer", 0, 0, 10}
                         };
                         actions[] = {
-                              {"water", 10, "STR_DRUGS_PLANT_ACTION_WATER", "plant_water", 10, "openrp_watercan", 1},
-                              {"fertilize", 10, "STR_DRUGS_PLANT_ACTION_FERTILIZE", "plant_fertilizer", 10, "openrp_fertilizer", 1}
+                              {"water", 10, "STR_DRUGS_PLANT_ACTION_WATER", "plant_water", 10, "openrp_watercan", 1, ""},
+                              {"fertilize", 10, "STR_DRUGS_PLANT_ACTION_FERTILIZE", "plant_fertilizer", 10, "openrp_fertilizer", 1, ""}
                         };
                         levels[] = {
                               {"plant_water", {

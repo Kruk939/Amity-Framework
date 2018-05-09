@@ -10,5 +10,5 @@ class Phone {
       class Limits {
             group = 4;
             numbers = 3;
-      }
+      };
 };

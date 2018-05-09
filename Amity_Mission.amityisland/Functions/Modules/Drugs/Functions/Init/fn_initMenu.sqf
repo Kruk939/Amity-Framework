@@ -14,15 +14,15 @@ private _plants = [] call ClientModules_Drugs_fnc_plant_getConfigs;
       private _class = getText(_x >> "plant");
       private _actions = [
             [
-                  ["DRUGS_PLANT_MAIN",  getText(_x >> "Menu" >> "name") call BIS_fnc_localize, "", {true}, {true}, {}, "", getArray(_x >> "Menu" >> "position"), 5],
+                  ["DRUGS_PLANT_MAIN",  getText(_x >> "Menu" >> "name") call BIS_fnc_localize, "", {true}, {true}, {}, "", getArray(_x >> "Menu" >> "position"), 3],
                   ["class",[_class, 0, []]]
             ],
             [
-                  ["DRUGS_PLANT_HARVEST","STR_DRUGS_PLANT_HARVEST" call BIS_fnc_localize, "", { [_target] call ClientModules_Drugs_fnc_plant_harvest; }, {([_target] call ClientModules_Drugs_fnc_is_plant) && _target getVariable["ready", false]}, {}, "", "", 20],
+                  ["DRUGS_PLANT_HARVEST","STR_DRUGS_PLANT_HARVEST" call BIS_fnc_localize, "", { [_target] call ClientModules_Drugs_fnc_plant_harvest; }, {([_target] call ClientModules_Drugs_fnc_is_plant) && _target getVariable["ready", false]}, {}, "", "", 3],
                   ["class",[_class, 0, ["DRUGS_PLANT_MAIN"]]]
             ],
             [
-                  ["DRUGS_PLANT_BURN","STR_DRUGS_PLANT_BURN" call BIS_fnc_localize, "", { [_target] call ClientModules_Drugs_fnc_plant_burn; }, {([_target] call ClientModules_Drugs_fnc_is_plant)}, {}, "", "", 20],
+                  ["DRUGS_PLANT_BURN","STR_DRUGS_PLANT_BURN" call BIS_fnc_localize, "", { [_target] call ClientModules_Drugs_fnc_plant_burn; }, {([_target] call ClientModules_Drugs_fnc_is_plant)}, {}, "", "", 3],
                   ["class",[_class, 0, ["DRUGS_PLANT_MAIN"]]]
             ]
       ];
@@ -39,9 +39,9 @@ private _plants = [] call ClientModules_Drugs_fnc_plant_getConfigs;
             _x params["_var", "", "_str", "", "", "_item"];
 
             //make action to the plant
-            private _checkFunction = { local _target };
+            private _checkFunction = { local _target && !(_target getVariable["ready", false]) };
             if(_item != "") then {
-                  _checkFunction = compile format["local _target && (['%1'] call Client_fnc_countItems) != 0", _item];
+                  _checkFunction = compile format["local _target && (['%1'] call Client_fnc_countItems) != 0 && !(_target getVariable[""ready"", false])", _item];
             };
             private _actionFunction = compile format["[_target, '%1'] call ClientModules_Drugs_fnc_plant_action", _var];
             private _action = [
@@ -51,7 +51,7 @@ private _plants = [] call ClientModules_Drugs_fnc_plant_getConfigs;
             _actions pushBack _action;
 
             //check plant
-            _checkFunction = { local _target };
+            _checkFunction = { local _target && !(_target getVariable["ready", false])};
             _actionFunction = compile format["[_target,'%1'] call ClientModules_Drugs_fnc_plant_check", _var];
             _action = [
                   [format["DRUGS_PLANT_CHECK_%1", _var], format["%1_CHECK",_str] call BIS_fnc_localize, "", _actionFunction, _checkFunction, {}, "", "", 20],

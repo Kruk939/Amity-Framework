@@ -17,3 +17,4 @@ if(isNull(_obj getVariable["owner", objNull])) then {
       _obj setVariable["owner", player, true];
       [_obj] remoteExec ["ClientModules_UsableItems_fnc_addAction", -2];
 };
+["onUsableItemPlaced", [_obj]] call Client_fnc_eventCall;
