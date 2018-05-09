@@ -4,17 +4,17 @@
             <English>Place</English>
             <Polish>Postaw</Polish>
       </Key>
-      <Key ID="STR_USABLE_ITEMS_PLACE">
+      <Key ID="STR_USABLE_ITEMS_ITEM">
             <Original>Item</Original>
             <English>Item</English>
             <Polish>Przedmiot</Polish>
       </Key>
-      <Key ID="STR_USABLE_ITEMS_PLACE">
+      <Key ID="STR_USABLE_ITEMS_TAKE">
             <Original>Take</Original>
             <English>Take</English>
             <Polish>Weź</Polish>
       </Key>
-      <Key ID="STR_USABLE_ITEMS_PLACE">
+      <Key ID="STR_USABLE_ITEMS_PICKUP">
             <Original>Pickup</Original>
             <English>Pickup</English>
             <Polish>Podnieś</Polish>
