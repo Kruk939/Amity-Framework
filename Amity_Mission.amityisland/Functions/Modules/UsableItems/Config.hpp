@@ -9,7 +9,7 @@ class UsableItems {
             food[] = {
 
             };
-            drinks = {
+            drinks[] = {
 
             };
       };
