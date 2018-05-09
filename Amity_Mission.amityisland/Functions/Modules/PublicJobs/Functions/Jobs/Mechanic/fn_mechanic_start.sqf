@@ -20,7 +20,7 @@ public_jobs_mechanic_var_objects = nearestobjects [amity_var_map_center, ["Land_
                        ];
                   };
                   _object setVariable["amity_repair", true, true];
-                  [_action] spawn Client_fnc_addAction;
+                  [_action] call Client_fnc_addAction;
                   private _time = time;
                   waitUntil{!(_object getVariable["amity_repair", false]) || time - _time > 600 || !public_jobs_var_running};
                   _object setVariable["amity_repair", nil, true];
