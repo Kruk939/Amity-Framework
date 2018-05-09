@@ -13,4 +13,14 @@ class ClientModules_UsableItems {
             class InventoryOpened {};
             class useItem {};
       };
+      class Place {
+            file="Functions\Modules\UsableItems\Functions\Place";
+            class addAction {};
+            class addPlacable {};
+            class attach {};
+            class find {};
+            class pickUp {};
+            class place {};
+            class reattach {};
+      };
 };

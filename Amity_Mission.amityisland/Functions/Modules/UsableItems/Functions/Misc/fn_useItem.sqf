@@ -19,5 +19,12 @@ if((count _item) != 0) then {
             player removeItem _class;
       };
       closeDialog 0;
+} else {
+      {
+            if(_class == _x select 0) exitWith {
+                  [_class] call ClientModules_UsableItems_fnc_attach;
+                  closeDialog 0;
+            };
+      } forEach UsableItems_var_placable;
 };
 false;

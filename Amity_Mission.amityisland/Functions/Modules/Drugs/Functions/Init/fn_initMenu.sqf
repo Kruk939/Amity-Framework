@@ -29,7 +29,8 @@ private _plants = [] call ClientModules_Drugs_fnc_plant_getConfigs;
 
       //adding interaction with seed
       if(!isNil "ClientModules_UsableItems_fnc_addItem") then {
-            [getText(_x >> "seed"), ClientModules_Drugs_fnc_plant_attach, false, getText(_x >> "variable")] call ClientModules_UsableItems_fnc_addItem;
+            private _fnc = compile format["[""%1""] call ClientModules_Drugs_fnc_plant_attach", getText(_x >> "variable")];
+            [getText(_x >> "seed"), _fnc, false] call ClientModules_UsableItems_fnc_addItem;
       };
 
 

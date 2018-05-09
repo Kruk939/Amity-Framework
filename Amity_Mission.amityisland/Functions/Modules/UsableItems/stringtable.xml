@@ -1,0 +1,22 @@
+<Container name="DRUGS">
+      <Key ID="STR_USABLE_ITEMS_PLACE">
+            <Original>Place</Original>
+            <English>Place</English>
+            <Polish>Postaw</Polish>
+      </Key>
+      <Key ID="STR_USABLE_ITEMS_PLACE">
+            <Original>Item</Original>
+            <English>Item</English>
+            <Polish>Przedmiot</Polish>
+      </Key>
+      <Key ID="STR_USABLE_ITEMS_PLACE">
+            <Original>Take</Original>
+            <English>Take</English>
+            <Polish>Weź</Polish>
+      </Key>
+      <Key ID="STR_USABLE_ITEMS_PLACE">
+            <Original>Pickup</Original>
+            <English>Pickup</English>
+            <Polish>Podnieś</Polish>
+      </Key>
+</Container>

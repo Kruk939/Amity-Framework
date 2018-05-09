@@ -4,6 +4,14 @@ class Drugs {
             maxPlants = 7;
             tick = 1;
       };
+      class UsableItems {
+            equipment[] = {
+                  {"openrp_net", "CamoNet_ghex_F"},
+                  {"openrp_generator", "Land_Portable_generator_F"},
+                  {"openrp_lamp", "Land_PortableLight_double_F"},
+                  {"openrp_druglabitem", "Land_openrp_druglab"}
+            };
+      };
       class Plants {
             class Weed {
                   seed = "openrp_weedseed";
