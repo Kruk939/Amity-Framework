@@ -1,5 +1,5 @@
 params[["_target", objNull], ["_profile_id", -1]];
-if(_target getVariable["locked", false]) exitWith {};
+if(_target getVariable["locker_open", false]) exitWith {};
 if(_profile_id == -1) then {
       _profile_id = player getVariable["profile_id", -1];
 };

@@ -23,6 +23,7 @@ if(_clear) then {
       };
 };
 [_holder] call Client_fnc_clearCargo;
-_holder setVariable["locked", nil, true];
+_holder setVariable["locker_open", nil, true];
+_holder setVariable["locked", true, true];
 _holder setVariable["profile_id", nil];
 _holder setVariable["id", nil];

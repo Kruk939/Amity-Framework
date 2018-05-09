@@ -32,7 +32,7 @@ class ClientModules_Jail {
             class jail_sentences_receive {};
       };
       class Jail {
-            file="Functions\Modules\Jail\Functions\Jail"
+            file="Functions\Modules\Jail\Functions\Jail";
             class getRemaining {};
             class jailLoop {};
             class jailPlayer {};

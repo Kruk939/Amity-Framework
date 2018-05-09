@@ -11,4 +11,4 @@ if(_officer_id == -1) then { _officer_id = ""; };
 
 private _query = format["jail_get_sentences_profile:%1", _profile_id];
 private _ret = [_query, 2] call ExternalS_fnc_ExtDBasync;
-[_ret] remoteExec["ClientModules_Jail_fnc_jailPower", _target];
+[_ret] remoteExec["ClientModules_Jail_fnc_jailLoop", _target];

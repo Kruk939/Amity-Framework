@@ -55,6 +55,11 @@ if (_container isKindOf "Man" && !alive _container) exitWith {
    _handle;
 };
 
+if((_container getVariable["locked", false])) exitWith {
+	_handle = true;
+	_handle;
+};
+
 [_handle] spawn {
 	params["_handle"];
 	uiSleep 0.05;

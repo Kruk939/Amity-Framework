@@ -3,6 +3,12 @@ class Jail {
             tickTime = 60;          //jail loop tick time
             updateEvery = 5;        //update every x ticks
             escapedMarker = 120;    //how long variable is set for player when he escapes
+            autoCloseLocker = 120;  //how long until server automatilcly close locker
+            class Permissions {
+                  allLockersOpen = 5;     //jail_lockers_access
+                  forceCloseLocker = 3;   //jail_lockers_access
+                  jailPlayer = 0;         //jail_put_player
+            };
       };
       class Security {
             min[] = {0, "STR_JAIL_SECURITY_MIN"};
@@ -32,7 +38,7 @@ class Jail {
                   };
                   class Locations {
                         position[] = {6371.681,5626.605,0.00143433};
-                        radius = 600;
+                        radius = 300;
                         entryPoint[] = {};
                         release[] = {6369.82,5555.774,0.00143433};
                   };

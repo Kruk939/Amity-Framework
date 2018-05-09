@@ -9,6 +9,7 @@ if(isNull _jail) exitWith {};
 
 //removing all jobs
 player setVariable["jail_jailed", true, true];
+player setVariable["jail_remaining_seconds", _remaining * 60];
 [] call Client_fnc_stopWorking;
 if(!isNil "ClientModules_PublicJobs_fnc_stop") then {
       [] call ClientModules_PublicJobs_fnc_stop;
@@ -66,7 +67,7 @@ if(getNumber(_jail >> "Items" >> "enable") == 1) then {
 
 
 
-while{player getVariable["jail_jailed", false] && _endTime < time && (count _data) != 0} do {
+while{(player getVariable["jail_jailed", false]) && _endTime > time && (count _data) != 0} do {
       if((player distance _location) > _radius) exitWith { _escaped = true; };
       uiSleep _tickTime;
       _tick = _tick + 1;
@@ -80,6 +81,7 @@ while{player getVariable["jail_jailed", false] && _endTime < time && (count _dat
                         private _second = _data select 1;
                         _second set[2, (_second select 0) - _remaining];
                   };
+                  _data deleteAt 0;
                   [_id, 0] remoteExec["ServerModules_Jail_fnc_updateSentence", 2];
                   [["STR_JAIL_SENTENCE_SERVED", _reason], true] call Client_fnc_domsg;
             } else {
