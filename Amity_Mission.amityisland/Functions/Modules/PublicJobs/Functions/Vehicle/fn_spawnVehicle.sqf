@@ -28,10 +28,7 @@ if(_can) then {
       private _class = getText(_config >> "vehicleClass");
       if(_class != "") then {
             private _vehicle = _class createVehicle [492.124,356.297,0.0019784];
-            clearWeaponCargoGlobal _vehicle;
-            clearMagazineCargoGlobal _vehicle;
-            clearItemCargoGlobal _vehicle;
-            clearBackpackCargoGlobal _vehicle;
+            [_vehicle] call Client_fnc_clearCargo;
             [_vehicle] call Client_fnc_attachVehicle;
             _vehicle setOwner 2;
             if(!isNil "ClientModules_Mechanic_fnc_addActionsToCar") then {

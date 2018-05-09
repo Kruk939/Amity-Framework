@@ -69,6 +69,9 @@ class Misc {
       class fetchItem {};
       class checkPermission {};
       class vehicleCrew {};
+      class clearCargo {};
+      class getCargo {};
+      class loadCargo {};
 };
 class Money {
       file="Functions\Core\Money";

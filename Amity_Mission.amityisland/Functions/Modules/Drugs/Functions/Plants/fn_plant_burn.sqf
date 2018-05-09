@@ -2,7 +2,7 @@ params[["_target", objNull], ["_force", false]];
 if(isNull _target) exitWith {};
 if(!([_target] call ClientModules_Drugs_fnc_is_plant)) exitWith {};
 if(!([] call ClientModules_Drugs_fnc_has_burnEquipment) && !_force) exitWith {};
-private _enabled = getNumber(missionConfigFile >> "Drugs" >> "Config" >> "Fire" >> "Time" >> "enable");
+private _enabled = getNumber(missionConfigFile >> "Drugs" >> "Config" >> "Fire" >> "enable");
 if(_enabled == 0) exitWith { deleteVehicle _target; };
 
 
@@ -25,9 +25,9 @@ if(_enabled == 0) exitWith { deleteVehicle _target; };
       _fire attachTo [_target, [0,0,0]];
       private _chance = getNumber(missionConfigFile >> "Drugs" >> "Config" >> "Fire" >> "moveChance");
       private _distance = getNumber(missionConfigFile >> "Drugs" >> "Config" >> "Fire" >> "moveMaxDistance");
-
+      private _tick = getNumber(missionConfigFile >> "Drugs" >> "Config" >> "Fire" >> "tick");
       while{_duration > time} do {
-            uiSleep 0.3;
+            uiSleep _tick;
             private _random = random(100);
             if(_random < _chance) then {
                   private _nearest = nearestObjects[_target, [], _distance];
