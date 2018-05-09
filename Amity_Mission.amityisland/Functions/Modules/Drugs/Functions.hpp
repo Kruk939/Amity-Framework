@@ -10,11 +10,13 @@ class ClientModules_Drugs {
       class Misc {
             file="Functions\Modules\Drugs\Functions\Misc";
             class is_plant {};
+            class has_burnEquipment {};
       };
       class Plants {
             file="Functions\Modules\Drugs\Functions\Plants";
             class plant_attach {};
             class plant_burn {};
+            class plant_burn_action {};
             class plant_getConfig {};
             class plant_getConfigs {};
       };

@@ -14,7 +14,7 @@ private _plants = [] call ClientModules_Drugs_fnc_plant_getConfigs;
       private _class = getText(_x >> "plant");
       private _actions = [
             [
-                  ["DRUGS_PLANT_MAIN",  getText(_x >> "Menu" >> "name") call BIS_fnc_localize, "", {true}, {true}, {}, "", getArray(_x >> "Menu" >> "position"), 3],
+                  ["DRUGS_PLANT_MAIN",  getText(_x >> "Menu" >> "name") call BIS_fnc_localize, "", {true}, {!(_target getVariable["onFire", false])}, {}, "", getArray(_x >> "Menu" >> "position"), 3],
                   ["class",[_class, 0, []]]
             ],
             [
@@ -22,7 +22,7 @@ private _plants = [] call ClientModules_Drugs_fnc_plant_getConfigs;
                   ["class",[_class, 0, ["DRUGS_PLANT_MAIN"]]]
             ],
             [
-                  ["DRUGS_PLANT_BURN","STR_DRUGS_PLANT_BURN" call BIS_fnc_localize, "", { [_target] call ClientModules_Drugs_fnc_plant_burn; }, {([_target] call ClientModules_Drugs_fnc_is_plant)}, {}, "", "", 3],
+                  ["DRUGS_PLANT_BURN","STR_DRUGS_PLANT_BURN" call BIS_fnc_localize, "", { [_target] call ClientModules_Drugs_fnc_plant_burn_action; }, {([_target] call ClientModules_Drugs_fnc_is_plant) && ([] call ClientModules_Drugs_fnc_has_burnEquipment)}, {}, "", "", 3],
                   ["class",[_class, 0, ["DRUGS_PLANT_MAIN"]]]
             ]
       ];

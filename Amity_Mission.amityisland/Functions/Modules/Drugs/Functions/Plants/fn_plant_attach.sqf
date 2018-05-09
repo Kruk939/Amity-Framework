@@ -5,7 +5,7 @@ if(_var == "" || !isNull Drugs_var_attached) exitWith {};
 private _toRemove = [];
 {
       if(isNull _x) then {
-            _toRemove pushBack [_forEachIndex];
+            _toRemove pushBack _forEachIndex;
       };
 } forEach Drugs_var_plants;
 private _c = count _toRemove;

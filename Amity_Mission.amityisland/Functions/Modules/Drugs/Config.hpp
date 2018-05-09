@@ -3,6 +3,24 @@ class Drugs {
             proximity = 2;
             maxPlants = 7;
             tick = 1;
+            class Fire {
+                  burnEquipment[] = {
+                        "RPF_Items_Matches",
+                        "murshun_cigs_lighter",
+                        "CG_ATF_Matchbox_i",
+                        "murshun_cigs_matches"
+                  };
+                  fireClass = "test_EmptyObjectForFireBig";
+                  moveChance = 80;
+                  moveMaxDistance = 10;
+                  class Time {
+                        minDelay = 3;
+                        maxDelay = 10;
+                        minDuration = 50;
+                        maxDuration = 120;
+                  };
+            };
+
       };
       class UsableItems {
             equipment[] = {
