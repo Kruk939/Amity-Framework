@@ -32,7 +32,7 @@ class PublicJobs {
                   class Vehicle {
                         vehicleClass = "openrp_mercedes_vito_taxi";
                         variables[] = {
-                              {"taxi_vehicle", 1, 0, "BOOL"}
+                              {"taxi_vehicle", 1, 1, "BOOL"}
                         };
                         class Items {
                               items[] = {

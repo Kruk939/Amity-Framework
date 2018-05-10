@@ -9,6 +9,7 @@ class Jail {
                   forceCloseLocker = 3;   //jail_lockers_access
                   jailPlayer = 0;         //jail_put_player
             };
+            defaultJail = 1;
       };
       class Security {
             min[] = {0, "STR_JAIL_SECURITY_MIN"};

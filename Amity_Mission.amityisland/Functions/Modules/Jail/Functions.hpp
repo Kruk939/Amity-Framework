@@ -6,6 +6,7 @@ class ClientModules_Jail {
             class initMenu {};
             class initPlayer {};
             class initVariables {};
+            class receive {};
       };
       class Locker {
             file="Functions\Modules\Jail\Functions\Locker";

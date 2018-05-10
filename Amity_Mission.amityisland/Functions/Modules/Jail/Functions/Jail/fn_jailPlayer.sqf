@@ -1,7 +1,7 @@
 params[["_target", objNull], ["_sentence", 0], ["_security", 1], ["_reason", ""]];
 if(isNull _target || _sentence <= 0) exitWith {};
 if(player getVariable["jail_put_player", -1] < getNumber(missionConfigFile >> "Jail" >> "Setup" >> "Permissions" >> "jailPlayer")) exitWith {};
-      
+
 private _jail = [player] call ClientModules_Jail_fnc_jail_getNearest;
 if(isNull _jail) exitWith { false; };
 private _entry = getArray(_jail >> "Locations" >> "entryPoint");

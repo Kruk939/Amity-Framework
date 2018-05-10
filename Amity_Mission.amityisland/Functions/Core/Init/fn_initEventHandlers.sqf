@@ -10,3 +10,4 @@
 ["onFactionWorkingChange"] call Client_fnc_eventRegister;
 ["onFactionWorkingStart"] call Client_fnc_eventRegister;
 ["onFactionWorkingStop"] call Client_fnc_eventRegister;
+["onSpawn"] call Client_fnc_eventRegister;
