@@ -159,6 +159,11 @@
             <English>[J]</English>
             <Polish>[W]</Polish>
       </Key>
+      <Key ID="STR_JAIL_DIALOG_LOCKERS_SUFFIX_ACTIVE">
+            <Original>[A]</Original>
+            <English>[A]</English>
+            <Polish>[A]</Polish>
+      </Key>
       <Key ID="STR_JAIL_DIALOG_LOCKERS_BUTTON_VIEW">
             <Original>View Sentences</Original>
             <English>View Sentences</English>
@@ -174,4 +179,30 @@
             <English>Locker is already open! Try to close it first.</English>
             <Polish>Szafka już została otwarta! Spróbuj ją najpierw zamknąć.</Polish>
       </Key>
+      <Key ID="STR_JAIL_DIALOG_SENTENCES_OFFICER_NO_EXISTS">
+            <Original>NONE</Original>
+            <English>NONE</English>
+            <Polish>BRAK</Polish>
+      </Key>
+      <Key ID="STR_JAIL_DIALOG_SENTENCES_IN_JAIL">
+            <Original>In jail</Original>
+            <English>In jail</English>
+            <Polish>W więzieniu</Polish>
+      </Key>
+      <Key ID="STR_JAIL_DIALOG_SENTENCES_ESCAPED">
+            <Original>Escaped</Original>
+            <English>Escaped</English>
+            <Polish>Ucieczka</Polish>
+      </Key>
+      <Key ID="STR_JAIL_DIALOG_SENTENCES_TEXT_INFO_SUMMARY">
+            <Original>%1(%2)\nTime left: %3(Total: %4)\nSecurity: %5\nActive sentences: %6</Original>
+            <English>%1(%2)\nTime left: %3(Total: %4)\nSecurity: %5\nActive sentences: %6</English>
+            <Polish>%1(%2)\nPozostały czas: %3(Suma: %4)\nRygor: %5\nAktywne wyroki: %6</Polish>
+      </Key>
+      <Key ID="STR_JAIL_DIALOG_SENTENCES_TEXT_INFO_SENTENCE">
+            <Original>ID: %1\nSentence: %2/%3\nJailed by: %4\nReason:\n%5</Original>
+            <English>ID: %1\nSentence: %2/%3\nJailed by: %4\nReason:\n%5</English>
+            <Polish>ID: %1\nWyrok: %2/%3\nZatrzymany przez: %4\nPowód:\n%5</Polish>
+      </Key>
+
 </container>

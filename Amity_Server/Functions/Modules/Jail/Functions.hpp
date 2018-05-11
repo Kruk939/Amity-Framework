@@ -15,5 +15,6 @@ class ServerModules_Jail {
             class jailPlayer {};
             class updateSentence {};
             class updateStatus {};
+            class getJailSentences {};
       };
 };

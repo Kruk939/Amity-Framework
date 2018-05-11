@@ -4,6 +4,7 @@ class jail_sentences {
             class text_info: RscText {
             	idc = 1000;
             	text = "Info"; //--- ToDo: Localize;
+                  style = ST_MULTI;
             	x = 13.5 * GUI_GRID_W + GUI_GRID_X;
             	y = 2.5 * GUI_GRID_H + GUI_GRID_Y;
             	w = 26.5 * GUI_GRID_W;
@@ -12,6 +13,7 @@ class jail_sentences {
             };
             class text_info_sentence: RscText {
             	idc = 1001;
+                  style = ST_MULTI;
             	text = "Info"; //--- ToDo: Localize;
             	x = 26.5 * GUI_GRID_W + GUI_GRID_X;
             	y = 8.5 * GUI_GRID_H + GUI_GRID_Y;
@@ -21,6 +23,7 @@ class jail_sentences {
             };
             class listbox_list: RscListbox {
             	idc = 1500;
+                  onLBSelChanged = " ['LB'] call ClientModules_Jail_fnc_jail_sentences_action; ";
             	x = 0 * GUI_GRID_W + GUI_GRID_X;
             	y = 2.5 * GUI_GRID_H + GUI_GRID_Y;
             	w = 13 * GUI_GRID_W;
@@ -29,6 +32,7 @@ class jail_sentences {
             };
             class listbox_previous: RscListbox {
             	idc = 1501;
+                  onLBSelChanged = " ['LB_SET'] call ClientModules_Jail_fnc_jail_sentences_action; ";
             	x = 13.5 * GUI_GRID_W + GUI_GRID_X;
             	y = 8.5 * GUI_GRID_H + GUI_GRID_Y;
             	w = 12.5 * GUI_GRID_W;
@@ -45,6 +49,7 @@ class jail_sentences {
             };
             class button_release: RscButton {
             	idc = 1600;
+                  action = " ['RELEASE'] call ClientModules_Jail_fnc_jail_sentences_action; ";
             	text = "Release"; //--- ToDo: Localize;
             	x = 13.5 * GUI_GRID_W + GUI_GRID_X;
             	y = 21.5 * GUI_GRID_H + GUI_GRID_Y;
@@ -53,6 +58,7 @@ class jail_sentences {
             };
             class button_exit: RscButton {
             	idc = 1601;
+                  action = " closeDialog 0 ;";
             	text = "Exit"; //--- ToDo: Localize;
             	x = 26.5 * GUI_GRID_W + GUI_GRID_X;
             	y = 21.5 * GUI_GRID_H + GUI_GRID_Y;
