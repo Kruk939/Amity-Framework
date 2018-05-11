@@ -3,24 +3,27 @@ class jail_insert {
       class controls {
             class text_name: RscText {
             	idc = 1000;
-            	text = "John Raven"; //--- ToDo: Localize;
+            	text = ""; //--- ToDo: Localize;
             	x = 20 * GUI_GRID_W + GUI_GRID_X;
             	y = 1.5 * GUI_GRID_H + GUI_GRID_Y;
             	w = 10 * GUI_GRID_W;
             	h = 1.5 * GUI_GRID_H;
             	colorBackground[] = {0,0,0,0.3};
             };
-                  class edit_sentence: RscEdit {
-                  	idc = 1400;
-                  	text = "0"; //--- ToDo: Localize;
-                  	x = 20 * GUI_GRID_W + GUI_GRID_X;
-                  	y = 5.5 * GUI_GRID_H + GUI_GRID_Y;
-                  	w = 10 * GUI_GRID_W;
-                  	h = 1.5 * GUI_GRID_H;
-                  	colorBackground[] = {0,0,0,0.3};
-                  };
+            class edit_sentence: RscEdit {
+            	idc = 1400;
+                  onKeyDown = " ['SENTENCE'] call ClientModules_Jail_fnc_jail_insert_action; ";
+            	text = "0"; //--- ToDo: Localize;
+            	x = 20 * GUI_GRID_W + GUI_GRID_X;
+            	y = 5.5 * GUI_GRID_H + GUI_GRID_Y;
+            	w = 10 * GUI_GRID_W;
+            	h = 1.5 * GUI_GRID_H;
+            	colorBackground[] = {0,0,0,0.3};
+            };
             class edit_reason: RscEdit {
             	idc = 1401;
+                  onKeyDown = " ['REASON'] call ClientModules_Jail_fnc_jail_insert_action; ";
+                  style = ST_MULTI;
             	x = 10 * GUI_GRID_W + GUI_GRID_X;
             	y = 8.5 * GUI_GRID_H + GUI_GRID_Y;
             	w = 20 * GUI_GRID_W;
@@ -29,7 +32,8 @@ class jail_insert {
             };
             class button_process: RscButton {
             	idc = 1600;
-            	text = "Process"; //--- ToDo: Localize;
+            	text = $STR_JAIL_DIALOG_INSERT_PROCESS; //--- ToDo: Localize;
+                  action = " ['PROCESS'] call ClientModules_Jail_fnc_jail_insert_action; ";
             	x = 10 * GUI_GRID_W + GUI_GRID_X;
             	y = 17.5 * GUI_GRID_H + GUI_GRID_Y;
             	w = 9 * GUI_GRID_W;
@@ -38,7 +42,8 @@ class jail_insert {
             };
             class button_exit: RscButton {
             	idc = 1601;
-            	text = "Exit"; //--- ToDo: Localize;
+                  action = " closeDialog 0; ";
+            	text = $STR_EXIT; //--- ToDo: Localize;
             	x = 19 * GUI_GRID_W + GUI_GRID_X;
             	y = 17.5 * GUI_GRID_H + GUI_GRID_Y;
             	w = 11 * GUI_GRID_W;
@@ -54,8 +59,8 @@ class jail_insert {
             	colorBackground[] = {0,0,0,0.3};
             };
             class title_main: RscText {
-            	idc = =1;
-            	text = "Jail player"; //--- ToDo: Localize;
+            	idc = -1;
+            	text = $STR_JAIL_DIALOG_INSERT_TITLE; //--- ToDo: Localize;
             	x = 10 * GUI_GRID_W + GUI_GRID_X;
             	y = 0 * GUI_GRID_H + GUI_GRID_Y;
             	w = 20 * GUI_GRID_W;
@@ -64,7 +69,8 @@ class jail_insert {
             };
             class title_name: RscText {
             	idc = -1;
-            	text = "Name and Surname:"; //--- ToDo: Localize;
+                  style = ST_RIGHT;
+            	text = $STR_JAIL_DIALOG_INSERT_NAME; //--- ToDo: Localize;
             	x = 10 * GUI_GRID_W + GUI_GRID_X;
             	y = 1.5 * GUI_GRID_H + GUI_GRID_Y;
             	w = 10 * GUI_GRID_W;
@@ -73,7 +79,8 @@ class jail_insert {
             };
             class title_sentence: RscText {
             	idc = -1;
-            	text = "Sentence:"; //--- ToDo: Localize;
+                  style = ST_RIGHT;
+            	text = $STR_JAIL_DIALOG_INSERT_SENTENCE; //--- ToDo: Localize;
             	x = 10 * GUI_GRID_W + GUI_GRID_X;
             	y = 5.5 * GUI_GRID_H + GUI_GRID_Y;
             	w = 10 * GUI_GRID_W;
@@ -82,7 +89,8 @@ class jail_insert {
             };
             class title_security: RscText {
             	idc = -1;
-            	text = "Secrurity:"; //--- ToDo: Localize;
+                  style = ST_RIGHT;
+            	text = $STR_JAIL_DIALOG_INSERT_SECURITY; //--- ToDo: Localize;
             	x = 10 * GUI_GRID_W + GUI_GRID_X;
             	y = 3.5 * GUI_GRID_H + GUI_GRID_Y;
             	w = 10 * GUI_GRID_W;
@@ -91,7 +99,8 @@ class jail_insert {
             };
             class title_reason: RscText {
             	idc = -1;
-            	text = "Reason"; //--- ToDo: Localize;
+                  style = ST_RIGHT;
+            	text = $STR_JAIL_DIALOG_INSERT_REASON; //--- ToDo: Localize;
             	x = 10 * GUI_GRID_W + GUI_GRID_X;
             	y = 7.5 * GUI_GRID_H + GUI_GRID_Y;
             	w = 20 * GUI_GRID_W;

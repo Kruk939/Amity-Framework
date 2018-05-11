@@ -1,6 +1,6 @@
 params["_loc", ["_inside", true]];
 private _jail = configNull;
-if(isNil "_loc") exitWith { _jail; };
+if(isNil "_loc") then { _loc = getPos player; };
 private _jails = [] call ClientModules_Jail_fnc_jail_getConfigs;
 private _minDistance = 99999999999999;
 {

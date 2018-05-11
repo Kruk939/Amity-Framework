@@ -19,7 +19,7 @@ class ClientModules_Jail {
             class jail_getConfig {};
             class jail_getConfigs {};
             class jail_getNearest {};
-            class jail_getSecurities {};
+            class jail_getSecurity {};
       };
       class Dialog {
             file="Functions\Modules\Jail\Functions\Dialog";

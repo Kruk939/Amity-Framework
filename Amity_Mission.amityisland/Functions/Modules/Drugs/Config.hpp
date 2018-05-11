@@ -12,8 +12,8 @@ class Drugs {
                         "murshun_cigs_matches"
                   };
                   fireClass = "test_EmptyObjectForFireBig";
-                  moveChance = 40;
-                  moveMaxDistance = 5;
+                  moveChance = 70;
+                  moveMaxDistance = 7;
                   tick = 0.5;
                   class Time {
                         settingUp = 10;

@@ -6,7 +6,7 @@ private _profile_id = _target getVariable["profile_id", -1];
 if(_profile_id == -1) exitWith {};
 if(_officer_id == -1) then { _officer_id = ""; };
 
-private _jail = [_jail_id, "id"] call ClientModules_Jail_fnc_getConfig;
+private _jail = [_jail_id, "id"] call ClientModules_Jail_fnc_jail_getConfig;
 if(isNull _jail) exitWith {};
 
 if(getNumber(_jail >> "persistant") == 1) then {

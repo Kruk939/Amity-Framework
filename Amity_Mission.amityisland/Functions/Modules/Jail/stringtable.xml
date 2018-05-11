@@ -74,4 +74,104 @@
             <English>This facility does not serve for this kind of prisoners!</English>
             <Polish>Ta placówka nie obsługuje tego typu więźniów</Polish>
       </Key>
+      <Key ID="STR_JAIL_NO_NEAR">
+            <Original>There is no nearby facility!</Original>
+            <English>There is no nearby facility!</English>
+            <Polish>Nie ma placówki w pobliżu!</Polish>
+      </Key>
+      <Key ID="STR_JAIL_NO_PERRMISION">
+            <Original>You don't have permissions!</Original>
+            <English>You don't have permissions!</English>
+            <Polish>Nie masz uprawnień!</Polish>
+      </Key>
+      <Key ID="STR_JAIL_DIALOG_INSERT_TITLE">
+            <Original>Jail player</Original>
+            <English>Jail player</English>
+            <Polish>Wrzuć do więzienia</Polish>
+      </Key>
+      <Key ID="STR_JAIL_DIALOG_INSERT_NAME">
+            <Original>Name and Surname:</Original>
+            <English>Name and Surname:</English>
+            <Polish>Imię i nazwisko:</Polish>
+      </Key>
+      <Key ID="STR_JAIL_DIALOG_INSERT_SECURITY">
+            <Original>Secrurity:</Original>
+            <English>Secrurity:</English>
+            <Polish>Rygor:</Polish>
+      </Key>
+      <Key ID="STR_JAIL_DIALOG_INSERT_SENTENCE">
+            <Original>Sentence:</Original>
+            <English>Sentence:</English>
+            <Polish>Wyrok:</Polish>
+      </Key>
+      <Key ID="STR_JAIL_DIALOG_INSERT_REASON">
+            <Original>Reason:</Original>
+            <English>Reason:</English>
+            <Polish>Powód:</Polish>
+      </Key>
+      <Key ID="STR_JAIL_DIALOG_INSERT_PROCESS">
+            <Original>Process</Original>
+            <English>Process</English>
+            <Polish>Wyślij</Polish>
+      </Key>
+      <Key ID="STR_JAIL_DIALOG_LOCKERS_TEXT_INFO">
+            <Original>%1 %2\nOnline: %3\nIn jail: %4</Original>
+            <English>%1 %2\nOnline: %3\nIn jail: %4</English>
+            <Polish>%1 %2\nDostępny: %3\nW więzieniu: %4</Polish>
+      </Key>
+      <Key ID="STR_JAIL_DIALOG_LOCKERS_TITLE">
+            <Original>Jail Lockers</Original>
+            <English>Jail Lockers</English>
+            <Polish>Szafki Więzienne</Polish>
+      </Key>
+      <Key ID="STR_JAIL_DIALOG_LOCKERS_TITLE_OPEN_FOR">
+            <Original>Open new locker</Original>
+            <English>Open new locker</English>
+            <Polish>Szafki Więzienne</Polish>
+      </Key>
+      <Key ID="STR_JAIL_DIALOG_LOCKERS_TITLE_PLAYER">
+            <Original>Player</Original>
+            <English>Player</English>
+            <Polish>Gracz</Polish>
+      </Key>
+      <Key ID="STR_JAIL_DIALOG_LOCKERS_TITLE_LIST">
+            <Original>List</Original>
+            <English>List</English>
+            <Polish>Lista</Polish>
+      </Key>
+      <Key ID="STR_JAIL_DIALOG_LOCKERS_TITLE_INFO">
+            <Original>Information</Original>
+            <English>Information</English>
+            <Polish>Informacja</Polish>
+      </Key>
+      <Key ID="STR_JAIL_DIALOG_LOCKERS_TITLE_ACTIONS">
+            <Original>Actions</Original>
+            <English>Actions</English>
+            <Polish>Akcje</Polish>
+      </Key>
+      <Key ID="STR_JAIL_DIALOG_LOCKERS_SUFFIX_ONLINE">
+            <Original>[O]</Original>
+            <English>[O]</English>
+            <Polish>[D]</Polish>
+      </Key>
+      <Key ID="STR_JAIL_DIALOG_LOCKERS_SUFFIX_JAILED">
+            <Original>[J]</Original>
+            <English>[J]</English>
+            <Polish>[W]</Polish>
+      </Key>
+      <Key ID="STR_JAIL_DIALOG_LOCKERS_BUTTON_VIEW">
+            <Original>View Sentences</Original>
+            <English>View Sentences</English>
+            <Polish>Wyświetl Wyroki</Polish>
+      </Key>
+      <Key ID="STR_JAIL_DIALOG_LOCKERS_BUTTON_FORCE_CLOSE">
+            <Original>Force Close Locker</Original>
+            <English>Force Close Locker</English>
+            <Polish>Wymuś Zamknięcie Szafki</Polish>
+      </Key>
+      <Key ID="STR_JAIL_LOCKER_ALREADY_OPEN">
+            <Original>Locker is already open! Try to close it first.</Original>
+            <English>Locker is already open! Try to close it first.</English>
+            <Polish>Szafka już została otwarta! Spróbuj ją najpierw zamknąć.</Polish>
+      </Key>
 </container>

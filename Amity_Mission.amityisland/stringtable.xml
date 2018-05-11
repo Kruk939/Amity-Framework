@@ -9,6 +9,21 @@
             <English>No</English>
             <Polish>Nie</Polish>
       </Key>
+      <Key ID="STR_EXIT">
+            <Original>Exit</Original>
+            <English>Exit</English>
+            <Polish>Wyjście</Polish>
+      </Key>
+      <Key ID="STR_ABORT">
+            <Original>Abort</Original>
+            <English>Abort</English>
+            <Polish>Anuluj</Polish>
+      </Key>
+      <Key ID="STR_OPEN">
+            <Original>Open</Original>
+            <English>Open</English>
+            <Polish>Otwórz</Polish>
+      </Key>
       <Key ID="STR_CORE_REPAIRING">
             <Original>Repairing</Original>
             <English>Repairing</English>
