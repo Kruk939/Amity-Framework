@@ -16,5 +16,6 @@ private _onChange = {
 
 private _unLoad = {
       permissions_var_active = [];
+      false;
 };
 ["onFactionWorkingStop", _unLoad] call Client_fnc_eventAdd;

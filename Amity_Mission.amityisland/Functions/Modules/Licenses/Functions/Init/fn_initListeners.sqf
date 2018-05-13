@@ -8,6 +8,7 @@ private _onLoad = {
 };
 private _unLoad = {
       licenses_var_faction = [];
+      false;
 };
 ["onFactionWorkingStart", _onLoad] call Client_fnc_eventAdd;
 ["onFactionWorkingChange", _onLoad] call Client_fnc_eventAdd;
