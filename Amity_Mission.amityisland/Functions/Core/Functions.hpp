@@ -11,6 +11,7 @@ class Factions {
       file="Functions\Core\Factions";
       class startWorking {};
       class stopWorking {};
+      class faction_addMember {};
       class faction_create_action {};
       class faction_create_open {};
       class faction_member_edit_action {};

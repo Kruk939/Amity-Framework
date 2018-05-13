@@ -46,7 +46,11 @@ private _array = [
 		["ACE_Medical_revive","Revive", "",{[_target] spawn ClientModules_ACE_fnc_defibrylator; }, {!(_target getVariable["medical_revive_active", false]) && (_target getVariable["ACE_isUnconscious", false]) && ((["CG_ATF_Revival_Kit_i"] call Client_fnc_countItems) != 0) && ([player] call ace_medical_fnc_isMedic)},{},"","",5],
 		["class",["Civilian", 0, ["ACE_Torso"],true]]
 
-      ]
+      ],
+	[
+		["ARP_FACTION_ADD","Add to Faction", "", { [_target] call Client_fnc_faction_addMember; },{(player getVariable["faction_id", -1]) != -1 && (_target getVariable["profile_id", -1]) != -1}],
+		["class",["Civilian", 0, ["ACE_Torso"],true]]
+	]
 
 ];
 _array call Client_fnc_addAction;

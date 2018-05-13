@@ -4,7 +4,7 @@ private _array = [
 		["class",["AllVehicles", 0, ["ACE_MainActions"],true]]
 	],
       [
-		["TOW_PARKING_SET_FOR_IMPOUND",localize "STR_TOW_PARKING_IMPUND", "", { [_target] call ClientModules_TowParking_fnc_impound; }, { !(_target getVariable["amity_remove", false]) && (((player getVariable ["module_towtruck_set_impound", -1]) != -1) || _target IN amity_var_vehicles) }],
+		["TOW_PARKING_SET_FOR_IMPOUND",localize "STR_TOW_PARKING_IMPUND", "", { [_target] call ClientModules_TowParking_fnc_impound; }, { !(_target getVariable["amity_remove", false]) && (((player getVariable ["module_towtruck_set_impound", -1]) != -1) || _target IN amity_var_vehicles) && _target isKindOf "Car" }],
 		["class",["AllVehicles", 0, ["ACE_MainActions"],true]]
 	],
       [
