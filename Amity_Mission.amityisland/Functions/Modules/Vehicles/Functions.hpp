@@ -11,7 +11,7 @@ class ClientModules_Vehicles {
             file="Functions\Modules\Vehicles\Functions\Sirens";
             class sirenCreate {};
             class sirenDestroy {};
-            class sirenKeyDown {};
+            class sirenGetArray {};
             class sirenKeyUp {};
       }
       class Misc {

@@ -122,7 +122,9 @@ class Growing {
                               harvest = "";
                         };
                         harvest[] = {
-                              {0, "class", 5}
+                              {10, "openrp_cutpoppyplant", 10},
+                              {40, "openrp_cutpoppyplant", 5},
+                              {80, "openrp_cutpoppyplant", 2}
                         };
                         variables[] = {
                               {"plant_water", 5, 0, 5},

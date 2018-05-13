@@ -1,10 +1,10 @@
-DD_PoliceSirens_Destroy = {
-	if(!isNull DD_SirenObject)then{
-		deleteVehicle DD_SirenObject;
-		DD_SirenObject = objNull;
-		if(!isNull (vehicle player getVariable["DD_SirenSource", objNull]))then{
-			deleteVehicle (vehicle player getVariable "DD_SirenSource");
-			vehicle player setVariable["DD_SirenSource", objNull, true];
-		};
-	};
+private _vehicle = vehicle player;
+private _source = _vehicle getVariable["Vehicle_SirenSource", objNull];
+if(!isNull _source) then {
+	deleteVehicle _source;
+	_vehicle setVariable["Vehicle_SirenSource", objNull, true];
+};
+if(!isNull Vehicles_var_sirens_sound) then {
+	deleteVehicle Vehicles_var_sirens_sound;
+	Vehicles_var_sirens_sound = objNull;
 };
