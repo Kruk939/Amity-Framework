@@ -8,6 +8,7 @@ class Jail {
                   allLockersOpen = 5;     //jail_lockers_access
                   forceCloseLocker = 3;   //jail_lockers_access
                   jailPlayer = 0;         //jail_put_player
+                  sentenceView = 3;       //jail_sentences
             };
             defaultJail = 1;
       };

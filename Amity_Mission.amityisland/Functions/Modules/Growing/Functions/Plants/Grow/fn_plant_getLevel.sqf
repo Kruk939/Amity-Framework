@@ -2,7 +2,7 @@ params[["_plant", objNull], ["_var", ""]];
 if(isNull _plant || _var == "") exitWith { []; };
 
 //reading config
-private _config = [typeOf _plant, "plant"] call ClientModules_Drugs_fnc_plant_getConfig;
+private _config = [typeOf _plant, "plant"] call ClientModules_Growing_fnc_plant_getConfig;
 if(isNull _config) exitWith { []; };
 private _actions = getArray(_config >> "Growing" >> "actions");
 private _levels = getArray(_config >> "Growing" >> "levels");

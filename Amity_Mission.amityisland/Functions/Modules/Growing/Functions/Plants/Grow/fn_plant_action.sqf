@@ -1,6 +1,6 @@
 params[["_plant", objNull], ["_type", ""]];
 if(isNull _plant || _type == "") exitWith {};
-private _config = [typeOf _plant, "plant"] call ClientModules_Drugs_fnc_plant_getConfig;
+private _config = [typeOf _plant, "plant"] call ClientModules_Growing_fnc_plant_getConfig;
 if(isNull _config) exitWith {};
 private _function = getText(_config >> "Grow" >> "Functions" >> "action");
 if(!isNil _function && _function != "") exitWith { _this call (call compile _function); };
@@ -17,7 +17,7 @@ private _action = [];
 } forEach _actions;
 
 _action params["", "_time", "_text", "", "", "_item"];
-if(_item != "" && (([_item] call Client_fnc_countItems) == 0)) exitWith { ["STR_DRUGS_NO_ITEM", true] call Client_fnc_domsg; };
+if(_item != "" && (([_item] call Client_fnc_countItems) == 0)) exitWith { ["STR_Growing_NO_ITEM", true] call Client_fnc_domsg; };
 
 private _onFinish = {
       (_this select 0) params["_plant", "_action"];

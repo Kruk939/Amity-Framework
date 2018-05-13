@@ -1,6 +1,6 @@
-class ClientModules_Drugs {
+class ClientModules_Growing {
       class Init {
-            file="Functions\Modules\Drugs\Functions\Init";
+            file="Functions\Modules\Growing\Functions\Init";
             class initEventHandlers {};
             class initListeners {};
             class initMenu {};
@@ -8,12 +8,12 @@ class ClientModules_Drugs {
             class initVariables {};
       };
       class Misc {
-            file="Functions\Modules\Drugs\Functions\Misc";
+            file="Functions\Modules\Growing\Functions\Misc";
             class is_plant {};
             class has_burnEquipment {};
       };
       class Plants {
-            file="Functions\Modules\Drugs\Functions\Plants";
+            file="Functions\Modules\Growing\Functions\Plants";
             class plant_attach {};
             class plant_burn {};
             class plant_burn_action {};
@@ -21,7 +21,7 @@ class ClientModules_Drugs {
             class plant_getConfigs {};
       };
       class PlantsGrow {
-            file="Functions\Modules\Drugs\Functions\Plants\Grow";
+            file="Functions\Modules\Growing\Functions\Plants\Grow";
             class plant_action {};
             class plant_check {};
             class plant_checkLevel {};

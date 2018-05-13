@@ -1,0 +1,17 @@
+<Container name="SHOP">
+      <Key ID="STR_SHOP_GENERAL">
+            <Original>General Store</Original>
+            <English>General Store</English>
+            <Polish>Sklep wielobranżowy</Polish>
+      </Key>
+      <Key ID="STR_SHOP_WEAPON">
+            <Original>Gun Store</Original>
+            <English>Gun Store</English>
+            <Polish>Sklep z bronią</Polish>
+      </Key>
+      <Key ID="STR_SHOP_CLOTHES">
+            <Original>Clothing Store</Original>
+            <English>Clothing Store</English>
+            <Polish>Sklep z ubraniami</Polish>
+      </Key>
+</Container>

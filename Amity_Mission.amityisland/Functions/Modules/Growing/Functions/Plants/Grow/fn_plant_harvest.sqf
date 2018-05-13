@@ -1,13 +1,13 @@
 params[["_plant", objNull]];
 if(isNull _plant) exitWith {};
 
-private _config = [typeOf _plant, "plant"] call ClientModules_Drugs_fnc_plant_getConfig;
+private _config = [typeOf _plant, "plant"] call ClientModules_Growing_fnc_plant_getConfig;
 if(isNull _config) exitWith {}; //something went wrong
 
 private _function = getText(_config >> "Growing" >> "Functions" >> "harvest");
 if(_function != "" && !isNil _function) exitWith { _this call (call compile _function); };
 
-if(!(_plant getVariable["ready", false]) || _plant getVariable["growing", true]) exitWith { ["STR_DRUGS_PLANT_STILL_GROWING", true] call Client_fnc_domsg; };
+if(!(_plant getVariable["ready", false]) || _plant getVariable["growing", true]) exitWith { ["STR_Growing_PLANT_STILL_GROWING", true] call Client_fnc_domsg; };
 private _quality = _plant getVariable["quality", -1];
 if(_quality < 0) exitWith { deleteVehicle _plant; }; //something went wrong
 

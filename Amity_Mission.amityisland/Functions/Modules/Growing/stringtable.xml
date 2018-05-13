@@ -1,125 +1,125 @@
-<Container name="DRUGS">
-      <Key ID="STR_DRUGS_NO_GENERATOR">
+<Container name="GROWING">
+      <Key ID="STR_GROWING_NO_GENERATOR">
             <Original>You Need to be near a Generator!</Original>
             <English>You Need to be near a Generator!</English>
             <Polish>Musisz być w pobliżu generatora!</Polish>
       </Key>
-      <Key ID="STR_DRUGS_NO_LIGHT">
+      <Key ID="STR_GROWING_NO_LIGHT">
             <Original>You think you can grow without a light?!</Original>
             <English>You think you can grow without a light?!</English>
             <Polish>Myślisz, że bez oświetlenia coś wyrośnie?!</Polish>
       </Key>
-      <Key ID="STR_DRUGS_NO_CAMONET">
+      <Key ID="STR_GROWING_NO_CAMONET">
             <Original>You need a camonet. We don't want to get caught now do we?!</Original>
             <English>You need a camonet. We don't want to get caught now do we?!</English>
             <Polish>Potrzebujesz siatki maskującej. Chyba nie chcemy być złapani, nie?</Polish>
       </Key>
-      <Key ID="STR_DRUGS_PLANT_WEED">
+      <Key ID="STR_GROWING_PLANT_WEED">
             <Original>Mariujana</Original>
             <English>Mariujana</English>
             <Polish>Marihuana</Polish>
       </Key>
-      <Key ID="STR_DRUGS_POPPY">
+      <Key ID="STR_GROWING_POPPY">
             <Original>Poppy</Original>
             <English>Poppy</English>
             <Polish>Mak</Polish>
       </Key>
-      <Key ID="STR_DRUGS_PLANT_ACTION_WATER">
+      <Key ID="STR_GROWING_PLANT_ACTION_WATER">
             <Original>Water</Original>
             <English>Water</English>
             <Polish>Nawodnij</Polish>
       </Key>
-      <Key ID="STR_DRUGS_PLANT_ACTION_WATER_CHECK">
+      <Key ID="STR_GROWING_PLANT_ACTION_WATER_CHECK">
             <Original>Check water</Original>
             <English>Check water</English>
             <Polish>Sprawdź wilgotność</Polish>
       </Key>
-      <Key ID="STR_DRUGS_PLANT_ACTION_WATER_ACTION">
+      <Key ID="STR_GROWING_PLANT_ACTION_WATER_ACTION">
             <Original>Watering</Original>
             <English>Watering</English>
             <Polish>Podlewam</Polish>
       </Key>
-      <Key ID="STR_DRUGS_PLANT_ACTION_FERTILIZE">
+      <Key ID="STR_GROWING_PLANT_ACTION_FERTILIZE">
             <Original>Fertilize</Original>
             <English>Fertilize</English>
             <Polish>Dodaj nawóz</Polish>
       </Key>
-      <Key ID="STR_DRUGS_PLANT_ACTION_FERTILIZE_CHECK">
+      <Key ID="STR_GROWING_PLANT_ACTION_FERTILIZE_CHECK">
             <Original>Check fertilization</Original>
             <English>Check fertilization</English>
             <Polish>Sprawdź użyźnienie</Polish>
       </Key>
-      <Key ID="STR_DRUGS_PLANT_ACTION_FERTILIZE_ACTION">
+      <Key ID="STR_GROWING_PLANT_ACTION_FERTILIZE_ACTION">
             <Original>Fertilizing</Original>
             <English>Fertilizing</English>
             <Polish>Użyźniam</Polish>
       </Key>
-      <Key ID="STR_DRUGS_CHECK_NOT_MUCH">
+      <Key ID="STR_GROWING_CHECK_NOT_MUCH">
             <Original>Not much</Original>
             <English>Not much</English>
             <Polish>Za mało</Polish>
       </Key>
-      <Key ID="STR_DRUGS_CHECK_GOOD">
+      <Key ID="STR_GROWING_CHECK_GOOD">
             <Original>It's good</Original>
             <English>It's good</English>
             <Polish>Jest dobrze</Polish>
       </Key>
-      <Key ID="STR_DRUGS_CHECK_LITTLE_TOO_MUCH">
+      <Key ID="STR_GROWING_CHECK_LITTLE_TOO_MUCH">
             <Original>Little too much</Original>
             <English>Little too much</English>
             <Polish>Trochę za dużo</Polish>
       </Key>
-      <Key ID="STR_DRUGS_CHECK_TOO_MUCH">
+      <Key ID="STR_GROWING_CHECK_TOO_MUCH">
             <Original>Too much!</Original>
             <English>Too much!</English>
             <Polish>Za dużo!</Polish>
       </Key>
-      <Key ID="STR_DRUGS_PLANT_HARVEST">
+      <Key ID="STR_GROWING_PLANT_HARVEST">
             <Original>Harvest plant</Original>
             <English>Harvest plant</English>
             <Polish>Zbierz plon</Polish>
       </Key>
-      <Key ID="STR_DRUGS_PLANT_BURN">
+      <Key ID="STR_GROWING_PLANT_BURN">
             <Original>Burn plant</Original>
             <English>Burn plant</English>
             <Polish>Spal plon</Polish>
       </Key>
-      <Key ID="STR_DRUGS_PLANT_BURNING">
+      <Key ID="STR_GROWING_PLANT_BURNING">
             <Original>Setting up fire</Original>
             <English>Setting up fire</English>
             <Polish>Podpalam</Polish>
       </Key>
-      <Key ID="STR_DRUGS_PLANT_REMOVE">
+      <Key ID="STR_GROWING_PLANT_REMOVE">
             <Original>Remove plant</Original>
             <English>Remove plant</English>
             <Polish>Usuń sadzonkę</Polish>
       </Key>
-      <Key ID="STR_DRUGS_PLANT_DETACH">
+      <Key ID="STR_GROWING_PLANT_DETACH">
             <Original>Detach plant</Original>
             <English>Detach plant</English>
             <Polish>Posadź sadzonkę</Polish>
       </Key>
-      <Key ID="STR_DRUGS_NO_ITEM">
+      <Key ID="STR_GROWING_NO_ITEM">
             <Original>You don't have required item!</Original>
             <English>You don't have required item!</English>
             <Polish>Nie masz wymaganego przedmiotu!</Polish>
       </Key>
-      <Key ID="STR_DRUGS_PLANT_STILL_GROWING">
+      <Key ID="STR_GROWING_PLANT_STILL_GROWING">
             <Original>Plant is still growing!</Original>
             <English>Plant is still growing!</English>
             <Polish>Roślina wciąż rośnie!</Polish>
       </Key>
-      <Key ID="STR_DRUGS_PLANT_NO_GOOD_SURFACE">
+      <Key ID="STR_GROWING_PLANT_NO_GOOD_SURFACE">
             <Original>Not good surface, find better one!</Original>
             <English>Not good surface, find better one!</English>
             <Polish>Złe podłoże, znajdź lepsze!</Polish>
       </Key>
-      <Key ID="STR_DRUGS_NO_GOOD_POSITION">
+      <Key ID="STR_GROWING_NO_GOOD_POSITION">
             <Original>You can't plant here, find better spot!</Original>
             <English>You can't plant here, find better spot!</English>
             <Polish>Nie możesz tutaj uprawiać, znajdź lepszą miejscówkę!</Polish>
       </Key>
-      <Key ID="STR_DRUGS_PLANT_TOO_CLOSE">
+      <Key ID="STR_GROWING_PLANT_TOO_CLOSE">
             <Original>You can't plant here, it is too close to other plants!</Original>
             <English>You can't plant here, it is too close to other plants!</English>
             <Polish>Nie możesz tutaj uprawiać, za blisko innych roślin!</Polish>

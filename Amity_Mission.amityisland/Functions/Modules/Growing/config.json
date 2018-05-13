@@ -1,6 +1,6 @@
 {
-      "module": "Drugs",
-      "namespace": "ClientModules_Drugs",
+      "module": "Growing",
+      "namespace": "ClientModules_Growing",
       "version": "0.1",
       "require": {
             "amity-framework": ">=0.0.1"
