@@ -1,10 +1,10 @@
-class ClientModules_Example {
+class ClientModules_GPSModule {
       class Init {
-            file="Functions\Modules\#Example\Functions\Init";
-            class initEventHandlers {};
+            file="Functions\Modules\GPSModule\Functions\Init";
             class initListeners {};
-            class initMenu {};
-            class initPlayer {};
-            class initVariables {};
+      };
+      class Misc {
+            file="Functions\Modules\GPSModule\Functions\Misc";
+            class map_loop {};
       };
 };
