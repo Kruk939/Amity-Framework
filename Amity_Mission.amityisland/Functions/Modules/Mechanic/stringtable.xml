@@ -1,0 +1,57 @@
+<Container name="MECHANIC">
+      <Key ID="STR_MECHANIC_PUSHING">
+            <Original>Pushing Vehicle</Original>
+            <English>Pushing Vehicle</English>
+            <Polish>Pcham pojazd</Polish>
+      </Key>
+      <Key ID="STR_MECHANIC">
+            <Original>Mechanic</Original>
+            <English>Mechanic</English>
+            <Polish>Mechanik</Polish>
+      </Key>
+      <Key ID="STR_MECHANIC_FIX_ENGINE">
+            <Original>Fix Engine</Original>
+            <English>Fix Engine</English>
+            <Polish>Napraw silnik</Polish>
+      </Key>
+      <Key ID="STR_MECHANIC_FIX_FUEL_TANK">
+            <Original>Fix Fuel Tank</Original>
+            <English>Fix Fuel Tank</English>
+            <Polish>Napraw zbiornik paliwa</Polish>
+      </Key>
+      <Key ID="STR_MECHANIC_FIX_HULL">
+            <Original>Fix Hull</Original>
+            <English>Fix Hull</English>
+            <Polish>Napraw karoserie</Polish>
+      </Key>
+      <Key ID="STR_MECHANIC_FIX_FGLASS">
+            <Original>Fix Glass</Original>
+            <English>Fix Glass</English>
+            <Polish>Napraw szyby</Polish>
+      </Key>
+      <Key ID="STR_MECHANIC_FIX_VEHICLE">
+            <Original>Fix Vehicle</Original>
+            <English>Fix Vehicle</English>
+            <Polish>Napraw pojazd</Polish>
+      </Key>
+      <Key ID="STR_MECHANIC_REFUEL">
+            <Original>Refuel Vehicle</Original>
+            <English>Refuel Vehicle</English>
+            <Polish>Zatankuj pojazd</Polish>
+      </Key>
+      <Key ID="STR_MECHANIC_PAINT_JOB">
+            <Original>Paint job</Original>
+            <English>Paint job</English>
+            <Polish>Pomaluj pojazd</Polish>
+      </Key>
+      <Key ID="STR_MECHANIC_FLIP">
+            <Original>Flip Vehicle</Original>
+            <English>Flip Vehicle</English>
+            <Polish>Odwróć pojazd</Polish>
+      </Key>
+      <Key ID="STR_MECHANIC_PUSH">
+            <Original>Push Vehicle</Original>
+            <English>Push Vehicle</English>
+            <Polish>Pchnij pojazd</Polish>
+      </Key>
+</Container>

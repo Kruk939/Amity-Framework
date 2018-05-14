@@ -9,7 +9,7 @@ private _onSpawn = {
       params[["_vehicle", objNull]];
       private _vehicles = getArray(missionConfigFile >> "Medical" >> "Config" >> "vehicles");
       if((typeName _vehicle) IN _vehicles) then {
-            _vehicle setVariable["Ace_medical_medicClass", 1];
+            _vehicle setVariable["Ace_medical_medicClass", 1, true];
       };
 };
 ["onVehicleSpawn", _onSpawn] call Client_fnc_eventAdd;

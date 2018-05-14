@@ -10,7 +10,7 @@ class ClientModules_Mechanic {
       class Misc {
             file="Functions\Modules\Mechanic\Functions\Misc";
             class addActionsToCar {};
-            class pushVeh {};
+            class pushVehicle {};
             class fuelVehicle {};
       };
       class Repair {
