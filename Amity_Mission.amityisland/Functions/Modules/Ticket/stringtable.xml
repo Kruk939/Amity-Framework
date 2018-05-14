@@ -49,6 +49,11 @@
             <English>Amount:</English>
             <Polish>Kwota:</Polish>
       </Key>
+      <Key ID="STR_TICKET_GIVE_TICKET">
+            <Original>Give ticket</Original>
+            <English>Give ticket</English>
+            <Polish>Wypisz mandat</Polish>
+      </Key>
       <Key ID="STR_TICKET_DIALOG_REASON">
             <Original>Reason:</Original>
             <English>Reason:</English>
