@@ -6,4 +6,8 @@ class Shop {
       };
       sell = 1.2;
       buy = 0.8;
+      class Holder {
+            maxDistance = 100;
+            holderClass = "plp_ct_woodboxlightsmall";
+      };
 };

@@ -1,0 +1,18 @@
+params[["_from", objNull], ["_data", []]];
+if(isNull _from) exitWith {};
+_data params["_amount", "_reason", "_points", "_preset"];
+if(dialog) then { closeDialog 0; };
+private _ok = createDialog "ticket_receive";
+if(!_ok) exitWith {};
+private _display = findDisplay 14001;
+if(isNull _display) exitWith { closeDialog 0; };
+_display setVariable["target", _from];
+_display setVariable["amount", _amount];
+_display setVariable["reason", _reason];
+_display setVariable["points", _points];
+_display setVariable["preset", _preset];
+ctrlSetText[1000, player getVariable["name", ""]];
+ctrlSetText[1001, _from getVariable["name", ""]];
+ctrlSetText[1002, str(_amount)];
+ctrlSetText[1003, format["$%1", _amount]];
+ctrlSetText[1004, _reason];

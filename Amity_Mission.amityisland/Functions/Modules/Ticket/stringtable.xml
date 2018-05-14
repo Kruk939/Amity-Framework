@@ -1,0 +1,98 @@
+<Container name="TICKET">
+      <Key ID="STR_TICKET_ACCEPT">
+            <Original>Sign</Original>
+            <English>Sign</English>
+            <Polish>Podpisz</Polish>
+      </Key>
+      <Key ID="STR_TICKET_REJECT">
+            <Original>Refuse</Original>
+            <English>Refuse</English>
+            <Polish>Odrzuć</Polish>
+      </Key>
+      <Key ID="STR_TICKET_CANCEL">
+            <Original>Cancel</Original>
+            <English>Cancel</English>
+            <Polish>Anuluj</Polish>
+      </Key>
+      <Key ID="STR_TICKET_DIALOG_RECEIVE_TITLE">
+            <Original>Ticket view</Original>
+            <English>Ticket view</English>
+            <Polish>Podgląd mandatu</Polish>
+      </Key>
+      <Key ID="STR_TICKET_DIALOG_GIVE_TITLE">
+            <Original>Give ticket</Original>
+            <English>Give ticket</English>
+            <Polish>Wypisz mandant</Polish>
+      </Key>
+      <Key ID="STR_TICKET_DIALOG_GIVE_PRESET">
+            <Original>Preset:</Original>
+            <English>Preset:</English>
+            <Polish>Szablon:</Polish>
+      </Key>
+      <Key ID="STR_TICKET_DIALOG_NAME">
+            <Original>Name and surname:</Original>
+            <English>Name and surname:</English>
+            <Polish>Imię i nazwisko:</Polish>
+      </Key>
+      <Key ID="STR_TICKET_DIALOG_RECEIVE_OFFICER_NAME">
+            <Original>Issued by:</Original>
+            <English>Issued by:</English>
+            <Polish>Wystawił:</Polish>
+      </Key>
+      <Key ID="STR_TICKET_DIALOG_POINTS">
+            <Original>Points:</Original>
+            <English>Points:</English>
+            <Polish>Punkty:</Polish>
+      </Key>
+      <Key ID="STR_TICKET_DIALOG_AMOUNT">
+            <Original>Amount:</Original>
+            <English>Amount:</English>
+            <Polish>Kwota:</Polish>
+      </Key>
+      <Key ID="STR_TICKET_DIALOG_REASON">
+            <Original>Reason:</Original>
+            <English>Reason:</English>
+            <Polish>Powód:</Polish>
+      </Key>
+      <Key ID="STR_TICKET_DIALOG_GIVE_NONE">
+            <Original>None</Original>
+            <English>None</English>
+            <Polish>Brak</Polish>
+      </Key>
+      <Key ID="STR_TICKET_ACTION_PAID">
+            <Original>%1 has paid for the ticket!</Original>
+            <English>%1 has paid for the ticket!</English>
+            <Polish>%1 zapłacił za mandat!</Polish>
+      </Key>
+      <Key ID="STR_TICKET_ACTION_PAID_P">
+            <Original>You have paid for the ticket!</Original>
+            <English>You have paid for the ticket!</English>
+            <Polish>Zapłaciłeś za mandat</Polish>
+      </Key>
+      <Key ID="STR_TICKET_ACTION_NOT_ENOUGH">
+            <Original>%1 don't have enough money to pay the ticket!</Original>
+            <English>%1 don't have enough money to pay the ticket!</English>
+            <Polish>%1 nie ma wystarczająco pieniędzy, aby zapłacić mandat!</Polish>
+      </Key>
+      <Key ID="STR_TICKET_ACTION_REFUSED">
+            <Original>%1 refused to pay the ticket!</Original>
+            <English>%1 refused to pay the ticket!</English>
+            <Polish>%1 odmówił zapłaty mandatu!</Polish>
+      </Key>
+      <Key ID="STR_TICKET_ACTION_NOT_ENOUGH_P">
+            <Original>You don't have enough money to pay the ticket!</Original>
+            <English>You don't have enough money to pay the ticket!</English>
+            <Polish>Nie masz wystarczająco pieniedzy, aby zapłacić mandat!</Polish>
+      </Key>
+      <Key ID="STR_TICKET_PRESET_SPEED_LESS_20_TITLE">
+            <Original>PP do 20 km/h</Original>
+            <English>PP do 20 km/h</English>
+            <Polish>PP do 20 km/h</Polish>
+      </Key>
+      <Key ID="STR_TICKET_PRESET_SPEED_LESS_20_REASON">
+            <Original>Przekroczenie prędkości o xx km/h</Original>
+            <English>Przekroczenie prędkości o xx km/h</English>
+            <Polish>Przekroczenie prędkości o xx km/h</Polish>
+      </Key>
+
+</Container>

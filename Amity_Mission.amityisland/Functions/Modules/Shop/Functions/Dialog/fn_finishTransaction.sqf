@@ -6,10 +6,10 @@ closeDialog 0;
 
 if(count _add != 0) then {
       if(isNull Shop_var_holder) then {
-            Shop_var_holder = "plp_ct_woodboxlightsmall" createVehicleLocal (getpos player);
+            Shop_var_holder = (getText(missionConfigFile >> "Shop" >> "Holder" >> "holderClass")) createVehicleLocal (getpos player);
             player disableCollisionWith Shop_var_holder;
       } else {
-            if(player distance Shop_var_holder > 100) then {
+            if(player distance Shop_var_holder > (getNumber(missionConfigFile >> "Shop" >> "Holder" >> "maxDistance"))) then {
                   clearWeaponCargo Shop_var_holder;
                   clearMagazineCargo Shop_var_holder;
                   clearItemCargo Shop_var_holder;
