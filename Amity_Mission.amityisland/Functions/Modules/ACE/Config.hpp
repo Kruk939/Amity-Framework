@@ -3,6 +3,13 @@ class Medical {
 		syncTime = 30;
 		requestMedicDelay = 30;
 		minimalDamageToRevive = 0.1;
+		facilities[] = {
+			"land_POP_Hospital",
+			"A3L_HospitalBed"
+		};
+		vehicles[] = {
+			"amity_ambulance"
+		};
 	};
 	class Defibrylator {
 		item = "CG_ATF_Revival_Kit_i";
@@ -21,6 +28,8 @@ class Medical {
 		startChance = 10;
 		addChance = 10; //on each try add this to next try chance
 		addTime = 180; //adds random time to player dead count
+	};
+	class Medical {
 	};
 };
 class ACE_Settings {
