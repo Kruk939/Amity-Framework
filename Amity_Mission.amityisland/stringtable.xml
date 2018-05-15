@@ -19,6 +19,16 @@
             <English>Abort</English>
             <Polish>Anuluj</Polish>
       </Key>
+      <Key ID="STR_ADD">
+            <Original>Add</Original>
+            <English>Add</English>
+            <Polish>Dodaj</Polish>
+      </Key>
+      <Key ID="STR_CANCELLLED">
+            <Original>Cancelled</Original>
+            <English>Cancelled</English>
+            <Polish>Anulowano</Polish>
+      </Key>
       <Key ID="STR_OPEN">
             <Original>Open</Original>
             <English>Open</English>

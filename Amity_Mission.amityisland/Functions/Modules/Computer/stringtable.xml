@@ -1,0 +1,242 @@
+<Container name="MECHANIC">
+      <Key ID="STR_COMPUTER_CASE_CLOSE">
+            <Original>Close case</Original>
+            <English>Close case</English>
+            <Polish>Zamknij sprawe</Polish>
+      </Key>
+      <Key ID="STR_COMPUTER_CASE_SAVE">
+            <Original>Save</Original>
+            <English>Save</English>
+            <Polish>Zapisz</Polish>
+      </Key>
+      <Key ID="STR_COMPUTER_CASE_ADD_CLOSE">
+            <Original>Add and Close</Original>
+            <English>Add and Close</English>
+            <Polish>Dodaj i Zamknij</Polish>
+      </Key>
+      <Key ID="STR_COMPUTER_CASE_VIEW_VEHICLE_TITLE">
+            <Original>View of vehicle case</Original>
+            <English>View of vehicle case</English>
+            <Polish>Podglad sprawy pojazdu</Polish>
+      </Key>
+      <Key ID="STR_COMPUTER_CASE_VIEW_PROFILE_TITLE">
+            <Original>View of personal case</Original>
+            <English>View of personal case</English>
+            <Polish>Podglad sprawy osoby</Polish>
+      </Key>
+      <Key ID="STR_COMPUTER_CASE_ADD_VEHICLE_TITLE">
+            <Original>Add vehicle case</Original>
+            <English>Add vehicle case</English>
+            <Polish>Dodawanie sprawy pojazdu</Polish>
+      </Key>
+      <Key ID="STR_COMPUTER_CASE_ADD_PROFILE_TITLE">
+            <Original>Add personal case</Original>
+            <English>Add personal case</English>
+            <Polish>Dodawanie sprawy osoby</Polish>
+      </Key>
+      <Key ID="STR_COMPUTER_PLATE">
+            <Original>Plate:</Original>
+            <English>Plate:</English>
+            <Polish>Rejestracja:</Polish>
+      </Key>
+      <Key ID="STR_COMPUTER_WANTED_LEVEL">
+            <Original>Level:</Original>
+            <English>Level:</English>
+            <Polish>Poziom:</Polish>
+      </Key>
+      <Key ID="STR_COMPUTER_INFO">
+            <Original>Information</Original>
+            <English>Information</English>
+            <Polish>Informacje</Polish>
+      </Key>
+      <Key ID="STR_COMPUTER_RETURN">
+            <Original>Return</Original>
+            <English>Return</English>
+            <Polish>Powrót</Polish>
+      </Key>
+      <Key ID="STR_COMPUTER_VEHICLE_CHECK_TITLE">
+            <Original>View of the vehicle</Original>
+            <English>View of the vehicle</English>
+            <Polish>Podgląd pojazdu</Polish>
+      </Key>
+      <Key ID="STR_COMPUTER_CASES">
+            <Original>Cases</Original>
+            <English>Cases</English>
+            <Polish>Sprawy</Polish>
+      </Key>
+      <Key ID="STR_COMPUTER_COMPANY">
+            <Original>Company:</Original>
+            <English>Company:</English>
+            <Polish>Firma:</Polish>
+      </Key>
+      <Key ID="STR_COMPUTER_COUNT">
+            <Original>Count:</Original>
+            <English>Count:</English>
+            <Polish>Ilość:</Polish>
+      </Key>
+      <Key ID="STR_COMPUTER_SENTENCES">
+            <Original>Sentences:</Original>
+            <English>Sentences:</English>
+            <Polish>Wyroki:</Polish>
+      </Key>
+      <Key ID="STR_COMPUTER_STATUS">
+            <Original>Status:</Original>
+            <English>Status:</English>
+            <Polish>Status:</Polish>
+      </Key>
+      <Key ID="STR_COMPUTER_CHECK_PROFILE_TITLE">
+            <Original>View of personal files</Original>
+            <English>View of personal files</English>
+            <Polish>Podgląd akt osobistych</Polish>
+      </Key>
+      <Key ID="STR_COMPUTER_COUNT_HOUSES">
+            <Original>Houses count:</Original>
+            <English>Houses count:</English>
+            <Polish>Ilość posiadłości:</Polish>
+      </Key>
+      <Key ID="STR_COMPUTER_TICKET_POINTS">
+            <Original>Ticket points:</Original>
+            <English>Ticket points:</English>
+            <Polish>Liczba punktów:</Polish>
+      </Key>
+      <Key ID="STR_COMPUTER_TICKETS">
+            <Original>Tickets</Original>
+            <English>Tickets</English>
+            <Polish>Mandaty</Polish>
+      </Key>
+      <Key ID="STR_COMPUTER_WANTED">
+            <Original>Wanted:</Original>
+            <English>Wanted:</English>
+            <Polish>Poszukiwany:</Polish>
+      </Key>
+      <Key ID="STR_COMPUTER_WANTED_REASON">
+            <Original>Reason:</Original>
+            <English>Reason:</English>
+            <Polish>Powód:</Polish>
+      </Key>
+      <Key ID="STR_COMPUTER_WANTED_ID">
+            <Original>ID:</Original>
+            <English>ID:</English>
+            <Polish>ID:</Polish>
+      </Key>
+      <Key ID="STR_COMPUTER_NAME_SURNAME">
+            <Original>Name and Surname:</Original>
+            <English>Name and Surname:</English>
+            <Polish>Imię i Nazwisko:</Polish>
+      </Key>
+      <Key ID="STR_COMPUTER_PLAYERS">
+            <Original>Players:</Original>
+            <English>Players:</English>
+            <Polish>Gracze:</Polish>
+      </Key>
+      <Key ID="STR_COMPUTER_MAIN_QUICK_SEARCH">
+            <Original>Quick search</Original>
+            <English>Quick search</English>
+            <Polish>Szybkie wyszukiwanie</Polish>
+      </Key>
+      <Key ID="STR_COMPUTER_MAIN_WANTED_VEHICLES">
+            <Original>Wanted vehicles</Original>
+            <English>Wanted vehicles</English>
+            <Polish>Poszukiwane pojazdy</Polish>
+      </Key>
+      <Key ID="STR_COMPUTER_MAIN_WANTED_PROFILES">
+            <Original>Wanted persons</Original>
+            <English>Wanted persons</English>
+            <Polish>Poszukiwane osoby</Polish>
+      </Key>
+      <Key ID="STR_COMPUTER_MAIN_TITLE">
+            <Original>Police computer</Original>
+            <English>Police computer</English>
+            <Polish>Komputer policyjny</Polish>
+      </Key>
+      <Key ID="STR_COMPUTER_MAIN_ENTER">
+            <Original>Enter:</Original>
+            <English>Enter:</English>
+            <Polish>Wprowadź:</Polish>
+      </Key>
+      <Key ID="STR_COMPUTER_MAIN_SEARCH">
+            <Original>Search</Original>
+            <English>Search</English>
+            <Polish>Wyszukaj</Polish>
+      </Key>
+      <Key ID="STR_COMPUTER_MAIN_SEND">
+            <Original>Send</Original>
+            <English>Send</English>
+            <Polish>Wyslij</Polish>
+      </Key>
+      <Key ID="STR_COMPUTER_MAIN_MESSAGES">
+            <Original>Messages</Original>
+            <English>Messages</English>
+            <Polish>Komunikaty</Polish>
+      </Key>
+      <Key ID="STR_COMPUTER_MAIN_PLATE">
+            <Original>Plate</Original>
+            <English>Plate</English>
+            <Polish>Rejestracja</Polish>
+      </Key>
+      <Key ID="STR_COMPUTER_MAIN_NAME_SURNAME">
+            <Original>Name and Surname</Original>
+            <English>Name and Surname</English>
+            <Polish>Imię i Nazwisko</Polish>
+      </Key>
+      <Key ID="STR_COMPUTER_MAIN_VIN">
+            <Original>VIN</Original>
+            <English>VIN</English>
+            <Polish>VIN</Polish>
+      </Key>
+      <Key ID="STR_COMPUTER_VEHICLE_VIN_INPUT">
+            <Original>VIN:</Original>
+            <English>VIN:</English>
+            <Polish>VIN:</Polish>
+      </Key>
+      <Key ID="STR_COMPUTER_VEHICLE">
+            <Original>Vehicle</Original>
+            <English>Vehicle</English>
+            <Polish>Pojazd</Polish>
+      </Key>
+      <Key ID="STR_COMPUTER_VEHICLES">
+            <Original>Vehicles</Original>
+            <English>Vehicles</English>
+            <Polish>Pojazdy</Polish>
+      </Key>
+      <Key ID="STR_COMPUTER_LICENSES">
+            <Original>Licenses</Original>
+            <English>Licenses</English>
+            <Polish>Licencje</Polish>
+      </Key>
+      <Key ID="STR_COMPUTER_VEHICLE_COLOR">
+            <Original>Color:</Original>
+            <English>Color:</English>
+            <Polish>Kolor:</Polish>
+      </Key>
+      <Key ID="STR_COMPUTER_VEHICLE_MODEL">
+            <Original>Model:</Original>
+            <English>Model:</English>
+            <Polish>Model:</Polish>
+      </Key>
+      <Key ID="STR_COMPUTER_VEHICLE_MATERIAL">
+            <Original>Material:</Original>
+            <English>Material:</English>
+            <Polish>Material:</Polish>
+      </Key>
+      <Key ID="STR_COMPUTER_MAIN_ID">
+            <Original>ID</Original>
+            <English>ID</English>
+            <Polish>Nr Dowodu:</Polish>
+      </Key>
+      <Key ID="STR_COMPUTER_CHECK">
+            <Original>Check</Original>
+            <English>Check</English>
+            <Polish>Sprawdź</Polish>
+      </Key>
+      <Key ID="STR_COMPUTER_MAIN_VEHICLE_SEARCH">
+            <Original>Search for vehicle:</Original>
+            <English>Search for vehicle:</English>
+            <Polish>Szukaj pojazdu:</Polish>
+      </Key>
+      <Key ID="STR_COMPUTER_MAIN_PERSON_SEARCH">
+            <Original>Search for person:</Original>
+            <English>Search for person:</English>
+            <Polish>Szukaj osoby:</Polish>
+      </Key>
+</Container>
