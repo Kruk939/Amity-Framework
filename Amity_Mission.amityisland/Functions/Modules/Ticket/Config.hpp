@@ -7,6 +7,9 @@ class Ticket {
                         {4, 60}
                   };
             };
+            class Points {
+                  maxDays = 7;
+            };
       };
       class Prests {
             class speed_less_20 {
