@@ -279,4 +279,9 @@
             <English>Wanted(deadly)</English>
             <Polish>Poszukiwany(zabójczy)</Polish>
       </Key>
+      <Key ID="STR_COMPUTER_OPEN">
+            <Original>Police computer</Original>
+            <English>Police computer</English>
+            <Polish>Komputer policyjny</Polish>
+      </Key>
 </Container>

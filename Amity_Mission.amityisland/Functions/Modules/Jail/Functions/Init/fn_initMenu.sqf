@@ -1,27 +1,13 @@
 private _actions = [
       [
-            ["JAIL_SENTENCES", "STR_JAIL_SENTENCES_OPEN" call BIS_fnc_localize, "", { [] call ClientModules_Jail_fnc_sentences_open; }, { player getVariable["jail_sentences_view", -1] > 0}],
+            ["JAIL_SENTENCES", "STR_JAIL_SENTENCES_OPEN" call BIS_fnc_localize, "", { [] call ClientModules_Jail_fnc_jail_sentences_open; }, { player getVariable["jail_sentences_view", -1] > 0}],
             ["object", [player, 1, ["ACE_SelfActions"]]]
+      ],
+      [
+            ["JAIL_PLAYER", "STR_JAIL_DIALOG_INSERT_TITLE" call BIS_fnc_localize, "", { [_target] call ClientModules_Jail_fnc_jail_insert_open; }, {player getVariable["jail_put_player", -1] >= getNumber(missionConfigFile >> "Jail" >> "Setup" >> "Permissions" >> "jailPlayer")}],
+            ["class",["Civilian", 0, ["ACE_Torso"],true]]
       ]
 ];
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -55,7 +41,7 @@ private _configs = [] call ClientModules_Jail_fnc_jail_getConfigs;
 
 
             _action = [
-                  ["JAIL_LOCKER_BROWSE","STR_JAIL_LOCKER_BROWSE" call BIS_fnc_localize, "", { [_target] call ClientModules_Jail_fnc_lockers_open; }, { (player getVariable["jail_lockers_access", -1]) >= getNumber(missionConfigFile >> "Jail" >> "Setup" >> "Permissions" >> "allLockersOpen")}],
+                  ["JAIL_LOCKER_BROWSE","STR_JAIL_LOCKER_BROWSE" call BIS_fnc_localize, "", { [_target] call ClientModules_Jail_fnc_jail_lockers_open; }, { (player getVariable["jail_lockers_access", -1]) >= getNumber(missionConfigFile >> "Jail" >> "Setup" >> "Permissions" >> "allLockersOpen")}],
                   ["object",[_object, 0, ["JAIL_LOCKER"]]]
             ];
             _actions pushBack _action;
