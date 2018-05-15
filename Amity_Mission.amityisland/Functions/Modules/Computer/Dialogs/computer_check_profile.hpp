@@ -1,7 +1,6 @@
 class computer_check_profile {
       idd = 15001;
 	class controls {
-
 		class text_danger: RscText {
 			idc = 1000;
 			text = "Brak"; //--- ToDo: Localize;
@@ -76,6 +75,7 @@ class computer_check_profile {
 		};
 		class text_tickets_info: RscText {
 			idc = 1008;
+                  style = ST_MULTI;
 			text = "Info"; //--- ToDo: Localize;
 			x = 20 * GUI_GRID_W + GUI_GRID_X;
 			y = 15.5 * GUI_GRID_H + GUI_GRID_Y;
@@ -92,8 +92,9 @@ class computer_check_profile {
 			h = 1 * GUI_GRID_H;
 			colorBackground[] = {0,0,0,0.2};
 		};
-		class text_wanted_profiles_inf: RscText {
+		class text_wanted_profiles_info: RscText {
 			idc = 1010;
+                  style = ST_MULTI;
 			text = "Info"; //--- ToDo: Localize;
 			x = 20 * GUI_GRID_W + GUI_GRID_X;
 			y = 4.5 * GUI_GRID_H + GUI_GRID_Y;
@@ -224,6 +225,7 @@ class computer_check_profile {
 		};
 		class title_licenses: RscText {
 			idc = -1;
+                  style = ST_RIGHT;
 			text = $STR_COMPUTER_LICENSES; //--- ToDo: Localize;
 			x = 0 * GUI_GRID_W + GUI_GRID_X;
 			y = 6.5 * GUI_GRID_H + GUI_GRID_Y;

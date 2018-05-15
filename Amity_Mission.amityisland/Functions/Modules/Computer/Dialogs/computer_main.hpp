@@ -12,6 +12,7 @@ class computer_main {
 		};
 		class text_messages: RscText {
 			idc = 1001;
+                  style = ST_MULTI;
 			x = 18.5 * GUI_GRID_W + GUI_GRID_X;
 			y = 2.5 * GUI_GRID_H + GUI_GRID_Y;
 			w = 21.5 * GUI_GRID_W;
@@ -52,6 +53,7 @@ class computer_main {
 		};
 		class button_wanted_profile_check: RscButton {
 			idc = 1600;
+                  action = " ['WANTED_PERSON_CHECK'] call ClientModules_Computer_fnc_computer_main_action; ";
 			text = $STR_COMPUTER_CHECK; //--- ToDo: Localize;
 			x = 0 * GUI_GRID_W + GUI_GRID_X;
 			y = 11.5 * GUI_GRID_H + GUI_GRID_Y;
@@ -59,6 +61,7 @@ class computer_main {
 			h = 1 * GUI_GRID_H;
 			colorBackground[] = {0,0,0,0.5};
 		};
+            /*
 		class button_wanted_profile_add: RscButton {
 			idc = 1601;
 			text = $STR_ADD; //--- ToDo: Localize;
@@ -68,8 +71,10 @@ class computer_main {
 			h = 1 * GUI_GRID_H;
 			colorBackground[] = {0,0,0,0.5};
 		};
+            */
 		class button_wanted_vehicle_check: RscButton {
 			idc = 1602;
+                  action = " ['WANTED_VEHICLE_CHECK'] call ClientModules_Computer_fnc_computer_main_action; ";
 			text = $STR_COMPUTER_CHECK; //--- ToDo: Localize;
 			x = 0 * GUI_GRID_W + GUI_GRID_X;
 			y = 23 * GUI_GRID_H + GUI_GRID_Y;
@@ -79,6 +84,7 @@ class computer_main {
 		};
 		class button_wanted_vehicle_add: RscButton {
 			idc = 1603;
+                  action = " ['WANTED_VEHICLE_ADD'] call ClientModules_Computer_fnc_computer_main_action; ";
 			text = $STR_ADD; //--- ToDo: Localize;
 			x = 12 * GUI_GRID_W + GUI_GRID_X;
 			y = 23 * GUI_GRID_H + GUI_GRID_Y;
@@ -88,6 +94,7 @@ class computer_main {
 		};
 		class button_combo_check: RscButton {
 			idc = 1604;
+                  action = " ['QUICK_CHECK'] call ClientModules_Computer_fnc_computer_main_action; ";
 			text = $STR_COMPUTER_CHECK; //--- ToDo: Localize;
 			x = 26 * GUI_GRID_W + GUI_GRID_X;
 			y = 15 * GUI_GRID_H + GUI_GRID_Y;
@@ -97,6 +104,7 @@ class computer_main {
 		};
 		class button_combo_add: RscButton {
 			idc = 1605;
+                  action = " ['QUICK_ADD'] call ClientModules_Computer_fnc_computer_main_action; ";
 			text = $STR_ADD; //--- ToDo: Localize;
 			x = 34 * GUI_GRID_W + GUI_GRID_X;
 			y = 15 * GUI_GRID_H + GUI_GRID_Y;
@@ -106,6 +114,7 @@ class computer_main {
 		};
 		class button_input_check_name: RscButton {
 			idc = 1607;
+                  action = " ['SEARCH_NAME'] call ClientModules_Computer_fnc_computer_main_action; ";
 			text = $STR_COMPUTER_MAIN_NAME_SURNAME; //--- ToDo: Localize;
 			x = 27 * GUI_GRID_W + GUI_GRID_X;
 			y = 19.5 * GUI_GRID_H + GUI_GRID_Y;
@@ -115,6 +124,7 @@ class computer_main {
 		};
 		class button_input_check_id: RscButton {
 			idc = 1606;
+                  action = " ['SEARCH_ID'] call ClientModules_Computer_fnc_computer_main_action; ";
 			text = $STR_COMPUTER_MAIN_ID; //--- ToDo: Localize;
 			x = 27 * GUI_GRID_W + GUI_GRID_X;
 			y = 20.5 * GUI_GRID_H + GUI_GRID_Y;
@@ -124,6 +134,7 @@ class computer_main {
 		};
 		class button_input_check_vin: RscButton {
 			idc = 1608;
+                  action = " ['SEARCH_VIN'] call ClientModules_Computer_fnc_computer_main_action; ";
 			text = $STR_COMPUTER_MAIN_VIN; //--- ToDo: Localize;
 			x = 27 * GUI_GRID_W + GUI_GRID_X;
 			y = 22 * GUI_GRID_H + GUI_GRID_Y;
@@ -133,6 +144,7 @@ class computer_main {
 		};
 		class button_input_check_license: RscButton {
 			idc = 1609;
+                  action = " ['SEARCH_PLATE'] call ClientModules_Computer_fnc_computer_main_action; ";
 			text = $STR_COMPUTER_MAIN_PLATE; //--- ToDo: Localize;
 			x = 27 * GUI_GRID_W + GUI_GRID_X;
 			y = 23 * GUI_GRID_H + GUI_GRID_Y;
@@ -142,6 +154,7 @@ class computer_main {
 		};
 		class button_send: RscButton {
 			idc = 1610;
+                  action = " ['SEND'] call ClientModules_Computer_fnc_computer_main_action; ";
 			text = $STR_COMPUTER_MAIN_SEND; //--- ToDo: Localize;
 			x = 34 * GUI_GRID_W + GUI_GRID_X;
 			y = 11.5 * GUI_GRID_H + GUI_GRID_Y;

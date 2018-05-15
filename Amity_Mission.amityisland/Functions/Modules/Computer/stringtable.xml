@@ -200,9 +200,9 @@
             <Polish>Pojazdy</Polish>
       </Key>
       <Key ID="STR_COMPUTER_LICENSES">
-            <Original>Licenses</Original>
-            <English>Licenses</English>
-            <Polish>Licencje</Polish>
+            <Original>Licenses:</Original>
+            <English>Licenses:</English>
+            <Polish>Licencje:</Polish>
       </Key>
       <Key ID="STR_COMPUTER_VEHICLE_COLOR">
             <Original>Color:</Original>
@@ -238,5 +238,45 @@
             <Original>Search for person:</Original>
             <English>Search for person:</English>
             <Polish>Szukaj osoby:</Polish>
+      </Key>
+      <Key ID="STR_COMPUTER_ESCAPED">
+            <Original>Escaped</Original>
+            <English>Escaped</English>
+            <Polish>Ucieczka</Polish>
+      </Key>
+      <Key ID="STR_COMPUTER_IN_JAIL">
+            <Original>In jail</Original>
+            <English>In jail</English>
+            <Polish>W więzieniu</Polish>
+      </Key>
+      <Key ID="STR_COMPUTER_NO_IN_JAIL">
+            <Original>No active sentences</Original>
+            <English>No active sentences</English>
+            <Polish>Brak aktywnych wyroków</Polish>
+      </Key>
+      <Key ID="STR_COMPUTER_WANTED_LEVEL_NONE">
+            <Original>No</Original>
+            <English>No</English>
+            <Polish>Nie</Polish>
+      </Key>
+      <Key ID="STR_COMPUTER_WANTED_LEVEL_MINIMUM">
+            <Original>Wanted(minimum)</Original>
+            <English>Wanted(minimum)</English>
+            <Polish>Poszukiwany(Minimalny)</Polish>
+      </Key>
+      <Key ID="STR_COMPUTER_WANTED_LEVEL_MEDIUM">
+            <Original>Wanted(medium)</Original>
+            <English>Wanted(medium)</English>
+            <Polish>Poszukiwany(średni)</Polish>
+      </Key>
+      <Key ID="STR_COMPUTER_WANTED_LEVEL_HIGH">
+            <Original>Wanted(high)</Original>
+            <English>Wanted(high)</English>
+            <Polish>Poszukiwany(wysoki)</Polish>
+      </Key>
+      <Key ID="STR_COMPUTER_WANTED_LEVEL_DEADLY">
+            <Original>Wanted(deadly)</Original>
+            <English>Wanted(deadly)</English>
+            <Polish>Poszukiwany(zabójczy)</Polish>
       </Key>
 </Container>

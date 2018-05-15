@@ -49,4 +49,9 @@ class ClientModules_Computer {
             class computer_main_receive {};
             class computer_main_action {};
       };
+      class Misc {
+            file="Functions\Modules\Computer\Functions\Misc";
+            class getWantedConfig {};
+            class getWantedConfigs {};
+      };
 };
