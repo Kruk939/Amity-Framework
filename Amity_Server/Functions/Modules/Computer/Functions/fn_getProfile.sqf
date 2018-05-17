@@ -10,7 +10,7 @@ if(count _profile != 0) then {
       _profile = _profile select 0;
 };
 private _wanted =  [format["computer_select_wanted_profiles_profile:%1", _profile_id], 2] call ExternalS_fnc_ExtDBasync;
-private _vehicles = [_profile_id] call Server_fnc_getGarage;
+private _vehicles = [format["core_garage_get_profile_all:51", _profile_id], 2] call ExternalS_fnc_ExtDBasync;
 private _sentences = [];
 if(!isNil "ServerModules_Jail_fnc_getSentences") then {
       _sentences = [_profile_id, true] call ServerModules_Jail_fnc_getSentences;

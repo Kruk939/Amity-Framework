@@ -1,4 +1,4 @@
-if(player getVariable["jail_sentences_view", -1] < getNumber(missionConfigFile >> "Jail" >> "Setup" >> "Permissions" >> "sentenceView")) exitWith {
+if(player getVariable["jail_sentences", -1] < getNumber(missionConfigFile >> "Jail" >> "Setup" >> "Permissions" >> "sentenceView")) exitWith {
       ["STR_JAIL_NO_PERRMISION", true] call Client_fnc_domsg;
 };
 private _jail = [player] call ClientModules_Jail_fnc_jail_getNearest;

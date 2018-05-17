@@ -66,4 +66,5 @@ if(_type == "SEND") exitWith {
       private _amount = parseNumber(ctrlText 1401);
       private _reason = ctrlText 1402;
       [player, [_amount, _reason, _points, _preset]] remoteExec["ClientModules_Ticket_fnc_ticket_receive_open", _target];
+      closeDialog 0;
 };

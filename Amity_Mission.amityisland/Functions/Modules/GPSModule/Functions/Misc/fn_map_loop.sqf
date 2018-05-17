@@ -5,7 +5,7 @@ private _markers = [];
 if(visibleMap && "ItemGPS" in assignedItems player || visibleGPS) then {
 	{
 		if (( _x getVariable["faction_id",-1]) == _faction_id ) then {
-			private _marker = createMarkerLocal [format["gps_module_%1", getPlayerUID player], visiblePosition _x];
+			private _marker = createMarkerLocal [format["gps_module_%1", getPlayerUID _x], visiblePosition _x];
 			_marker setMarkerColorLocal getText(missionConfigFile >> "GPSModule" >> "Marker" >> "color");
 			_marker setMarkerTypeLocal getText(missionConfigFile >> "GPSModule" >> "Marker" >> "type");
 			_marker setMarkerTextLocal format["%1", _x getVariable["name", ""]];

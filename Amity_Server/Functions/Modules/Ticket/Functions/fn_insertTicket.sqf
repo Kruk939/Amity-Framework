@@ -32,7 +32,7 @@ if(_paid) then {
             [_faction_id, "ADD", _am] call Server_fnc_factionBankTransfer;
       } forEach _split;
       if(_left > 0) then {
-            [getNumber(missionConfigFile >> "Ticket" >> "Config" >> "Money" >> "defaultFaction"), "ADD", _left] call Server_fnc_factionBankTransfer;      
+            [getNumber(missionConfigFile >> "Ticket" >> "Config" >> "Money" >> "defaultFaction"), "ADD", _left] call Server_fnc_factionBankTransfer;
       };
 } else {
       [["STR_TICKET_ACTION_NOT_ENOUGH", _player getVariable["name", ""]], true] remoteExec["Client_fnc_domsg", _officer];

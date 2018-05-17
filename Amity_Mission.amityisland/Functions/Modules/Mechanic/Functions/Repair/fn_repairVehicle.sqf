@@ -11,7 +11,7 @@ _index = -1;
 _name = "";
 private _onFinish = {
       (_this select 0) params ["_target", "_name", "_text", "_remove"];
-      [_target,_name] remoteExec ["ClientModules_Mechanic_fnc_fixSelection", 2];
+      [_target,_name] remoteExec ["ClientModules_Mechanic_fnc_fixSelection", 0];
       private _anim =  getText(missionConfigFile >> "Mechanic" >> "Config" >> "animation");
       [player, _anim, 1] call ace_common_fnc_doAnimation;
       [_text, true] spawn Client_fnc_domsg;
