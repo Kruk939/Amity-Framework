@@ -9,6 +9,8 @@ _display setVariable["vehicles", _vehicles];
 _display setVariable["wanted", _wanted];
 _display setVariable["licenses", _licenses];
 _display setVariable["sentences", _sentences];
+_display setVariable["tickets", _tickets];
+[(_display getVariable["profile_id", -1]), "ClientModules_Computer_fnc_computer_check_profile_open"] call ClientModules_Computer_fnc_addLast;
 
 _profile params["_id", "", "_profile_uid", "_first_name", "_last_name"];
 ctrlSetText[1001, format["%1 %2", _first_name, _last_name]];
@@ -35,6 +37,7 @@ private _ids = (["view"] call ClientModules_Licenses_fnc_getAvialableLicenses) +
             lbSetData[2102, _index, str(_id)];
       };
 } forEach _licenses;
+if(lbSize 2102 != 0) then { lbSetCurSel[2102, 0]; };
 
 //tickets
 ctrlSetText[1007, str(count _tickets)];

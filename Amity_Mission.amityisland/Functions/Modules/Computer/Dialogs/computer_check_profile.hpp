@@ -1,5 +1,8 @@
 class computer_check_profile {
       idd = 15001;
+      class controlsBackground {
+		class ComputerBackground: Tbackground_police_computer {};
+      };
 	class controls {
 		class text_danger: RscText {
 			idc = 1000;
@@ -129,6 +132,7 @@ class computer_check_profile {
 		};
 		class button_wanted_profile_check: RscButton {
 			idc = 1600;
+                  action = " ['CASES_CHECK'] call ClientModules_Computer_fnc_computer_check_profile_action; ";
 			text = $STR_COMPUTER_CHECK; //--- ToDo: Localize;
 			x = 20 * GUI_GRID_W + GUI_GRID_X;
 			y = 11 * GUI_GRID_H + GUI_GRID_Y;
@@ -138,6 +142,7 @@ class computer_check_profile {
 		};
 		class button_wanted_profile_add: RscButton {
 			idc = 1601;
+                  action = " ['CASES_ADD'] call ClientModules_Computer_fnc_computer_check_profile_action; ";
 			text = $STR_ADD; //--- ToDo: Localize;
 			x = 33.5 * GUI_GRID_W + GUI_GRID_X;
 			y = 11 * GUI_GRID_H + GUI_GRID_Y;
@@ -147,6 +152,7 @@ class computer_check_profile {
 		};
 		class button_wanted_vehicle_add: RscButton {
 			idc = 1602;
+                  action = " ['VEHICLES_ADD'] call ClientModules_Computer_fnc_computer_check_profile_action; ";
 			text = $STR_ADD; //--- ToDo: Localize;
 			x = 12.5 * GUI_GRID_W + GUI_GRID_X;
 			y = 12 * GUI_GRID_H + GUI_GRID_Y;
@@ -156,6 +162,7 @@ class computer_check_profile {
 		};
 		class button_sentences_check: RscButton {
 			idc = 1603;
+                  action = " ['SENTENCES_CHECK'] call ClientModules_Computer_fnc_computer_check_profile_action; ";
 			text = $STR_COMPUTER_CHECK; //--- ToDo: Localize;
 			x = 0 * GUI_GRID_W + GUI_GRID_X;
 			y = 22 * GUI_GRID_H + GUI_GRID_Y;
@@ -165,6 +172,7 @@ class computer_check_profile {
 		};
 		class button_return: RscButton {
 			idc = 1604;
+                  action = " [] call ClientModules_Computer_fnc_openLast; ";
 			text = $STR_COMPUTER_RETURN; //--- ToDo: Localize;
 			x = 30 * GUI_GRID_W + GUI_GRID_X;
 			y = 23.5 * GUI_GRID_H + GUI_GRID_Y;
@@ -174,6 +182,7 @@ class computer_check_profile {
 		};
 		class button_vehicle_check: RscButton {
 			idc = 1605;
+                  action = " ['VEHICLES_CHECK'] call ClientModules_Computer_fnc_computer_check_profile_action; ";
 			text = $STR_COMPUTER_CHECK; //--- ToDo: Localize;
 			x = 0 * GUI_GRID_W + GUI_GRID_X;
 			y = 12 * GUI_GRID_H + GUI_GRID_Y;
@@ -183,6 +192,7 @@ class computer_check_profile {
 		};
 		class combo_tickets: RscCombo {
 			idc = 2100;
+                  onLbSelChanged =" ['CB_TICKETS'] call ClientModules_Computer_fnc_computer_check_profile_action; ";
 			x = 20 * GUI_GRID_W + GUI_GRID_X;
 			y = 14.5 * GUI_GRID_H + GUI_GRID_Y;
 			w = 20 * GUI_GRID_W;
@@ -191,6 +201,7 @@ class computer_check_profile {
 		};
 		class combo_wanted_cases: RscCombo {
 			idc = 2101;
+                  onLbSelChanged =" ['CB_CASES'] call ClientModules_Computer_fnc_computer_check_profile_action; ";
 			x = 20 * GUI_GRID_W + GUI_GRID_X;
 			y = 3.5 * GUI_GRID_H + GUI_GRID_Y;
 			w = 20 * GUI_GRID_W;

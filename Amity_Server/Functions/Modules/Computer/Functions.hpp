@@ -9,6 +9,9 @@ class ServerModules_Computer {
             class getMessages {};
             class openMain {};
             class getProfile {};
+            class caseSetStatus {};
+            class caseUpdateLevel {};
+            class addCase {};
       };
 
 };

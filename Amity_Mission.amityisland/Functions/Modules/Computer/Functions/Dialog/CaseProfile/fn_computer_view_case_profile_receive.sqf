@@ -1,0 +1,29 @@
+params[["_data", []]];
+if(!dialog) exitWith {};
+private _display = findDisplay 15006;
+if(isNull _display) exitWith { closeDialog 0; };
+
+if(count _data != 0) then {
+      [[(_display getVariable["id", -1]), _data], "ClientModules_Computer_fnc_computer_view_case_profile_open"] call ClientModules_Computer_fnc_addLast;
+      _data params["_id", "", "", "_wanted_id", "_reason", "_closed_by", "_name", "_officer_name", "_closed_name"];
+      _display setVariable["data", _data];
+      ctrlSetText[1000, str(_id)];
+      ctrlSetText[1001, _name];
+      ctrlSetText[1002, _reason];
+      ctrlSetText[1003, _officer_name];
+      _closed_name = if(typeName _closed_by == "OBJECT") then { localize "STR_COMPUTER_NOBODY"; } else { _closed_name; ctrlSetText[1601, localize "STR_COMPUTER_CASE_REOPEN"]; };
+      ctrlSetText[1004, _closed_name];
+      private _selected = -1;
+      private _configs = [] call ClientModules_Computer_fnc_getWantedConfigs;
+      {
+            private _id = getNumber(_x >> "id");
+            if(_id == _wanted_id) then { _selected = _forEachIndex; };
+            private _index = lbAdd[2100, getText(_x >> "name") call BIS_fnc_localize];
+            lbSetData[2100, _index, str(_id)];
+      } forEach _configs;
+      if(_selected != -1) then {
+            lbSetCurSel[2100, _selected];
+      };
+} else {
+      closeDialog 0;
+};

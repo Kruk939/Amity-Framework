@@ -1,5 +1,8 @@
 class computer_add_vehicle {
       idd = 15005;
+      class controlsBackground {
+		class ComputerBackground: Tbackground_police_computer {};
+      };
       class controls {
 		class edit_plate: RscEdit {
 			idc = 1400;

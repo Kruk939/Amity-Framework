@@ -1,5 +1,8 @@
 class computer_view_case_vehicle {
       idd = 15007;
+      class controlsBackground {
+		class ComputerBackground: Tbackground_police_computer {};
+      };
       class controls {
             class text_id: RscText {
             	idc = 1000;

@@ -1,3 +1,4 @@
+#include "Dialogs\main.hpp"
 #include "Dialogs\computer_add_profile.hpp"
 #include "Dialogs\computer_add_vehicle.hpp"
 #include "Dialogs\computer_check_profile.hpp"

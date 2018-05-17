@@ -1,5 +1,8 @@
 class computer_add_profile {
       idd = 15004;
+      class controlsBackground {
+		class ComputerBackground: Tbackground_police_computer {};
+      };
       class controls {
 		class text_name: RscText {
 			idc = 1000;
@@ -12,6 +15,8 @@ class computer_add_profile {
 		};
 		class edit_reason: RscEdit {
 			idc = 1400;
+                  style = ST_MULTI;
+                  onKeyDown = " ['REASON'] call ClientModules_Computer_fnc_computer_add_profile_action; ";
 			x = 10 * GUI_GRID_W + GUI_GRID_X;
 			y = 5.5 * GUI_GRID_H + GUI_GRID_Y;
 			w = 20 * GUI_GRID_W;
@@ -27,6 +32,7 @@ class computer_add_profile {
 		};
 		class button_add_close: RscButton {
 			idc = 1600;
+                  action = " ['ADD_CLOSE'] call ClientModules_Computer_fnc_computer_add_profile_action; ";
 			text = $STR_COMPUTER_CASE_ADD_CLOSE; //--- ToDo: Localize;
 			x = 10 * GUI_GRID_W + GUI_GRID_X;
 			y = 13.5 * GUI_GRID_H + GUI_GRID_Y;
@@ -35,6 +41,7 @@ class computer_add_profile {
 		};
 		class button_add: RscButton {
 			idc = 1601;
+                  action = " ['ADD'] call ClientModules_Computer_fnc_computer_add_profile_action; ";
 			text = $STR_ADD; //--- ToDo: Localize;
 			x = 17.5 * GUI_GRID_W + GUI_GRID_X;
 			y = 13.5 * GUI_GRID_H + GUI_GRID_Y;
@@ -43,6 +50,7 @@ class computer_add_profile {
 		};
 		class button_exit: RscButton {
 			idc = 1602;
+                  action = " [] call ClientModules_Computer_fnc_openLast; ";
 			text = $STR_ABORT; //--- ToDo: Localize;
 			x = 23.5 * GUI_GRID_W + GUI_GRID_X;
 			y = 13.5 * GUI_GRID_H + GUI_GRID_Y;
@@ -58,8 +66,9 @@ class computer_add_profile {
 			h = 1 * GUI_GRID_H;
 			colorBackground[] = {0,0,0,0.8};
 		};
-		class title_plate: RscText {
+		class title_name: RscText {
 			idc = -1;
+                  style = ST_RIGHT;
 			text = $STR_COMPUTER_NAME_SURNAME; //--- ToDo: Localize;
 			x = 10 * GUI_GRID_W + GUI_GRID_X;
 			y = 1.5 * GUI_GRID_H + GUI_GRID_Y;
@@ -67,8 +76,9 @@ class computer_add_profile {
 			h = 1 * GUI_GRID_H;
 			colorBackground[] = {0,0,0,0.6};
 		};
-		class title_poziom: RscText {
+		class title_level: RscText {
 			idc = -1;
+                  style = ST_RIGHT;
 			text = $STR_COMPUTER_WANTED_LEVEL; //--- ToDo: Localize;
 			x = 10 * GUI_GRID_W + GUI_GRID_X;
 			y = 3 * GUI_GRID_H + GUI_GRID_Y;

@@ -4,6 +4,11 @@
             <English>Close case</English>
             <Polish>Zamknij sprawe</Polish>
       </Key>
+      <Key ID="STR_COMPUTER_CASE_REOPEN">
+            <Original>Reopen case</Original>
+            <English>Reopen case</English>
+            <Polish>Otwórz sprawe</Polish>
+      </Key>
       <Key ID="STR_COMPUTER_CASE_SAVE">
             <Original>Save</Original>
             <English>Save</English>
@@ -39,10 +44,30 @@
             <English>Plate:</English>
             <Polish>Rejestracja:</Polish>
       </Key>
+      <Key ID="STR_COMPUTER_WANTED_CASE_OPEN">
+            <Original>Open</Original>
+            <English>Open</English>
+            <Polish>Otwarta</Polish>
+      </Key>
+      <Key ID="STR_COMPUTER_WANTED_CASE_CLOSED">
+            <Original>Closed</Original>
+            <English>Closed</English>
+            <Polish>Zamknięta</Polish>
+      </Key>
       <Key ID="STR_COMPUTER_WANTED_LEVEL">
             <Original>Level:</Original>
             <English>Level:</English>
             <Polish>Poziom:</Polish>
+      </Key>
+      <Key ID="STR_COMPUTER_OPENED_BY">
+            <Original>Opened by:</Original>
+            <English>Opened by:</English>
+            <Polish>Utworzony przez:</Polish>
+      </Key>
+      <Key ID="STR_COMPUTER_CLOSED_BY">
+            <Original>Closed by:</Original>
+            <English>Closed by:</English>
+            <Polish>Zamknięty przez:</Polish>
       </Key>
       <Key ID="STR_COMPUTER_INFO">
             <Original>Information</Original>
@@ -259,6 +284,11 @@
             <English>No</English>
             <Polish>Nie</Polish>
       </Key>
+      <Key ID="STR_COMPUTER_NOBODY">
+            <Original>Nobody</Original>
+            <English>Nobody</English>
+            <Polish>Nikt</Polish>
+      </Key>
       <Key ID="STR_COMPUTER_WANTED_LEVEL_MINIMUM">
             <Original>Wanted(minimum)</Original>
             <English>Wanted(minimum)</English>
@@ -283,5 +313,15 @@
             <Original>Police computer</Original>
             <English>Police computer</English>
             <Polish>Komputer policyjny</Polish>
+      </Key>
+      <Key ID="STR_COMPUTER_CHECK_PROFILE_CASE_VIEW">
+            <Original>ID: %1(%2)\nOfficer: %3\nStatus: %4%5\nLevel: %6\nReason: %7</Original>
+            <English>ID: %1(%2)\nOfficer: %3\nStatus: %4%5\nLevel: %6\nReason: %7</English>
+            <Polish>ID: %1(%2)\nOficer: %3\nStatus: %4%5\nPoziom: %6\nPowód: %7</Polish>
+      </Key>
+      <Key ID="STR_COMPUTER_CHECK_PROFILE_TICKET_VIEW">
+            <Original>ID: %1(%2 %3)\nOfficer: %4 %5\nPreset: %6\nAmount: $%8(Points: %7)\nReason: %9</Original>
+            <English>ID: %1(%2 %3)\nOfficer: %4 %5\nPreset: %6\nAmount: $%8(Points: %7)\nReason: %9</English>
+            <Polish>ID: %1(%2 %3)\nOficer: %4 %5\nSzablon: %6\nKwota: $%8(Punkty: %7)\nPowód: %9</Polish>
       </Key>
 </Container>

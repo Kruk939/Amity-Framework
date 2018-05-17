@@ -13,6 +13,11 @@ class ClientModules_Computer {
             class computer_add_profile_open {};
             class computer_add_profile_receive {};
       };
+      class Dialog {
+            file="Functions\Modules\Computer\Functions\Dialog";
+            class openLast {};
+            class addLast {};
+      };
       class Dialog_AddVehicle {
             file="Functions\Modules\Computer\Functions\Dialog\AddVehicle";
             class computer_add_vehicle_action {};
