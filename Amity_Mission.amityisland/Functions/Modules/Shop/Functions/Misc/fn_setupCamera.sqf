@@ -14,4 +14,5 @@ if(!Shop_var_preview) then {
       Shop_var_camera camSetFocus [40, 0];
       Shop_var_camera camCommit 0;
       Shop_var_preview = true;
+      Shop_var_view_lock = false;
 };

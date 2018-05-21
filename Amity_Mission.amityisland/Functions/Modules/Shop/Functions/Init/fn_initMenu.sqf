@@ -2,7 +2,7 @@ private _basic = getArray(missionConfigFile >> "Shop" >> "basic");
 private _array = [];
 {
       _x params["_name", "_id", "_class"];
-      private _code = format["[%1] call ClientModules_Shop_fnc_open;", _id];
+      private _code = format["[%1, _target] call ClientModules_Shop_fnc_open;", _id];
       _code = compile _code;
       _array pushBack [
             [format["SHOP_BASIC_%1", _forEachIndex], localize _name, "", _code,{true},{},"","screenloc",3],

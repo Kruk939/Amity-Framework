@@ -1,6 +1,8 @@
 params[["_add", []], ["_remove", []], ["_message", ""]];
 [_message, true] call Client_fnc_domsg;
 if(count _add == 0 && count _remove == 0) exitWith {};
+private _display = findDisplay 9900;
+private _target = _display getVariable["target", objNull];
 closeDialog 0;
 [] call ClientModules_Shop_fnc_terminateCamera;
 
@@ -19,6 +21,9 @@ if(count _add != 0) then {
       player allowDamage false;
       private _pos = getPosATL player;
       private _dir = getDir player;
+      if(!isNull _target) then {
+            _dir = _target getDir player;
+      };
       private _distance = 3;
       _pos set[0, (_pos select 0) + (sin _dir) * _distance];
       _pos set[1, (_pos select 1) + (cos _dir) * _distance];

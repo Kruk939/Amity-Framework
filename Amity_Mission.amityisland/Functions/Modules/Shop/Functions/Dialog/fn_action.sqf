@@ -55,7 +55,7 @@ if(_type == "CB") exitWith {
             private _item = [_class] call client_fnc_fetchItem;
             if(count _item != 0) then {
                   _item params ["", "_display", "_picture", "_desc"];
-                  private _index = lnbAddRow[1500, [_display, format["$%1", _price], "0%", str(_stock)]];
+                  private _index = lnbAddRow[1500, [_display, "", "", str(_stock)]];
                   lnbSetPicture [1500, [_index, 0], _picture];
                   lnbSetData [1500, [_index, 0], str(_id)];
                   lnbSetData [1500, [_index, 1], _type];

@@ -2,7 +2,8 @@ params[["_id", -1], ["_faction_id", -1], ["_data", []], ["_player", objNull], ["
 if(_id == -1) exitWith {};
 private _vehicle = [_id] call ServerModules_Showroom_fnc_getVehicle;
 if((count _vehicle) == 0) exitWith {}; //no vehicle found
-_vehicle params["_id", "_vehicle_id", "", "", "_name", "", "_price", "", "_f_id", "_allow_skin"];
+_vehicle params["_id", "_vehicle_id", "_class", "", "_name", "", "_price", "", "_f_id", "_allow_skin"];
+if(_name == "") then { _name =  getText(configFile >> "CfgVehicles" >> _class >> "displayName"); };
 if(_faction_id == -1) then {
       if(typeName _f_id != "OBJECT") then {
             _faction_id = _f_id;

@@ -132,7 +132,9 @@ if(_type == "color") exitWith {
 };
 if(_type == "buyCompany") exitWith {
       private _faction_id = player getVariable["faction_id", -1];
-      if(_faction_id == -1) exitWith {};
+      if(_faction_id == -1) exitWith {
+            ["You can't buy a car when you are not signed to a faction", true] call Client_fnc_domsg;
+      };
       private _index = lbCurSel (1500);
       if(_index == -1) exitWith {};
       private _id = parseNumber(lbData[1500, _index]);

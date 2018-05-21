@@ -1,8 +1,5 @@
 params[["_shop",[]]];
-if(count _shop == 0) exitWith {};
-disableSerialization;
-private _ok = createDialog "Amity_store";
-if(!_ok) exitWith {};
+if(count _shop == 0) exitWith { closeDialog 0;};
 private _display = findDisplay 9900;
 if(isNull _display) exitWith { closeDialog 0; };
 _shop params["_id", "_name", "_faction_id", "_type", "_image", "_categories"];
