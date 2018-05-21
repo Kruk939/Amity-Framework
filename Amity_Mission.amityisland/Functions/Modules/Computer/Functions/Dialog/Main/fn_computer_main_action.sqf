@@ -23,7 +23,7 @@ if(_type == "WANTED_PERSON_CHECK") exitWith {
       [_id] call ClientModules_Computer_fnc_computer_view_case_profile_open;
 };
 if(_type == "WANTED_VEHICLE_ADD") exitWith {
-
+      [] call ClientModules_Computer_fnc_computer_add_vehicle_open;
 };
 if(_type == "WANTED_VEHICLE_CHECK") exitWith {
 

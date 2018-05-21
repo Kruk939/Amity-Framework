@@ -14,6 +14,8 @@ class computer_add_vehicle {
 		};
 		class edit_reason: RscEdit {
 			idc = 1401;
+                  style = ST_MULTI;
+                  onKeyDown = " ['REASON'] call ClientModules_Computer_fnc_computer_add_vehicle_action; ";
 			x = 10 * GUI_GRID_W + GUI_GRID_X;
 			y = 5.5 * GUI_GRID_H + GUI_GRID_Y;
 			w = 20 * GUI_GRID_W;
@@ -22,6 +24,7 @@ class computer_add_vehicle {
 		};
 		class button_add_close: RscButton {
 			idc = 1600;
+                  action = " ['ADD_CLOSE'] call ClientModules_Computer_fnc_computer_add_vehicle_action; ";
 			text = $STR_COMPUTER_CASE_ADD_CLOSE; //--- ToDo: Localize;
 			x = 10 * GUI_GRID_W + GUI_GRID_X;
 			y = 13.5 * GUI_GRID_H + GUI_GRID_Y;
@@ -30,6 +33,7 @@ class computer_add_vehicle {
 		};
 		class button_add: RscButton {
 			idc = 1601;
+                  action = " ['ADD'] call ClientModules_Computer_fnc_computer_add_vehicle_action; ";
 			text = $STR_ADD; //--- ToDo: Localize;
 			x = 17.5 * GUI_GRID_W + GUI_GRID_X;
 			y = 13.5 * GUI_GRID_H + GUI_GRID_Y;
@@ -38,6 +42,7 @@ class computer_add_vehicle {
 		};
 		class button_exit: RscButton {
 			idc = 1602;
+                  action = " [] call ClientModules_Computer_fnc_openLast; ";
 			text = $STR_ABORT; //--- ToDo: Localize;
 			x = 23.5 * GUI_GRID_W + GUI_GRID_X;
 			y = 13.5 * GUI_GRID_H + GUI_GRID_Y;

@@ -22,7 +22,6 @@ class ClientModules_Computer {
             file="Functions\Modules\Computer\Functions\Dialog\AddVehicle";
             class computer_add_vehicle_action {};
             class computer_add_vehicle_open {};
-            class computer_add_vehicle_receive {};
       };
       class Dialog_CaseProfile {
             file="Functions\Modules\Computer\Functions\Dialog\CaseProfile";

@@ -86,5 +86,11 @@ if(_type == "VEHICLES_CHECK") exitWith {
 };
 
 if(_type == "VEHICLES_ADD") exitWith {
-
+      private _idc = 2103;
+      private _index = lbCurSel _idc;
+      if(_index == -1) exitWith {};
+      private _id = parseNumber(lbData[_idc, _index]);
+      private _vehicle = [_vehicles, _id] call _fnc_find;
+      _vehicle params["", "", "", "", "", "", "_plate"];
+      [_plate] call ClientModules_Computer_fnc_computer_add_vehicle_open;
 };
