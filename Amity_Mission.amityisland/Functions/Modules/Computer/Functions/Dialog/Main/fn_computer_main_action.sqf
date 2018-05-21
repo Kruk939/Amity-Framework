@@ -17,7 +17,10 @@ if(_type == "SEND") exitWith {
       [player, player getVariable["faction_id", -1], _message] remoteExec["ServerModules_Computer_fnc_addMessage", 2];
 };
 if(_type == "WANTED_PERSON_CHECK") exitWith {
-
+      private _index = lbCurSel 1500;
+      if(_index == -1) exitWith {}; //not selected
+      private _id = parseNumber(lbData[1500, _index]);
+      [_id] call ClientModules_Computer_fnc_computer_view_case_profile_open;
 };
 if(_type == "WANTED_VEHICLE_ADD") exitWith {
 

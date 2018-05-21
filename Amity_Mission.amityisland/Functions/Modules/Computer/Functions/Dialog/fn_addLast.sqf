@@ -14,4 +14,3 @@ if(computer_var_lastOpened) then {
       computer_var_lastIndex = 0;
 };
 computer_var_lastDialog pushBack [_params, _function];
-hint format["Index: %1 | Last: %2\n%3", computer_var_lastIndex, computer_var_lastOpened, computer_var_lastDialog];

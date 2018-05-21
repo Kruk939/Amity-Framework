@@ -5,8 +5,8 @@ enableDebugConsole = 1;
 respawn = "BASE";
 disabledAI = 1;
 author = "Kruk";
-onLoadName = "Amity Framework";
-onLoadMission = "Amity Mission Beta";
+onLoadName = "Amity Mission Beta";
+onLoadMission = "Amity Framework by Kruk";
 loadScreen =  "openrp.paa";
 respawndelay = 1;
 

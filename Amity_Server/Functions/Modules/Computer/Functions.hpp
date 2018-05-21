@@ -12,6 +12,8 @@ class ServerModules_Computer {
             class caseSetStatus {};
             class caseUpdateLevel {};
             class addCase {};
+            class getCase {};
+            class getPersonProfile {};
       };
 
 };
