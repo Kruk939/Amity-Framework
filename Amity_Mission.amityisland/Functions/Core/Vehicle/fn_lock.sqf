@@ -15,4 +15,5 @@ if(_monit) then {
             ["You have locked the car", true] call Client_fnc_domsg;
       };
 };
+_veh lock _lock;
 [_veh, _lock, false] remoteExec["lock", 0 - clientOwner];

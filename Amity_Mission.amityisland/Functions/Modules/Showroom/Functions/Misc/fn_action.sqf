@@ -45,16 +45,18 @@ if(_type == "combo") exitWith {
       _display setVariable["active", _active];
       lbClear 1500;
       {
-            _x params["_id", "", "_class", "", "_name", "", "", "", "", ""];
+            _x params["_id", "", "_class", "", "_name", "", "_price", "", "", ""];
             if(_name == "") then {
                   _name = getText(configFile >> "CfgVehicles" >> _class >> "displayName");
             };
             private _index = lbAdd[1500, _name];
             lbSetData[1500, _index, str(_id)];
+            lbSetValue[1500, _index, _price];
       } forEach _list;
       if(count _list != 0) then {
             lbSetCurSel [1500, 0];
       };
+      lbSortByValue 1500;
 };
 if(_type == "vehicle") exitWith {
 	private _index = lbCurSel (1500);

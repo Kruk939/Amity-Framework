@@ -1,6 +1,7 @@
 params[["_id", -1]];
 if(_id == -1) exitWith {};
 private _member = [_id] call Server_fnc_memberGet;
+if(count _member == 0) exitWith {};
 private _profile_id = _member select 2;
 private _faction_id = _member select 1;
 private _player = [_profile_id] call Client_fnc_getPlayerByProfile;

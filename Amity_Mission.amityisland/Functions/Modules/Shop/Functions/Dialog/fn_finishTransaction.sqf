@@ -21,10 +21,11 @@ if(count _add != 0) then {
       player allowDamage false;
       private _pos = getPosATL player;
       private _dir = getDir player;
+      private _distance = 3;
       if(!isNull _target) then {
             _dir = _target getDir player;
+            _distance = 1;
       };
-      private _distance = 3;
       _pos set[0, (_pos select 0) + (sin _dir) * _distance];
       _pos set[1, (_pos select 1) + (cos _dir) * _distance];
       Shop_var_holder setDir _dir;

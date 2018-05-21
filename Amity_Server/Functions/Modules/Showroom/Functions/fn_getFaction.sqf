@@ -14,7 +14,7 @@ private _arr = switch(_type) do {
       };
 } forEach _arr;
 if(!_found) then {
-      _ret = [format["showroom_get_faction:%1:%2", _faction_id, _type], 2] call ExternalS_fnc_ExtDBasync;
+      _ret = [format["showroom_get_faction:%1:%2", _type, _faction_id], 2] call ExternalS_fnc_ExtDBasync;
       _arr pushBack [_faction_id, _ret];
 };
 
