@@ -26,7 +26,10 @@ if(_type == "WANTED_VEHICLE_ADD") exitWith {
       [] call ClientModules_Computer_fnc_computer_add_vehicle_open;
 };
 if(_type == "WANTED_VEHICLE_CHECK") exitWith {
-
+      private _index = lbCurSel 1501;
+      if(_index == -1) exitWith {}; //not selected
+      private _id = parseNumber(lbData[1501, _index]);
+      [_id] call ClientModules_Computer_fnc_computer_view_case_vehicle_open;
 };
 if(_type == "QUICK_ADD") exitWith {
       private _index = lbCurSel 2100;
