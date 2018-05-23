@@ -67,6 +67,7 @@ class computer_add_vehicle {
 		};
 		class title_plate: RscText {
 			idc = -1;
+                  style = ST_RIGHT;
 			text = $STR_COMPUTER_PLATE; //--- ToDo: Localize;
 			x = 10 * GUI_GRID_W + GUI_GRID_X;
 			y = 1.5 * GUI_GRID_H + GUI_GRID_Y;
@@ -74,8 +75,9 @@ class computer_add_vehicle {
 			h = 1 * GUI_GRID_H;
 			colorBackground[] = {0,0,0,0.6};
 		};
-		class title_poziom: RscText {
+		class title_level: RscText {
 			idc = -1;
+                  style = ST_RIGHT;
 			text = $STR_COMPUTER_WANTED_LEVEL; //--- ToDo: Localize;
 			x = 10 * GUI_GRID_W + GUI_GRID_X;
 			y = 3 * GUI_GRID_H + GUI_GRID_Y;
