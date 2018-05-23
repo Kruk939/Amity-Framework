@@ -112,6 +112,7 @@ class computer_view_case_vehicle {
             };
             class title_plate: RscText {
             	idc = -1;
+                  style = ST_RIGHT;
             	text = $STR_COMPUTER_PLATE; //--- ToDo: Localize;
             	x = 10 * GUI_GRID_W + GUI_GRID_X;
             	y = 3 * GUI_GRID_H + GUI_GRID_Y;
@@ -121,6 +122,7 @@ class computer_view_case_vehicle {
             };
             class title_level: RscText {
             	idc = -1;
+                  style = ST_RIGHT;
             	text = $STR_COMPUTER_WANTED_LEVEL; //--- ToDo: Localize;
 			x = 10 * GUI_GRID_W + GUI_GRID_X;
 			y = 6 * GUI_GRID_H + GUI_GRID_Y;
@@ -139,6 +141,7 @@ class computer_view_case_vehicle {
             };
             class title_id: RscText {
             	idc = -1;
+                  style = ST_RIGHT;
             	text = $STR_COMPUTER_WANTED_ID; //--- ToDo: Localize;
             	x = 10 * GUI_GRID_W + GUI_GRID_X;
             	y = 1.5 * GUI_GRID_H + GUI_GRID_Y;
