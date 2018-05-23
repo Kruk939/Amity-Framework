@@ -14,6 +14,9 @@ if(_type == "SEND") exitWith {
       private _message = ctrlText 1401;
       private _length = getNumber(missionConfigFile >> "Computer" >> "Messages" >> "length");
       if(count _message > _length) then { _message = format["%1...", ([_message, 0, _length - 1] call BIS_fnc_trimString)]; };
+      private _all = format["%1%2: %3\n", ctrlText 1001, player getVariable["name", ""], _message];
+      ctrlSetText[1001, _all];
+      ctrlSetText[1401, ""];
       [player, player getVariable["faction_id", -1], _message] remoteExec["ServerModules_Computer_fnc_addMessage", 2];
 };
 if(_type == "WANTED_PERSON_CHECK") exitWith {
