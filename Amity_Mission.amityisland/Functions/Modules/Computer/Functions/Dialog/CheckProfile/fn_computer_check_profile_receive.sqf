@@ -10,7 +10,7 @@ _display setVariable["wanted", _wanted];
 _display setVariable["licenses", _licenses];
 _display setVariable["sentences", _sentences];
 _display setVariable["tickets", _tickets];
-[(_display getVariable["profile_id", -1]), "ClientModules_Computer_fnc_computer_check_profile_open"] call ClientModules_Computer_fnc_addLast;
+[[(_display getVariable["profile_id", -1])], "ClientModules_Computer_fnc_computer_check_profile_open"] call ClientModules_Computer_fnc_addLast;
 
 _profile params["_id", "", "_profile_uid", "_first_name", "_last_name"];
 ctrlSetText[1001, format["%1 %2", _first_name, _last_name]];

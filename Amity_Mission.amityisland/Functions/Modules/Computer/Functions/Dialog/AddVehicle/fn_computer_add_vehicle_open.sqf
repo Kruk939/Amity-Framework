@@ -12,5 +12,5 @@ private _configs = [] call ClientModules_Computer_fnc_getWantedConfigs;
       lbSetData[2100, _index, str(_id)];
 } forEach _configs;
 if(lbSize 2100 != 0) then { lbSetCurSel[2100, 0]; };
-
+[_this, "ClientModules_Computer_fnc_computer_add_vehicle_open"] call ClientModules_Computer_fnc_addLast;
 ctrlSetText[1400, _plate];
