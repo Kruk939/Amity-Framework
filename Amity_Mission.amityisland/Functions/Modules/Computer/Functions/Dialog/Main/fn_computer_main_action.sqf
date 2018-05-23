@@ -45,14 +45,14 @@ if(_type == "QUICK_CHECK") exitWith {
       [_id] call ClientModules_Computer_fnc_computer_check_profile_open;
 };
 if(_type == "SEARCH_NAME") exitWith {
-
+      [ctrlText 1400, "name", player, "ClientModules_Computer_fnc_computer_check_profile_open"] remoteExec["ServerModules_Computer_fnc_search", 2];
 };
 if(_type == "SEARCH_ID") exitWith {
-
+      [ctrlText 1400, "id", player, "ClientModules_Computer_fnc_computer_check_profile_open"] remoteExec["ServerModules_Computer_fnc_search", 2];
 };
 if(_type == "SEARCH_VIN") exitWith {
-
+      [ctrlText 1400, "vin", player, "ClientModules_Computer_fnc_computer_check_vehicle_open"] remoteExec["ServerModules_Computer_fnc_search", 2];
 };
 if(_type == "SEARCH_PLATE") exitWith {
-
+      [ctrlText 1400, "plate", player, "ClientModules_Computer_fnc_computer_check_vehicle_open"] remoteExec["ServerModules_Computer_fnc_search", 2];
 };

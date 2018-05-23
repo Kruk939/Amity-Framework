@@ -324,4 +324,9 @@
             <English>ID: %1(%2 %3)\nOfficer: %4 %5\nPreset: %6\nAmount: $%8(Points: %7)\nReason: %9</English>
             <Polish>ID: %1(%2 %3)\nOficer: %4 %5\nSzablon: %6\nKwota: $%8(Punkty: %7)\nPowód: %9</Polish>
       </Key>
+      <Key ID="STR_COMPUTER_QUERY_NOT_FOUND">
+            <Original>The looked query was not found in database</Original>
+            <English>The looked query was not found in database</English>
+            <Polish>Wyszukiwana fraza nie została znaleziona w bazie danych</Polish>
+      </Key>
 </Container>

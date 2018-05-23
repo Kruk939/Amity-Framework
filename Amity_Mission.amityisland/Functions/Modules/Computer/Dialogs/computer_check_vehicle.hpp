@@ -40,15 +40,6 @@ class computer_check_vehicle {
 			h = 1 * GUI_GRID_H;
 			colorBackground[] = {0,0,0,0.2};
 		};
-		class text_info: RscText {
-			idc = 1004;
-			text = ""; //--- ToDo: Localize;
-			x = 20 * GUI_GRID_W + GUI_GRID_X;
-			y = 4.5 * GUI_GRID_H + GUI_GRID_Y;
-			w = 20 * GUI_GRID_W;
-			h = 6.5 * GUI_GRID_H;
-			colorBackground[] = {0,0,0,0.2};
-		};
 		class text_vin: RscText {
 			idc = 1004;
 			text = "AF45Z-5869-7792-3592"; //--- ToDo: Localize;
@@ -103,8 +94,19 @@ class computer_check_vehicle {
 			h = 1 * GUI_GRID_H;
 			colorBackground[] = {0,0,0,0.2};
 		};
+		class text_info: RscText {
+			idc = 1010;
+                  style = ST_MULTI;
+			text = ""; //--- ToDo: Localize;
+			x = 20 * GUI_GRID_W + GUI_GRID_X;
+			y = 4.5 * GUI_GRID_H + GUI_GRID_Y;
+			w = 20 * GUI_GRID_W;
+			h = 6.5 * GUI_GRID_H;
+			colorBackground[] = {0,0,0,0.2};
+		};
 		class button_wanted_vehicle_check: RscButton {
 			idc = 1600;
+                  action = "['CHECK'] call ClientModules_Computer_fnc_computer_check_vehicle_action; ";
 			text = $STR_COMPUTER_CHECK; //--- ToDo: Localize;
 			x = 20 * GUI_GRID_W + GUI_GRID_X;
 			y = 11 * GUI_GRID_H + GUI_GRID_Y;
@@ -114,6 +116,7 @@ class computer_check_vehicle {
 		};
 		class button_wanted_vehicle_add: RscButton {
 			idc = 1601;
+                  action = "['ADD'] call ClientModules_Computer_fnc_computer_check_vehicle_action; ";
 			text = $STR_ADD; //--- ToDo: Localize;
 			x = 33.5 * GUI_GRID_W + GUI_GRID_X;
 			y = 11 * GUI_GRID_H + GUI_GRID_Y;
@@ -123,6 +126,7 @@ class computer_check_vehicle {
 		};
 		class button_return: RscButton {
 			idc = 1602;
+                  action = " [] call ClientModules_Computer_fnc_openLast; ";
 			text = $STR_COMPUTER_RETURN; //--- ToDo: Localize;
 			x = 30 * GUI_GRID_W + GUI_GRID_X;
 			y = 23.5 * GUI_GRID_H + GUI_GRID_Y;
@@ -132,6 +136,7 @@ class computer_check_vehicle {
 		};
 		class combo_wanted: RscCombo {
 			idc = 2100;
+                  onLbSelChanged = "['CB_CASES'] call ClientModules_Computer_fnc_computer_check_vehicle_action;";
 			x = 20 * GUI_GRID_W + GUI_GRID_X;
 			y = 3.5 * GUI_GRID_H + GUI_GRID_Y;
 			w = 20 * GUI_GRID_W;
@@ -159,6 +164,7 @@ class computer_check_vehicle {
 		};
 		class title_name: RscText {
 			idc = -1;
+                  style = ST_RIGHT;
 			text = $STR_COMPUTER_NAME_SURNAME; //--- ToDo: Localize;
 			x = 0 * GUI_GRID_W + GUI_GRID_X;
 			y = 2.5 * GUI_GRID_H + GUI_GRID_Y;
@@ -168,6 +174,7 @@ class computer_check_vehicle {
 		};
 		class title_faction: RscText {
 			idc = -1;
+                  style = ST_RIGHT;
 			text = $STR_COMPUTER_COMPANY; //--- ToDo: Localize;
 			x = 0 * GUI_GRID_W + GUI_GRID_X;
 			y = 3.5 * GUI_GRID_H + GUI_GRID_Y;
@@ -186,6 +193,7 @@ class computer_check_vehicle {
 		};
 		class title_wanted_profiles_count: RscText {
 			idc = -1;
+                  style = ST_RIGHT;
 			text = $STR_COMPUTER_COUNT; //--- ToDo: Localize;
 			x = 20 * GUI_GRID_W + GUI_GRID_X;
 			y = 2.5 * GUI_GRID_H + GUI_GRID_Y;
@@ -195,6 +203,7 @@ class computer_check_vehicle {
 		};
 		class title_wanted: RscText {
 			idc = -1;
+                  style = ST_RIGHT;
 			text = $STR_COMPUTER_WANTED; //--- ToDo: Localize;
 			x = 0 * GUI_GRID_W + GUI_GRID_X;
 			y = 6.5 * GUI_GRID_H + GUI_GRID_Y;
@@ -204,6 +213,7 @@ class computer_check_vehicle {
 		};
 		class title_material: RscText {
 			idc = -1;
+                  style = ST_RIGHT;
 			text = $STR_COMPUTER_VEHICLE_MATERIAL; //--- ToDo: Localize;
 			x = 0 * GUI_GRID_W + GUI_GRID_X;
 			y = 11 * GUI_GRID_H + GUI_GRID_Y;
@@ -213,6 +223,7 @@ class computer_check_vehicle {
 		};
 		class title_class: RscText {
 			idc = -1;
+                  style = ST_RIGHT;
 			text = $STR_COMPUTER_VEHICLE_MODEL; //--- ToDo: Localize;
 			x = 0 * GUI_GRID_W + GUI_GRID_X;
 			y = 9 * GUI_GRID_H + GUI_GRID_Y;
@@ -222,6 +233,7 @@ class computer_check_vehicle {
 		};
 		class title_plate: RscText {
 			idc = -1;
+                  style = ST_RIGHT;
 			text = $STR_COMPUTER_PLATE; //--- ToDo: Localize;
 			x = 0 * GUI_GRID_W + GUI_GRID_X;
 			y = 4.5 * GUI_GRID_H + GUI_GRID_Y;
@@ -231,6 +243,7 @@ class computer_check_vehicle {
 		};
 		class title_vin: RscText {
 			idc = -1;
+                  style = ST_RIGHT;
 			text = $STR_COMPUTER_VEHICLE_VIN_INPUT; //--- ToDo: Localize;
 			x = 0 * GUI_GRID_W + GUI_GRID_X;
 			y = 5.5 * GUI_GRID_H + GUI_GRID_Y;
@@ -240,6 +253,7 @@ class computer_check_vehicle {
 		};
 		class title_color: RscText {
 			idc = -1;
+                  style = ST_RIGHT;
 			text = $STR_COMPUTER_VEHICLE_COLOR; //--- ToDo: Localize;
 			x = 0 * GUI_GRID_W + GUI_GRID_X;
 			y = 10 * GUI_GRID_H + GUI_GRID_Y;

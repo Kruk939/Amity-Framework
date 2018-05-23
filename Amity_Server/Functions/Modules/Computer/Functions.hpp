@@ -14,6 +14,8 @@ class ServerModules_Computer {
             class addCase {};
             class getCase {};
             class getPersonProfile {};
+            class getVehicle {};
+            class search {};
       };
 
 };

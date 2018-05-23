@@ -1,0 +1,11 @@
+params[["_id", -1]];
+if(_id == -1) exitWith {};
+disableSerialization;
+if(player getVariable["module_computer", -1] == -1) exitWith {};
+if(dialog) then { closeDialog 0; };
+private _ok = createDialog "computer_check_vehicle";
+if(!_ok) exitWith {};
+private _display = findDisplay 15002;
+if(isNull _display) exitWith {};
+_display setVariable["id", _id];
+[_id, player, "ClientModules_Computer_fnc_computer_check_vehicle_receive"] remoteExec ["ServerModules_Computer_fnc_getVehicle", 2];

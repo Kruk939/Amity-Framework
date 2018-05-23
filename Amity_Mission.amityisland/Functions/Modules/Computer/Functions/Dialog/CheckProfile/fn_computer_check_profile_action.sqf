@@ -82,7 +82,11 @@ if(_type == "SENTENCES_CHECK") exitWith {
 };
 
 if(_type == "VEHICLES_CHECK") exitWith {
-
+      private _idc = 2103;
+      private _index = lbCurSel _idc;
+      if(_index == -1) exitWith {};
+      private _id = parseNumber(lbData[_idc, _index]);
+      [_id] call ClientModules_Computer_fnc_computer_check_vehicle_open;
 };
 
 if(_type == "VEHICLES_ADD") exitWith {
