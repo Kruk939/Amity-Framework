@@ -21,7 +21,7 @@ if((count _profile) != 0 && (count _faction) == 0) then {
             ctrlSetText[1002, format["[%1] %2", _short, _long]];
       };
 };
-[(_display getVariable["id", -1]), "ClientModules_Computer_fnc_computer_check_vehicle_open"] call ClientModules_Computer_fnc_addLast;
+[[(_display getVariable["id", -1])], "ClientModules_Computer_fnc_computer_check_vehicle_open"] call ClientModules_Computer_fnc_addLast;
 
 ctrlSetText[1003, _plate];
 ctrlSetText[1004, _vin];

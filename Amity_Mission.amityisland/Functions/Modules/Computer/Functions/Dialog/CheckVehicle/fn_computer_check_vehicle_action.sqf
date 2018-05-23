@@ -5,7 +5,7 @@ if(!dialog) exitWith {};
 private _display = findDisplay 15002;
 if(isNull _display) exitWith { closeDialog 0; };
 private _profile = _display getVariable["profile", []];
-private _vehicle = _display getVariable["vehicles", []];
+private _vehicle = _display getVariable["vehicle", []];
 private _cases = _display getVariable["cases", []];
 private _faction = _display getVariable["faction", []];
 private _fnc_find = {
