@@ -1,3 +1,3 @@
-#include "air\cfgVehicles.hpp"
-#include "car\cfgVehicles.hpp"
-#include "ship\cfgVehicles.hpp"
+#include "air\CfgVehicles.hpp"
+#include "car\CfgVehicles.hpp"
+#include "ship\CfgVehicles.hpp"

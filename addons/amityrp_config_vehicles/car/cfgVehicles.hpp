@@ -1,1 +1,5 @@
+#include "CrownVictoria\cfgVehicles.hpp"
 #include "DodgeCharger\cfgVehicles.hpp"
+#include "FordExplorer\cfgVehicles.hpp"
+#include "FordTaurus\cfgVehicles.hpp"
+#include "Suburban\cfgVehicles.hpp"
