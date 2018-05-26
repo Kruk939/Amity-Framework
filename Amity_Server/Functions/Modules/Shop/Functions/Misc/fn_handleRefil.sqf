@@ -1,4 +1,4 @@
-params[["_cargo", objNull], ["_shop_id", -1], ["_player", objNull], ["_function", ""]];
+params[["_cargo", objNull], ["_shop_id", -1], ["_remove", false], ["_player", objNull], ["_function", ""]];
 if(isNull _cargo || _shop_id == -1) exitWith {};
 private _items = [_cargo] call Client_fnc_getCargo;
 {
@@ -17,3 +17,4 @@ private _items = [_cargo] call Client_fnc_getCargo;
       };
 } forEach _items;
 [_cargo] call Client_fnc_clearCargo;
+if(_remove) then { deleteVehicle _cargo; };

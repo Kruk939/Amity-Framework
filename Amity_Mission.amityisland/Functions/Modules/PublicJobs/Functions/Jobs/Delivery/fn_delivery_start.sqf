@@ -1,5 +1,8 @@
 public_jobs_delivery_var_package = false;
-
+public_jobs_delivery_var_packages_count = 0;
+public_jobs_delivery_var_packages = [];
+public_jobs_delivery_var_enroute_toMagazine = false;
+public_jobs_delivery_var_enroute_toShops = false;
 
 [] spawn {
       while{public_jobs_var_running} do {

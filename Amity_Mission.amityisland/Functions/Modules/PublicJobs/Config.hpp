@@ -114,7 +114,7 @@ class PublicJobs {
                   condition = "!isNil ""Shop_var_initialized""";
                   variable = "delivery";
                   paycheck = 100; //paycheck
-                  show = 1; //show in phone book
+                  show = 0; //show in phone book
                   uniform = "CUP_U_C_Mechanic_01";
                   class Functions {
                         start = "ClientModules_PublicJobs_fnc_delivery_start";
@@ -128,7 +128,7 @@ class PublicJobs {
                   };
                   variables[] = {};
                   class Vehicle {
-                        vehicleClass = "openrp_transit_repair_blank";
+                        vehicleClass = " pop_sprinter_2016_blanco";
                         variables[] = {};
                         class Items {
                               items[] = {};
