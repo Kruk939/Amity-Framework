@@ -49,6 +49,15 @@ class ClientModules_PublicJobs {
             class towtruck_stop {};
             class towtruck_store {};
       };
+      class Jobs_Delivery {
+            file="Functions\Modules\PublicJobs\Functions\Jobs\Delivery";
+            class delivery_deliverPackage {};
+            class delivery_getPackage {};
+            class delivery_loadPackage {};
+            class delivery_start {};
+            class delivery_stop {};
+            class delivery_unloadPackage {};
+      };
       class Dialog {
             file="Functions\Modules\PublicJobs\Functions\Dialog";
             class public_job_action {};

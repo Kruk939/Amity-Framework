@@ -1,13 +1,14 @@
 params[["_class", ""], ["_shop_id", -1]];
 private _ret = [];
-if(_class != "") exitWith { _ret; };
+if(_class == "") exitWith { _ret; };
 private _fnc_search_categories = {
       params[["_categories", []]];
+      private _ret = [];
       {
             _x params["", "", "", "_items"];
             {
                   _x params["", "_c"];
-                  if(_class == _c) exitWith {
+                  if(toLower(_class) == toLower(_c)) exitWith {
                         _ret = _x;
                   };
             } forEach _items;

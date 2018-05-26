@@ -136,7 +136,7 @@ class PublicJobs {
                         };
                   };
                   class Setup {
-                        boxClass = "";
+                        boxClass = "plp_ct_woodboxlightsmall";
                         deliveryFee = 200;
                         shops[] = {1, 2, 3};
                         class Random {
