@@ -10,5 +10,8 @@ class ServerModules_Shop {
             class handleItem {};
             class loadShop {};
             class transaction {};
+            class findClass {};
+            class handleRefil {};
+            class addRandomItemsFromShopToCargo {};
       };
 };

@@ -59,6 +59,11 @@
             <English>Taxi</English>
             <Polish>Taksówkarz</Polish>
       </Key>
+      <Key ID="STR_PUBLIC_JOBS_JOB_DELIVERY">
+            <Original>Delivery</Original>
+            <English>Delivery</English>
+            <Polish>Dostawca</Polish>
+      </Key>
       <Key ID="STR_PUBLIC_JOBS_JOB_MECHANIC">
             <Original>Mechanic</Original>
             <English>Mechanic</English>
