@@ -9,7 +9,7 @@ class amityrp_v_FordExplorer_base : amity_PD_explorer
 	fireResistance = 4;
 	thrustDelay = 0.3;
 	brakeIdleSpeed = 1.98;
-	maxSpeed = 300;
+	maxSpeed = 190;
 	fuelCapacity = 25;
 	wheelCircumference = 2.277;
 	antiRollbarForceCoef = 0.5;
@@ -37,7 +37,7 @@ class amityrp_v_FordExplorer_base : amity_PD_explorer
 	centreBias = 1.3;
 	clutchStrength = 35;
 	enginePower = 300;
-	maxOmega = 680;
+	maxOmega = 651900;
 	peakTorque = 850;
 	slowSpeedForwardCoef = 0.2;
 	normalSpeedForwardCoef = 0.6;

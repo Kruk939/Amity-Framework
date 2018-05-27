@@ -6,10 +6,10 @@ class amityrp_v_CrownVictoria06_base : amity_PD_cvpi
 	precision = 12;
 	brakeDistance = 4;
 	acceleration = 12;
-	fireResistance = 4;
+	fireResistance = 1;
 	thrustDelay = 0.3;
 	brakeIdleSpeed = 1.98;
-	maxSpeed = 300;
+	maxSpeed = 185;
 	fuelCapacity = 20;
 	wheelCircumference = 2.277;
 	antiRollbarForceCoef = 0.5;
@@ -20,7 +20,7 @@ class amityrp_v_CrownVictoria06_base : amity_PD_cvpi
 	redRpm = 7000;
 	class complexGearbox
 	{
-			GearboxRatios[] = {"R1",-3.231,"N",0,"D1",2.2,"D2",1.40,"D3",1.0,"D4",0.60};
+			GearboxRatios[] = {"R1",-3.231,"N",0,"D1",2.2,"D2",1.40,"D3",1.0,"D4",0.80};
 			TransmissionRatios[] = {"High",4.0};
 			gearBoxMode = "auto";
 			moveOffGear = 1;
@@ -37,7 +37,7 @@ class amityrp_v_CrownVictoria06_base : amity_PD_cvpi
 	centreBias = 1.3;
 	clutchStrength = 35;
 	enginePower = 300;
-	maxOmega = 680;
+	maxOmega = 600;
 	peakTorque = 800;
 	slowSpeedForwardCoef = 0.2;
 	normalSpeedForwardCoef = 0.6;
