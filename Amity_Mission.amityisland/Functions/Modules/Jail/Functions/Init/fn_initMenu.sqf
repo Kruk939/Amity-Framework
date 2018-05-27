@@ -23,26 +23,26 @@ private _configs = [] call ClientModules_Jail_fnc_jail_getConfigs;
             _object setVariable["locked", true];
             private _action = [
                   ["JAIL_LOCKER","STR_JAIL_LOCKER" call BIS_fnc_localize, "", {}, {!(player getVariable["jail_jailed", false]) && !(player getVariable["jail_escaped", false])}, {}, "", "", 5],
-                  ["object", [_object, 0, []]]
+                  ["object", [_object, 0, ["ARP_OBJECT_MENU"]]]
             ];
             _actions pushBack _action;
 
             _action = [
                   ["JAIL_LOCKER_OPEN","STR_JAIL_LOCKER_OPEN" call BIS_fnc_localize, "", { [_target] call ClientModules_Jail_fnc_openLocker; }, { !(_target getVariable["locker_open", false])}],
-                  ["object",[_object, 0, ["JAIL_LOCKER"]]]
+                  ["object",[_object, 0, ["ARP_OBJECT_MENU", "JAIL_LOCKER"]]]
             ];
             _actions pushBack _action;
 
             _action = [
                   ["JAIL_LOCKER_CLOSE","STR_JAIL_LOCKER_CLOSE" call BIS_fnc_localize, "", { [_target] call ClientModules_Jail_fnc_closeLocker; }, { (_target getVariable["locker_open", false]) && ((player getVariable["jail_lockers_access", -1]) >= getNumber(missionConfigFile >> "Jail" >> "Setup" >> "Permissions" >> "forceCloseLocker") || (_target getVariable["profile_id", -1]) == (player getVariable["profile_id", -1]))}],
-                  ["object",[_object, 0, ["JAIL_LOCKER"]]]
+                  ["object",[_object, 0, ["ARP_OBJECT_MENU", "JAIL_LOCKER"]]]
             ];
             _actions pushBack _action;
 
 
             _action = [
                   ["JAIL_LOCKER_BROWSE","STR_JAIL_LOCKER_BROWSE" call BIS_fnc_localize, "", { [_target] call ClientModules_Jail_fnc_jail_lockers_open; }, { (player getVariable["jail_lockers_access", -1]) >= getNumber(missionConfigFile >> "Jail" >> "Setup" >> "Permissions" >> "allLockersOpen")}],
-                  ["object",[_object, 0, ["JAIL_LOCKER"]]]
+                  ["object",[_object, 0, ["ARP_OBJECT_MENU", "JAIL_LOCKER"]]]
             ];
             _actions pushBack _action;
       };

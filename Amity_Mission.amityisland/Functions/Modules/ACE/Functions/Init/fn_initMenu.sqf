@@ -61,6 +61,10 @@ private _array = [
       [
             ["ARP_OBJECT_DETACH",  "Detach object", "", {[] call Client_fnc_detachObject}, {!isNull amity_var_attachedObject && ((count attachedObjects player) > 0)}, {}, "", "", 5],
             ["object",[player, 1, ["ACE_SelfActions"]]]
+      ],
+      [
+            ["ARP_OBJECT_MENU", "Object", "", {}, {true}],
+            ["class",["ThingX", 0, [],true]]
       ]
 
 ];
