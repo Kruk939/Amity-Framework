@@ -11,8 +11,8 @@ _holder setVariable["locked", true, true];
 private _target = [_shop] call ClientModules_PublicJobs_fnc_delivery_getRandomShop;
 if(isNull _target) exitWith { deleteVehicle _holder; };
 
-[localize "STR_PUBLIC_JOBS_TOWTRUCK_MAP_MARKER", getPos _target] call ClientModules_PublicJobs_fnc_addMarker;
-["You picked up new package, go to the shop marked on map and deliver it!", true] call Client_fnc_domsg;
+[localize "STR_PUBLIC_JOBS_DELIVERY_MAP_MARKER_STORE", getPos _target] call ClientModules_PublicJobs_fnc_addMarker;
+["STR_PUBLIC_JOBS_DELIVERY_GOT_NEW_PACKAGE", true] call Client_fnc_domsg;
 
 _holder setVariable["target", _target];
 _holder setVariable["shop", _shop];
@@ -29,11 +29,11 @@ public_jobs_delivery_var_enroute_toShops = true;
 private _condition = compile (format["_target getVariable[""shop"", -1] != -1 && player distance %1 < 10", getPos _target]);
 private _actions = [
             [
-                  ["PUBLICJOBS_DELIVER",  "Deliver Package", "", {[_target] call ClientModules_PublicJobs_fnc_delivery_deliverPackage}, _condition, {}, "", "", 5],
+                  ["PUBLICJOBS_DELIVER",  localize "STR_PUBLIC_JOBS_DELIVERY_PACKAGE_DELIVER", "", {[_target] call ClientModules_PublicJobs_fnc_delivery_deliverPackage}, _condition, {}, "", "", 5],
                   ["object",[_holder, 0, ["ARP_OBJECT_MENU"]]]
             ],
             [
-                  ["PUBLICJOBS_DELIVER_LOAD",  "Load Package", "", {[_target] call ClientModules_PublicJobs_fnc_delivery_loadPackage}, {_target getVariable["shop", -1] != -1 && public_jobs_var_vehicle distance player < 10}, {}, "", "", 5],
+                  ["PUBLICJOBS_DELIVER_LOAD",  localize "STR_PUBLIC_JOBS_DELIVERY_PACKAGE_LOAD", "", {[_target] call ClientModules_PublicJobs_fnc_delivery_loadPackage}, {_target getVariable["shop", -1] != -1 && public_jobs_var_vehicle distance player < 10}, {}, "", "", 5],
                   ["object",[_holder, 0, ["ARP_OBJECT_MENU"]]]
             ]
 

@@ -137,8 +137,12 @@ class PublicJobs {
                   };
                   class Setup {
                         boxClass = "plp_ct_woodboxlightsmall";
-                        deliveryFee = 200;
-                        shops[] = {1, 2, 3};
+                        class Paycheck {
+                              delivery = 400;
+                              emptyCargoFine = 800;
+                              sealUnlocked = 100;
+                              countMismatch = 50;
+                        };
                         class Random {
                               min = 10;
                               max = 30;

@@ -16,14 +16,14 @@ private _magazines = getArray(missionConfigFile >> "PublicJobs" >> "Jobs" >> "De
             if(count public_jobs_delivery_var_magazine != 0) then {
                   public_jobs_delivery_var_enroute_toMagazine = true;
                   public_jobs_delivery_var_magazine params ["_id", "_location", "_distance", "_shops", "_min", "_max"];
-                  [localize "STR_PUBLIC_JOBS_TOWTRUCK_MAP_MARKER", _location] call ClientModules_PublicJobs_fnc_addMarker;
-                  ["You have new package to deliver. Go to the marker position and get the package!", true] call Client_fnc_domsg;
+                  [localize "STR_PUBLIC_JOBS_DELIVERY_MAP_MARKER", _location] call ClientModules_PublicJobs_fnc_addMarker;
+                  ["STR_PUBLIC_JOBS_DELIVERY_NEW_PACKAGE", true] call Client_fnc_domsg;
                   if(!(_id IN public_jobs_delivery_var_magazine_actions)) then {
                         public_jobs_delivery_var_magazine_actions pushBack _id;
                         private _condition = compile(format["public_jobs_delivery_var_enroute_toMagazine && player distance %1 < %2 && (count public_jobs_delivery_var_magazine) != 0 && (public_jobs_delivery_var_magazine select 0) == %3", _location, _distance, _id]);
                         private _action =
                               [
-                                    ["TOW_PARKING_STORE", localize "STR_PUBLIC_JOBS_IMPUND", "", { [] call ClientModules_PublicJobs_fnc_delivery_getPackage; },_condition],
+                                    ["PUBLIC_JOBS_DELIVERY_GET_PACKAGE", localize "STR_PUBLIC_JOBS_DELIVERY_PACKAGE_GET", "", { [] call ClientModules_PublicJobs_fnc_delivery_getPackage; },_condition],
                                     ["object", [player, 1, ["ACE_SelfActions"]]]
                               ];
                         [_action] call Client_fnc_addAction;

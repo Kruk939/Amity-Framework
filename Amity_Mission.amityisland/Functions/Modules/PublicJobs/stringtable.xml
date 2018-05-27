@@ -34,6 +34,11 @@
             <English>You have received $%1, now you have $%2. You can collect it at center link.</English>
             <Polish>Otrzymałeś $%1 wypłaty, teraz masz już w sumie $%2. Możesz odebrać swoją wypłatę w center linku.</Polish>
       </Key>
+      <Key ID="STR_PUBLIC_JOBS_PAYCHECK_FINE">
+            <Original>You recived a fine of $%1, your balance is $%2.</Original>
+            <English>You recived a fine of $%1, your balance is $%2.</English>
+            <Polish>Otrzymałeś karę w wysokości $%1, Twój bilans wynosi $%2.</Polish>
+      </Key>
       <Key ID="STR_PUBLIC_JOBS_PAYCHECK_TAKE">
             <Original>You have collected $%1</Original>
             <English>You have collected $%1</English>
@@ -133,5 +138,40 @@
             <Original>Impound!</Original>
             <English>Impound!</English>
             <Polish>Odholuj!</Polish>
+      </Key>
+      <Key ID="STR_PUBLIC_JOBS_DELIVERY_MAP_MARKER">
+            <Original>Warehouse</Original>
+            <English>Warehouse</English>
+            <Polish>Magazyn</Polish>
+      </Key>
+      <Key ID="STR_PUBLIC_JOBS_DELIVERY_MAP_MARKER_STORE">
+            <Original>Deliver to this store</Original>
+            <English>Deliver to this store</English>
+            <Polish>Dostarcz do tego magazynu</Polish>
+      </Key>
+      <Key ID="STR_PUBLIC_JOBS_DELIVERY_PACKAGE_GET">
+            <Original>Get package</Original>
+            <English>Get package</English>
+            <Polish>Odbierz paczkę</Polish>
+      </Key>
+      <Key ID="STR_PUBLIC_JOBS_DELIVERY_PACKAGE_LOAD">
+            <Original>Load Package</Original>
+            <English>Load Package</English>
+            <Polish>Załaduj Paczkę</Polish>
+      </Key>
+      <Key ID="STR_PUBLIC_JOBS_DELIVERY_PACKAGE_DELIVER">
+            <Original>Deliver Package</Original>
+            <English>Deliver Package</English>
+            <Polish>Dostarcz Paczkę</Polish>
+      </Key>
+      <Key ID="STR_PUBLIC_JOBS_DELIVERY_NEW_PACKAGE">
+            <Original>You have new package to deliver. Go to the marker position and get the package!</Original>
+            <English>You have new package to deliver. Go to the marker position and get the package!</English>
+            <Polish>Masz nową paczkę do dostarczenia. Pojedź do magazynu oznaczonego na mapie i odbierz paczkę!</Polish>
+      </Key>
+      <Key ID="STR_PUBLIC_JOBS_DELIVERY_GOT_NEW_PACKAGE">
+            <Original>You picked up new package, go to the shop marked on map and deliver it!</Original>
+            <English>You picked up new package, go to the shop marked on map and deliver it!</English>
+            <Polish>Odebrałeś nową paczkę, udaj się do sklepu oznaczonego na mapie i ją dostarcz!</Polish>
       </Key>
 </Container>
