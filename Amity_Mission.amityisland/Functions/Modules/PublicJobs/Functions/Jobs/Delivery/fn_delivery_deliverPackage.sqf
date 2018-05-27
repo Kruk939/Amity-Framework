@@ -6,7 +6,7 @@ private _locked = _holder getVariable["locked", false];
 private _amount = _holder getVariable["amount", false];
 if(_shop == -1 || isNull _target) exitWith {};
 if(_holder distance _target > 20) exitWith {}; // you are to far away
-private _config = (missionConfigFile >> "Jobs" >> "Delivery" >> "Setup" >> "Paycheck");
+private _config = (missionConfigFile >> "PublicJobs" >> "Jobs" >> "Delivery" >> "Setup" >> "Paycheck");
 
 private _content = [_holder] call Client_fnc_getCargo;
 private _count = 0;

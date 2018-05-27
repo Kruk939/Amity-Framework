@@ -3,6 +3,7 @@ public_jobs_delivery_var_packages_count = 0;
 public_jobs_delivery_var_packages = [];
 public_jobs_delivery_var_enroute_toMagazine = false;
 public_jobs_delivery_var_enroute_toShops = false;
+public_jobs_delivery_var_delivered_shops = [];
 public_jobs_delivery_var_magazine = [];
 public_jobs_delivery_var_magazine_actions = [];
 
@@ -29,11 +30,13 @@ private _magazines = getArray(missionConfigFile >> "PublicJobs" >> "Jobs" >> "De
                         [_action] call Client_fnc_addAction;
                   };
 
-                  waitUntil{!public_jobs_delivery_var_enroute_toMagazine};
-
+                  waitUntil{!public_jobs_delivery_var_enroute_toMagazine || !public_jobs_var_running};
+                  if(!public_jobs_var_running) exitWith {};
                   private _time = time;
                   waitUntil{!public_jobs_delivery_var_enroute_toShops || time - _time > 600 || !public_jobs_var_running};
+
                   [] call ClientModules_PublicJobs_fnc_removeMarker;
+                  if(!public_jobs_var_running) exitWith {};
                   uiSleep 5;
             };
       };

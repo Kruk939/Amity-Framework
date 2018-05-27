@@ -9,6 +9,10 @@ private _shop = _shops call BIS_fnc_selectRandom;
 
 _holder setVariable["locked", true, true];
 private _target = [_shop] call ClientModules_PublicJobs_fnc_delivery_getRandomShop;
+while{(_target IN public_jobs_delivery_var_delivered_shops)} do {
+      _target = [_shop] call ClientModules_PublicJobs_fnc_delivery_getRandomShop;
+};
+public_jobs_delivery_var_delivered_shops pushBack _target;
 if(isNull _target) exitWith { deleteVehicle _holder; };
 
 [localize "STR_PUBLIC_JOBS_DELIVERY_MAP_MARKER_STORE", getPos _target] call ClientModules_PublicJobs_fnc_addMarker;
