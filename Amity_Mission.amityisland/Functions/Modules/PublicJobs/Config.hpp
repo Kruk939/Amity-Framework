@@ -128,8 +128,8 @@ class PublicJobs {
                   };
                   variables[] = {};
                   class Vehicle {
-                        vehicleClass = " pop_sprinter_2016_blanco";
-                        variables[] = {};
+                        vehicleClass = "pop_sprinter_2016_blanco";
+                        variables[] = {{"delivery_vehicle", 1, 1, "BOOL"}};
                         class Items {
                               items[] = {};
                               backpack = "";
@@ -144,8 +144,11 @@ class PublicJobs {
                               max = 30;
                         };
                         class Locations {
-                              magzines[] = {
-                                    {}
+                              magazines[] = {
+                                    {1, {4724.14,4690.23,0.00143862}, 10, {1, 2, 3}, 500, 2500}, //location, distance, shops, min distance, max distance
+                                    {2, {4272.32,2453.9,0.00143909}, 10, {1, 2 ,3}, 300, 4000},
+                                    {3, {4273.35,2409.04,0.00143862}, 10, {1, 2 ,3}, 300, 4000},
+                                    {4, {3505.48,4159.1,0.00143909}, 10, {1, 2, 3}, 1000, 3000}
                               };
                         };
                   };

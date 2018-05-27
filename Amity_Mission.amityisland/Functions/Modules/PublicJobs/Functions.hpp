@@ -54,6 +54,7 @@ class ClientModules_PublicJobs {
             class delivery_deliverPackage {};
             class delivery_getPackage {};
             class delivery_loadPackage {};
+            class delivery_getRandomShop {};
             class delivery_start {};
             class delivery_stop {};
             class delivery_unloadPackage {};

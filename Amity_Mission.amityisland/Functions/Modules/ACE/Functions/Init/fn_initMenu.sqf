@@ -57,7 +57,11 @@ private _array = [
 	[
 		["ARP_FACTION_ADD","Add to Faction", "", { [_target] call Client_fnc_faction_addMember; },{(player getVariable["faction_id", -1]) != -1 && (_target getVariable["profile_id", -1]) != -1}],
 		["class",["Civilian", 0, ["ACE_Torso"],true]]
-	]
+	],
+      [
+            ["ARP_OBJECT_DETACH",  "Detach object", "", {[] call Client_fnc_detachObject}, {!isNull amity_var_attachedObject && ((count attachedObjects player) > 0)}, {}, "", "", 5],
+            ["object",[player, 1, ["ACE_SelfActions"]]]
+      ]
 
 ];
 _array call Client_fnc_addAction;

@@ -16,8 +16,7 @@ player setVariable["public_job", _variable, true];
 private _variables = getArray(_config >> "variables");
 {
       _x params["_name", "_value", ["_public", 0], ["_type", ""]];
-      _vehicle setVariable[_name, if(_type == "BOOL") then { (_value == 1) } else { _value }, (_public == 1)];
-      player setVariable[_name,_value,_public];
+      player setVariable[_name, if(_type == "BOOL") then { (_value == 1) } else { _value }, (_public == 1)];
 } forEach _variables;
 
 public_jobs_var_running = true;

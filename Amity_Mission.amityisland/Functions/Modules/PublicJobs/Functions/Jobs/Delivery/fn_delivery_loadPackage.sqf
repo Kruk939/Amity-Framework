@@ -1,7 +1,7 @@
 params[["_holder", objNull]];
 if(isNull public_jobs_var_vehicle) exitWith {}; //no job vehicle
 if(public_jobs_var_vehicle distance player > 10) exitWith {};//to far away from vehicle
-private _shop = _holder getVariable["shop_id", -1];
+private _shop = _holder getVariable["shop", -1];
 private _target = _holder getVariable["target", objNull];
 private _locked = _holder getVariable["locked", false];
 private _amount = _holder getVariable["amount", -1];

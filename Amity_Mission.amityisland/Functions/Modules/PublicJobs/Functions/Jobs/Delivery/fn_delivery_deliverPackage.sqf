@@ -15,8 +15,10 @@ private _count = 0;
 } forEach _content;
 
 if(!_locked) exitWith {
-      deleteVehicle _holder;
       public_jobs_delivery_var_packages_count = public_jobs_delivery_var_packages_count - 1;
+      public_jobs_delivery_var_packages deleteAt (public_jobs_delivery_var_packages find _holder);
+      public_jobs_delivery_var_enroute_toShops = false;
+      deleteVehicle _holder;
       if(_count == 0) then {
             //no stuff in here
       } else {
@@ -28,7 +30,13 @@ if(!_locked) exitWith {
             [_holder, _shop] remoteExec["ServerModules_Shop_fnc_handleRefil", 2];
       };
 };
-if(_count == 0) exitWith { deleteVehicle _holder; public_jobs_delivery_var_packages_count = public_jobs_delivery_var_packages_count - 1; }; //no stuff here, no payment
+if(_count == 0) exitWith {
+      public_jobs_delivery_var_packages_count = public_jobs_delivery_var_packages_count - 1;
+      public_jobs_delivery_var_packages deleteAt (public_jobs_delivery_var_packages find _holder);
+      public_jobs_delivery_var_enroute_toShops = false;
+      deleteVehicle _holder;
+ }; //no stuff here, no payment
+ public_jobs_delivery_var_packages_count = public_jobs_delivery_var_packages_count - 1;
+ public_jobs_delivery_var_packages deleteAt (public_jobs_delivery_var_packages find _holder);
+ public_jobs_delivery_var_enroute_toShops = false;
 [_holder, _shop, true] remoteExec["ServerModules_Shop_fnc_handleRefil", 2];
-public_jobs_delivery_var_packages_count = public_jobs_delivery_var_packages_count - 1;
-public_jobs_delivery_var_packages deleteAt (public_jobs_delivery_var_packages find _holder);

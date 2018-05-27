@@ -105,3 +105,9 @@ class Vehicle {
       class attachVehicle {};
       class detachVehicle {};
 };
+class Attach {
+      file="Functions\Core\Attach";
+      class attachObject {};
+      class detachObject {};
+      class addAttachable {};
+};
