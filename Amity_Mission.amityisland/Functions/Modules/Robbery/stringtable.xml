@@ -1,0 +1,47 @@
+<Container name="ROBBERY">
+      <Key ID="STR_ROBBERY_ROB_SHOP">
+            <Original>Rob Store</Original>
+            <English>Rob Store</English>
+            <Polish>Okradnij sklep</Polish>
+      </Key>
+      <Key ID="STR_ROBBERY_ROB_SHOP_TIME_MINUTES">
+            <Original>Robbery, time left: %1 minutes</Original>
+            <English>Robbery, time left: %1 minutes</English>
+            <Polish>Okradanie, pozostały czas: %1 minut</Polish>
+      </Key>
+      <Key ID="STR_ROBBERY_ROB_SHOP_TIME_SECONDS">
+            <Original>Robbery, time left: %1 seconds</Original>
+            <English>Robbery, time left: %1 seconds</English>
+            <Polish>Okradanie, pozostały czas: %1 sekund</Polish>
+      </Key>
+      <Key ID="STR_ROBBERY_ROB_SHOP_ROBBED_WITH_ITEMS">
+            <Original>You have robbed store for value of $%1 and got some items!</Original>
+            <English>You have robbed store for value of $%1 and got some items!</English>
+            <Polish>Okradłeś sklep, ukradłeś $%1 oraz parę rzeczy zaa lady</Polish>
+      </Key>
+      <Key ID="STR_ROBBERY_ROB_SHOP_ROBBED">
+            <Original>You have robbed store for value of $1</Original>
+            <English>You have robbed store for value of $1</English>
+            <Polish>Okradłeś sklep, ukradłeś $%1</Polish>
+      </Key>
+      <Key ID="STR_ROBBERY_ROB_SHOP_FAILED_SURRENDER">
+            <Original>You have surrendered, robbery failed!</Original>
+            <English>You have surrendered, robbery failed!</English>
+            <Polish>Poddałeś się, napad nieudany!</Polish>
+      </Key>
+      <Key ID="STR_ROBBERY_ROB_SHOP_FAILED_NO_WEAPON">
+            <Original>You've hidden your weapon, robbery failed!</Original>
+            <English>You've hidden your weapon, robbery failed!</English>
+            <Polish>Schowałeś broń, napad nieudany!</Polish>
+      </Key>
+      <Key ID="STR_ROBBERY_ROB_SHOP_FAILED_UNCONSCIOUS">
+            <Original>You are unconscious, robbery failed!</Original>
+            <English>You are unconscious, robbery failed!</English>
+            <Polish>jesteś nieprzytomny, napad nieudany!</Polish>
+      </Key>
+      <Key ID="STR_ROBBERY_ROB_SHOP_FAILED_DISTANCE">
+            <Original>You are too far away, robbery failed!</Original>
+            <English>You are too far away, robbery failed!</English>
+            <Polish>Jesteś za daleko, napad nieudany!</Polish>
+      </Key>
+</Container>
