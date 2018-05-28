@@ -4,6 +4,21 @@
             <English>Rob Store</English>
             <Polish>Okradnij sklep</Polish>
       </Key>
+      <Key ID="STR_ROBBERY_ROB_SHOP_INPROGRESS">
+            <Original>Robbery is already in progress!</Original>
+            <English>Robbery is already in progress!</English>
+            <Polish>Napad jest już w trakcie!</Polish>
+      </Key>
+      <Key ID="STR_ROBBERY_ROB_SHOP_LAST_ROBBED">
+            <Original>The store was robbed recently, you can't rob it now!</Original>
+            <English>The store was robbed recently, you can't rob it now!</English>
+            <Polish>Sklep został już niedawno napadnięty, nie możesz go teraz napaść!</Polish>
+      </Key>
+      <Key ID="STR_ROBBERY_ROB_SHOP_NO_REQUIRED_FACTION">
+            <Original>There is no required faction on server!</Original>
+            <English>There is no required faction on server!</English>
+            <Polish>Nie ma wymaganej frakcji na serwerze!</Polish>
+      </Key>
       <Key ID="STR_ROBBERY_ROB_SHOP_TIME_MINUTES">
             <Original>Robbery, time left: %1 minutes</Original>
             <English>Robbery, time left: %1 minutes</English>
@@ -43,5 +58,15 @@
             <Original>You are too far away, robbery failed!</Original>
             <English>You are too far away, robbery failed!</English>
             <Polish>Jesteś za daleko, napad nieudany!</Polish>
+      </Key>
+      <Key ID="STR_ROBBERY_ROB_SHOP_NOTIFY_MARKER">
+            <Original>Shop is beeing robbed!</Original>
+            <English>Shop is beeing robbed!</English>
+            <Polish>Napad na sklep!</Polish>
+      </Key>
+      <Key ID="STR_ROBBERY_ROB_SHOP_NOTIFY_MESSAGE">
+            <Original>Shop is beeing robbed! Location has been put on map.</Original>
+            <English>Shop is beeing robbed! Location has been put on map.</English>
+            <Polish>Napad na sklep! Lokacja została oznaczona na mapie.</Polish>
       </Key>
 </Container>

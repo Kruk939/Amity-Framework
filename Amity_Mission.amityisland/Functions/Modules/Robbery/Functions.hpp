@@ -10,6 +10,8 @@ class ClientModules_Robbery {
       class Misc {
             file="Functions\Modules\Robbery\Functions\Misc";
             class giveReward {};
+            class notify {};
+            class notifyPlayer {};
       };
       class Bank {
             file="Functions\Modules\Robbery\Functions\Bank";

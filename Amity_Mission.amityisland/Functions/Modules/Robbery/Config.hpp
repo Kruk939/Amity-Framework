@@ -3,9 +3,16 @@ class Robbery {
             cases[] = {
                   //class, value
             };
+            class Marker {
+                  shape = "ICON";
+                  type = "hd_dot";
+                  color = "ColorRed";
+                  time = 120;
+            };
       };
       class Shop {
             maxDistance = 20;
+            requiredFactions[] = {}; //faction_id, count
             class Reward {
                   min = 2000;
                   max = 10000;
@@ -35,6 +42,8 @@ class Robbery {
             class Notify {
                   enabled = 1;
                   factions[] = {}; //faction_id, chance
+                  message = "STR_ROBBERY_ROB_SHOP_NOTIFY_MESSAGE";
+                  markerName = "STR_ROBBERY_ROB_SHOP_NOTIFY_MARKER";
             };
       };
 }

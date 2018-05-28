@@ -1,12 +1,28 @@
 params[["_target", objNull], ["_shop_id", -1]];
 if(isNull _target) exitWith {};
 private _config = (missionConfigFile >> "Robbery" >> "Shop");
-private _cooltime = getNumber(_config >> "Time" >> "_cooltime");
+private _cooltime = getNumber(_config >> "Time" >> "cooltime");
 
-if(_target getVariable["robbery_inprogress", false]) exitWith {}; //is being robbed
+if(_target getVariable["robbery_inprogress", false]) exitWith {
+      ["STR_ROBBERY_ROB_SHOP_INPROGRESS", true] call Client_fnc_doMsg;
+}; //is being robbed
 
 private _lastRobbery = _target getVariable["robbery_last", time - _cooltime];
-if(_lastRobbery + _cooltime > time) exitWith {}; //last robbed
+if(_lastRobbery + _cooltime > time && _cooltime > 0) exitWith {
+      ["STR_ROBBERY_ROB_SHOP_LAST_ROBBED", true] call Client_fnc_doMsg;
+}; //last robbed
+
+private _requiredFaction = getArray(_config >> "requiredFactions");
+if(getNumber(_config >> "Items" >> "primary") != 0 && primaryWeapon player == "") exitWith {};
+if(getNumber(_config >> "Items" >> "secondary") != 0 && secondaryWeapon player == "") exitWith {};
+private _can = true;
+if((count _requiredFaction) == 0) then {
+      private _count = count([_requiredFaction select 0] call Client_fnc_factionGetActivePlayers);
+      if(_count < (_requiredFaction select 1)) then { _can = false; };
+};
+if(!_can) exitWith {
+      ["STR_ROBBERY_ROB_SHOP_NO_REQUIRED_FACTION", true] call Client_fnc_doMsg;
+}; //not enough faction members
 
 //call event
 private _nearest = [];
@@ -26,10 +42,26 @@ private _nearest = [];
       private _maxDistance = getNumber(_config >> "maxDistance");
       private _time = round(random(_max - _min) + _min);
       private _robbed = true;
+
+      private _soundTime = -1;
+      private _minSound = getNumber(_config >> "Sound" >> "Time" >> "min");
+      private _maxSound = getNumber(_config >> "Sound" >> "Time" >> "max");
+      if(getNumber(_config >> "Sound" >> "enabled") == 1 && getNumber(_config >> "Sound" >> "chance") > random(100)) then {
+            _soundTime = _time - round(random(_maxSound - _minSound) + _minSound);
+            if(_soundTime < 0) then { _soundTime = 1; };
+      };
+
       while{_time > 0} do {
             uiSleep 1;
             _time = _time - 1;
 
+            if(_time == _soundTime) then {
+                  private _sounds = getArray(_config >> "Sound" >> "sounds");
+                  if((count _sounds) != 0) then {
+                        private _sound = _sounds call BIS_fnc_selectRandom;
+                        playSound3D [_sound, _target, false, getPosASL _target, 5, 1, 200];
+                  };
+            };
             //checkings
             if(getNumber(_config >> "Items" >> "primary") != 0 && primaryWeapon player == "") exitWith {
                   _robbed = false;
