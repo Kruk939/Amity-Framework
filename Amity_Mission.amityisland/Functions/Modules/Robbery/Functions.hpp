@@ -24,6 +24,14 @@ class ClientModules_Robbery {
       };
       class ATM {
             file="Functions\Modules\Robbery\Functions\ATM";
-
+            class placeDrillATM {};
+      };
+      class Drill {
+            file="Functions\Modules\Robbery\Functions\Drill";
+            class placeDrill {};
+            class repairDrill {};
+            class startDrill {};
+            class takeDrill {};
+            class drillAddActions {};
       };
 };

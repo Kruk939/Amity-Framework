@@ -121,6 +121,12 @@ private _nearest = [];
                         private _holder = createVehicle [_holderClass, (getPosATL player), [], 0, "CAN_COLLIDE"];
                         [_holder, _shop_id, true, (_randomItem select 1)] remoteExec["ServerModules_Shop_fnc_addRandomItemsFromShopToCargo", 2];
                         _holderReward = true;
+                        private _removeAfter = getText(_config >> "Reward" >> "removeAfter");
+                        [_holder, _removeAfter, _shop_id] spawn {
+                              params["_holder", "_time", "_shop_id"];
+                              uiSleep _time;
+                              [_holder, _shop_id, true] remoteExec ["serverModules_Shop_fnc_handleRefil", 2];
+                        };
                   };
             };
 

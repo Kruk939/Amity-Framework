@@ -74,4 +74,69 @@
             <English>Shop is beeing robbed! Location has been put on map.</English>
             <Polish>Napad na sklep! Lokacja została oznaczona na mapie.</Polish>
       </Key>
+      <Key ID="STR_ROBBERY_ROB_ATM_NOTIFY_MARKER">
+            <Original>ATM is beeing robbed!</Original>
+            <English>ATM is beeing robbed!</English>
+            <Polish>Napad na bankomat!</Polish>
+      </Key>
+      <Key ID="STR_ROBBERY_ROB_ATM_NOTIFY_MESSAGE">
+            <Original>ATM is beeing robbed! Location has been put on map.</Original>
+            <English>ATM is beeing robbed! Location has been put on map.</English>
+            <Polish>Napad na bankomat! Lokacja została oznaczona na mapie.</Polish>
+      </Key>
+      <Key ID="STR_ROBBERY_DRILL_TAKING">
+            <Original>Taking Drill...</Original>
+            <English>Taking Drill...</English>
+            <Polish>Zabieram wiertło...</Polish>
+      </Key>
+      <Key ID="STR_ROBBERY_DRILL_REPAIRING">
+            <Original>Repairing Drill...</Original>
+            <English>Repairing Drill...</English>
+            <Polish>Naprawiam wiertło...</Polish>
+      </Key>
+      <Key ID="STR_ROBBERY_DRILL_REPAIRED">
+            <Original>Drill is repaired!</Original>
+            <English>Drill is repaired!</English>
+            <Polish>Wiertło zostało naprawione!</Polish>
+      </Key>
+      <Key ID="STR_ROBBERY_DRILL_JAMMED">
+            <Original>Drill is jammed!</Original>
+            <English>Drill is jammed!</English>
+            <Polish>Wiertło się zacięło!</Polish>
+      </Key>
+      <Key ID="STR_ROBBERY_DRILL_PLACED">
+            <Original>Drill has been placed!</Original>
+            <English>Drill has been placed!</English>
+            <Polish>Wiertło zostało ustawione!</Polish>
+      </Key>
+      <Key ID="STR_ROBBERY_DRILL_PLACE">
+            <Original>Place drill</Original>
+            <English>Place drill</English>
+            <Polish>Ustaw wiertło</Polish>
+      </Key>
+      <Key ID="STR_ROBBERY_DRILL_TAKE">
+            <Original>Take</Original>
+            <English>Take</English>
+            <Polish>Zabierz</Polish>
+      </Key>
+      <Key ID="STR_ROBBERY_DRILL_START">
+            <Original>Start</Original>
+            <English>Start</English>
+            <Polish>Włącz</Polish>
+      </Key>
+      <Key ID="STR_ROBBERY_DRILL">
+            <Original>Drill</Original>
+            <English>Drill</English>
+            <Polish>Wiertło</Polish>
+      </Key>
+      <Key ID="STR_ROBBERY_DRILL_REPAIR">
+            <Original>Repair</Original>
+            <English>Repair</English>
+            <Polish>Napraw</Polish>
+      </Key>
+      <Key ID="STR_ROBBERY_ROB_ATM_LAST_ROBBED">
+            <Original>The ATM was robbed recently, you can't rob it now!</Original>
+            <English>The ATM was robbed recently, you can't rob it now!</English>
+            <Polish>Bankomat został już niedawno napadnięty, nie możesz go teraz napaść!</Polish>
+      </Key>
 </Container>

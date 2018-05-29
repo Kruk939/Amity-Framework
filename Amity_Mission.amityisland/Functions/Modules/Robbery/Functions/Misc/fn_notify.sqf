@@ -2,6 +2,7 @@ params[["_pos", []], ["_type", ""]];
 if(count _pos == 0 || _type == "") exitWith {};
 private _config = switch(_type) do {
       case "shop": { missionConfigFile >> "Robbery" >> "Shop"};
+      case "atm": { missionConfigFile >> "Robbery" >> "ATM"};
       default { configNull; };
 };
 if(isNull _config) exitWith {};
