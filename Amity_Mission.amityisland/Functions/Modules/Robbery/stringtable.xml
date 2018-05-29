@@ -9,6 +9,11 @@
             <English>Robbery is already in progress!</English>
             <Polish>Napad jest już w trakcie!</Polish>
       </Key>
+      <Key ID="STR_ROBBERY_ROB_SHOP_NO_WEAPON">
+            <Original>You don't have weapon in your hands!</Original>
+            <English>You don't have weapon in your hands!</English>
+            <Polish>Nie masz broni w rękach!</Polish>
+      </Key>
       <Key ID="STR_ROBBERY_ROB_SHOP_LAST_ROBBED">
             <Original>The store was robbed recently, you can't rob it now!</Original>
             <English>The store was robbed recently, you can't rob it now!</English>
@@ -35,8 +40,8 @@
             <Polish>Okradłeś sklep, ukradłeś $%1 oraz parę rzeczy zaa lady</Polish>
       </Key>
       <Key ID="STR_ROBBERY_ROB_SHOP_ROBBED">
-            <Original>You have robbed store for value of $1</Original>
-            <English>You have robbed store for value of $1</English>
+            <Original>You have robbed store for value of $%1</Original>
+            <English>You have robbed store for value of $%1</English>
             <Polish>Okradłeś sklep, ukradłeś $%1</Polish>
       </Key>
       <Key ID="STR_ROBBERY_ROB_SHOP_FAILED_SURRENDER">

@@ -7,16 +7,21 @@ if(_target getVariable["robbery_inprogress", false]) exitWith {
       ["STR_ROBBERY_ROB_SHOP_INPROGRESS", true] call Client_fnc_doMsg;
 }; //is being robbed
 
-private _lastRobbery = _target getVariable["robbery_last", time - _cooltime];
+private _lastRobbery = _target getVariable["robbery_last", time - _cooltime - 1];
 if(_lastRobbery + _cooltime > time && _cooltime > 0) exitWith {
       ["STR_ROBBERY_ROB_SHOP_LAST_ROBBED", true] call Client_fnc_doMsg;
 }; //last robbed
 
+if(getNumber(_config >> "Items" >> "primary") != 0 && primaryWeapon player == "") exitWith {
+      ["STR_ROBBERY_ROB_SHOP_FAILED_NO_WEAPON", true] call Client_fnc_doMsg;
+};
+if(getNumber(_config >> "Items" >> "secondary") != 0 && secondaryWeapon player == "") exitWith {
+      ["STR_ROBBERY_ROB_SHOP_FAILED_NO_WEAPON", true] call Client_fnc_doMsg;
+};
+
 private _requiredFaction = getArray(_config >> "requiredFactions");
-if(getNumber(_config >> "Items" >> "primary") != 0 && primaryWeapon player == "") exitWith {};
-if(getNumber(_config >> "Items" >> "secondary") != 0 && secondaryWeapon player == "") exitWith {};
 private _can = true;
-if((count _requiredFaction) == 0) then {
+if((count _requiredFaction) != 0) then {
       private _count = count([_requiredFaction select 0] call Client_fnc_factionGetActivePlayers);
       if(_count < (_requiredFaction select 1)) then { _can = false; };
 };
@@ -46,14 +51,19 @@ private _nearest = [];
       private _soundTime = -1;
       private _minSound = getNumber(_config >> "Sound" >> "Time" >> "min");
       private _maxSound = getNumber(_config >> "Sound" >> "Time" >> "max");
-      if(getNumber(_config >> "Sound" >> "enabled") == 1 && getNumber(_config >> "Sound" >> "chance") > random(100)) then {
+      if(getNumber(_config >> "Sound" >> "enabled") == 1 && getNumber(_config >> "Sound" >> "chance") >= random(100)) then {
             _soundTime = _time - round(random(_maxSound - _minSound) + _minSound);
             if(_soundTime < 0) then { _soundTime = 1; };
       };
+      private _notifyAfter = _time - getNumber(_config >> "Notify" >> "after");
 
       while{_time > 0} do {
             uiSleep 1;
             _time = _time - 1;
+
+            if(_notifyAfter == _time) then {
+                  [getPos _target, "shop"] call ClientModules_Robbery_fnc_notify;
+            };
 
             if(_time == _soundTime) then {
                   private _sounds = getArray(_config >> "Sound" >> "sounds");
