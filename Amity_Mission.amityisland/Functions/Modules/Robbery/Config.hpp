@@ -51,7 +51,7 @@ class Robbery {
             class Notify {
                   enabled = 1;
                   after = 30;
-                  factions[] = {}; //faction_id, chance
+                  factions[] = {{5, 100}}; //faction_id, chance
                   message = "STR_ROBBERY_ROB_SHOP_NOTIFY_MESSAGE";
                   markerName = "STR_ROBBERY_ROB_SHOP_NOTIFY_MARKER";
             };

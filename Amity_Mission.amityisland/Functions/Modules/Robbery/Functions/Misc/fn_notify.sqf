@@ -10,7 +10,7 @@ private _factions = getArray(_config >> "Notify" >> "factions");
 private _notify = [];
 {
       _x params["_id", "_chance"];
-      if(random(100) < _chance) then {
+      if(random(100) <= _chance) then {
             private _members = [_id] call Client_fnc_factionGetActivePlayers;
             _notify = _notify + _members;
       };
