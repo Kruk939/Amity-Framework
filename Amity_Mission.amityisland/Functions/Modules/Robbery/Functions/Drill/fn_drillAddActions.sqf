@@ -15,6 +15,10 @@ private _actions = [
       [
             ["ROBBING_DRILL_TAKE",  localize "STR_ROBBERY_DRILL_TAKE", "", { [_target] call ClientModules_Robbery_fnc_takeDrill; }, { _target getVariable["robbery_drill", false]}, {}, "", "", 5],
             ["object",[_drill, 0, ["ROBBING_DRILL"]]]
+      ],
+      [
+            ["ROBBING_DRILL_TAKE",  localize "STR_ROBBERY_DRILL_REWARD", "", { (_target getVariable["robbery_reward", []]) call ClientModules_Robbery_fnc_giveReward; _target setVariable["robbery_reward", nil, true]; }, {count(_target getVariable["robbery_reward", []] )!= 0}, {}, "", "", 5],
+            ["object",[_drill, 0, ["ROBBING_DRILL"]]]
       ]
 ];
 _actions call Client_fnc_addAction;

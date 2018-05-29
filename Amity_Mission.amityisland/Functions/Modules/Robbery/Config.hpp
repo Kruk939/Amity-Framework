@@ -50,12 +50,13 @@ class Robbery {
       };
       class ATM {
             atmClass = "Land_mattaust_ATM";
+            requiredFactions[] = {}; //faction_id, count
             cooldown = 10000;
             class Drill {
                   position[] = {0,-0.8,0};
                   class Time {
-                        min = 200;
-                        max = 600;
+                        min = 30;
+                        max = 60;
                   };
             };
             class Reward {

@@ -134,6 +134,11 @@
             <English>Repair</English>
             <Polish>Napraw</Polish>
       </Key>
+      <Key ID="STR_ROBBERY_DRILL_REWARD">
+            <Original>Reward</Original>
+            <English>Reward</English>
+            <Polish>Łup</Polish>
+      </Key>
       <Key ID="STR_ROBBERY_ROB_ATM_LAST_ROBBED">
             <Original>The ATM was robbed recently, you can't rob it now!</Original>
             <English>The ATM was robbed recently, you can't rob it now!</English>
