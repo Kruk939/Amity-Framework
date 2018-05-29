@@ -118,7 +118,7 @@ private _nearest = [];
             if(count _randomItem != 0) then {
                   private _holderClass = getText(_config >> "Reward" >> "holderClass");
                   if(_holderClass != "") then {
-                        private _holder = _holderClass createVehicle (getPos player);
+                        private _holder = createVehicle [_holderClass, (getPosATL player), [], 0, "CAN_COLLIDE"];
                         [_holder, _shop_id, true, (_randomItem select 1)] remoteExec["ServerModules_Shop_fnc_addRandomItemsFromShopToCargo", 2];
                         _holderReward = true;
                   };
