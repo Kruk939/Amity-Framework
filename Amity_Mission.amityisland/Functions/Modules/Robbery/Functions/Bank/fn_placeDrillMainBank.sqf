@@ -48,7 +48,7 @@ private _onFinish = {
       _target setVariable["robbery_last", time, true];
 
       //animating doors
-	_target setVariable ["bis_disabled_Door_safe", 1, true];
+	_target setVariable ["bis_disabled_Door_safe", 0, true];
       _target animate["Door_safe", 1];
 
 

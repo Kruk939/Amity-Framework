@@ -58,8 +58,7 @@ class Robbery {
                   title = "STR_ROBBERY_MAIN_BANK_GRINDING";
                   action = "STR_ROBBERY_MAIN_BANK_GRIND_USE";
                   variables[] = {
-                        {"bis_disabled_Door_vault", 1, 1},
-                        {"bis_disabled_Door_17", 1, 1}
+                        {"bis_disabled_Door_17", 0, 1}
                   };
                   animate[] = {
                         {"Door_17", 1}
@@ -76,7 +75,9 @@ class Robbery {
                   objClass = "openrp_trigger2";
                   title = "STR_ROBBERY_MAIN_BANK_VAULTING";
                   action = "STR_ROBBERY_MAIN_BANK_VAULT_USE";
-                  variables[] = {};
+                  variables[] = {
+                        {"bis_disabled_Door_vault", 0, 1}
+                  };
                   animate[] = {
                         {"Door_vault", 1}
                   };

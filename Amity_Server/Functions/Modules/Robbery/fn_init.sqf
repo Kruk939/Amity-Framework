@@ -8,4 +8,6 @@ Robbery_var_main_banks = nearestObjects[[0,0,0], [_mainBankClass], 35500];
       private _safe = createVehicle[_mainBankSafeClass, (_x modelToWorld _mainBankSafeRelPos), [], 0, "CAN_COLLIDE"];
       _safe setDir ((getDir _x) + _mainBankSafeRelDir);
       _safe setPos (_x modelToWorld _mainBankSafeRelPos);
+      _safe setVariable["bank", _x, true];
+      [_safe] spawn ClientModules_Robbery_fnc_mainBankReset;
 } forEach Robbery_var_main_banks;

@@ -10,10 +10,10 @@ private _bank = _target getVariable["bank", objNull];
 } forEach _cases;
 
 if(!isNull _bank) then {
-      _bank setVariable ["bis_disabled_Door_vault",0,true];
-      _bank setVariable ["bis_disabled_Door_17",0,true];
+      _bank setVariable ["bis_disabled_Door_vault",1,true];
+      _bank setVariable ["bis_disabled_Door_17",1,true];
 };
-_target setVariable ["bis_disabled_Door_safe",0,true];
+_target setVariable ["bis_disabled_Door_safe",1,true];
 
 uiSleep 0.2;
 
