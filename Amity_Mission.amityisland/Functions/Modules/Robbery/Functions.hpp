@@ -15,7 +15,10 @@ class ClientModules_Robbery {
       };
       class Bank {
             file="Functions\Modules\Robbery\Functions\Bank";
-
+            class getNearestMainBank {};
+            class mainBankReset {};
+            class pickUpBankCase {};
+            class placeDrillMainBank {};
       };
       class Shop {
             file="Functions\Modules\Robbery\Functions\Shop";

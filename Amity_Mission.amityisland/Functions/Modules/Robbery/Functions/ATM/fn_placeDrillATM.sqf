@@ -13,11 +13,6 @@ if(!_can) exitWith {
       ["STR_ROBBERY_ROB_SHOP_NO_REQUIRED_FACTION", true] call Client_fnc_doMsg;
 }; //not enough faction members
 
-
-
-
-
-
 private _min = getNumber(_config >> "Drill" >> "Time" >> "min");
 private _max = getNumber(_config >> "Drill" >> "Time" >> "max");
 private _time = round(random(_max - _min) + _min);
@@ -27,18 +22,19 @@ private _pos = getArray(_config >> "Drill" >> "position");
 private _onFinish = {
       params["_drill", "_target"];
       if(isNull _drill) exitWith {};
-      private _cooltime = getNumber(missionConfigFile >> "Robbery" >> "ATM" >> "cooldown");
+      private _config = (missionConfigFile >> "Robbery" >> "ATM");
+      private _cooltime = getNumber(_config >> "cooldown");
       private _lastRobbery = _target getVariable["robbery_last", time - _cooltime - 1];
       if(_lastRobbery + _cooltime > time && _cooltime > 0) exitWith {
             ["STR_ROBBERY_ROB_ATM_LAST_ROBBED", true] call Client_fnc_doMsg;
       };
-      private _config = (missionConfigFile >> "Robbery" >> "ATM");
       private _min = getNumber(_config >> "Reward" >> "min");
       private _max = getNumber(_config >> "Reward" >> "max");
       private _reward = round(random(_max - _min) + _min);
       private _cases = (getNumber(_config >> "Reward" >> "cases")) != 0;
       if(_target distance player < 5) then {
             [_reward, _cases] call ClientModules_Robbery_fnc_giveReward;
+            [["STR_ROBBERY_ROB_ATM_ROBBED", _reward], true] call Client_fnc_doMsg;
       } else {
             _drill setVariable["robbery_reward", [_reward, _cases], true];
       };

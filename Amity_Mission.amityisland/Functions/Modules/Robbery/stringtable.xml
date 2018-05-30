@@ -44,6 +44,11 @@
             <English>You have robbed store for value of $%1</English>
             <Polish>Okradłeś sklep, ukradłeś $%1</Polish>
       </Key>
+      <Key ID="STR_ROBBERY_ROB_ATM_ROBBED">
+            <Original>You have robbed ATM for value of $%1</Original>
+            <English>You have robbed ATM for value of $%1</English>
+            <Polish>Okradłeś bankomat, ukradłeś $%1</Polish>
+      </Key>
       <Key ID="STR_ROBBERY_ROB_SHOP_FAILED_SURRENDER">
             <Original>You have surrendered, robbery failed!</Original>
             <English>You have surrendered, robbery failed!</English>
