@@ -17,9 +17,13 @@ if(visibleMap && "ItemGPS" in assignedItems player || visibleGPS) then {
 		{
                   _x params[["_marker", ""], ["_unit", objNull]];
 			if(!isNull _unit) then {
-				if ("ItemGPS" in assignedItems _unit) then {
+				if ("ItemGPS" in (assignedItems _unit)) then {
 					_marker setMarkerPosLocal (visiblePosition _unit);
+				} else {
+					deleteMarkerLocal _marker;
 				};
+			} else {
+				deleteMarkerLocal _marker;
 			};
 		} foreach _markers;
 		if(!visibleMap) exitWith {};

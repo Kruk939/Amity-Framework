@@ -1,4 +1,5 @@
 params[["_plate", ""]];
+if(typeName _plate != "STRING") exitWith { false; };
 if(_plate == "") exitWith { true; };
 if(count _plate != 7) exitWith { true; };
 private _ret = [format["core_garage_exists_plate:%1", _plate], 2] call ExternalS_fnc_ExtDBasync;
