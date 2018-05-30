@@ -31,7 +31,7 @@ _array pushBack [
 ];
 
 _array pushBack [
-      ["ROBBERY_MAIN_BANK_TAKE_CASE", localize "STR_ROBBERY_MAIN_BANK_TAKE_CASE", "", {[_target] call ClientModules_Robbery_fnc_pickUpBankCase},{ _target getVariable["value", 0] != 0 },{},"","",3],
+      ["ROBBERY_MAIN_BANK_TAKE_CASE", localize "STR_ROBBERY_MAIN_BANK_TAKE_CASE", "", {[_target] call ClientModules_Robbery_fnc_pickUpBankCase},{ _target getVariable["value", 0] != 0 },{},"","",5],
       ["class",[getText(_main_bank_config >> "Reward" >> "Case" >> "item"), 0, []]]
 ];
 

@@ -16,4 +16,4 @@ private _onFinish = {
             deleteVehicle _target;
 };
 private _onFailure = {};
-[_time, [_target, _config], _onFinish, _onFailure, ""] call Client_fnc_progressBar;
+[_time, [_target, _config], _onFinish, _onFailure, localize "STR_ROBBERY_MAIN_BANK_PICK_UP_CASE"] call Client_fnc_progressBar;

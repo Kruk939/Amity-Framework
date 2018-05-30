@@ -170,8 +170,8 @@
             <Polish>Rozszyfrowuję kombinację zamka</Polish>
       </Key>
       <Key ID="STR_ROBBERY_MAIN_BANK_GRINDING">
-            <Original>Gridning</Original>
-            <English>Gridning</English>
+            <Original>Grinding</Original>
+            <English>Grinding</English>
             <Polish>Piłuję</Polish>
       </Key>
       <Key ID="STR_ROBBERY_MAIN_BANK_TAKE_CASE">
@@ -214,5 +214,4 @@
             <English>The bank is beeing robbed! Check location marked on map!</English>
             <Polish>Bank jest własnie okradany! Sprawdź jego lokalizację na mapie!</Polish>
       </Key>
-
 </Container>

@@ -3,6 +3,13 @@ if(isNull _target) exitWith {};
 private _config = (missionConfigFile >> "Robbery" >> "MainBank");
 if(typeOf _target != getText(_config >> "Safe" >> "safe")) exitWith {};
 
+private _cooltime = getNumber(_config>> "cooldown");
+private _lastRobbery = _target getVariable["robbery_last", time - _cooltime - 1];
+if(_lastRobbery + _cooltime > time && _cooltime > 0) exitWith {
+      ["STR_ROBBERY_ROB_MAIN_BANK_LAST_ROBBED", true] call Client_fnc_doMsg;
+};
+
+
 private _requiredFaction = getArray(_config >> "requiredFactions");
 private _can = true;
 if((count _requiredFaction) != 0) then {
@@ -92,7 +99,7 @@ if(_ret) then {
             [_bank, _config] spawn {
                   params["_target", "_config"];
                   uiSleep (getNumber(_config >> "Notify" >> "after"));
-                  [getPos _target, "atm"] call ClientModules_Robbery_fnc_notify;
+                  [getPos _target, "mainbank"] call ClientModules_Robbery_fnc_notify;
             };
       };
 

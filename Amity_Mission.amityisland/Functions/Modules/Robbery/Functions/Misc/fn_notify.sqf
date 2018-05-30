@@ -3,6 +3,7 @@ if(count _pos == 0 || _type == "") exitWith {};
 private _config = switch(_type) do {
       case "shop": { missionConfigFile >> "Robbery" >> "Shop"};
       case "atm": { missionConfigFile >> "Robbery" >> "ATM"};
+      case "mainbank": { missionConfigFile >> "Robbery" >> "MainBank"};
       default { configNull; };
 };
 if(isNull _config) exitWith {};

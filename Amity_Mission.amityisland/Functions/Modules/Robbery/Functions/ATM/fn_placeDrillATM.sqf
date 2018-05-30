@@ -3,6 +3,12 @@ if(isNull _target) exitWith {};
 private _config = (missionConfigFile >> "Robbery" >> "ATM");
 if(typeOf _target != getText(_config >> "atmClass")) exitWith {};
 
+private _cooltime = getNumber(_config>> "cooldown");
+private _lastRobbery = _target getVariable["robbery_last", time - _cooltime - 1];
+if(_lastRobbery + _cooltime > time && _cooltime > 0) exitWith {
+      ["STR_ROBBERY_ROB_ATM_LAST_ROBBED", true] call Client_fnc_doMsg;
+};
+
 private _requiredFaction = getArray(_config >> "requiredFactions");
 private _can = true;
 if((count _requiredFaction) != 0) then {
@@ -12,6 +18,7 @@ if((count _requiredFaction) != 0) then {
 if(!_can) exitWith {
       ["STR_ROBBERY_ROB_SHOP_NO_REQUIRED_FACTION", true] call Client_fnc_doMsg;
 }; //not enough faction members
+
 
 private _min = getNumber(_config >> "Drill" >> "Time" >> "min");
 private _max = getNumber(_config >> "Drill" >> "Time" >> "max");

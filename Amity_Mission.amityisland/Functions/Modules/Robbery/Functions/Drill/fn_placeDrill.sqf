@@ -4,12 +4,6 @@ private _config = (missionConfigFile >> "Robbery" >> "Config" >> "Drill");
 private _item = getText(_config >> "item");
 if(_item != "" && ([_item] call Client_fnc_countItems) == 0) exitWith { false; };
 if(_target getVariable["robbery_has_drill", false]) exitWith { false; };
-private _cooltime = getNumber(missionConfigFile >> "Robbery" >> "ATM" >> "cooldown");
-private _lastRobbery = _target getVariable["robbery_last", time - _cooltime - 1];
-if(_lastRobbery + _cooltime > time && _cooltime > 0) exitWith {
-      ["STR_ROBBERY_ROB_ATM_LAST_ROBBED", true] call Client_fnc_doMsg;
-      false;
-};
 
 private _drill = (getText(_config >> "drillClass")) createVehicle (getArray(_config >> "spawn"));
 _drill attachTo [_target, _relPos];
