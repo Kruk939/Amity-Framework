@@ -9,8 +9,8 @@ class amityrp_v_CrownVictoria06_base : amity_PD_cvpi
 	fireResistance = 1;
 	thrustDelay = 0.3;
 	brakeIdleSpeed = 1.98;
-	maxSpeed = 185;
-	fuelCapacity = 20;
+	maxSpeed = 240;
+	fuelCapacity = 25;
 	wheelCircumference = 2.277;
 	antiRollbarForceCoef = 0.5;
 	antiRollbarForceLimit = 0.5;
@@ -20,13 +20,13 @@ class amityrp_v_CrownVictoria06_base : amity_PD_cvpi
 	redRpm = 7000;
 	class complexGearbox
 	{
-			GearboxRatios[] = {"R1",-3.231,"N",0,"D1",2.2,"D2",1.40,"D3",1.0,"D4",0.80};
-			TransmissionRatios[] = {"High",4.0};
-			gearBoxMode = "auto";
-			moveOffGear = 1;
-			driveString = "D";
-			neutralString = "N";
-			reverseString = "R";
+		GearboxRatios[] = {"R1",-3.231,"N",0,"D1",2.2,"D2",1.40,"D3",1.0,"D4",0.80};
+		TransmissionRatios[] = {"High",4.0};
+		gearBoxMode = "auto";
+		moveOffGear = 1;
+		driveString = "D";
+		neutralString = "N";
+		reverseString = "R";
 	};
 	simulation = "carx";
 	dampersBumpCoef = 3;
@@ -38,7 +38,7 @@ class amityrp_v_CrownVictoria06_base : amity_PD_cvpi
 	clutchStrength = 35;
 	enginePower = 300;
 	maxOmega = 600;
-	peakTorque = 800;
+	peakTorque = 600;
 	slowSpeedForwardCoef = 0.2;
 	normalSpeedForwardCoef = 0.6;
 	dampingRateFullThrottle = 0.08;
@@ -54,48 +54,48 @@ class amityrp_v_CrownVictoria06_PD001 : amityrp_v_CrownVictoria06_base
 {
 	displayName = "Crown Victoria 2006 PD001";
 	hiddenSelectionsTextures[] = {"\amityrp_data_vehicles\textures\cars\CrownVictoria\ford_cvpi_001.paa","","","","","","","","","","","","","","","","","","","","","","",""};
-	peakTorque = 600;
+	peakTorque = 450;
 };
 class amityrp_v_CrownVictoria06_PD002 : amityrp_v_CrownVictoria06_base
 {
 	displayName = "Crown Victoria 2006 PD002";
 	hiddenSelectionsTextures[] = {"\amityrp_data_vehicles\textures\cars\CrownVictoria\ford_cvpi_002.paa","","","","","","","","","","","","","","","","","","","","","","",""};
-	peakTorque = 500;
+	peakTorque = 400;
 };
 class amityrp_v_CrownVictoria06_PD003 : amityrp_v_CrownVictoria06_base
 {
 	displayName = "Crown Victoria 2006 PD003";
 	hiddenSelectionsTextures[] = {"\amityrp_data_vehicles\textures\cars\CrownVictoria\ford_cvpi_003.paa","","","","","","","","","","","","","","","","","","","","","","",""};
-	peakTorque = 700;
+	peakTorque = 550;
 };
 class amityrp_v_CrownVictoria06_PD004 : amityrp_v_CrownVictoria06_base
 {
 	displayName = "Crown Victoria 2006 PD004";
 	hiddenSelectionsTextures[] = {"\amityrp_data_vehicles\textures\cars\CrownVictoria\ford_cvpi_004.paa","","","","","","","","","","","","","","","","","","","","","","",""};
-	peakTorque = 750;
+	peakTorque = 600;
 };
 class amityrp_v_CrownVictoria06_PD006 : amityrp_v_CrownVictoria06_base
 {
 	displayName = "Crown Victoria 2006 PD006";
 	hiddenSelectionsTextures[] = {"\amityrp_data_vehicles\textures\cars\CrownVictoria\ford_cvpi_006.paa","","","","","","","","","","","","","","","","","","","","","","",""};
-	peakTorque = 620;
+	peakTorque = 470;
 };
 class amityrp_v_CrownVictoria06_PD007 : amityrp_v_CrownVictoria06_base
 {
 	displayName = "Crown Victoria 2006 PD007";
 	hiddenSelectionsTextures[] = {"\amityrp_data_vehicles\textures\cars\CrownVictoria\ford_cvpi_007.paa","","","","","","","","","","","","","","","","","","","","","","",""};
-	peakTorque = 450;
+	peakTorque = 350;
 };
 class amityrp_v_CrownVictoria06_PD009 : amityrp_v_CrownVictoria06_base
 {
 	displayName = "Crown Victoria 2006 PD009";
 	hiddenSelectionsTextures[] = {"\amityrp_data_vehicles\textures\cars\CrownVictoria\ford_cvpi_009.paa","","","","","","","","","","","","","","","","","","","","","","",""};
-	peakTorque = 650;
+	peakTorque = 500;
 };
 
 class amityrp_v_CrownVictoria06_PD010 : amityrp_v_CrownVictoria06_base
 {
 	displayName = "Crown Victoria 2006 PD010";
 	hiddenSelectionsTextures[] = {"\amityrp_data_vehicles\textures\cars\CrownVictoria\ford_cvpi_010.paa","","","","","","","","","","","","","","","","","","","","","","",""};
-	peakTorque = 700;
+	peakTorque = 550;
 };

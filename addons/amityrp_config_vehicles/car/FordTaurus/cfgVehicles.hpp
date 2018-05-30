@@ -9,7 +9,7 @@ class amityrp_v_FordTaurus_base : red_taurus_10_p_sheriff
 	fireResistance = 2;
 	thrustDelay = 0.3;
 	brakeIdleSpeed = 1.98;
-	maxSpeed = 210;
+	maxSpeed = 240;
 	fuelCapacity = 25;
 	wheelCircumference = 2.277;
 	antiRollbarForceCoef = 0.5;
@@ -20,13 +20,13 @@ class amityrp_v_FordTaurus_base : red_taurus_10_p_sheriff
 	redRpm = 7000;
 	class complexGearbox
 	{
-			GearboxRatios[] = {"R1",-3.231,"N",0,"D1",2.662,"D2",1.90,"D3",1.6,"D4",1.3,"D5",1.0,"D6",0.70};
-			TransmissionRatios[] = {"High",4.1};
-			gearBoxMode = "auto";
-			moveOffGear = 1;
-			driveString = "D";
-			neutralString = "N";
-			reverseString = "R";
+		GearboxRatios[] = {"R1",-3.231,"N",0,"D1",2.662,"D2",1.90,"D3",1.6,"D4",1.3,"D5",1.0,"D6",0.70};
+		TransmissionRatios[] = {"High",4.1};
+		gearBoxMode = "auto";
+		moveOffGear = 1;
+		driveString = "D";
+		neutralString = "N";
+		reverseString = "R";
 	};
 	simulation = "carx";
 	dampersBumpCoef = 3;
@@ -38,7 +38,7 @@ class amityrp_v_FordTaurus_base : red_taurus_10_p_sheriff
 	clutchStrength = 35;
 	enginePower = 300;
 	maxOmega = 680;
-	peakTorque = 850;
+	peakTorque = 750;
 	slowSpeedForwardCoef = 0.2;
 	normalSpeedForwardCoef = 0.6;
 	dampingRateFullThrottle = 0.08;
@@ -49,7 +49,7 @@ class amityrp_v_FordTaurus_base : red_taurus_10_p_sheriff
 	switchTime = 0.35;
 	latency = 2;
 	scope = 2;
-	
+
 };
 
 class amityrp_v_FordTaurus_PD024 : amityrp_v_FordTaurus_base
