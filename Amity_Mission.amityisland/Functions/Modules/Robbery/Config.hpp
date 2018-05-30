@@ -49,7 +49,46 @@ class Robbery {
             };
       };
       class MainBank {
-            safeClass = "Land_openrp_safe2";
+            class Safe {
+                  safe = "Land_openrp_safe2";
+                  relPos[] = {-1.17371,9.65674,-35.2};
+                  relDir = -270;
+            };
+            class Grind {
+                  item = "openrp_Grinder";
+                  memoryPoint = "combinationlock";
+                  remove = 0;
+                  objClass = "openrp_trigger1";
+                  title = "STR_ROBBERY_MAIN_BANK_GRINDING";
+                  action = "STR_ROBBERY_MAIN_BANK_GRIND_USE";
+                  variables[] = {
+                        {"bis_disabled_Door_vault", 1, 1},
+                        {"bis_disabled_Door_17", 1, 1}
+                  };
+                  animate[] = {
+                        {"Door_17", 1}
+                  };
+                  class Time {
+                        min = 50;
+                        max = 70;
+                  };
+            };
+            class crashVault {
+                  item = "openrp_stethoscope";
+                  memoryPoint = "trigger";
+                  remove = 0;
+                  objClass = "openrp_trigger2";
+                  title = "STR_ROBBERY_MAIN_BANK_VAULTING";
+                  action = "STR_ROBBERY_MAIN_BANK_VAULT_USE";
+                  variables[] = {};
+                  animate[] = {
+                        {"Door_vault", 1}
+                  };
+                  class Time {
+                        min = 50;
+                        max = 70;
+                  };
+            };
             bankClass = "Land_pop_banco2";
             requiredFactions[] = {}; //faction_id, count
             cooldown = 10000;
@@ -64,10 +103,10 @@ class Robbery {
                   cases = 1;
                   min = 5000;
                   max = 10000;
-                  class Cases {
+                  class Case {
                         item = "plp_cts_SuitcaseMetalSilver";
                         spawn[] = {4836.52,1942.4,8.60751};
-                        positions[] {
+                        positions[] = {
                               {0.0, 0, -0.55},
                               {0.0, 0.3, -0.55},
                               {0.0, -0.3, -0.55},
@@ -75,34 +114,37 @@ class Robbery {
                               {-0.1, 0.3, 0.29},
                               {-0.1, -0.3, 0.29}
                         };
+                        class Time {
+                              min = 5;
+                              max = 20;
+                        };
                         chance = 50; //chance for each case
                   };
             };
             class Reset {
                   after = 600;
                   messages[] = {
-                        {"Bank Systems are resetting in 10 minutes!", 0},
-                        {"Bank Systems resetting in 30 seconds!", 570},
-                        {"Bank Systems are resetting!", 600}
+                        {"STR_ROBBERY_MAIN_BANK_RESET_10_MINS", 0},
+                        {"STR_ROBBERY_MAIN_BANK_RESET_30_SECS", 570},
+                        {"STR_ROBBERY_MAIN_BANK_RESET_30_NOW", 600}
                   };
             };
             class Notify {
                   enabled = 1;
                   after = 30;
                   factions[] = {{5, 100}}; //faction_id, chance
-                  message = "STR_ROBBERY_ROB_ATM_NOTIFY_MARKER";
-                  markerName = "STR_ROBBERY_ROB_ATM_NOTIFY_MESSAGE";
+                  message = "STR_ROBBERY_MAIN_BANK_NOTIFY_MESSAGE";
+                  markerName = "STR_ROBBERY_MAIN_BANK_NOTIFY_MARKER";
             };
             class Sound {
-                  enabled = 0;
+                  enabled = 1;
                   class Time {
                         min = 20;
                         max = 80;
                   };
-                  sounds[] = {};
+                  sounds[] = {"openrp_client\sounds\shopAlarm.ogg"};
                   chance = 100;
             };
-
       };
       class ATM {
             atmClass = "Land_mattaust_ATM";
@@ -124,8 +166,8 @@ class Robbery {
                   enabled = 1;
                   after = 30;
                   factions[] = {{5, 100}}; //faction_id, chance
-                  message = "STR_ROBBERY_ROB_ATM_NOTIFY_MARKER";
-                  markerName = "STR_ROBBERY_ROB_ATM_NOTIFY_MESSAGE";
+                  message = "STR_ROBBERY_ROB_ATM_NOTIFY_MESSAGE";
+                  markerName = "STR_ROBBERY_ROB_ATM_NOTIFY_MARKER";
             };
             class Sound {
                   enabled = 0;

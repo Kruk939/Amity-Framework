@@ -149,4 +149,70 @@
             <English>The ATM was robbed recently, you can't rob it now!</English>
             <Polish>Bankomat został już niedawno napadnięty, nie możesz go teraz napaść!</Polish>
       </Key>
+      <Key ID="STR_ROBBERY_ROB_MAIN_BANK_LAST_ROBBED">
+            <Original>The Bank was robbed recently, you can't rob it now!</Original>
+            <English>The Bank was robbed recently, you can't rob it now!</English>
+            <Polish>Bank został już niedawno napadnięty, nie możesz go teraz napaść!</Polish>
+      </Key>
+      <Key ID="STR_ROBBERY_MAIN_BANK_VAULT_USE">
+            <Original>Use Stethoscope</Original>
+            <English>Use Stethoscope</English>
+            <Polish>Uzyj stetoskopu</Polish>
+      </Key>
+      <Key ID="STR_ROBBERY_MAIN_BANK_GRIND_USE">
+            <Original>Use Grinder</Original>
+            <English>Use Grinder</English>
+            <Polish>Użyj piły</Polish>
+      </Key>
+      <Key ID="STR_ROBBERY_MAIN_BANK_VAULTING">
+            <Original>Cracking Vault</Original>
+            <English>Cracking Vault</English>
+            <Polish>Rozszyfrowuję kombinację zamka</Polish>
+      </Key>
+      <Key ID="STR_ROBBERY_MAIN_BANK_GRINDING">
+            <Original>Gridning</Original>
+            <English>Gridning</English>
+            <Polish>Piłuję</Polish>
+      </Key>
+      <Key ID="STR_ROBBERY_MAIN_BANK_TAKE_CASE">
+            <Original>Take Case</Original>
+            <English>Take Case</English>
+            <Polish>Weź walizkę</Polish>
+      </Key>
+      <Key ID="STR_ROBBERY_MAIN_BANK_NO_ITEM">
+            <Original>You don't have required item!</Original>
+            <English>You don't have required item!</English>
+            <Polish>Nie masz potrzebnego sprzętu!</Polish>
+      </Key>
+      <Key ID="STR_ROBBERY_MAIN_BANK_RESET_10_MINS">
+            <Original>Bank Systems are resetting in 10 minutes!</Original>
+            <English>Bank Systems are resetting in 10 minutes!</English>
+            <Polish>System banku zresetuje się za 10 minut!</Polish>
+      </Key>
+      <Key ID="STR_ROBBERY_MAIN_BANK_RESET_30_SECS">
+            <Original>Bank Systems resetting in 30 seconds!</Original>
+            <English>Bank Systems resetting in 30 seconds!</English>
+            <Polish>System banku zresetuje się za 30 sekund!</Polish>
+      </Key>
+      <Key ID="STR_ROBBERY_MAIN_BANK_RESET_30_NOW">
+            <Original>Bank Systems are resetting!</Original>
+            <English>Bank Systems are resetting!</English>
+            <Polish>System banku jest właśnie resetowany!</Polish>
+      </Key>
+      <Key ID="STR_ROBBERY_MAIN_BANK_PICK_UP_CASE">
+            <Original>Picking up case!</Original>
+            <English>Picking up case!</English>
+            <Polish>Podnoszę walizkę!</Polish>
+      </Key>
+      <Key ID="STR_ROBBERY_MAIN_BANK_NOTIFY_MARKER">
+            <Original>BANK ROBBERY!!!</Original>
+            <English>BANK ROBBERY!!!</English>
+            <Polish>NAPAD NA BANK!!!</Polish>
+      </Key>
+      <Key ID="STR_ROBBERY_MAIN_BANK_NOTIFY_MESSAGE">
+            <Original>The bank is beeing robbed! Check location marked on map!</Original>
+            <English>The bank is beeing robbed! Check location marked on map!</English>
+            <Polish>Bank jest własnie okradany! Sprawdź jego lokalizację na mapie!</Polish>
+      </Key>
+
 </Container>

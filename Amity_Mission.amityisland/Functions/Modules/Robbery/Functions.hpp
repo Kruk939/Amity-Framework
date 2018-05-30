@@ -19,6 +19,7 @@ class ClientModules_Robbery {
             class mainBankReset {};
             class pickUpBankCase {};
             class placeDrillMainBank {};
+            class unlockDoorMainBank {};
       };
       class Shop {
             file="Functions\Modules\Robbery\Functions\Shop";

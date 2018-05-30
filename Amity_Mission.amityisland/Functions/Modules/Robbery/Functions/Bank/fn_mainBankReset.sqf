@@ -4,7 +4,9 @@ private _cases = _target getVariable["cases", []];
 private _bank = _target getVariable["bank", objNull];
 
 {
-      deleteVehicle _x;
+      if(!isNull _x) then {
+            deleteVehicle _x;
+      };
 } forEach _cases;
 
 if(!isNull _bank) then {
@@ -15,7 +17,7 @@ _target setVariable ["bis_disabled_Door_safe",0,true];
 
 uiSleep 0.2;
 
-if(isNull _bank) then {
+if(!isNull _bank) then {
       _bank animate ["Door_vault", 0];
       _bank animate ["Door_17", 0];
 };

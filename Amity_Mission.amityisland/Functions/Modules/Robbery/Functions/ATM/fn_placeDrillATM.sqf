@@ -40,12 +40,13 @@ private _onFinish = {
       };
       _target setVariable["robbery_last", time, true];
 };
-[_target, _pos, _time, _onFinish] call ClientModules_Robbery_fnc_placeDrill;
-
-if((getNumber(_config >> "Notify" >> "enabled")) != 0) then {
-      [_target, _config] spawn {
-            params["_target", "_config"];
-            uiSleep (getNumber(_config >> "Notify" >> "after"));
-            [getPos _target, "atm"] call ClientModules_Robbery_fnc_notify;
+private _ret = [_target, _pos, _time, _onFinish] call ClientModules_Robbery_fnc_placeDrill;
+if(_ret) then {
+      if((getNumber(_config >> "Notify" >> "enabled")) != 0) then {
+            [_target, _config] spawn {
+                  params["_target", "_config"];
+                  uiSleep (getNumber(_config >> "Notify" >> "after"));
+                  [getPos _target, "atm"] call ClientModules_Robbery_fnc_notify;
+            };
       };
 };

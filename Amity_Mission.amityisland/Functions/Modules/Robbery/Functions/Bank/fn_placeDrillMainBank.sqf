@@ -1,7 +1,7 @@
 params[["_target", objNull]];
 if(isNull _target) exitWith {};
 private _config = (missionConfigFile >> "Robbery" >> "MainBank");
-if(typeOf _target != getText(_config >> "safeClass")) exitWith {};
+if(typeOf _target != getText(_config >> "Safe" >> "safe")) exitWith {};
 
 private _requiredFaction = getArray(_config >> "requiredFactions");
 private _can = true;
@@ -36,22 +36,22 @@ private _onFinish = {
       private _cooltime = getNumber(_config >> "cooldown");
       private _lastRobbery = _target getVariable["robbery_last", time - _cooltime - 1];
       if(_lastRobbery + _cooltime > time && _cooltime > 0) exitWith {
-            ["STR_ROBBERY_ROB_ATM_LAST_ROBBED", true] call Client_fnc_doMsg;
+            ["STR_ROBBERY_ROB_MAIN_BANK_LAST_ROBBED", true] call Client_fnc_doMsg;
       };
       _target setVariable["robbery_last", time, true];
 
       //animating doors
 	_target setVariable ["bis_disabled_Door_safe", 1, true];
-      _target animate["Dor_safe", 1];
+      _target animate["Door_safe", 1];
 
 
       //place cases in vault
       private _min = getNumber(_config >> "Reward" >> "min");
       private _max = getNumber(_config >> "Reward" >> "max");
-      private _class = getText(_config >> "Reward" >> "Cases" >> "item");
-      private _chance = getNumber(_config >> "Reward" >> "Cases" >> "chance");
-      private _positions = getArray(_config >> "Reward" >> "Cases" >> "positions");
-      private _spawn = getArray(_config >> "Reward" >> "Cases" >> "spawn");
+      private _class = getText(_config >> "Reward" >> "Case" >> "item");
+      private _chance = getNumber(_config >> "Reward" >> "Case" >> "chance");
+      private _positions = getArray(_config >> "Reward" >> "Case" >> "positions");
+      private _spawn = getArray(_config >> "Reward" >> "Case" >> "spawn");
       private _cases = [];
       {
             if(_chance <= random(100)) then {
@@ -86,27 +86,28 @@ private _onFinish = {
 
 
 };
-[_target, _pos, _time, _onFinish] call ClientModules_Robbery_fnc_placeDrill;
-
-if((getNumber(_config >> "Notify" >> "enabled")) != 0) then {
-      [_target, _config] spawn {
-            params["_target", "_config"];
-            uiSleep (getNumber(_config >> "Notify" >> "after"));
-            [getPos _target, "atm"] call ClientModules_Robbery_fnc_notify;
+private _ret = [_target, _pos, _time, _onFinish] call ClientModules_Robbery_fnc_placeDrill;
+if(_ret) then {
+      if((getNumber(_config >> "Notify" >> "enabled")) != 0) then {
+            [_bank, _config] spawn {
+                  params["_target", "_config"];
+                  uiSleep (getNumber(_config >> "Notify" >> "after"));
+                  [getPos _target, "atm"] call ClientModules_Robbery_fnc_notify;
+            };
       };
-};
 
-if((getNumber(_config >> "Sound" >> "enabled")) != 0 && (getNumber(_config >> "Sound" >> "chance")) <= round(100)) then {
-      [_target, _config] spawn {
-            params["_target", "_config"];
-            private _min = getNumber(_config >> "Sound" >> "Time" >> "min");
-            private _max = getNumber(_config >> "Sound" >> "Time" >> "max");
-            private _time = round(random(_max - _min) + _min);
-            uiSleep _time;
-            private _sounds = getArray(_config >> "Sound" >> "sounds");
-            if((count _sounds) != 0) then {
-                  private _sound = _sounds call BIS_fnc_selectRandom;
-                  playSound3D [_sound, _target, false, getPosASL _target, 5, 1, 200];
+      if((getNumber(_config >> "Sound" >> "enabled")) != 0 && (getNumber(_config >> "Sound" >> "chance")) <= round(100)) then {
+            [_bank, _config] spawn {
+                  params["_target", "_config"];
+                  private _min = getNumber(_config >> "Sound" >> "Time" >> "min");
+                  private _max = getNumber(_config >> "Sound" >> "Time" >> "max");
+                  private _time = round(random(_max - _min) + _min);
+                  uiSleep _time;
+                  private _sounds = getArray(_config >> "Sound" >> "sounds");
+                  if((count _sounds) != 0) then {
+                        private _sound = _sounds call BIS_fnc_selectRandom;
+                        playSound3D [_sound, _target, false, getPosASL _target, 5, 1, 200];
+                  };
             };
       };
 };
