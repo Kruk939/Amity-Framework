@@ -59,6 +59,13 @@ if(_working || !(_drill getVariable["robbery_drill", false])) exitWith {};
             deleteVehicle _PS;
       };
       if(_finished) then {
+            private _nearest = [];
+            {
+                  if(_x getVariable["profile_id", -1] != -1 && alive _x) then {
+                        _nearest pushBack _x;
+                  };
+            } forEach allPlayers;
+            ["onDrillPlace", [_target, _drill, player, _nearest]] call Client_fnc_eventCall;
             [_drill, _target] call _onFinish;
       };
 };

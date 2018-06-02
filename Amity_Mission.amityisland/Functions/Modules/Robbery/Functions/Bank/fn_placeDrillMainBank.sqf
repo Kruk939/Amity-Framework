@@ -66,6 +66,7 @@ private _onFinish = {
                   private _case = _class createVehicle _spawn;
                   _case attachTo[_target, _x];
                   _case setVariable["value", _value, true];
+                  _case setVariable["safe", _target, true];
                   _cases pushBack _case;
             };
       } forEach _positions;

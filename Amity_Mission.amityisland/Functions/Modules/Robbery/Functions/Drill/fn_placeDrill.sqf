@@ -17,4 +17,13 @@ _drill setVariable["robbery_drill_jammed", false, true];
 _target setVariable["robbery_has_drill", true, true];
 [_drill] remoteExec ["ClientModules_Robbery_fnc_drillAddActions", -2];
 ["STR_ROBBERY_DRILL_PLACED", true] call Client_fnc_doMsg;
+
+private _nearest = [];
+{
+      if(_x getVariable["profile_id", -1] != -1 && alive _x) then {
+            _nearest pushBack _x;
+      };
+} forEach allPlayers;
+["onDrillPlace", [_target, _drill, player, _nearest]] call Client_fnc_eventCall;
+
 true;

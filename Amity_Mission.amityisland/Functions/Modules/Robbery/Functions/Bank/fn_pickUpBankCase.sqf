@@ -13,6 +13,17 @@ private _onFinish = {
             private _value = _target getVariable["value", 0];
             if(_value == 0) exitWith {};
             [_value, (getNumber(_config >> "Reward" >> "cases") == 1)] call ClientModules_Robbery_fnc_giveReward;
+
+            private _safe = _target getVariable["safe", objNull];
+            private _nearest = [];
+            {
+                  if(_x getVariable["profile_id", -1] != -1 && alive _x) then {
+                        _nearest pushBack _x;
+                  };
+            } forEach allPlayers;
+            ["onBankCaseTake", [_safe, player, _nearest]] call Client_fnc_eventCall;
+
+
             deleteVehicle _target;
 };
 private _onFailure = {};

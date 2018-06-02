@@ -9,8 +9,7 @@ class amityrp_v_suburban_base : red_suburban_15_p_sheriff
 };
 
 class Amity_EMS_suburban;
-class amityrp_v_suburban_ems_base : Amity_EMS_suburban
-{
+class amityrp_v_suburban_ems_base : Amity_EMS_suburban {
 	fuelCapacity = 15;
 	peakTorque = 350;
 	maxSpeed = 200;
