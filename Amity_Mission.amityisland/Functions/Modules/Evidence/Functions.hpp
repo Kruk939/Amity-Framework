@@ -15,5 +15,6 @@ class ClientModules_Evidence {
             class clearEvidence {};
             class getConfig {};
             class getConfigs {};
+            class getPersonalInfo {};
       };
 };

@@ -11,7 +11,7 @@ private _playerIndex = getNumber(_config >> "Params" >> "player");
 private _nearestIndex = getNumber(_config >> "Params" >> "nearest");
 
 private _player = _params select _playerIndex;
-private _name = _player getVariable["name", ""];
+private _name = [_player] call ClientModules_Evidence_fnc_getPersonalInfo;
 private _chance_player = getNumber(_mainConfig >> "Chance" >> "player");
 if(_chance_player >= random(100)) then { _target setVariable["evidence_name", _name, true]; };
 
@@ -20,7 +20,7 @@ private _new_nearest = [];
 private _chance_nearest = getNumber(_mainConfig >> "Chance" >> "nearest");
 {
       if(_chance_nearest >= random(100)) then {
-            _new_nearest pushBack (_x getVariable["name", ""]);
+            _new_nearest pushBack ([_x] call ClientModules_Evidence_fnc_getPersonalInfo;);
       };
 } forEach _nearest;
 if(count _new_nearest != 0) then {

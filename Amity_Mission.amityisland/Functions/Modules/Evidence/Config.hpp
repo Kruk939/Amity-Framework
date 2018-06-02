@@ -17,6 +17,7 @@ class Evidence {
                   player = 80;
                   nearest = 30;
             };
+            information[] = {{"name", 40}, {"profile_uid", 40}, {"first_name", 5}, {"last_name", 15}}; //variable name, chance
       };
       class Types {
             class Robbery {
