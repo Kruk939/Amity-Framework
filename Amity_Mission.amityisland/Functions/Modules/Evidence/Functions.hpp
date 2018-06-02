@@ -7,4 +7,12 @@ class ClientModules_Evidence {
             class initPlayer {};
             class initVariables {};
       };
+      class Misc {
+            file="Functions\Modules\Evidence\Functions\Misc";
+            class addEvidence {};
+            class checkEvidence {};
+            class clearEvidence {};
+            class getConfig {};
+            class getConfigs {};
+      };
 };

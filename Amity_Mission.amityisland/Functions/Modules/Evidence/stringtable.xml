@@ -1,0 +1,27 @@
+<Container name="EVIDENCE">
+      <Key ID="STR_EVIDENCE_NO_EVIDENCE">
+            <Original>You have not found any evidence.</Original>
+            <English>You have not found any evidence.</English>
+            <Polish>Nie znalazłeś żadnych dowodów.</Polish>
+      </Key>
+      <Key ID="STR_EVIDENCE_CHECK_ACTION">
+            <Original>Check Evidence</Original>
+            <English>Check Evidence</English>
+            <Polish>Szukaj dowodów</Polish>
+      </Key>
+      <Key ID="STR_EVIDENCE_TYPE_MSG_PLAYER">
+            <Original>You have found evidence for %1.</Original>
+            <English>You have found evidence for %1.</English>
+            <Polish>Znalazłeś dowody na %1.</Polish>
+      </Key>
+      <Key ID="STR_EVIDENCE_TYPE_MSG_NEAREST">
+            <Original>The CCTV and face recognition have matched: %1</Original>
+            <English>The CCTV and face recognition have matched: %1</English>
+            <Polish>Monitoring and system rozpoznawania twarzy potwierdził obecność: %1</Polish>
+      </Key>
+      <Key ID="STR_EVIDENCE_TYPE_MSG_NEAREST_COUNT">
+            <Original>There were total of %1 people nearby.</Original>
+            <English>There were total of %1 people nearby.</English>
+            <Polish>W okolicy było %1 osób.</Polish>
+      </Key>
+</Container>
