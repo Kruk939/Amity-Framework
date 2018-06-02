@@ -20,7 +20,7 @@ private _new_nearest = [];
 private _chance_nearest = getNumber(_mainConfig >> "Chance" >> "nearest");
 {
       if(_chance_nearest >= random(100)) then {
-            _new_nearest pushBack ([_x] call ClientModules_Evidence_fnc_getPersonalInfo;);
+            _new_nearest pushBack ([_x] call ClientModules_Evidence_fnc_getPersonalInfo);
       };
 } forEach _nearest;
 if(count _new_nearest != 0) then {

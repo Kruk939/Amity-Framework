@@ -46,29 +46,111 @@
       </Key>
 </Container>
 <Container name="AMITY_CORE_FACTION">
-	<Key ID="STR_FACTION_NAME_COMPANY">
-		<Original>Company</Original>
-		<English>Company</English>
-		<Polish>Firma</Polish>
-	</Key>
-	<Key ID="STR_FACTION_NAME_GANG">
-		<Original>Gang</Original>
-		<English>Gang</English>
-		<Polish>Gang</Polish>
-	</Key>
-	<Key ID="STR_FACTION_CREATE_SUCCESSFULL">
-		<Original>You created a new faction!</Original>
-		<English>You created a new faction!</English>
-		<Polish>Utworzyłeś nową fakcje!</Polish>
-	</Key>
-	<Key ID="STR_FACTION_CREATE_NOT_ENOUGH_MONEY">
-		<Original>You don't have enough money in your bank account.</Original>
-		<English>You don't have enough money in your bank account.</English>
-		<Polish>Nie masz wystarczająco pieniędzy aby utworzyć fakcję.</Polish>
-	</Key>
-	<Key ID="STR_FACTION_CREATE_EXISTS">
-		<Original>Faction with this name already exists. Change short or long name of the faction.</Original>
-		<English>Faction with this name already exists. Change short or long name of the faction.</English>
-		<Polish>Frakcja, którą próbujesz stworzyć już istnieje. Zmień skrót lub pełną nazwę.</Polish>
-	</Key>
+      <Key ID="STR_FACTION_NAME_COMPANY">
+            <Original>Company</Original>
+            <English>Company</English>
+            <Polish>Firma</Polish>
+      </Key>
+      <Key ID="STR_FACTION_NAME_GANG">
+            <Original>Gang</Original>
+            <English>Gang</English>
+            <Polish>Gang</Polish>
+      </Key>
+      <Key ID="STR_FACTION_CREATE_SUCCESSFULL">
+            <Original>You created a new faction!</Original>
+            <English>You created a new faction!</English>
+            <Polish>Utworzyłeś nową fakcje!</Polish>
+      </Key>
+      <Key ID="STR_FACTION_CREATE_NOT_ENOUGH_MONEY">
+            <Original>You don't have enough money in your bank account.</Original>
+            <English>You don't have enough money in your bank account.</English>
+            <Polish>Nie masz wystarczająco pieniędzy aby utworzyć fakcję.</Polish>
+      </Key>
+      <Key ID="STR_FACTION_CREATE_EXISTS">
+            <Original>Faction with this name already exists. Change short or long name of the faction.</Original>
+            <English>Faction with this name already exists. Change short or long name of the faction.</English>
+            <Polish>Frakcja, którą próbujesz stworzyć już istnieje. Zmień skrót lub pełną nazwę.</Polish>
+      </Key>
+</Container>
+<Container name="AMITY_CORE_ATM">
+      <Key ID="STR_CORE_ATM_WITHDRAW">
+            <Original>Withdraw</Original>
+            <English>Withdraw</English>
+            <Polish>Wypłać</Polish>
+      </Key>
+      <Key ID="STR_CORE_ATM_PAYIN">
+            <Original>Pay In</Original>
+            <English>Pay In</English>
+            <Polish>Wpłać</Polish>
+      </Key>
+      <Key ID="STR_CORE_ATM_TRANSFER_ACTION">
+            <Original>Transfer</Original>
+            <English>Transfer</English>
+            <Polish>Przelej</Polish>
+      </Key>
+      <Key ID="STR_CORE_ATM_TRANSFER_TITLE">
+            <Original>Transfer</Original>
+            <English>Transfer</English>
+            <Polish>Przelew</Polish>
+      </Key>
+      <Key ID="STR_CORE_ATM">
+            <Original>ATM</Original>
+            <English>ATM</English>
+            <Polish>Bankomat</Polish>
+      </Key>
+      <Key ID="STR_CORE_ATM_CASH">
+            <Original>Cash:</Original>
+            <English>Cash:</English>
+            <Polish>Gotów</Polish>
+      </Key>
+      <Key ID="STR_CORE_ATM_ACCOUNT">
+            <Original>Account:</Original>
+            <English>Account:</English>
+            <Polish>Konto:</Polish>
+      </Key>
+      <Key ID="STR_CORE_ATM_BALANCE">
+            <Original>Balance:</Original>
+            <English>Balance:</English>
+            <Polish>Bilans:</Polish>
+      </Key>
+      <Key ID="STR_CORE_ATM_AMOUNT">
+            <Original>Amount:</Original>
+            <English>Amount:</English>
+            <Polish>Kwota:</Polish>
+      </Key>
+      <Key ID="STR_CORE_ATM_ACTION_WITHDRAW">
+            <Original>You have withdrawn $%1</Original>
+            <English>You have withdrawn $%1</English>
+            <Polish>Wypłaciłeś $%1</Polish>
+      </Key>
+      <Key ID="STR_CORE_ATM_ACTION_WITHDRAW_NO_MONEY">
+            <Original>You don not have enough money to withdraw</Original>
+            <English>You don not have enough money to withdraw</English>
+            <Polish>Nie masz wystarczającej ilości aby wypłacić</Polish>
+      </Key>
+      <Key ID="STR_CORE_ATM_ACTION_DEPOSIT">
+            <Original>You have deposited $%1</Original>
+            <English>You have deposited $%1</English>
+            <Polish>Wpłaciłeś $%1</Polish>
+      </Key>
+      <Key ID="STR_CORE_ATM_ACTION_DEPOSIT_NO_MONEY">
+            <Original>You dont have enough money to deposit</Original>
+            <English>You dont have enough money to deposit</English>
+            <Polish>Nie masz wystarczającej ilości aby wpłacić</Polish>
+      </Key>
+      <Key ID="STR_CORE_ATM_ACTION_TRANSFER_SEND">
+            <Original>You have wire transfered $%1 to account(%2) from your bank account(%3)</Original>
+            <English>You have wire transfered $%1 to account(%2) from your bank account(%3)</English>
+            <Polish>Przelałeś $%1 na konto(%2) z Twojego konta(%3)</Polish>
+      </Key>
+      <Key ID="STR_CORE_ATM_ACTION_TRANSFER_RECEIVE">
+            <Original>You have been wire transfered $%1 from account(%2) to your bank account(%3)</Original>
+            <English>You have been wire transfered $%1 from account(%2) to your bank account(%3)</English>
+            <Polish>Przelano Ci $%1 z konta(%2) na Twoje konto(%3)</Polish>
+      </Key>
+      <Key ID="STR_CORE_ATM_ACTION_TRANSFER_BETWEEN">
+            <Original>You have wire transfered $%1 between your accounts.</Original>
+            <English>You have wire transfered $%1 between your accounts.</English>
+            <Polish>Przelałeś $%1 pomiędzy swoimi kontami</Polish>
+      </Key>
 </Container>
