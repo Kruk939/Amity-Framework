@@ -149,10 +149,10 @@ class CfgVehicles
 		displayName="AIPD Pilot";
 		uniformClass="amityrp_u_pd_pilot";
 		hiddenSelections[]={"camo","insignia"};
-		hiddenSelectionsTextures[]={"\amityrp_clothes\data\textures\uniforms\aipd\amityrp_u_pd_pilot.paa","\amityrp_clothes\data\aipd_insignia.paa"};
+		hiddenSelectionsTextures[]={"\amityrp_clothes\data\textures\uniforms\aipd\amityrp_u_pd_pilot.paa","\amityrp_clothes\data\textures\aipd_insignia.paa"};
 	};
 };
-class cfgWeapons 
+class CfgWeapons 
 {
 	class ItemCore;
 	class Uniform_Base;
