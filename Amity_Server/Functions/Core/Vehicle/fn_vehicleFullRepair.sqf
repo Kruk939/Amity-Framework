@@ -2,7 +2,7 @@ params[["_id", -1], ["_player", objNull]];
 private _repair = false;
 private _price = 5000;
 if(!isNull _player) then {
-      private _profile_id = player getVariable["profile_id", -1];
+      private _profile_id = _player getVariable["profile_id", -1];
       if(_profile_id == -1) exitWith {};
       private _vehicle = [_id] call Server_fnc_getVehicle;
       //_vehicle  params ["_id", "_profile_id", "_faction_id", "_vehicle_id", "_class", "_vin", "_plate", "_status", "_hit", "_damage", "_fuel", "_color", "_material", "_rims", "_windows", "_lights", "_pos", "_inventory", "_access_level"];

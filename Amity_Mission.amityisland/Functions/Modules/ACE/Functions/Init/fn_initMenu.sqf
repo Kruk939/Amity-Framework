@@ -6,11 +6,11 @@ private _array = [
       ],
       [
             ["ARP_GARAGE_SHIP","Ship Garage", "", {["Ship"] call Client_fnc_garage_open;},{isNull amity_var_attachedVehicle},{},"","screenloc",2],
-            ["class",["openrp_vendor_airshop", 0, ["ACE_MainActions"]]]
+            ["class",["openrp_vendor_boatshop", 0, ["ACE_MainActions"]]]
       ],
       [
             ["ARP_GARAGE_AIR","Air Garage", "", {["Air"] call Client_fnc_garage_open;},{isNull amity_var_attachedVehicle},{},"","screenloc",2],
-            ["class",["openrp_vendor_boatshop", 0, ["ACE_MainActions"]]]
+            ["class",["openrp_vendor_airshop", 0, ["ACE_MainActions"]]]
       ],
       [
             ["ARP_FACTION_START","Start Job", "", {[] spawn Client_fnc_faction_sign_open;},{count amity_var_faction == 0},{},"","screenloc",2],
