@@ -1,15 +1,15 @@
-params[["_target", objNull]];
-if(isNull _target) exitWith {};
+params[["_target", objNull], ["_monit", false]];
+private _text = "";
+if(isNull _target) exitWith {_text;};
 private _type = _target getVariable["evidence_type", ""];
 private _time = _target getVariable["evidence_time", -1];
-if(_type == "" || _time == -1) exitWith {};
+if(_type == "" || _time == -1) exitWith {  ["STR_EVIDENCE_NO_EVIDENCE", true] call Client_fnc_doMsg; _text; };
 private _config = [_type] call ClientModules_Evidence_fnc_getConfig;
-if(isNull _config) exitWith { [_target] call ClientModules_Evidence_fnc_clearEvidence; ["STR_EVIDENCE_NO_EVIDENCE", true] call Client_fnc_doMsg; };
+if(isNull _config) exitWith { [_target] call ClientModules_Evidence_fnc_clearEvidence; ["STR_EVIDENCE_NO_EVIDENCE", true] call Client_fnc_doMsg; _text; };
 private _mainConfig = missionConfigFile >> "Evidence" >> "Config";
 private _timePassed = serverTime - _time;
-if(_timePassed > getNumber(_mainConfig >> "Time" >> "max")) exitWith { [_target] call ClientModules_Evidence_fnc_clearEvidence; ["STR_EVIDENCE_NO_EVIDENCE", true] call Client_fnc_doMsg; };
+if(_timePassed > getNumber(_mainConfig >> "Time" >> "max")) exitWith { [_target] call ClientModules_Evidence_fnc_clearEvidence; ["STR_EVIDENCE_NO_EVIDENCE", true] call Client_fnc_doMsg; _text; };
 
-private _text = "";
 
 //getting player name
 private _name = _target getVariable["evidence_name", ""];
@@ -51,5 +51,8 @@ if(_nearest_count != -1) then {
             _text = format["%1%2\n", _text, _add];
       };
 };
-[_text, true] call Client_fnc_doMsg;
-[_target] call ClientModules_Evidence_fnc_clearEvidence;
+if(_monit) then {
+      [_text, true] call Client_fnc_doMsg;
+      [_target] call ClientModules_Evidence_fnc_clearEvidence;
+};
+_text;

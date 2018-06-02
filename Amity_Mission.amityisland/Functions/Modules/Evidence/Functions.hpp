@@ -11,6 +11,7 @@ class ClientModules_Evidence {
             file="Functions\Modules\Evidence\Functions\Misc";
             class addEvidence {};
             class checkEvidence {};
+            class checkEvidenceAction {};
             class clearEvidence {};
             class getConfig {};
             class getConfigs {};

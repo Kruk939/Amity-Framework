@@ -9,6 +9,11 @@
             <English>Check Evidence</English>
             <Polish>Szukaj dowodów</Polish>
       </Key>
+      <Key ID="STR_EVIDENCE_CHECK_PROGRESS">
+            <Original>Looking for evidence</Original>
+            <English>Looking for evidence</English>
+            <Polish>Szukam dowodów</Polish>
+      </Key>
       <Key ID="STR_EVIDENCE_TYPE_MSG_PLAYER">
             <Original>You have found evidence for %1.</Original>
             <English>You have found evidence for %1.</English>

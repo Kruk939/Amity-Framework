@@ -7,6 +7,10 @@ class Evidence {
                         nearest = 360;
                         player = 400;
                   };
+                  class Progress {
+                        min = 10;
+                        max = 60;
+                  };
             };
             class Chance {
                   add = 90;
