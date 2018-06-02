@@ -13,8 +13,13 @@ class Lockpicking {
             };
             class Sound {
                   enabled = 1;
-                  chance = 100;
-                  sounds[] = {};
+                  after = 3;
+                  chance = 70;
+                  sounds[] = {
+                        "amityrp_data\sounds\car_alarm1.ogg",
+                        "amityrp_data\sounds\car_alarm2.ogg",
+                        "amityrp_data\sounds\car_alarm3.ogg"
+                  };
             };
       };
       class Holder {

@@ -30,6 +30,12 @@ class Amity {
                   factionView = "client_faction_view"; //idd = 1034
                   factionManageGarage = "client_faction_manage_garage"; //idd 1035
             };
+            class Sounds {
+                  class Vehicle {
+                        open = "amityrp_data\sounds\door_lock.ogg";
+                        close = "amityrp_data\sounds\door_lock.ogg";
+                  };
+            };
       };
       class Misc {
             class Faction {

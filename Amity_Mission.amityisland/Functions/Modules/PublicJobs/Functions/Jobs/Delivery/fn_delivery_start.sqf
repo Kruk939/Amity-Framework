@@ -21,7 +21,7 @@ private _magazines = getArray(missionConfigFile >> "PublicJobs" >> "Jobs" >> "De
                   ["STR_PUBLIC_JOBS_DELIVERY_NEW_PACKAGE", true] call Client_fnc_domsg;
                   if(!(_id IN public_jobs_delivery_var_magazine_actions)) then {
                         public_jobs_delivery_var_magazine_actions pushBack _id;
-                        private _condition = compile(format["public_jobs_delivery_var_enroute_toMagazine && player distance %1 < %2 && (count public_jobs_delivery_var_magazine) != 0 && (public_jobs_delivery_var_magazine select 0) == %3", _location, _distance, _id]);
+                        private _condition = compile(format["public_jobs_var_running && public_jobs_delivery_var_enroute_toMagazine && player distance %1 < %2 && (count public_jobs_delivery_var_magazine) != 0 && (public_jobs_delivery_var_magazine select 0) == %3", _location, _distance, _id]);
                         private _action =
                               [
                                     ["PUBLIC_JOBS_DELIVERY_GET_PACKAGE", localize "STR_PUBLIC_JOBS_DELIVERY_PACKAGE_GET", "", { [] call ClientModules_PublicJobs_fnc_delivery_getPackage; },_condition],

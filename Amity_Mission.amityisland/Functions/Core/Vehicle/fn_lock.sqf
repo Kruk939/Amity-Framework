@@ -16,4 +16,11 @@ if(_monit) then {
       };
 };
 _veh lock _lock;
+private _config = missionConfigFile >> "Amity" >> "Sounds" >> "Vehicle";
+if(getText(_config >> "open") != "" && _lock == 0) then {
+      playSound3D [getText(_config >> "open"), _veh, false, getPosASL _veh, 5, 1, 25];
+};
+if(getText(_config >> "close") != "" && _lock != 0) then {
+      playSound3D [getText(_config >> "close"), _veh, false, getPosASL _veh, 5, 1, 25];
+};
 [_veh, _lock, false] remoteExec["lock", 0 - clientOwner];

@@ -16,6 +16,20 @@ private _min = getNumber(_config >> "Time" >> "min");
 private _max = getNumber(_config >> "Time" >> "max");
 private _random = round(_max - _min) + _min;
 
+if(getNumber(_config >> "Sound" >> "enabled") == 1) then {
+      private _sound_chance = getNumber(_config >> "Sound" >> "chance");
+      if(_sound_chance <= round(100)) then {
+            private _sound = (getArray(_config >> "Sound" >> "sounds")) call BIS_fnc_selectRandom;
+            private _after = getNumber(_config >> "Sound" >> "after");
+            [_target, _sound, _after] spawn {
+                  params["_target", "_sound", "_after"];
+                  uiSleep _after;
+                  playSound3D [_sound, _target, false, getPosASL _target, 5, 1, 100];
+            };
+      };
+};
+
+
 private _onFinish = {
       (_this select 0) params[["_target", objNull], ["_config", configNull]];
       if(isNull _target || isNull _config) exitWith {};
