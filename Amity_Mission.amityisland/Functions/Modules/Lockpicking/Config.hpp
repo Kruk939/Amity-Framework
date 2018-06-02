@@ -14,7 +14,7 @@ class Lockpicking {
             class Sound {
                   enabled = 1;
                   after = 3;
-                  chance = 70;
+                  chance = 35;
                   sounds[] = {
                         "amityrp_data\sounds\car_alarm1.ogg",
                         "amityrp_data\sounds\car_alarm2.ogg",

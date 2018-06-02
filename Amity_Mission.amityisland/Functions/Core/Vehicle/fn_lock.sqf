@@ -16,7 +16,7 @@ if(_monit) then {
       };
 };
 _veh lock _lock;
-private _config = missionConfigFile >> "Amity" >> "Sounds" >> "Vehicle";
+private _config = missionConfigFile >> "Amity" >> "Custamization" >> "Sounds" >> "Vehicle";
 if(getText(_config >> "open") != "" && _lock == 0) then {
       playSound3D [getText(_config >> "open"), _veh, false, getPosASL _veh, 5, 1, 25];
 };
