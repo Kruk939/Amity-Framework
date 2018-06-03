@@ -23,4 +23,9 @@ class ClientModules_UsableItems {
             class place {};
             class reattach {};
       };
+      class SpikeStrip {
+            file="Functions\Modules\UsableItems\Functions\SpikeStrip";
+            class SpikeStripEffect {};
+            class SpikeStripPlaced {};
+      };
 };

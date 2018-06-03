@@ -19,4 +19,9 @@
             <English>Pickup</English>
             <Polish>Podnieś</Polish>
       </Key>
+      <Key ID="STR_USABLE_ITEMS_PICKING_UP">
+            <Original>Picking up</Original>
+            <English>Picking up</English>
+            <Polish>Podnoszę</Polish>
+      </Key>
 </Container>

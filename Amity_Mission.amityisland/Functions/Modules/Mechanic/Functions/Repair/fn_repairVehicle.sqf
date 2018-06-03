@@ -4,7 +4,7 @@ private _onFinish = {
       (_this select 0) params ["_target", "_name","_config"];
       private _success = (getText(_config >> "Message" >> "success")) call BIS_fnc_localize;
       private _remove = getNumber(_config >> "remove") == 1;
-      [_target,_name] remoteExec ["ClientModules_Mechanic_fnc_fixSelection", 0];
+      [_target,_name] remoteExec ["ClientModules_Mechanic_fnc_fixSelection", _vehicle];
       private _anim =  getText(missionConfigFile >> "Mechanic" >> "Config" >> "animation");
       [player, _anim, 1] call ace_common_fnc_doAnimation;
       [_success, true] spawn Client_fnc_domsg;

@@ -65,6 +65,10 @@ private _array = [
       [
             ["ARP_OBJECT_MENU", "Object", "", {}, {true}],
             ["class",["ThingX", 0, [],true]]
+      ],
+      [
+            ["ARP_OBJECT_MENU", "Object", "", {}, {true}, {}],
+            ["class",["Building", 0, [],true]]
       ]
 
 ];

@@ -17,7 +17,7 @@ if(_damage == 0) exitWith {
 private _time = 5 + _damage * 5;
 private _onFinish = {
       (_this select 0) params ["_target"];
-      [_target, 0] remoteExec["setDamage", 2];
+      [_target, 0] remoteExec["setDamage", _target];
       ["You have fixed a car!", true] spawn Client_fnc_domsg;
 };
 private _onFailure = {
