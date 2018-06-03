@@ -9,6 +9,11 @@
             <English>Mechanic</English>
             <Polish>Mechanik</Polish>
       </Key>
+      <Key ID="STR_MECHANIC_FIX_TYRE">
+            <Original>Change Tyre</Original>
+            <English>Change Tyre</English>
+            <Polish>Zmień koło</Polish>
+      </Key>
       <Key ID="STR_MECHANIC_FIX_ENGINE">
             <Original>Fix Engine</Original>
             <English>Fix Engine</English>
@@ -53,5 +58,75 @@
             <Original>Push Vehicle</Original>
             <English>Push Vehicle</English>
             <Polish>Pchnij pojazd</Polish>
+      </Key>
+      <Key ID="STR_MECHANIC_REPAIR_NOTHING_TO_FIX">
+            <Original>There is nothing to fix</Original>
+            <English>There is nothing to fix</English>
+            <Polish>There is nothing to fix</Polish>
+      </Key>
+      <Key ID="STR_MECHANIC_REPAIR_NO_VARIABLE">
+            <Original>You are not qualified to repair this part!</Original>
+            <English>You are not qualified to repair this part!</English>
+            <Polish>Nie jesteś odpowiednio wykwalifikowany do naprawy tej części</Polish>
+      </Key>
+      <Key ID="STR_MECHANIC_REPAIR_NO_LOCATION">
+            <Original>You can't repair here!</Original>
+            <English>You can't repair here!</English>
+            <Polish>Nie możesz tego tutaj naprawić!</Polish>
+      </Key>
+      <Key ID="STR_MECHANIC_REPAIR_NO_ITEM">
+            <Original>You don't have required item!</Original>
+            <English>You don't have required item!</English>
+            <Polish>Nie masz odpowiedniego przedmiotu potrzebnego do naprawy!</Polish>
+      </Key>
+      <Key ID="STR_MECHANIC_REPAIR_PART_WHEEL_PROGRESS">
+            <Original>Fixing Tyre...</Original>
+            <English>Fixing Tyre...</English>
+            <Polish>Wymieniam koło...</Polish>
+      </Key>
+      <Key ID="STR_MECHANIC_REPAIR_PART_WHEEL_SUCCESS">
+            <Original>You have replaced tyre!</Original>
+            <English>You have replaced tyre!</English>
+            <Polish>Wymieniłeś koło!</Polish>
+      </Key>
+      <Key ID="STR_MECHANIC_REPAIR_PART_ENGINE_PROGRESS">
+            <Original>Fixing some engine parts...</Original>
+            <English>Fixing some engine parts...</English>
+            <Polish>Naprawiam parę części silnika...</Polish>
+      </Key>
+      <Key ID="STR_MECHANIC_REPAIR_PART_ENGINE_SUCCESS">
+            <Original>You have repaired engine part!</Original>
+            <English>You have repaired engine part!</English>
+            <Polish>Naprawiłeś część śilnika!</Polish>
+      </Key>
+      <Key ID="STR_MECHANIC_REPAIR_PART_FUELTANK_PROGRESS">
+            <Original>Fixing fuel tank...</Original>
+            <English>Fixing fuel tank...</English>
+            <Polish>Naprawiam zbiornik paliwa...</Polish>
+      </Key>
+      <Key ID="STR_MECHANIC_REPAIR_PART_FUELTANK_SUCCESS">
+            <Original>You have repaired fuel tank!</Original>
+            <English>You have repaired fuel tank!</English>
+            <Polish>Naprawiłeś zbiornik paliwa!</Polish>
+      </Key>
+      <Key ID="STR_MECHANIC_REPAIR_PART_HULL_PROGRESS">
+            <Original>Fixing some hull parts...</Original>
+            <English>Fixing some hull parts...</English>
+            <Polish>Naprawiam część karoserii...</Polish>
+      </Key>
+      <Key ID="STR_MECHANIC_REPAIR_PART_HULL_SUCCESS">
+            <Original>You have fixed some of hull parts!</Original>
+            <English>You have fixed some of hull parts!</English>
+            <Polish>Naprawiłeś część karoserii!</Polish>
+      </Key>
+      <Key ID="STR_MECHANIC_REPAIR_PART_GLASS_PROGRESS">
+            <Original>Changing glass...</Original>
+            <English>Changing glass...</English>
+            <Polish>Wymieniam szybę...</Polish>
+      </Key>
+      <Key ID="STR_MECHANIC_REPAIR_PART_GLASS_SUCCESS">
+            <Original>You have replaced glass!</Original>
+            <English>You have replaced glass!</English>
+            <Polish>Wymieniłeś szybę!</Polish>
       </Key>
 </Container>

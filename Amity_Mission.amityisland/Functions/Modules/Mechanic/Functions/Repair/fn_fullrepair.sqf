@@ -1,5 +1,5 @@
 params[["_target", objNull]];
-if((player getVariable ["module_mechanic", 0]) == 0) exitWith { hint "You cannot use that item"; };
+if((player getVariable ["module_mechanic", 0]) < 1) exitWith { hint "You cannot use that item"; };
 
 private _kit = getText(missionConfigFile >> "Mechanic" >> "Items" >> "mechanicKit");
 if(_kit != "") then {

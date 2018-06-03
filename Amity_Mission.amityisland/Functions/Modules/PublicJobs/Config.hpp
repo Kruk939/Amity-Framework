@@ -60,7 +60,7 @@ class PublicJobs {
                         {6, 90},
                         {10, 120}
                   };
-                  variables[] = {};
+                  variables[] = {{"module_mechanic", 1}};
                   class Vehicle {
                         vehicleClass = "openrp_transit_repair_blank";
                         variables[] = {};
@@ -68,6 +68,9 @@ class PublicJobs {
                               items[] = {
                                     {"CUP_U_C_Mechanic_01", 1},
                                     {"CG_wheel", 8},
+                                    {"openrp_mechanic_enigne_part", 4},
+                                    {"openrp_mechanic_hull_part", 8},
+                                    {"openrp_mechanic_glass", 6},
                                     {"H_Construction_basic_orange_F", 1},
                                     {"V_Safety_orange_F", 1}
                               };
