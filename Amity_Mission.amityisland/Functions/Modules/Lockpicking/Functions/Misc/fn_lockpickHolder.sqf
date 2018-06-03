@@ -38,4 +38,4 @@ private _onFailure = {
             };
       };
 };
-[_random, [_target, _config], _onFinish, _onFailure, "Lockpicking"] call Client_fnc_progressBar;
+[_random, [_target, _config], _onFinish, _onFailure, localize "STR_LOCKPICKING"] call Client_fnc_progressBar;

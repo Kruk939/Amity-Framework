@@ -1,0 +1,12 @@
+<Container name="LOCKPICKING">
+      <Key ID="STR_LOCKPICKING_LOCPICK">
+            <Original>Lockpick</Original>
+            <English>Lockpick</English>
+            <Polish>Wytrychuj</Polish>
+      </Key>
+      <Key ID="STR_LOCKPICKING">
+            <Original>Lockpicking</Original>
+            <English>Lockpicking</English>
+            <Polish>Wytrychuję</Polish>
+      </Key>
+</Container>
