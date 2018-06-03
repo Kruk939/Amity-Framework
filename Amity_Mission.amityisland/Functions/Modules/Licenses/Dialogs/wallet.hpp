@@ -17,7 +17,7 @@ class license_wallet {
       class controls {
             class listbox_list: Company_RscListbox {
             	idc = 1500;
-                  onLBSelChanged = "['PREVIEW'] spawn ClientModules_License_fnc_lbAction;";
+                  onLBSelChanged = "['LB'] call ClientModules_Licenses_fnc_wallet_action;";
             	x = 22.5 * GUI_GRID_W + GUI_GRID_X;
             	y = 13 * GUI_GRID_H + GUI_GRID_Y;
             	w = 9.5 * GUI_GRID_W;

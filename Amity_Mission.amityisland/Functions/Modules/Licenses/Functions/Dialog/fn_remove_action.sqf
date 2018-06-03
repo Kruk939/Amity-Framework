@@ -18,7 +18,7 @@ if(_type == "LB") exitWith {
                   private _uid = _target getVariable["profile_uid", ""];
                   if(typeName _faction_id == "OBJECT") then { _faction_id = "n/a"; };
                   _data params["", "_first", "_last"];
-                  private _text = format["License ID: %1\nName: %2\nID Number: %3\nGiven by: %4\nName: %5 %6\nDescription:\n%7",_i, _name, _uid, _faction_id, _first, _last, _description];
+                  private _text = format[localize "STR_LICENSES_PREVIEW_DESCRIPTION",_i, _name, _uid, _faction_id, _first, _last, _description];
                   ctrlSetText [1000, _text];
             };
       } forEach _licenses;

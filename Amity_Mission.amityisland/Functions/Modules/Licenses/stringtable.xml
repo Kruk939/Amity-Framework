@@ -1,0 +1,37 @@
+<Container name="LICENSES">
+      <Key ID="STR_LICENSES">
+            <Original>Licenses</Original>
+            <English>Licenses</English>
+            <Polish>Licencje</Polish>
+      </Key>
+      <Key ID="STR_LICENSES_GIVE">
+            <Original>Give</Original>
+            <English>Give</English>
+            <Polish>Przyznaj</Polish>
+      </Key>
+      <Key ID="STR_LICENSES_PREVIEW">
+            <Original>Preview</Original>
+            <English>Preview</English>
+            <Polish>Podgląd</Polish>
+      </Key>
+      <Key ID="STR_LICENSES_REVOKE">
+            <Original>Revoke</Original>
+            <English>Revoke</English>
+            <Polish>Odbierz</Polish>
+      </Key>
+      <Key ID="STR_LICENSES_WALLET">
+            <Original>Wallet</Original>
+            <English>Wallet</English>
+            <Polish>Portfel</Polish>
+      </Key>
+      <Key ID="STR_LICENSES_WALLET_DESCRIPTION">
+            <Original>ID:%1\n\nName:\n%2\n\nDescription:\n%3</Original>
+            <English>ID:%1\n\nName:\n%2\n\nDescription:\n%3</English>
+            <Polish>ID:%1\n\nNazwa:\n%2\n\nOpis:\n%3</Polish>
+      </Key>
+      <Key ID="STR_LICENSES_PREVIEW_DESCRIPTION">
+            <Original>ID: %1\nName: %2\nID Number: %3\nGiven by: %4\nName: %5 %6\nDescription:\n%7</Original>
+            <English>ID: %1\nName: %2\nID Number: %3\nGiven by: %4\nName: %5 %6\nDescription:\n%7</English>
+            <Polish>ID: %1\nNazwa: %2\nNumer ID: %3\nPrzyznane przez: %4\nImię i nazwisko: %5 %6\nOpis:\n%7</Polish>
+      </Key>
+</Container>
