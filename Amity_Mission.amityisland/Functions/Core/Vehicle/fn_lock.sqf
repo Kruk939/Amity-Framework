@@ -23,4 +23,4 @@ if(getText(_config >> "open") != "" && _lock == 0) then {
 if(getText(_config >> "close") != "" && _lock != 0) then {
       playSound3D [getText(_config >> "close"), _veh, false, getPosASL _veh, 5, 1, 25];
 };
-[_veh, _lock, false] remoteExec["lock", 0 - clientOwner];
+[_veh, _lock, false] remoteExec["lock", _veh];

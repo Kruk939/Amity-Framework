@@ -34,4 +34,14 @@
             <English>ID: %1\nName: %2\nID Number: %3\nGiven by: %4\nName: %5 %6\nDescription:\n%7</English>
             <Polish>ID: %1\nNazwa: %2\nNumer ID: %3\nPrzyznane przez: %4\nImię i nazwisko: %5 %6\nOpis:\n%7</Polish>
       </Key>
+      <Key ID="STR_LICENSES_GIVE_CASH_GIVEN">
+            <Original>You have given $%1 to %2!</Original>
+            <English>You have given $%1 to %2!</English>
+            <Polish>Dałeś $%1 dla %2</Polish>
+      </Key>
+      <Key ID="STR_LICENSES_GIVE_CASH_RECEIVED">
+            <Original>You have been given $%1 from %2!</Original>
+            <English>You have been given $%1 from %2!</English>
+            <Polish>Dostałeś $%1 od %2</Polish>
+      </Key>
 </Container>

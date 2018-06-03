@@ -31,5 +31,7 @@ class ClientModules_Licenses {
             class remove_receive {};
             class wallet_open {};
             class wallet_action {};
+            class give_cash_action {};
+            class give_cash_open {};
       };
 };

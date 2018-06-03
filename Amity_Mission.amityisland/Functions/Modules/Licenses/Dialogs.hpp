@@ -2,3 +2,4 @@
 #include "Dialogs\preview.hpp"
 #include "Dialogs\revoke.hpp"
 #include "Dialogs\wallet.hpp"
+#include "Dialogs\give_cash.hpp"

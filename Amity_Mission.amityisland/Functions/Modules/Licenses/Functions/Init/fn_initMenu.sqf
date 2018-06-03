@@ -18,6 +18,10 @@ private _array = [
       [
             ["LICENSE_WALLET",localize "STR_LICENSES_WALLET", "", {[] call ClientModules_Licenses_fnc_wallet_open;},{true}],
             ["object",[player, 1, ["ACE_SelfActions"]]]
+      ],
+      [
+		["LICENSE_GIVE_CASH", localize "STR_LICENSES_GIVE_CASH", "",{[_target] call ClientModules_Licenses_fnc_give_cash_open; }, {true},{},"","",5],
+		["class",["Civilian", 0, ["ACE_Torso"],true]]
       ]
 ];
 _array call Client_fnc_addAction;
