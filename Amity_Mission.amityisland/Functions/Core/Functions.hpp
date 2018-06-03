@@ -36,6 +36,9 @@ class Garage {
       class garage_open {};
       class garage_receive {};
       class handleVehicle {};
+      class give_keys_action {};
+      class give_keys_open {};
+      class receive_key {};
 };
 class Init {
       file="Functions\Core\Init";

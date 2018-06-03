@@ -44,6 +44,11 @@
             <English>Repair</English>
             <Polish>Napraw</Polish>
       </Key>
+      <Key ID="STR_CORE_GIVE">
+            <Original>Give</Original>
+            <English>Give</English>
+            <Polish>Daj</Polish>
+      </Key>
 </Container>
 <Container name="AMITY_CORE_FACTION">
       <Key ID="STR_FACTION_NAME_COMPANY">
@@ -152,5 +157,42 @@
             <Original>You have wire transfered $%1 between your accounts.</Original>
             <English>You have wire transfered $%1 between your accounts.</English>
             <Polish>Przelałeś $%1 pomiędzy swoimi kontami</Polish>
+      </Key>
+</Container>
+<Container name="AMITY_CORE_KEYS">
+      <Key ID="STR_CORE_AMITY_KEYS_INFO">
+            <Original>Information</Original>
+            <English>Information</English>
+            <Polish>Informacje</Polish>
+      </Key>
+      <Key ID="STR_CORE_AMITY_KEYS_NAME">
+            <Original>Name:</Original>
+            <English>Name:</English>
+            <Polish>Imię i nazwisko:</Polish>
+      </Key>
+      <Key ID="STR_CORE_AMITY_KEYS_TITLE">
+            <Original>Give keys</Original>
+            <English>Give keys</English>
+            <Polish>Daj klucze</Polish>
+      </Key>
+      <Key ID="STR_CORE_AMITY_KEYS_VEHICLE">
+            <Original>Vehicle:</Original>
+            <English>Vehicle:</English>
+            <Polish>Pojazd:</Polish>
+      </Key>
+      <Key ID="STR_CORE_AMITY_KEYS_INFO_TEXT">
+            <Original>ID: %1 %2\nName: %3\nSeats: %4\nHP: %5</Original>
+            <English>ID: %1 %2\nName: %3\nSeats: %4\nHP: %5</English>
+            <Polish>ID: %1 %2\nNazwa: %3\nMiejsca: %4n\KM: %5</Polish>
+      </Key>
+      <Key ID="STR_CORE_AMITY_KEYS_GIVEN">
+            <Original>You have given keys to %1</Original>
+            <English>You have given keys to %1</English>
+            <Polish>Dałeś klucze do %1</Polish>
+      </Key>
+      <Key ID="STR_CORE_AMITY_KEYS_RECEIVED">
+            <Original>You have been given keys to %1</Original>
+            <English>You have been given keys to %1</English>
+            <Polish>Otrzymałeś klucze do %1</Polish>
       </Key>
 </Container>

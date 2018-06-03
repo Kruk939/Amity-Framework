@@ -54,6 +54,10 @@ private _array = [
 		["class",["Civilian", 0, ["ACE_Torso"],true]]
 
       ],
+      [
+		["ARP_KEYS_GIVE","Give keys", "",{[_target] call Client_fnc_give_keys_open; }, {true},{},"","",5],
+		["class",["Civilian", 0, ["ACE_Torso"],true]]
+      ],
 	[
 		["ARP_FACTION_ADD","Add to Faction", "", { [_target] call Client_fnc_faction_addMember; },{(player getVariable["faction_id", -1]) != -1 && (_target getVariable["profile_id", -1]) != -1}],
 		["class",["Civilian", 0, ["ACE_Torso"],true]]

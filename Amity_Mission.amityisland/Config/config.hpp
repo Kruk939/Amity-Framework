@@ -23,6 +23,7 @@ class Amity {
                   profile = "client_profile"; //idd = 1000;
                   createProfile = "client_profile_create"; //idd = 1001;
                   garage = "client_garage"; //idd = 1005;
+                  giveKeys = "client_give_keys"; //idd = 1006;
                   factionCreate = "client_faction_create"; //idd = 1030
                   factionSign = "client_faction_sign"; //idd = 1031
                   factionMembers = "client_faction_members"; //idd = 1032

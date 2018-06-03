@@ -11,3 +11,4 @@
 #include "client_faction_sign.hpp"
 #include "client_faction_manage_garage.hpp"
 #include "client_faction_view.hpp"
+#include "client_give_keys.hpp"
