@@ -14,4 +14,49 @@
             <English>Clothing Store</English>
             <Polish>Sklep z ubraniami</Polish>
       </Key>
+      <Key ID="STR_SHOP_FOOD">
+            <Original>Food Store</Original>
+            <English>Food Store</English>
+            <Polish>Sklep z żywnością</Polish>
+      </Key>
+      <Key ID="STR_SHOP_BLACK_MARKET">
+            <Original>Black market</Original>
+            <English>Black market</English>
+            <Polish>Czarny rynek</Polish>
+      </Key>
+      <Key ID="STR_SHOP_BLACK_DILER">
+            <Original>Diler</Original>
+            <English>Diler</English>
+            <Polish>Diler</Polish>
+      </Key>
+      <Key ID="STR_SHOP_INGOTS">
+            <Original>Ingots</Original>
+            <English>Ingots</English>
+            <Polish>Sklep z rudami</Polish>
+      </Key>
+      <Key ID="STR_SHOP_HAIR">
+            <Original>Hairdresser</Original>
+            <English>Hairdresser</English>
+            <Polish>Balwierz</Polish>
+      </Key>
+      <Key ID="STR_SHOP_FACTION_PD">
+            <Original>AIPD Shop</Original>
+            <English>AIPD Shop</English>
+            <Polish>Sklep AIPD</Polish>
+      </Key>
+      <Key ID="STR_SHOP_FACTION_EMS_CLOTHES">
+            <Original>EMS Shop Clothes</Original>
+            <English>EMS Shop Clothes</English>
+            <Polish>Sklep z ubraniami EMS</Polish>
+      </Key>
+      <Key ID="STR_SHOP_FACTION_EMS_WEAPONS">
+            <Original>EMS Shop Weapons</Original>
+            <English>EMS Shop Weapons</English>
+            <Polish>Sklep z bronią EMS</Polish>
+      </Key>
+      <Key ID="STR_SHOP_FACTION_EMS_GENERAL">
+            <Original>EMS Shop General</Original>
+            <English>EMS Shop General</English>
+            <Polish>Sklep wielobranżowy EMS</Polish>
+      </Key>
 </Container>

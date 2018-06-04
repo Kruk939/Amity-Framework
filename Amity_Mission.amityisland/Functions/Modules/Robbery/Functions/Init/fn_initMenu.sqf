@@ -2,15 +2,19 @@ private _array = [];
 
 //Shop actions
 if(!isNil "Shop_var_initialized") then {
+      private _classes = [];
       private _basic = getArray(missionConfigFile >> "Shop" >> "basic");
       {
             _x params["", "_id", "_class"];
-            private _code = format["[_target, %1] call ClientModules_Robbery_fnc_robShop;", _id];
-            _code = compile _code;
-            _array pushBack [
-                  [format["SHOP_BASIC_%1", _forEachIndex], localize "STR_ROBBERY_ROB_SHOP", "", _code,{true},{},"","screenloc",3],
-                  ["class", [_class, 0, ["ACE_MainActions"]]]
-            ];
+            if(!(_class IN _classes)) then {
+                  private _code = format["[_target, %1] call ClientModules_Robbery_fnc_robShop;", _id];
+                  _code = compile _code;
+                  _array pushBack [
+                        [format["SHOP_BASIC_%1", _forEachIndex], localize "STR_ROBBERY_ROB_SHOP", "", _code,{true},{},"","screenloc",3],
+                        ["class", [_class, 0, ["ACE_MainActions"]]]
+                  ];
+                  _classes pushBack _class;
+            };
       } forEach _basic;
 };
 

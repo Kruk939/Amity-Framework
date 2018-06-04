@@ -1398,20 +1398,20 @@ class RscControlsGroup {
 	fade = 0;
 	class VScrollbar {
 		color[] = {
-1,
-1,
-1,
-1
+			1,
+			1,
+			1,
+			1
 		};
 		width = 0.021;
 		autoScrollEnabled = 1;
 	};
 	class HScrollbar {
 		color[] = {
-1,
-1,
-1,
-1
+			1,
+			1,
+			1,
+			1
 		};
 		height = 0.028;
 	};
@@ -1837,8 +1837,8 @@ class RscProgress {
 class Company_HideButton {
 	text = "";
 	style = 2;
-      access = 0;
-      type = CT_BUTTON;
+	access = 0;
+	type = CT_BUTTON;
 	x = 0;
 	y = 0;
 	w = 0.095589;
@@ -1846,11 +1846,11 @@ class Company_HideButton {
 	shadow = 2;
 	font = "PuristaMedium";
 	sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
-      colorText[] = {0,0,0,0};
-      colorDisabled[] = {0,0,0,0};
-      colorBackground[] = {0,0,0,0};
-      colorBackgroundActive[] = {0,0,0,0};
-      colorBackgroundDisabled[] = {0,0,0,0};
+	colorText[] = {0,0,0,0};
+	colorDisabled[] = {0,0,0,0};
+	colorBackground[] = {0,0,0,0};
+	colorBackgroundActive[] = {0,0,0,0};
+	colorBackgroundDisabled[] = {0,0,0,0};
 	offsetX = 0;
 	offsetY = 0;
 	offsetPressedX = 0;
@@ -1859,10 +1859,10 @@ class Company_HideButton {
 	colorShadow[] = {0,0,0,0};
 	colorBorder[] = {0,0,0,0};
 	borderSize = 0.0;
-      soundEnter[] = {"\ca\ui\data\sound\onover",0.09,1};
-      soundPush[] = {"\ca\ui\data\sound\new1",0,0};
-      soundClick[] = {"\openrp_client\Sounds\mouseclick.ogg",0.07,1};
-      soundEscape[] = {"\ca\ui\data\sound\onescape",0.09,1};
+	soundEnter[] = {"\ca\ui\data\sound\onover",0.09,1};
+	soundPush[] = {"\ca\ui\data\sound\new1",0,0};
+	soundClick[] = {"\openrp_client\Sounds\mouseclick.ogg",0.07,1};
+	soundEscape[] = {"\ca\ui\data\sound\onescape",0.09,1};
 };
 class Company_RscListBox {
 	deletable = 0;
@@ -1938,4 +1938,14 @@ class Company_RscText : RscText {
 	colorBackground[] = {0,0,0,0};
 	colorText[] = { 0, 0, 0, 1 };
 	colorShadow[] = { 0, 0, 0, 0};
+};
+class _CT_LISTNBOX_RIGHT: Company_HideButton {
+	idc = 66;
+	text = "<";
+	borderSize = 0;
+	colorShadow[] = {0,0,0,0};
+};
+class _CT_LISTNBOX_LEFT: _CT_LISTNBOX_RIGHT {
+	idc = 67;
+	text = ">";
 };

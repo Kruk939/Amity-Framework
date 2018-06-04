@@ -6,7 +6,7 @@ _shop params["_id", "_name", "_faction_id", "_type", "_image", "_categories"];
 
 if(typeName _faction_id != "OBJECT" && _type IN ["factionOnly", "factionOnlyClosed"]) then {
       private _faction = player getVariable["faction_id", -1];
-      if(_faction != _faction_id) exitWith {};
+      if(_faction != _faction_id) exitWith { closeDialog 0; };
 };
 
 ctrlSetText[1200, _image];
@@ -16,7 +16,7 @@ ctrlSetText[1200, _image];
 private _cats = [];
 {
       _x params["_id", "_name", "_access", ""];
-      if(typeName _access == "OBJECT") then { _access = 0; };
+      if(typeName _access == "OBJECT") then { _access = -1; };
       if(typeName _faction_id == "OBJECT" || _access <= player getVariable["faction_access_level", -1]) then {
             private _index = lbAdd [2100, _name];
             lbSetdata[2100, _index, str(_id)];
