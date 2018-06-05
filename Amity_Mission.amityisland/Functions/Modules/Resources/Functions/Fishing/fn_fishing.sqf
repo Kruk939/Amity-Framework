@@ -102,4 +102,4 @@ if(Resources_var_reacted == 3) then {
 } else {
       hint "You were too slow.";
 };
-Resource_var_is_fishing = false;
+Resources_var_is_fishing = false;
