@@ -7,8 +7,8 @@ class PublicJobs {
             paycheckMultiplayer = 1;
             class Marker {
                   shape = "ICON";
-                  type = "hd_dot";
-                  color = "ColorRed";
+                  type = "hd_destroy";
+                  color = "ColorBLUE";
             };
       };
       class Jobs {
