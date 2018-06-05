@@ -2,6 +2,7 @@ phone_var_data = [];
 phone_var_numbers = [];
 phone_var_contacts = [];
 phone_var_last_calls = [];
+phone_var_services = [];
 phone_var_lastFreq = "";
 phone_var_current_sound = objNull;
 

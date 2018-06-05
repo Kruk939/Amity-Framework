@@ -26,8 +26,8 @@ player adduniform _clothing;
 player linkItem "ItemMap";
 player linkItem "ItemCompass";
 player linkItem "Itemwatch";
-player additem "cg_tabletd";
-player assignitem "cg_tabletd";
+player additem "openrp_phone";
+player assignitem "openrp_phone";
 player setVariable ["tf_voiceVolume", 1, true];
 player setVariable ["EMS_markedDead",nil,true];
 player setVariable["EMSMedical_request_medic",nil, true];
@@ -37,8 +37,11 @@ player setDamage [0, true];
 player setVariable ["ACE_medical_damage", 0];
 player setVariable["ace_medical_bodyPartStatus",[0,0,0,0,0,0]];
 player setVariable ["ACE_medical_pain", 0];
-private _cash = player getVariable["cash",0];
-//[_cash] call Client_fnc_removeCash;
+
+if(getNumber(missionConfigFile >> "Medical" >> "Config" >> "removeCashOnDeath") == 1) then {
+      private _cash = player getVariable["cash",0];
+      [_cash] call Client_fnc_removeCash;
+};
 //[] spawn client_fnc_GUIupdate;
 [] call Client_fnc_save;
 player setpos [7641.1,2555.71,0.00143623];

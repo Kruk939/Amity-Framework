@@ -8,6 +8,9 @@ class Amity {
                   {"Female", "1"}
             };
             profiles = 3;
+            class Start {
+                  cash = 10000;
+            };
       };
       class Custamization {
             class Functions {

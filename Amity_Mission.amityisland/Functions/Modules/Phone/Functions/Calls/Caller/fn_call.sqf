@@ -2,6 +2,7 @@ params[["_number", ""]];
 if(_number == "") exitWith {};
 if(!([_number] call ClientModules_Phone_fnc_checkNumber)) exitWith { hint "Number is not correct!"; };
 if(count (player call TFAR_fnc_radiosList) isEqualTo 0) exitWith { hint "You don't have phone!"; };
+if(_number == (player getVariable["phone_number", ""])) exitWith {};
 if(player getVariable["phone_calling", false]) exitWith {};
 if(player getVariable["phone_disabled", false]) exitWith {};
 private _limit = getNumber(missionConfigFile >> "Phone" >> "Limits" >> "group");

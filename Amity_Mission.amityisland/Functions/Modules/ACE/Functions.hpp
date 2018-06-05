@@ -11,6 +11,7 @@ class ClientModules_ACE {
       class Misc {
             file="Functions\Modules\ACE\Functions\Misc";
             class addAceInteraction {};
+            class selfHeal {};
       };
       class Medical {
             file="Functions\Modules\ACE\Functions\Medical";
@@ -22,5 +23,6 @@ class ClientModules_ACE {
             class revive {};
             class startFresh {};
             class update {};
+            class fullHeal {};
       };
 };

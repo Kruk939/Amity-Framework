@@ -1,6 +1,6 @@
 private _actions = [
       [
-            ["JAIL_SENTENCES", "STR_JAIL_SENTENCES_OPEN" call BIS_fnc_localize, "", { [] call ClientModules_Jail_fnc_jail_sentences_open; }, { player getVariable["jail_sentences", -1] > 0}],
+            ["JAIL_SENTENCES", "STR_JAIL_SENTENCES_OPEN" call BIS_fnc_localize, "", { [] call ClientModules_Jail_fnc_jail_sentences_open; }, { player getVariable["jail_sentences", -1] > 0 && !isNull( [] call ClientModules_Jail_fnc_jail_getNearest )}],
             ["object", [player, 1, ["ACE_SelfActions"]]]
       ],
       [

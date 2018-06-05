@@ -10,7 +10,7 @@ if(_exists) then {
       if(_id != -1) then {
             private _ret = [0, format["core_insert_profile:%1:%2:%3:%4:%5", _id, _uid, _first_name, _last_name, _female]] call ExternalS_fnc_ExtDBquery;
             private _profile_id = ((_ret select 0) select 0);
-            [_profile_id] call Server_fnc_bankCreate;
+            [_profile_id, true] call Server_fnc_bankCreate;
       };
       ["OK"] remoteExec ["Client_fnc_createProfile_receive", _player];
 };

@@ -3,12 +3,16 @@ class Medical {
 		syncTime = 30;
 		requestMedicDelay = 30;
 		minimalDamageToRevive = 0.1;
+		removeCashOnDeath = 1;
 		facilities[] = {
 			"land_POP_Hospital",
 			"A3L_HospitalBed"
 		};
 		vehicles[] = {
 			"amity_ambulance"
+		};
+		class Price {
+			fullHeal = 300;
 		};
 	};
 	class Defibrylator {

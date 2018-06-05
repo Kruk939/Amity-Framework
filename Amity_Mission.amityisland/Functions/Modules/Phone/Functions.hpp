@@ -19,6 +19,8 @@ class ClientModules_Phone {
             class checkNumber {};
             class volumeControl {};
             class disablePhone {};
+            class getServiceCategories {};
+            class addServiceCategory {};
       };
       class Contacts {
             file="Functions\Modules\Phone\Functions\Contacts";

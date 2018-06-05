@@ -73,6 +73,10 @@ private _array = [
       [
             ["ARP_OBJECT_MENU", "Object", "", {}, {true}, {}],
             ["class",["Building", 0, [],true]]
+      ],
+      [
+            ["ARP_HOSTPIAL_FULL_HEAL","Full Heal", "", {[] call ClientModules_ACE_fnc_selfHeal;},{private _ret = []; { if((_x getVariable["Ace_medical_medicClass", 0]) != 0) then { _ret pushBack _x; };} forEach allPlayers; (count _ret == 0)},{},"","screenloc",2],
+            ["class",["openrp_vendor_EMSsignin", 0, ["ACE_MainActions"]]]
       ]
 
 ];
