@@ -3,10 +3,11 @@ private _array = [];
 //Shop actions
 if(!isNil "Shop_var_initialized") then {
       private _classes = [];
+      private _robbable = getArray(missionConfigFile >> "Robbery" >> "shop" >> "robbable");
       private _basic = getArray(missionConfigFile >> "Shop" >> "basic");
       {
             _x params["", "_id", "_class"];
-            if(!(_class IN _classes)) then {
+            if(!(_class IN _classes) && _id IN _robbable) then {
                   private _code = format["[_target, %1] call ClientModules_Robbery_fnc_robShop;", _id];
                   _code = compile _code;
                   _array pushBack [

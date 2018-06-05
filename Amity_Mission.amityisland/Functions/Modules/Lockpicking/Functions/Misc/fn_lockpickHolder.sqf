@@ -3,7 +3,9 @@ if(isNull _target) exitWith {};
 private _config = (missionConfigFile >> "Lockpicking" >> "Vehicle");
 private _item = getText(_config >> "Item" >> "itemClass");
 private _count = [_item] call Client_fnc_countItems;
-if(_count == 0 && _item != "") exitWith {}; //you don't have item
+if(_count == 0 && _item != "") exitWith {
+      ["STR_LOCKPICKING_NO_ITEM", true] call Client_fnc_domsg;
+}; //you don't have item
 
 if(_item != "") then {
       if(getNumber(_config >> "Item" >> "removeOnTry") == 1) then {

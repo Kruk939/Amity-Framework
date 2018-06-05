@@ -1,7 +1,7 @@
 class Lockpicking {
       class Vehicle {
             class Item {
-                  itemClass = "";
+                  itemClass = "CG_Lockpick";
                   removeOnTry = 0;
                   removeOnSuccess = 0;
                   removeOnFailed = 0;
@@ -24,7 +24,7 @@ class Lockpicking {
       };
       class Holder {
             class Item {
-                  itemClass = "";
+                  itemClass = "CG_Lockpick";
                   removeOnTry = 0;
                   removeOnSuccess = 0;
                   removeOnFailed = 0;

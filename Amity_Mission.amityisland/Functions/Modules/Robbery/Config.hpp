@@ -179,12 +179,13 @@ class Robbery {
       };
       class Shop {
             maxDistance = 20;
+            robbable[] = {1, 2, 3, 4, 8};
             requiredFactions[] = {5,5}; //faction_id, count
             class Reward {
                   min = 1000;
                   max = 5000;
                   cases = 1;
-                  randomItemsFrom[] = {{1, {}}, {2, {}}, {3, {}}}; //random items form shop_id, //shop_id, [_min, _max, _chance]
+                  randomItemsFrom[] = {{1, {}}, {2, {}}, {3, {}}, {4, {}}, {8, {}}}; //random items form shop_id, //shop_id, [_min, _max, _chance]
                   holderClass = "plp_ct_woodboxlightsmall";
                   removeAfter = 120;
             };

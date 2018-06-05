@@ -9,4 +9,9 @@
             <English>Lockpicking</English>
             <Polish>Wytrychuję</Polish>
       </Key>
+      <Key ID="STR_LOCKPICKING_NO_ITEM">
+            <Original>You don't have required item!</Original>
+            <English>You don't have required item!</English>
+            <Polish>Nie masz odpowiedniego przedmiotu!</Polish>
+      </Key>
 </Container>
