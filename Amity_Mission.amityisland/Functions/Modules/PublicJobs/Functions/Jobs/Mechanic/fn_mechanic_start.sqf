@@ -9,13 +9,13 @@ public_jobs_mechanic_var_objects = nearestobjects [amity_var_map_center, ["Land_
                   private _gate = (typeOf _object == "Land_GatedoorA");
                   ["STR_PUBLIC_JOBS_MECHANIC_NEW_TASK", true] call Client_fnc_domsg;
                   private _action = [
-                        ["PUBLIC_JOB_ACTION", "STR_CORE_REPAIR", "", { [_target, false] call ClientModules_PublicJobs_fnc_mechanic_repair; }, {true}, {}, "", "", 20],
+                        ["PUBLIC_JOB_ACTION", localize "STR_CORE_REPAIR", "", { [_target, false] call ClientModules_PublicJobs_fnc_mechanic_repair; }, {true}, {}, "", "", 20],
                         ["object", [_object, 0, []]]
                   ];
                   if(_gate) then {
                         private _check = compile (format["player distance %1 <= 20", getPos _object]);
                         _action = [
-                             ["PUBLIC_JOB_ACTION", "STR_CORE_REPAIR", "", { [_target, true] call ClientModules_PublicJobs_fnc_mechanic_repair; }, _check],
+                             ["PUBLIC_JOB_ACTION", localize "STR_CORE_REPAIR", "", { [_target, true] call ClientModules_PublicJobs_fnc_mechanic_repair; }, _check],
                              ["object", [player, 1, ["ACE_SelfActions"]]]
                        ];
                   };

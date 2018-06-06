@@ -4,7 +4,7 @@ private _actions = [
             ["object",[player, 1, ["ACE_SelfActions"]]]
       ],
       [
-            ["USABLE_SELF_PICK",  localize "STR_USABLE_ITEMS_TAKE", "", {private _tar = objNull; {if(!isNull(_x getVariable["owner", objNull])) exitWith { _tar = _x; }} forEach nearestObjects[player, [], 10]; [_tar] call ClientModules_UsableItems_fnc_pickUp}, { private _near = false; {if(!isNull(_x getVariable["owner", objNull])) exitWith { _near = true; }} forEach nearestObjects[player, [], 10]; isNull UsableItems_var_attached && (_near); }, {}, "", "", 5],
+            ["USABLE_SELF_PICK",  localize "STR_USABLE_ITEMS_TAKE", "", {private _tar = objNull; {if(!isNull(_x getVariable["owner", objNull]) && !(_x IN amity_var_vehicles)) exitWith { _tar = _x; }} forEach nearestObjects[player, [], 10]; [_tar] call ClientModules_UsableItems_fnc_pickUp}, { private _near = false; {if(!isNull(_x getVariable["owner", objNull]) && !(_x IN amity_var_vehicles)) exitWith { _near = true; }} forEach nearestObjects[player, [], 10]; isNull UsableItems_var_attached && (_near) && (vehicle player == player); }, {}, "", "", 5],
             ["object",[player, 1, ["ACE_SelfActions"]]]
       ]
 ];

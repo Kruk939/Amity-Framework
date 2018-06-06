@@ -16,7 +16,7 @@ class PublicJobs {
                   display = "STR_PUBLIC_JOBS_JOB_TAXI";
                   condition = " !isNil ""taxi_var_initialized""";
                   variable = "taxi";
-                  paycheck = 0; //paycheck
+                  paycheck = 50; //paycheck
                   show = 1; //show in phone book
                   uniform = "";
                   class Functions {
@@ -37,6 +37,7 @@ class PublicJobs {
                         };
                         class Items {
                               items[] = {
+                                    {"CG_wheel", 2}
                                     //{"name", 3} //class, count
                               };
                               backpack = "";
@@ -104,7 +105,9 @@ class PublicJobs {
                         vehicleClass = "Jonzie_Tow_Truck";
                         variables[] = {};
                         class Items {
-                              items[] = {};
+                              items[] = {
+                                    {"CG_wheel", 2}
+                              };
                               backpack = "";
                         };
                   };
@@ -134,7 +137,9 @@ class PublicJobs {
                         vehicleClass = "pop_sprinter_2016_blanco";
                         variables[] = {{"delivery_vehicle", 1, 1, "BOOL"}};
                         class Items {
-                              items[] = {};
+                              items[] = {
+                                    {"CG_wheel", 2}
+                              };
                               backpack = "";
                         };
                   };
