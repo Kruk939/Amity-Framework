@@ -10,6 +10,7 @@ class Robbery {
                   {"openrp_200", 200}
                   //class, value
             };
+            removeFromFaction = 1;
             class Marker {
                   shape = "ICON";
                   type = "hd_dot";

@@ -38,6 +38,10 @@ if(_faction_id == -1) then {
                   if(_function != "") then {
                         ["bought"] remoteExec[_function, _player];
                   };
+                  private _faction = getNumber(missionConfigFile >> "Showroom" >> "Config" >> "Payment" >> "faction");
+                  if(_faction > 0) then {
+                        [_faction, "ADD", _price] call Server_fnc_factionBankTransfer;
+                  };
             } else {
                   [["You don't have enough money to buy a %1", _name], true] remoteExec ["Client_fnc_domsg", _player];
                   if(_function != "") then {
@@ -66,6 +70,10 @@ if(_faction_id == -1) then {
       [_player, [_vehicle_id, _color, _material, _rims, _windows, _lights], _faction_id] call Server_fnc_insertGarage;
       [_id] call ServerModules_Showroom_fnc_removeCount;
       [["You bought a %1 for $%2 for your faction", _name, _price], true] remoteExec ["Client_fnc_domsg", _player];
+      private _faction = getNumber(missionConfigFile >> "Showroom" >> "Config" >> "Payment" >> "faction");
+      if(_faction > 0) then {
+            [_faction, "ADD", _price] call Server_fnc_factionBankTransfer;
+      };
       if(_function != "") then {
             ["bought"] remoteExec[_function, _player];
       };

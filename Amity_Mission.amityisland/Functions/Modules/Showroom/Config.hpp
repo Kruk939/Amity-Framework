@@ -10,6 +10,9 @@ class Showroom {
                   {"Chrome", 5000}
             };
             position[] = {4139.91,1157.14,1531};
+            class Payment {
+                  faction = 1;
+            };
       };
       class Camera {
             class Light {

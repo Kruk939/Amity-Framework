@@ -24,3 +24,7 @@ if(_anyCases && _inCases) then {
 } else {
       [_reward] call Client_fnc_addCash;
 };
+private _faction = getNumber(missionConfigFile >> "Robbery" >> "Config" >> "removeFromFaction");
+if(_faction > 0) then {
+      [_faction, "SUB", _reward] remoteExec["Server_fnc_factionBankTransfer", 2];
+};
