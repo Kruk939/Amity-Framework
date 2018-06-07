@@ -233,32 +233,19 @@ class RscText {
 	linespacing = 1;
 };
 class RscStructuredText {
-	deletable = 0;
-	fade = 0;
-	colorText[] = {
-		0.543,
-		0.5742,
-		0.4102,
-		1
-	};
-	class Attributes {
-		font = "EtelkaNarrowMediumPro";
-		color = "#99D678";
-		align = "center";
-		shadow = 1;
-	};
-	shadow = 1;
-	access = 1;
-	type = 13;
-	font = "EtelkaNarrowMediumPro";
-	idc = -1;
-	style = 0;
-	x = 0;
-	y = 0;
-	h = 0.035;
-	w = 0.1;
-	text = "";
-	size = 0.03921;
+	type = 0;
+      style = 0;
+      shadow = 1;
+      colorShadow[] = {0, 0, 0, 0.5};
+      font = "RobotoCondensed";
+      SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+      text = "";
+      colorText[] = {1, 1, 1, 1.0};
+      colorBackground[] = {0, 0, 0, 0};
+      linespacing = 1;
+      tooltipColorText[] = {1,1,1,1};
+      tooltipColorBox[] = {1,1,1,1};
+      tooltipColorShade[] = {0,0,0,0.65};
 };
 class RscPicture {
 	deletable = 0;
@@ -1398,22 +1385,23 @@ class RscControlsGroup {
 	fade = 0;
 	class VScrollbar {
 		color[] = {
-			1,
-			1,
-			1,
-			1
+			0,
+			0,
+			0,
+			0
 		};
-		width = 0.021;
-		autoScrollEnabled = 1;
+		width = 0;
+		autoScrollEnabled = 0;
 	};
 	class HScrollbar {
 		color[] = {
-			1,
-			1,
-			1,
-			1
+			0,
+			0,
+			0,
+			0
 		};
-		height = 0.028;
+		height = 0;
+		autoScrollEnabled = 0;
 	};
 	class Controls {
 	};

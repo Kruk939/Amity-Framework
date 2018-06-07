@@ -14,7 +14,7 @@ class Amity {
       };
       class Custamization {
             class Functions {
-                  domsg = "";
+                  domsg = "ClientModules_Notification_fnc_showNotification";
                   progressBar = "ace_common_fnc_progressBar";
                   addAction = "ClientModules_ACE_fnc_addAceInteraction";
                   checkPermission = "ClientModules_Permissions_fnc_checkPermission";
