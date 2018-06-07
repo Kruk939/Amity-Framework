@@ -1,10 +1,8 @@
 params[["_target", objNull]];
-if((player getVariable ["module_mechanic", 0]) < 1) exitWith { hint "You cannot use that item"; };
+if((player getVariable ["module_mechanic", 0]) < 2) exitWith { hint "You cannot use that item"; };
 
 private _kit = getText(missionConfigFile >> "Mechanic" >> "Items" >> "mechanicKit");
-if(_kit != "") then {
-      if(([_kit, false] call Client_fnc_countItems) == 0) exitWith {}; //does not have item
-};
+if(_kit != "" && ([_kit, false] call Client_fnc_countItems)) then {};
 if(isNull _target) exitWith {};
 private _damageArr = (getAllHitpointsDamage _target) select 2;
 private _damage = damage _target;

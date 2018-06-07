@@ -104,7 +104,7 @@ class Growing {
                         position[] = {0,0,0.8};
                   };
                   surface = "#amity_grass_green_Surface";
-                  attach[] = {[0, 1.3, -0.4};
+                  attach[] = {0, 1.3, -0.4};
                   positions[] = {
                         {{973.288,7335.59,0.139845}, 2000}
                   };

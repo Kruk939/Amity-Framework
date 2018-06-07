@@ -48,7 +48,7 @@ class PublicJobs {
                   display = "STR_PUBLIC_JOBS_JOB_MECHANIC";
                   condition = " !isNil ""mechanic_var_initialized""";
                   variable = "mechanic";
-                  paycheck = 100; //paycheck
+                  paycheck = 50; //paycheck
                   show = 1; //show in phone book
                   uniform = "CUP_U_C_Mechanic_01";
                   class Functions {
@@ -119,7 +119,7 @@ class PublicJobs {
                   display = "STR_PUBLIC_JOBS_JOB_DELIVERY";
                   condition = "!isNil ""Shop_var_initialized""";
                   variable = "delivery";
-                  paycheck = 100; //paycheck
+                  paycheck = 50; //paycheck
                   show = 0; //show in phone book
                   uniform = "CUP_U_C_Mechanic_01";
                   class Functions {
