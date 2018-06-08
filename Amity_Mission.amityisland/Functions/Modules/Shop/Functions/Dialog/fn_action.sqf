@@ -152,7 +152,7 @@ if(_type == "SELL_ADD") exitWith {
             if((count _item) != 0) then {
                   _item params["", "_class", "_type", "_price", "_stock", "_prev"];
                   private _found = false;
-                  private _realCount = [_class] call Client_fnc_countItems;
+                  private _realCount = [_class, false] call Client_fnc_countItems;
                   {
                         if((_x select 1) == _id) exitWith {
                               _x params["", "", "_c"];

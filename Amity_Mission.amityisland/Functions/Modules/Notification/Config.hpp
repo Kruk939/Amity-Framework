@@ -9,11 +9,14 @@ class Notification {
       };
       class Size {
             yStart = 0.3;
+            xStart = 0.79;
             yMax = 0.7;
             width = 0.2;
             height = 0.075;
             bar = 0.0025;
       };
-
-
+      class Position {
+            xStart = 1.21;
+            moveTo = "right";
+      };
 };

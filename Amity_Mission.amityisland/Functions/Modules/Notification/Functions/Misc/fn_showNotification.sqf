@@ -31,7 +31,11 @@ _this spawn {
                   _x ctrlCommit 0.8;
             } else {
                   private _pos = ctrlPosition _x;
-                  _pos set[0, safezoneX - (_pos select 3) * safezoneW];
+                  if(getText(missionConfigFile >> "Notification" >> "Position" >> "moveTo") == "left") then {
+                        _pos set[0, safezoneX - (_pos select 3) * safezoneW];
+                  } else {
+                        _pos set[0, safezoneX + ((_pos select 3) + 1) * safezoneW];
+                  };
                   _x ctrlSetPosition _pos;
                   _x ctrlSetFade 1;
                   _x ctrlCommit 1;
@@ -44,7 +48,8 @@ _this spawn {
       notification_var_displays pushBack _dispGroup;
       _dispGroup ctrlShow true;
       private _y = (getNumber(_config >> "Size" >> "yStart")) * safezoneH + safezoneY;
-      _dispGroup ctrlSetPosition [0.01 * safezoneW + safezoneX, _y, _width, _heigth * 1.01];
+      private _x = (getNumber(_config >> "Size" >> "xStart")) * safezoneW + safezoneX;
+      _dispGroup ctrlSetPosition [_x, _y, _width, _heigth * 1.01];
       _ctrl_text ctrlSetPosition [_bar, 0, _width - _bar, _heigth];
       _ctrl_strip ctrlSetPosition [0, 0, _bar, _heigth];
       _dispGroup ctrlSetFade 0;
@@ -57,7 +62,11 @@ _this spawn {
             uiSleep 15;
             if(isNull _dispGroup) exitWith {};
             private _pos = ctrlPosition _dispGroup;
-            _pos set[0, safezoneX - (_pos select 3) * safezoneW];
+            if(getText(missionConfigFile >> "Notification" >> "Position" >> "moveTo") == "left") then {
+                  _pos set[0, safezoneX - (_pos select 3) * safezoneW];
+            } else {
+                  _pos set[0, safezoneX + ((_pos select 3) + 1) * safezoneW];
+            };
             _dispGroup ctrlSetPosition _pos;
             _dispGroup ctrlSetFade 1;
             _dispGroup ctrlCommit 1;

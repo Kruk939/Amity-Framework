@@ -5,8 +5,9 @@ private _group = _display ctrlCreate ["RscControlsGroup", -1];
 private _strip = _display ctrlCreate ["RscText", 1000, _group];
 private _text = _display ctrlCreate ["RscStructuredText", 1001, _group];
 private _y = (getNumber(_config >> "Size" >> "yStart")) * safezoneH + safezoneY;
+private _x = (getNumber(_config >> "Position" >> "xStart")) * safezoneW + safezoneX;
 private _bar = (getNumber(_config >> "Size" >> "bar")) * safezoneW;
-_group ctrlSetPosition[-0.17031 * safezoneW + safezoneX, _y, 0.180469 * safezoneW, 0 * safezoneH];
+_group ctrlSetPosition[_x, _y, 0.180469 * safezoneW, 0 * safezoneH];
 _strip ctrlSetPosition[0, 0, _bar, 0];
 _text ctrlSetPosition[_bar, 0, 0.180469 * safezoneW - _bar, 0];
 
