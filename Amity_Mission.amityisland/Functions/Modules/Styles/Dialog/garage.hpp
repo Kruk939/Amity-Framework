@@ -1,4 +1,4 @@
-class client_garage {
+class styles_garage {
       idd = 1005;
       class controls {
             class Background: RscPicture {

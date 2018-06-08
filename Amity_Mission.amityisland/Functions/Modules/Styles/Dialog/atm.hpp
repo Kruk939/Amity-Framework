@@ -5,7 +5,7 @@ class styles_atm {
             	idc = -1;
             	text = "\amityrp_data\gui\atm\atm.paa";
             	x = -11 * GUI_GRID_W + GUI_GRID_X;
-            	y = -11.25 * GUI_GRID_H + GUI_GRID_Y;
+            	y = -11 * GUI_GRID_H + GUI_GRID_Y;
             	w = 62 * GUI_GRID_W;
             	h = 47 * GUI_GRID_H;
             };
