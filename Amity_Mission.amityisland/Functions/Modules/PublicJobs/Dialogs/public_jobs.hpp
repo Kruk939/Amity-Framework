@@ -1,6 +1,14 @@
 class public_job {
       idd = 11000;
       class controls {
+            class Background: RscPicture {
+            	idc = -1;
+            	text = "\amityrp_data\gui\public_jobs\public_jobs.paa";
+            	x = -11 * GUI_GRID_W + GUI_GRID_X;
+            	y = -11.25 * GUI_GRID_H + GUI_GRID_Y;
+            	w = 62 * GUI_GRID_W;
+            	h = 47 * GUI_GRID_H;
+            };
             class title_main: RscText {
             	idc = -1;
             	text = $STR_PUBLIC_JOBS_DIALOG_TITLE; //--- ToDo: Localize;

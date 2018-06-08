@@ -21,18 +21,18 @@ class Amity {
                   spawn = "";
             };
             class Dialogs {
-                  atm = "client_atm"; //idd = 1010;
+                  atm = "styles_atm"; //idd = 1010;
                   interaction = "client_interaction"; //idd = 1020;
                   profile = "client_profile"; //idd = 1000;
                   createProfile = "client_profile_create"; //idd = 1001;
-                  garage = "client_garage"; //idd = 1005;
+                  garage = "styles_garage"; //idd = 1005;
                   giveKeys = "client_give_keys"; //idd = 1006;
-                  factionCreate = "client_faction_create"; //idd = 1030
-                  factionSign = "client_faction_sign"; //idd = 1031
-                  factionMembers = "client_faction_members"; //idd = 1032
-                  factionMemberEdit = "client_faction_member_edit"; //idd = 1033
-                  factionView = "client_faction_view"; //idd = 1034
-                  factionManageGarage = "client_faction_manage_garage"; //idd 1035
+                  factionCreate = "styles_faction_create"; //idd = 1030
+                  factionSign = "styles_faction_sign"; //idd = 1031
+                  factionMembers = "styles_faction_members"; //idd = 1032
+                  factionMemberEdit = "styles_faction_member_edit"; //idd = 1033
+                  factionView = "styles_faction_view"; //idd = 1034
+                  factionManageGarage = "styles_faction_manage_garage"; //idd 1035
             };
             class Sounds {
                   class Vehicle {
