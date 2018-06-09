@@ -1,6 +1,8 @@
 params[["_id", -1]];
 if(_id == -1) exitWith {};
 private _vehicle = [format["showroom_update_count:%1", _id], 2] call ExternalS_fnc_ExtDBasync;
+if(count _vehicle == 0) exitWith {};
+_vehicle = _vehicle select 0;
 _vehicle params["_id", "", "", "_type", "", "", "", "_count", "_faction_id", ""];
 if(typeName _faction_id == "OBJECT") then {
       private _arr = switch(_type) do {
