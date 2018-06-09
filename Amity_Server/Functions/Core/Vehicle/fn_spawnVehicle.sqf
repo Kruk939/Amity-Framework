@@ -16,7 +16,7 @@ if(_status == 0 || _force) then {
       clearItemCargoGlobal _vehicle;
 
       [_vehicle, _hit] call Client_fnc_vehicleHitLoad;
-      [_vehicle, true] remoteExec ["lock", 0];
+      [_vehicle, 2, false] remoteExec ["Client_fnc_lock", _vehicle];
 
       private _handle = ["onVehicleSpawn", [_vehicle, _data]] call Client_fnc_eventCall;
       if(!isNull _player) then {
