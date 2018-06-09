@@ -7,8 +7,8 @@ private _faction = [_faction_id] call Server_fnc_factionGet;
 private _member = [_member_id] call Server_fnc_memberGet;
 _member params["", "", "_profile_id", "", "_salary", ""];
 _faction params["", "", "_faction_short_name", "_faction_full_name", "", "_bank", ""];
-if(!isNull(_salary)) then {
-      private _toPay = (_salary / 3600) * _time;
+if(typeName _salary != "OBJECT") then {
+      private _toPay = round((_salary / 3600) * _time);
       if(_bank >= _toPay) then {
             private _banks = [_profile_id] call Server_fnc_bankGetProfile;
             if((count _banks) != 0) then {

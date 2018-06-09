@@ -26,7 +26,7 @@ _this spawn {
             private _pos = ctrlPosition _x;
             private _y = (_pos select 1) + _heigth * 1.2;
             if(_y < (getNumber(_config >> "Size" >> "yMax")) * safezoneH + safezoneY) then {
-                  waitUntil{ctrlCommitted _this};
+                  waitUntil{ctrlCommitted _x};
                   _pos set[1, _y];
                   _x ctrlSetPosition _pos;
                   _x ctrlCommit 0.8;

@@ -43,6 +43,7 @@ if(_type == "LB") exitWith {
       ctrlSetText[1001, format["$%1", (_account select 3)]];
 };
 if(_type == "WITHDRAW") exitWith {
+      if(time - amity_var_cash_last_action < getNumber(missionConfigFile >> "Amity" >> "Setup" >> "timeLock")) exitWith {};
       private _index = lbCurSel 2100;
       if(_index == -1) exitWith {};
       private _account = [parseNumber(lbData[2100, _index])] call _find_account_fnc;
@@ -52,6 +53,10 @@ if(_type == "WITHDRAW") exitWith {
       private _player_cash = player getVariable["cash", -1];
       _account params ["_id", "_account_number","","_cash"];
       if(_amount <= _cash) then {
+            amity_var_cash_last_action = time;
+            ctrlEnable[1600, false];
+            ctrlEnable[1601, false];
+            ctrlEnable[1602, false];
             [_account_number,"SUB",_amount] remoteExecCall ["Server_fnc_handleBank", 2];
             [player, "ADD", _amount] remoteExec ["Server_fnc_handleCash", 2];
             ctrlSetText[1000, format["$%1",_player_cash + _amount]];
@@ -60,11 +65,13 @@ if(_type == "WITHDRAW") exitWith {
             _display setVariable["data", _data];
 
             [["STR_CORE_ATM_ACTION_WITHDRAW", _amount], true] call Client_fnc_domsg;
+            closeDialog 0;
       } else {
             ["STR_CORE_ATM_ACTION_WITHDRAW_NO_MONEY", true] call Client_fnc_domsg;
       };
 };
 if(_type == "DEPOSIT") exitWith {
+      if(time - amity_var_cash_last_action < getNumber(missionConfigFile >> "Amity" >> "Setup" >> "timeLock")) exitWith {};
       private _index = lbCurSel 2100;
       if(_index == -1) exitWith {};
       private _account = [parseNumber(lbData[2100, _index])] call _find_account_fnc;
@@ -74,6 +81,11 @@ if(_type == "DEPOSIT") exitWith {
       private _player_cash = player getVariable["cash", -1];
       _account params ["_id", "_account_number","","_cash"];
       if ([_amount] call Client_fnc_checkMoney) then {
+      amity_var_cash_last_action = time;
+            ctrlEnable[1600, false];
+            ctrlEnable[1601, false];
+            ctrlEnable[1602, false];
+            closeDialog 0;
             [_account_number,"ADD",_amount] remoteExecCall ["Server_fnc_handleBank", 2];
             [player, "SUB", _amount] remoteExec ["Server_fnc_handleCash", 2];
             ctrlSetText[1000, format["$%1",_player_cash - _amount]];
@@ -86,12 +98,14 @@ if(_type == "DEPOSIT") exitWith {
       };
 };
 if(_type == "TRANSFER") exitWith {
+      if(time - amity_var_cash_last_action < getNumber(missionConfigFile >> "Amity" >> "Setup" >> "timeLock")) exitWith {};
       private _index = lbCurSel 2100;
       if(_index == -1) exitWith {};
       private _account = [parseNumber(lbData[2100, _index])] call _find_account_fnc;
       if(count _account == 0) exitWith {};
       private _amount = parseNumber(ctrlText 1402);
       if(_amount <= 0) exitWith {};
+      amity_var_cash_last_action = time;
       _account params ["_id", "_account_number","","_cash"];
       private _toAccount = ctrlText 1401;
       [_account_number,_toAccount,_amount] remoteExecCall ["Server_fnc_bankTransfer", 2];

@@ -11,6 +11,7 @@ class Amity {
             class Start {
                   cash = 10000;
             };
+            timeLock = 2;
       };
       class Custamization {
             class Functions {

@@ -15,6 +15,8 @@ if(_type == "GIVE") exitWith {
       private _amount = parseNumber(ctrlText 1400);
       if(_amount <= 0) exitWith {};
       if(!([_amount] call Client_fnc_checkMoney)) exitWith {};
+      if(time - amity_var_cash_last_action < getNumber(missionConfigFile >> "Amity" >> "Setup" >> "timeLock")) exitWith {};
+      amity_var_cash_last_action = time;
       [_amount] call Client_fnc_removeCash;
       [_amount] remoteExec["Client_fnc_addCash", _target];
       [["STR_LICENSES_GIVE_CASH_GIVEN", _amount, _target getVariable["name", ""]]] call Client_fnc_domsg;

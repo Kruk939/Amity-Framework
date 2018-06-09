@@ -197,6 +197,8 @@ if(_type == "SELL_REM") exitWith {
       };
 };
 if(_type == "PAY_OUT") exitWith {
+      if(time - amity_var_cash_last_action < getNumber(missionConfigFile >> "Amity" >> "Setup" >> "timeLock")) exitWith {};
+      amity_var_cash_last_action = time;
       if(player getVariable["shop_var_inprogress", false]) exitWith {};
       private _buy = _cart select 0;
       private _sell = _cart select 1;

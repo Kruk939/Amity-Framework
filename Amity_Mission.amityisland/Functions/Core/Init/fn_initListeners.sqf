@@ -9,8 +9,8 @@ private _save = {
 private _paycheck = {
       params[["_player", objNull], "", ["_tick", 0]];
       if((_tick % 10) == 9) then {
-            private _salary = _player getVariable["faction_salary", objNull];
-            if(!isNull(_salary)) then {
+            private _salary = _player getVariable["faction_salary", 0];
+            if(_salary > 0) then {
                   private _faction_id = _player getVariable["faction_id", -1];
                   if(_faction_id != -1) then {
                         private _time = getNumber (missionConfigFile >> "Amity" >> "Setup" >> "loopTick");

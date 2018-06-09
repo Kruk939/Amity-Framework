@@ -7,3 +7,4 @@ amity_var_getVariable_receiving = false;
 amity_var_getVariable_lastReceived = "";
 amity_var_attachedVehicle = objNull;
 amity_var_attachedObject = objNull;
+amity_var_cash_last_action = time - getNumber(missionConfigFile >> "Amity" >> "Setup" >> "timeLock");

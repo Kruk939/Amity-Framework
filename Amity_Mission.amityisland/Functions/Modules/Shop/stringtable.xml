@@ -59,4 +59,9 @@
             <English>EMS Shop General</English>
             <Polish>Sklep wielobranżowy EMS</Polish>
       </Key>
+      <Key ID="STR_SHOP_FISHING">
+            <Original>Fishing Shop</Original>
+            <English>Fishing Shop</English>
+            <Polish>Sklep wędkarski</Polish>
+      </Key>
 </Container>
