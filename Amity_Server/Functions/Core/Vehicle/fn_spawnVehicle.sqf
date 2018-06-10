@@ -8,6 +8,9 @@ if(_status == 0 || _force) then {
       _vehicle setVariable ["vin", _vin];
       _vehicle setVariable ["plate", _plate];
       _vehicle setVariable ["profile_id", _profile_id];
+      if(typeName _profile_id == "OBJECT" && !isNull _player) then {
+            _vehicle setVariable ["profile_id",  _player getVariable["profile_id", -1]];
+      };
       _vehicle setVariable ["faction_id", _faction_id];
       _vehicle setFuel _fuel;
 
