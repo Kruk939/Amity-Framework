@@ -1,0 +1,42 @@
+<Container name="DISPATCH">
+      <Key ID="STR_DISPATCH_INFO">
+            <Original>Information</Original>
+            <English>Information</English>
+            <Polish>Information</Polish>
+      </Key>
+      <Key ID="STR_DISPATCH_SIGN">
+            <Original>Sign in</Original>
+            <English>Sign in</English>
+            <Polish>Zaloguj się</Polish>
+      </Key>
+      <Key ID="STR_DISPATCH_LOGOUT">
+            <Original>Logout from dispatch</Original>
+            <English>Logout from dispatch</English>
+            <Polish>Wyloguj się z dyspozytorni</Polish>
+      </Key>
+      <Key ID="STR_DISPATCH_MAIN">
+            <Original>Sign as dispatch</Original>
+            <English>Sign as dispatch</English>
+            <Polish>Zaloguj się jako dyspozytor</Polish>
+      </Key>
+      <Key ID="STR_DISPATCH">
+            <Original>Dispatch</Original>
+            <English>Dispatch</English>
+            <Polish>Dyspozytornia</Polish>
+      </Key>
+      <Key ID="STR_DISPATCH_NONE">
+            <Original>None</Original>
+            <English>None</English>
+            <Polish>Brak</Polish>
+      </Key>
+      <Key ID="STR_DISPATCH_EMERGENCY">
+            <Original>Emergency</Original>
+            <English>Emergency</English>
+            <Polish>Alarmowe</Polish>
+      </Key>
+      <Key ID="STR_DISPATCH_INFO_TEXT">
+            <Original>[%1] %2\nNumber: %3\nEmergency: %4\nName: %5</Original>
+            <English>[%1] %2\nNumber: %3\nEmergency: %4\nName: %5</English>
+            <Polish>[%1] %2\nNumer: %3\nWypadkowy: %4\nNazwa: %5</Polish>
+      </Key>
+</Container>

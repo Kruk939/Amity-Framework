@@ -12,6 +12,7 @@ class ClientModules_ACE {
             file="Functions\Modules\ACE\Functions\Misc";
             class addAceInteraction {};
             class selfHeal {};
+            class escInterupt {};
       };
       class Medical {
             file="Functions\Modules\ACE\Functions\Medical";

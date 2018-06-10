@@ -1,0 +1,17 @@
+<Container name="COMPUTER">
+      <Key ID="STR_ACE_RESPAWN">
+            <Original>Respawn</Original>
+            <English>Respawn</English>
+            <Polish>Odrodzenie</Polish>
+      </Key>
+      <Key ID="STR_ACE_EXIT">
+            <Original>Exit</Original>
+            <English>Exit</English>
+            <Polish>Wyjście</Polish>
+      </Key>
+      <Key ID="STR_ACE_BUTTON_POSSIBLE">
+            <Original>%2 possible in %1</Original>
+            <English>%2 possible in %1</English>
+            <Polish>%2 możliwe za %1</Polish>
+      </Key>
+</Container>

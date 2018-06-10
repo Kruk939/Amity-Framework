@@ -22,6 +22,7 @@ private _onFinish = {
       };
       [getNumber(missionConfigFile >> "PublicJobs" >> "Jobs" >> "Mechanic" >> "Setup" >> "rapairFee")] call ClientModules_PublicJobs_fnc_addPaycheck;
       [player, "AmovPknlMstpSrasWrflDnon", 1] call ace_common_fnc_doAnimation;
+      [] call ClientModules_PublicJobs_fnc_removeMarker;
 };
 private _onFailure = {
       [player, "AmovPknlMstpSrasWrflDnon", 1] call ace_common_fnc_doAnimation;
