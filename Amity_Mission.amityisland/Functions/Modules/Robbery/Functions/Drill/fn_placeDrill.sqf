@@ -20,7 +20,7 @@ _target setVariable["robbery_has_drill", true, true];
 
 private _nearest = [];
 {
-      if(_x getVariable["profile_id", -1] != -1 && alive _x) then {
+      if(_x getVariable["profile_id", -1] != -1 && alive _x && _target distance _x < 20) then {
             _nearest pushBack _x;
       };
 } forEach allPlayers;

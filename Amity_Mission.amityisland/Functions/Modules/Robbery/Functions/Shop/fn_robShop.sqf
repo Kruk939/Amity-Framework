@@ -12,10 +12,7 @@ if(_lastRobbery + _cooltime > time && _cooltime > 0) exitWith {
       ["STR_ROBBERY_ROB_SHOP_LAST_ROBBED", true] call Client_fnc_doMsg;
 }; //last robbed
 
-if(getNumber(_config >> "Items" >> "primary") != 0 && primaryWeapon player == "") exitWith {
-      ["STR_ROBBERY_ROB_SHOP_FAILED_NO_WEAPON", true] call Client_fnc_doMsg;
-};
-if(getNumber(_config >> "Items" >> "secondary") != 0 && secondaryWeapon player == "") exitWith {
+if((getNumber(_config >> "Items" >> "primary") != 0 && primaryWeapon player == "") && (getNumber(_config >> "Items" >> "secondary") != 0 && secondaryWeapon player == "")) exitWith {
       ["STR_ROBBERY_ROB_SHOP_FAILED_NO_WEAPON", true] call Client_fnc_doMsg;
 };
 
@@ -32,7 +29,7 @@ if(!_can) exitWith {
 //call event
 private _nearest = [];
 {
-      if(_x getVariable["profile_id", -1] != -1 && alive _x) then {
+      if(_x getVariable["profile_id", -1] != -1 && alive _x && _target distance _x < 20) then {
             _nearest pushBack _x;
       };
 } forEach allPlayers;
@@ -72,12 +69,9 @@ private _nearest = [];
                         playSound3D [_sound, _target, false, getPosASL _target, 5, 1, 200];
                   };
             };
+
             //checkings
-            if(getNumber(_config >> "Items" >> "primary") != 0 && primaryWeapon player == "") exitWith {
-                  _robbed = false;
-                  ["STR_ROBBERY_ROB_SHOP_FAILED_NO_WEAPON", true] call Client_fnc_doMsg;
-            };
-            if(getNumber(_config >> "Items" >> "secondary") != 0 && secondaryWeapon player == "") exitWith {
+            if((getNumber(_config >> "Items" >> "primary") != 0 && primaryWeapon player == "") && (getNumber(_config >> "Items" >> "secondary") != 0 && secondaryWeapon player == "")) exitWith {
                   _robbed = false;
                   ["STR_ROBBERY_ROB_SHOP_FAILED_NO_WEAPON", true] call Client_fnc_doMsg;
             };
@@ -138,7 +132,7 @@ private _nearest = [];
 
             private _nearest = [];
             {
-                  if(_x getVariable["profile_id", -1] != -1 && alive _x) then {
+                  if(_x getVariable["profile_id", -1] != -1 && alive _x && _target distance _x < 20) then {
                         _nearest pushBack _x;
                   };
             } forEach allPlayers;
