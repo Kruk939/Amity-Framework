@@ -12,5 +12,6 @@ class ClientModules_Notification {
             class showNotification {};
             class createGroup {};
             class convertToFormat {};
+            class info {};
       };
 };
