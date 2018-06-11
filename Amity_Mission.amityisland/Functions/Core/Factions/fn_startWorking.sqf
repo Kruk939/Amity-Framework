@@ -14,6 +14,7 @@ player setVariable["faction_id", _faction_id, true];
 player setVariable["faction_member_id", _id, true];
 player setVariable["faction_access_level", _access_level];
 player setVariable["faction_name", _faction_full_name];
+player setVariable["faction_short", _faction_short_name];
 if(typeName _salary == "OBJECT") then { _salary = 0; };
 player setVariable["faction_salary", _salary];
 

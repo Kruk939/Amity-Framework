@@ -6,6 +6,8 @@ player setVariable["faction_member_id", nil, true];
 player setVariable["faction_access_level", nil];
 player setVariable["faction_salary", nil];
 player setVariable["faction_name", nil];
+player setVariable["faction_short", nil];
+
 
 if(!_change) then {
       ["onFactionWorkingStop", [amity_var_faction]] call Client_fnc_eventCall;

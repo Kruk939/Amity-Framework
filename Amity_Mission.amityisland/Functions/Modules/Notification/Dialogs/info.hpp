@@ -14,23 +14,10 @@ class RscInfo {
                   h = 0.143 * safezoneH;
                   colorBackground[] = {0,0,0,0.4};
             };
-            class background_bar: RscText {
-                  idc = -1;
-                  text = "John Raven"; //--- ToDo: Localize;
-                  x = 0.989844 * safezoneW + safezoneX;
-                  y = 0.621 * safezoneH + safezoneY;
-                  w = 0.0025 * safezoneW;
-                  h = 0.143 * safezoneH;
-                  colorBackground[] = {0.043,0.486,0.769,1};
-                  colorShadow[] = { 0, 0, 0, 0 };
-                  tooltipColorText[] = { 0, 0, 0, 0 };
-                  tooltipColorBox[] = { 0, 0, 0, 0 };
-                  tooltipColorShade[] = { 0, 0, 0, 0 };
-            };
 
             class text_name: RscText {
             	idc = 1000;
-            	text = "John Raven"; //--- ToDo: Localize;
+            	text = ""; //--- ToDo: Localize;
             	x = 0.881562 * safezoneW + safezoneX;
             	y = 0.621 * safezoneH + safezoneY;
             	w = 0.109 * safezoneW;
@@ -44,7 +31,7 @@ class RscInfo {
             class text_faction: RscText {
             	idc = 1001;
                   style = ST_RIGHT;
-            	text = "John Raven"; //--- ToDo: Localize;
+            	text = ""; //--- ToDo: Localize;
             	x = 0.881562 * safezoneW + safezoneX;
             	y = 0.644 * safezoneH + safezoneY;
             	w = 0.109 * safezoneW;
@@ -57,7 +44,7 @@ class RscInfo {
             };
             class text_cash: RscText {
             	idc = 1002;
-            	text = "John Raven"; //--- ToDo: Localize;
+            	text = ""; //--- ToDo: Localize;
             	x = 0.881562 * safezoneW + safezoneX;
             	y = 0.67 * safezoneH + safezoneY;
             	w = 0.109 * safezoneW;
@@ -77,6 +64,19 @@ class RscInfo {
             	w = 0.108281 * safezoneW;
             	h = 0.066 * safezoneH;
             	colorBackground[] = {0,0,0,0.4};
+                  colorShadow[] = { 0, 0, 0, 0 };
+                  tooltipColorText[] = { 0, 0, 0, 0 };
+                  tooltipColorBox[] = { 0, 0, 0, 0 };
+                  tooltipColorShade[] = { 0, 0, 0, 0 };
+            };
+            class background_bar: RscText {
+                  idc = -1;
+                  text = ""; //--- ToDo: Localize;
+                  x = 0.989844 * safezoneW + safezoneX;
+                  y = 0.621 * safezoneH + safezoneY;
+                  w = 0.0025 * safezoneW;
+                  h = 0.143 * safezoneH;
+                  colorBackground[] = {0.043,0.486,0.769,1};
                   colorShadow[] = { 0, 0, 0, 0 };
                   tooltipColorText[] = { 0, 0, 0, 0 };
                   tooltipColorBox[] = { 0, 0, 0, 0 };
