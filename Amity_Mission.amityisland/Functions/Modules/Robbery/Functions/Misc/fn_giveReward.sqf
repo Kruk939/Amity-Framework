@@ -26,5 +26,5 @@ if(_anyCases && _inCases) then {
 };
 private _faction = getNumber(missionConfigFile >> "Robbery" >> "Config" >> "removeFromFaction");
 if(_faction > 0) then {
-      [_faction, "SUB", _reward] remoteExec["Server_fnc_factionBankTransfer", 2];
+      [_faction, "SUB", _reward] remoteExecCall["Server_fnc_factionBankTransfer", 2];
 };

@@ -32,9 +32,9 @@ if(!_first) then {
 } else {
       ["onPlayerFirstConnect", [player, _data]] call Client_fnc_eventCall;
 };
-[player] remoteExec ["Server_fnc_setConnection", 2];
+[player] remoteExecCall ["Server_fnc_setConnection", 2];
 
-[_profile_id, "PROFILE", player, player] remoteExec ["Server_fnc_variableSet", 2];
+[_profile_id, "PROFILE", player, player] remoteExecCall ["Server_fnc_variableSet", 2];
 
 diag_log format["----------- Loaded, elapsed: %1", [time - _time,"MM:SS.MS"] call BIS_fnc_secondsToString];
 [] call Client_fnc_spawn;

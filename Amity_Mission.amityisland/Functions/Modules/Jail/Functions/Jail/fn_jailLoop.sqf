@@ -82,12 +82,12 @@ while{(player getVariable["jail_jailed", false]) && _endTime > time && (count _d
                         _second set[2, (_second select 0) - _remaining];
                   };
                   _data deleteAt 0;
-                  [_id, 0] remoteExec["ServerModules_Jail_fnc_updateSentence", 2];
+                  [_id, 0] remoteExecCall["ServerModules_Jail_fnc_updateSentence", 2];
                   [["STR_JAIL_SENTENCE_SERVED", _reason], true] call Client_fnc_domsg;
             } else {
                   _timeLeft = _timeLeft - _minus;
                   _first set[2, _timeLeft];
-                  [_id, _timeLeft] remoteExec["ServerModules_Jail_fnc_updateSentence", 2];
+                  [_id, _timeLeft] remoteExecCall["ServerModules_Jail_fnc_updateSentence", 2];
             };
       };
 };
@@ -111,6 +111,6 @@ if(!_escaped) then {
             player setVariable["jail_escaped", nil, true];
       };
 };
-[player getVariable["profile_id", -1], 0] remoteExec["ServerModules_Jail_fnc_updateStatus", 2];
+[player getVariable["profile_id", -1], 0] remoteExecCall["ServerModules_Jail_fnc_updateStatus", 2];
 player setVariable["jail_jailed", nil, true];
 jail_var_active_sentences = [];

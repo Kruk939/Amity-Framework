@@ -17,7 +17,7 @@ if(_type == "SEND") exitWith {
       private _all = format["%1%2: %3\n", ctrlText 1001, player getVariable["name", ""], _message];
       ctrlSetText[1001, _all];
       ctrlSetText[1401, ""];
-      [player, player getVariable["faction_id", -1], _message] remoteExec["ServerModules_Computer_fnc_addMessage", 2];
+      [player, player getVariable["faction_id", -1], _message] remoteExecCall["ServerModules_Computer_fnc_addMessage", 2];
 };
 if(_type == "WANTED_PERSON_CHECK") exitWith {
       private _index = lbCurSel 1500;
@@ -48,14 +48,14 @@ if(_type == "QUICK_CHECK") exitWith {
       [_id] call ClientModules_Computer_fnc_computer_check_profile_open;
 };
 if(_type == "SEARCH_NAME") exitWith {
-      [ctrlText 1400, "name", player, "ClientModules_Computer_fnc_computer_check_profile_open"] remoteExec["ServerModules_Computer_fnc_search", 2];
+      [ctrlText 1400, "name", player, "ClientModules_Computer_fnc_computer_check_profile_open"] remoteExecCall["ServerModules_Computer_fnc_search", 2];
 };
 if(_type == "SEARCH_ID") exitWith {
-      [ctrlText 1400, "id", player, "ClientModules_Computer_fnc_computer_check_profile_open"] remoteExec["ServerModules_Computer_fnc_search", 2];
+      [ctrlText 1400, "id", player, "ClientModules_Computer_fnc_computer_check_profile_open"] remoteExecCall["ServerModules_Computer_fnc_search", 2];
 };
 if(_type == "SEARCH_VIN") exitWith {
-      [ctrlText 1400, "vin", player, "ClientModules_Computer_fnc_computer_check_vehicle_open"] remoteExec["ServerModules_Computer_fnc_search", 2];
+      [ctrlText 1400, "vin", player, "ClientModules_Computer_fnc_computer_check_vehicle_open"] remoteExecCall["ServerModules_Computer_fnc_search", 2];
 };
 if(_type == "SEARCH_PLATE") exitWith {
-      [ctrlText 1400, "plate", player, "ClientModules_Computer_fnc_computer_check_vehicle_open"] remoteExec["ServerModules_Computer_fnc_search", 2];
+      [ctrlText 1400, "plate", player, "ClientModules_Computer_fnc_computer_check_vehicle_open"] remoteExecCall["ServerModules_Computer_fnc_search", 2];
 };

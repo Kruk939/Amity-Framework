@@ -11,4 +11,4 @@ if(!_ok) exitWith {};
 private _display = findDisplay 666603;
 if(isNull _display) exitWith { closeDialog 0; };
 _display setVariable["target", _target];
-[player, "ClientModules_Licenses_fnc_remove_receive"] remoteExec["ClientModules_Licenses_fnc_getLicenses", _target];
+[player, "ClientModules_Licenses_fnc_remove_receive"] remoteExecCall["ClientModules_Licenses_fnc_getLicenses", _target];

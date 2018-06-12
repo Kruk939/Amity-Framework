@@ -12,7 +12,7 @@ disableSerialization;
 private _display = findDisplay 13000;
 if(isNull _display) exitWith {};
 _display setVariable["jail_id", _jail_id];
-[_jail_id, player, "ClientModules_Jail_fnc_jail_sentences_receive"] remoteExec["ServerModules_Jail_fnc_getJailSentences", 2];
+[_jail_id, player, "ClientModules_Jail_fnc_jail_sentences_receive"] remoteExecCall["ServerModules_Jail_fnc_getJailSentences", 2];
 {
       private _profile_id = _x getVariable["profile_id", -1];
       if(_profile_id != -1 && _x getVariable["jail_jailed", false]) then {

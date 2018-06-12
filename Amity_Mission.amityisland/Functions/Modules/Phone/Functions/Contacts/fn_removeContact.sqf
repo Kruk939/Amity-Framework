@@ -7,6 +7,6 @@ private _index = -1;
 } forEach phone_var_contacts;
 if(_found) then {
       phone_var_contacts deleteAt _index;
-      [_id] remoteExec ["ServerModules_Phone_fnc_removeContact", 2];
+      [_id] remoteExecCall ["ServerModules_Phone_fnc_removeContact", 2];
 };
 _found;

@@ -5,4 +5,4 @@ _data params ["_id", "_profile_id", "_faction_id", "_vehicle_id", "_class", "_vi
 _vehicle setVariable["plate", _plate];
 [_vehicle] call Client_fnc_attachVehicle;
 amity_var_vehicles pushBack _vehicle;
-[_id, "GARAGE", _vehicle, player] remoteExec ["Server_fnc_variableSet", 2];
+[_id, "GARAGE", _vehicle, player] remoteExecCall ["Server_fnc_variableSet", 2];

@@ -36,6 +36,6 @@ if(_found) then {
 };
 
 if(!isNull _player && _function != "") exitWith {
-      [_vehicle, _cases, _profile, _faction] remoteExec[_function, _player];
+      [_vehicle, _cases, _profile, _faction] remoteExecCall[_function, _player];
 };
 [_vehicle, _cases, _profile, _faction];

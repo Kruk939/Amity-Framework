@@ -30,5 +30,5 @@ if(count _data != 0) then {
       };
 
 } else {
-      [_id, false, player, "ClientModules_Computer_fnc_computer_view_case_profile_receive"] remoteExec ["ServerModules_Computer_fnc_getCase", 2];
+      [_id, false, player, "ClientModules_Computer_fnc_computer_view_case_profile_receive"] remoteExecCall ["ServerModules_Computer_fnc_getCase", 2];
 };

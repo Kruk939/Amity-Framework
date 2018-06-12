@@ -41,5 +41,5 @@ if(_type == "GIVE") exitWith {
       if(_id == -1) exitWith {};
       private _veh = [_id] call _fnc_find_veh;
       if(isNull _veh) exitWith {};
-      [_veh, player] remoteExec ["Client_fnc_receive_key", _target];
+      [_veh, player] remoteExecCall ["Client_fnc_receive_key", _target];
 };

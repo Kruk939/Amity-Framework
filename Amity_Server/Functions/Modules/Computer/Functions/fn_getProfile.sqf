@@ -23,6 +23,6 @@ private _houses = [];
 
 
 if(!isNull _player && _function != "") exitWith {
-      [_profile, _vehicles, _wanted, _licenses, _sentences, _tickets, count _houses] remoteExec[_function, _player];
+      [_profile, _vehicles, _wanted, _licenses, _sentences, _tickets, count _houses] remoteExecCall[_function, _player];
 };
 [_profile, _vehicles, _wanted, _licenses, _sentences, _tickets, count _houses];

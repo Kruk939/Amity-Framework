@@ -1,1 +1,1 @@
-[player] remoteExec ["ServerModules_Garage_fnc_getPlayerVehicles", 2];
+[player] remoteExecCall ["ServerModules_Garage_fnc_getPlayerVehicles", 2];

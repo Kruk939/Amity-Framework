@@ -8,4 +8,4 @@ if(!_ok) exitWith {};
 private _display = findDisplay 15001;
 if(isNull _display) exitWith {};
 _display setVariable["profile_id", _profile_id];
-[_profile_id, player, "ClientModules_Computer_fnc_computer_check_profile_receive"] remoteExec ["ServerModules_Computer_fnc_getProfile", 2];
+[_profile_id, player, "ClientModules_Computer_fnc_computer_check_profile_receive"] remoteExecCall ["ServerModules_Computer_fnc_getProfile", 2];

@@ -14,6 +14,6 @@ if(!_found) then {
       shops_var_shops pushBack _ret;
 };
 if(!isNull _player && _function != "") exitWith {
-      [_ret] remoteExec [_function, _player];
+      [_ret] remoteExecCall [_function, _player];
 };
 _ret;

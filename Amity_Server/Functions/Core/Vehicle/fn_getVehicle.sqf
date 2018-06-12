@@ -6,6 +6,6 @@ if((count _vehicle) != 0) then {
       _vehicle = _vehicle select 0;
 };
 if(!isNull _player && _function != "") exitWith {
-      _vehicle remoteExec [_function, _player];
+      _vehicle remoteExecCall [_function, _player];
 };
 _vehicle;

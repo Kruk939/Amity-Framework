@@ -8,4 +8,4 @@ if(!_ok) exitWith {};
 private _display = findDisplay 15002;
 if(isNull _display) exitWith {};
 _display setVariable["id", _id];
-[_id, player, "ClientModules_Computer_fnc_computer_check_vehicle_receive"] remoteExec ["ServerModules_Computer_fnc_getVehicle", 2];
+[_id, player, "ClientModules_Computer_fnc_computer_check_vehicle_receive"] remoteExecCall ["ServerModules_Computer_fnc_getVehicle", 2];

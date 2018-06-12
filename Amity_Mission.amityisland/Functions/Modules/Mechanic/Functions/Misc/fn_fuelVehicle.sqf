@@ -18,7 +18,7 @@ private _onFinish = {
       private _fuel = fuel _target;
       _fuel = _fuel + _toRefil;
       if(_fuel > 1) then { _fuel = 1; };
-      [_target, _fuel] remoteExec ["setFuel", 0];
+      [_target, _fuel] remoteExecCall ["setFuel", 0];
       [player, "openrp_canister_fuel"] call CBA_fnc_removeItem;
       [player, "openrp_canister"] call CBA_fnc_addItem;
       [format["You refiled vehicle by %1%2", _toRefil * 100, "%"], true] spawn Client_fnc_domsg;

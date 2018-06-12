@@ -10,6 +10,6 @@ if(_faction_id != -1) then {
 };
 
 if(!isNull _player && _function != "") exitWith {
-      [_arr, _fac] remoteExec [_function, _player];
+      [_arr, _fac] remoteExecCall [_function, _player];
 };
 [_arr, _fac];

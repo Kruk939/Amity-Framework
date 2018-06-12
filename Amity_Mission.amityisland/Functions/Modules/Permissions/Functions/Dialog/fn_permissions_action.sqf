@@ -92,6 +92,6 @@ if(_type == "REVERT") exitWith {
       ["LB"] call ClientModules_Permissions_fnc_permissions_action;
 };
 if(_type == "SAVE") exitWith {
-      [_changed, _faciton_id] remoteExec["ServerModules_Permissions_fnc_update", 2];
+      [_changed, _faciton_id] remoteExecCall["ServerModules_Permissions_fnc_update", 2];
       closeDialog 0;
 };

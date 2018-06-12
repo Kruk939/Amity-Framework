@@ -14,6 +14,6 @@ if(count _arr != 0) then {
       _arr call ClientModules_Taxi_fnc_taxi_fare_update;
       private _units = [_vehicle] call Client_fnc_vehicleCrew;
       if(count _units != 0) then {
-            _arr remoteExec["ClientModules_Taxi_fnc_taxi_fare_update", _units];
+            _arr remoteExecCall["ClientModules_Taxi_fnc_taxi_fare_update", _units];
       };
 };

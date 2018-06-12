@@ -17,7 +17,7 @@ if(_exists) then {
             private _messages = [format["phone_get_messages:%1", _number], 2] call ExternalS_fnc_ExtDBasync;
             _x pushBack _messages;
       } forEach _numbers;
-      [_data, _numbers, _contacts] remoteExec [_function, _player];
+      [_data, _numbers, _contacts] remoteExecCall [_function, _player];
 } else {
       private _background = getNumber(missionConfigFile >> "Phone" >> "Default" >> "background");
       private _frame = getNumber(missionConfigFile >> "Phone" >> "Default" >> "frame");

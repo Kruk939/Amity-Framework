@@ -16,7 +16,7 @@ private _configs = [] call ClientModules_Computer_fnc_getWantedConfigs;
 if(lbSize 2100 != 0) then { lbSetCurSel[2100, 0]; };
 
 if(count _data == 0) then {
-      [_profile_id, player, "ClientModules_Computer_fnc_computer_add_profile_receive"] remoteExec ["ServerModules_Computer_fnc_getPersonProfile", 2];
+      [_profile_id, player, "ClientModules_Computer_fnc_computer_add_profile_receive"] remoteExecCall ["ServerModules_Computer_fnc_getPersonProfile", 2];
 } else {
       [_this, "ClientModules_Computer_fnc_computer_add_profile_open"] call ClientModules_Computer_fnc_addLast;
       _data params["", "", "", "_first_name", "_last_name"];

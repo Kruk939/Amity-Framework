@@ -4,7 +4,7 @@ private _array = [
 		["class",["AllVehicles", 0, ["ACE_MainActions"],true]]
 	],
       [
-		["VEHICLES_VEHICLE_STORE","Store", "", {[_target] remoteExec ["Server_fnc_storeVehicle", 2]},{_objects = nearestObjects [player, ["openrp_vendor_garage","openrp_vendor_PDgarage","openrp_vendor_EMSgarage","openrp_vendor_carshop"], 15]; (count _objects) != 0}],
+		["VEHICLES_VEHICLE_STORE","Store", "", {[_target] remoteExecCall ["Server_fnc_storeVehicle", 2]},{_objects = nearestObjects [player, ["openrp_vendor_garage","openrp_vendor_PDgarage","openrp_vendor_EMSgarage","openrp_vendor_carshop"], 15]; (count _objects) != 0}],
 		["class",["AllVehicles", 0, ["ACE_MainActions", "VEHICLES_VEHICLE"],true]]
 	],
 	[

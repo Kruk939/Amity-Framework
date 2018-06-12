@@ -31,7 +31,7 @@ if(!_locked) exitWith {
                   [getNumber(_config >> "sealUnlocked") / getNumber(_config >> "countMismatch")] call ClientModules_PublicJobs_fnc_addPaycheck;
                   //package compromised
             };
-            [_holder, _shop] remoteExec["ServerModules_Shop_fnc_handleRefil", 2];
+            [_holder, _shop] remoteExecCall["ServerModules_Shop_fnc_handleRefil", 2];
       };
 };
 if(_count == 0) exitWith {
@@ -45,4 +45,4 @@ if(_count == 0) exitWith {
  public_jobs_delivery_var_packages_count = public_jobs_delivery_var_packages_count - 1;
  public_jobs_delivery_var_packages deleteAt (public_jobs_delivery_var_packages find _holder);
  public_jobs_delivery_var_enroute_toShops = false;
-[_holder, _shop, true] remoteExec["ServerModules_Shop_fnc_handleRefil", 2];
+[_holder, _shop, true] remoteExecCall["ServerModules_Shop_fnc_handleRefil", 2];

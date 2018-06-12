@@ -16,13 +16,13 @@ if(typeName _salary != "OBJECT") then {
                   private _bank = _banks select 0;
                   _bank params["", "_account_number", "", ""];
                   [_account_number, "ADD", _toPay] call Server_fnc_handleBank;
-                  [["You have received $%1 from [%2] %3 as a paycheck.", _toPay, _faction_short_name, _faction_full_name], true] remoteExec["Client_fnc_domsg", _player];
+                  [["You have received $%1 from [%2] %3 as a paycheck.", _toPay, _faction_short_name, _faction_full_name], true] remoteExecCall["Client_fnc_domsg", _player];
             } else {
-                  [["You couldn't receive $%1 from [%2] %3 as a paycheck, due to not having any bank account.", _toPay, _faction_short_name, _faction_full_name], true] remoteExec["Client_fnc_domsg", _player];
+                  [["You couldn't receive $%1 from [%2] %3 as a paycheck, due to not having any bank account.", _toPay, _faction_short_name, _faction_full_name], true] remoteExecCall["Client_fnc_domsg", _player];
                   //player doesn't have bank account
             };
       } else {
-            [["[%2] %3 does not have enough money, to transfer your paycheck($%1).", _toPay, _faction_short_name, _faction_full_name], true] remoteExec["Client_fnc_domsg", _player];
+            [["[%2] %3 does not have enough money, to transfer your paycheck($%1).", _toPay, _faction_short_name, _faction_full_name], true] remoteExecCall["Client_fnc_domsg", _player];
             //not enough money to pay employee
       };
 };

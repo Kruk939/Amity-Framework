@@ -18,7 +18,7 @@ if(!isNull _player && _function != "") exitWith {
       if(_id == -1) then {
             ["STR_COMPUTER_QUERY_NOT_FOUND", true] call Client_fnc_domsg;
       } else {
-            [_id] remoteExec[_function, _player];
+            [_id] remoteExecCall[_function, _player];
       };
 };
 _id;

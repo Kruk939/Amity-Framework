@@ -8,5 +8,5 @@ if(isNull _target) then {
 };
 if(_profile_id == -1 || isNull _target) exitWith { false; };
 private _jail = [_target] call ClientModules_Jail_fnc_jail_getNearest;
-[_target, _profile_id, getNumber(_jail >> "id")] remoteExec ["ServerModules_Jail_fnc_openLocker", 2];
+[_target, _profile_id, getNumber(_jail >> "id")] remoteExecCall ["ServerModules_Jail_fnc_openLocker", 2];
 true;

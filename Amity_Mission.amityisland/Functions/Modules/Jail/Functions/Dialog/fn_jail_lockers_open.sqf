@@ -15,7 +15,7 @@ private _display = findDisplay 13002;
 if(isNull _display) exitWith {};
 _display setVariable["target", _target];
 _display setVariable["jail_id", _jail_id];
-[_jail_id, player, "ClientModules_Jail_fnc_jail_lockers_receive"] remoteExec ["ServerModules_Jail_fnc_allLockers", 2];
+[_jail_id, player, "ClientModules_Jail_fnc_jail_lockers_receive"] remoteExecCall ["ServerModules_Jail_fnc_allLockers", 2];
 {
       private _profile_id = _x getVariable["profile_id", -1];
       if(_profile_id != -1) then {

@@ -15,7 +15,7 @@ private _paycheck = {
                   if(_faction_id != -1) then {
                         private _time = getNumber (missionConfigFile >> "Amity" >> "Setup" >> "loopTick");
                         private _last = _time * 10;
-                        [_player, _last] remoteExec ["Server_fnc_factionPayCheck", 2];
+                        [_player, _last] remoteExecCall ["Server_fnc_factionPayCheck", 2];
                   };
             };
       };

@@ -18,8 +18,8 @@ if(_type == "GIVE") exitWith {
       if(time - amity_var_cash_last_action < getNumber(missionConfigFile >> "Amity" >> "Setup" >> "timeLock")) exitWith {};
       amity_var_cash_last_action = time;
       [_amount] call Client_fnc_removeCash;
-      [_amount] remoteExec["Client_fnc_addCash", _target];
+      [_amount] remoteExecCall["Client_fnc_addCash", _target];
       [["STR_LICENSES_GIVE_CASH_GIVEN", _amount, _target getVariable["name", ""]]] call Client_fnc_domsg;
-      [["STR_LICENSES_GIVE_CASH_RECEIVED", _amount, player getVariable["name", ""]]] remoteExec["Client_fnc_domsg", _target];
+      [["STR_LICENSES_GIVE_CASH_RECEIVED", _amount, player getVariable["name", ""]]] remoteExecCall["Client_fnc_domsg", _target];
       closeDialog 0;
 };

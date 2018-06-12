@@ -10,6 +10,6 @@ if(!isNil "ServerModules_FactionVariables_fnc_init") then {
 };
 
 if(!isNull _player && _function != "") exitWith {
-      [_faction, _avialable, _bought] remoteExec[_function, _player];
+      [_faction, _avialable, _bought] remoteExecCall[_function, _player];
 };
 [_faction, _avialable, _bought];

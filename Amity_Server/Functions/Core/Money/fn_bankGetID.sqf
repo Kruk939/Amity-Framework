@@ -5,6 +5,6 @@ if((count _bank) != 0) then {
       _bank = _bank select 0;
 };
 if(_function != "" && !isNull _player) exitWith {
-      _bank remoteExec [_function, _player];
+      _bank remoteExecCall [_function, _player];
 };
 _bank;

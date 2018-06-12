@@ -22,7 +22,7 @@ _holder setVariable["target", _target];
 _holder setVariable["shop", _shop];
 [_holder] call Client_fnc_addAttachable;
 [_holder] call Client_fnc_attachObject;
-[_holder, _shop, false, [getNumber(_config >> "Setup" >> "Random" >> "min"), getNumber(_config >> "Setup" >> "Random" >> "max")]] remoteExec["ServerModules_Shop_fnc_addRandomItemsFromShopToCargo", 2];
+[_holder, _shop, false, [getNumber(_config >> "Setup" >> "Random" >> "min"), getNumber(_config >> "Setup" >> "Random" >> "max")]] remoteExecCall["ServerModules_Shop_fnc_addRandomItemsFromShopToCargo", 2];
 public_jobs_delivery_var_packages_count = public_jobs_delivery_var_packages_count + 1;
 public_jobs_delivery_var_packages pushBack _holder;
 

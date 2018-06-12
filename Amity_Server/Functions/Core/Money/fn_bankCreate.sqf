@@ -25,6 +25,6 @@ while {_exists} do {
 private _query = format["core_bank_insert:%1:%2:%3", _profile_id, _bankaccount, _cash];
 [0, _query] call ExternalS_fnc_ExtDBquery;
 if(!isNull _ret && _function != "") exitWith {
-      _bankaccount remoteExec [_function, _ret];
+      _bankaccount remoteExecCall [_function, _ret];
 };
 _bankaccount;

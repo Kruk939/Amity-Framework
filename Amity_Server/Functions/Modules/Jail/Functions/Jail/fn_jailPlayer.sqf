@@ -14,7 +14,7 @@ if(getNumber(_jail >> "persistant") == 1) then {
       [_profile_id, 1] call ServerModules_Jail_fnc_updateStatus;
 
       private _ret = [_profile_id] call ServerModules_Jail_fnc_getSentences;
-      [_ret] remoteExec["ClientModules_Jail_fnc_jailLoop", _target];
+      [_ret] remoteExecCall["ClientModules_Jail_fnc_jailLoop", _target];
 } else {
-      [[-1, 1, _sentence, _sentence, _security, _reason]] remoteExec["ClientModules_Jail_fnc_jailLoop", _target];
+      [[-1, 1, _sentence, _sentence, _security, _reason]] remoteExecCall["ClientModules_Jail_fnc_jailLoop", _target];
 };

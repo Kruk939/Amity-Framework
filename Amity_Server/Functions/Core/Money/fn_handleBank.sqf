@@ -10,7 +10,7 @@ if(_query != "") then {
       if((count _response) != 0) then {
             private _cash = (_response select 0) select 0;
             if(!isNull _player && _function != "") then {
-                  [_cash] remoteExec [_function, _player];
+                  [_cash] remoteExecCall [_function, _player];
             };
       };
 };

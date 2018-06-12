@@ -12,6 +12,6 @@ if(_faction == -1) then {
 
 };
 if(_function != "" && !isNull _player) exitWith {
-      _garage remoteExec [_function, _player];
+      _garage remoteExecCall [_function, _player];
 };
 _garage;

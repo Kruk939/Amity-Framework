@@ -33,6 +33,6 @@ if(_type == "CREATE") exitWith {
 if(_type == "EXIT") exitWith {
       if(amity_var_profile_choose) then {
             amity_var_profile_choose = false;
-            [player] remoteExec ["Server_fnc_initPlayer", 2];
+            [player] remoteExecCall ["Server_fnc_initPlayer", 2];
       };
 };

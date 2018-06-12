@@ -6,7 +6,7 @@ private _onPlaced = {
       if(isNull _obj) exitWith {};
       switch(typeOf _obj) do {
             case "CG_Spikes_Extended": {
-                  [_obj] remoteExec ["ClientModules_UsableItems_fnc_spikeStripPlaced", 2];
+                  [_obj] remoteExecCall ["ClientModules_UsableItems_fnc_spikeStripPlaced", 2];
             };
       };
 };

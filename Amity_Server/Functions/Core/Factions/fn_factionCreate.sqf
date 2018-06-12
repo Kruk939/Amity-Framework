@@ -35,19 +35,19 @@ if(_ret) then {
                   } foreach _banks;
                   if(!isNull _player) then {
                         if(_ret) then {
-                              ["STR_FACTION_CREATE_SUCCESSFULL", true] remoteExec["Client_fnc_domsg", _player];
+                              ["STR_FACTION_CREATE_SUCCESSFULL", true] remoteExecCall["Client_fnc_domsg", _player];
                         } else {
-                              ["STR_FACTION_CREATE_NOT_ENOUGH_MONEY", true] remoteExec["Client_fnc_domsg", _player];
+                              ["STR_FACTION_CREATE_NOT_ENOUGH_MONEY", true] remoteExecCall["Client_fnc_domsg", _player];
                         };
                   };
             } else {
                   if(!isNull _player) then {
-                        ["STR_FACTION_CREATE_EXISTS", true] remoteExec["Client_fnc_domsg", _player];
+                        ["STR_FACTION_CREATE_EXISTS", true] remoteExecCall["Client_fnc_domsg", _player];
                   };
             };
       };
 };
 if(!isNull _player && _function != "") exitWith {
-      _ret remoteExec[_function, _player];
+      _ret remoteExecCall[_function, _player];
 };
 _ret;

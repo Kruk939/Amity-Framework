@@ -58,7 +58,7 @@ if(_type == "WITHDRAW") exitWith {
             ctrlEnable[1601, false];
             ctrlEnable[1602, false];
             [_account_number,"SUB",_amount] remoteExecCall ["Server_fnc_handleBank", 2];
-            [player, "ADD", _amount] remoteExec ["Server_fnc_handleCash", 2];
+            [player, "ADD", _amount] remoteExecCall ["Server_fnc_handleCash", 2];
             ctrlSetText[1000, format["$%1",_player_cash + _amount]];
             ctrlSetText[1001, format["$%1", _cash - _amount]];
             _account set[3, _cash - _amount];
@@ -87,7 +87,7 @@ if(_type == "DEPOSIT") exitWith {
             ctrlEnable[1602, false];
             closeDialog 0;
             [_account_number,"ADD",_amount] remoteExecCall ["Server_fnc_handleBank", 2];
-            [player, "SUB", _amount] remoteExec ["Server_fnc_handleCash", 2];
+            [player, "SUB", _amount] remoteExecCall ["Server_fnc_handleCash", 2];
             ctrlSetText[1000, format["$%1",_player_cash - _amount]];
             ctrlSetText[1001, format["$%1", _cash + _amount]];
             _account set[3, _cash + _amount];

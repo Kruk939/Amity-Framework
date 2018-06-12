@@ -20,8 +20,8 @@ private _paid = false;
 if(_paid) then {
       if(_preset == -1) then { _preset = ""; };
       [0, format["ticket_insert_new:%1:%2:%3:%4:%5:%6", _profile_id, _officer_id, _amount, _points, _reason, _preset]] call ExternalS_fnc_ExtDBquery;
-      [["STR_TICKET_ACTION_PAID", _player getVariable["name", ""]], true] remoteExec["Client_fnc_domsg", _officer];
-      ["STR_TICKET_ACTION_PAID_P", true] remoteExec["Client_fnc_domsg", _player];
+      [["STR_TICKET_ACTION_PAID", _player getVariable["name", ""]], true] remoteExecCall["Client_fnc_domsg", _officer];
+      ["STR_TICKET_ACTION_PAID_P", true] remoteExecCall["Client_fnc_domsg", _player];
       private _left = _amount;
       private _split = getArray(missionConfigFile >> "Ticket" >> "Config" >> "Money" >> "split");
       {
@@ -35,6 +35,6 @@ if(_paid) then {
             [getNumber(missionConfigFile >> "Ticket" >> "Config" >> "Money" >> "defaultFaction"), "ADD", _left] call Server_fnc_factionBankTransfer;
       };
 } else {
-      [["STR_TICKET_ACTION_NOT_ENOUGH", _player getVariable["name", ""]], true] remoteExec["Client_fnc_domsg", _officer];
-      ["STR_TICKET_ACTION_NOT_ENOUGH_P", true] remoteExec["Client_fnc_domsg", _player];
+      [["STR_TICKET_ACTION_NOT_ENOUGH", _player getVariable["name", ""]], true] remoteExecCall["Client_fnc_domsg", _officer];
+      ["STR_TICKET_ACTION_NOT_ENOUGH_P", true] remoteExecCall["Client_fnc_domsg", _player];
 };

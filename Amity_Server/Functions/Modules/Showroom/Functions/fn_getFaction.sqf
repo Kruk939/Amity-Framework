@@ -19,6 +19,6 @@ if(!_found) then {
 };
 
 if(!isNull _player && _function != "") exitWith {
-      [_ret] remoteExec [_function, _player];
+      [_ret] remoteExecCall [_function, _player];
 };
 _ret;

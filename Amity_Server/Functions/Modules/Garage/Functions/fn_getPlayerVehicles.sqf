@@ -15,7 +15,7 @@ private _ret = [];
       };
 } forEach amity_var_vehicles;
 diag_log format["Keys for player(%1): %2", getPlayerUID _player, _ret];
-[_ret] remoteExec ["ClientModules_Vehicles_fnc_receive", _player];
+[_ret] remoteExecCall ["ClientModules_Vehicles_fnc_receive", _player];
 
 private _count = (count _toRemove) - 1;
 for [{}, {_count >= 0}, {_count = _count - 1}] do {

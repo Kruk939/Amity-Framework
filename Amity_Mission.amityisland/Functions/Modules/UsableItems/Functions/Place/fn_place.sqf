@@ -15,6 +15,6 @@ _obj setVectorUp surfaceNormal getpos _obj;
 
 if(isNull(_obj getVariable["owner", objNull])) then {
       _obj setVariable["owner", player, true];
-      [_obj] remoteExec ["ClientModules_UsableItems_fnc_addAction", -2];
+      [_obj] remoteExecCall ["ClientModules_UsableItems_fnc_addAction", -2];
 };
 ["onUsableItemPlaced", [_obj]] call Client_fnc_eventCall;

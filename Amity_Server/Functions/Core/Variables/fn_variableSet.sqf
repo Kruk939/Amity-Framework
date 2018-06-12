@@ -29,7 +29,7 @@ private _select = switch(_type) do {
                               _object setVariable[_name, _value];
                         } else {
                               if(!isNull _player) then {
-                                    [_object, [_name, _value]] remoteExec["setVariable", _player];
+                                    [_object, [_name, _value]] remoteExecCall["setVariable", _player];
                               };
                         };
                   };

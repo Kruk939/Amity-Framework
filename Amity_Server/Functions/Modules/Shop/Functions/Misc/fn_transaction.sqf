@@ -66,5 +66,5 @@ if(_toPay <= _cash) then {
       _add = [];
       _remove = [];
 };
-[_add, _remove, _message] remoteExec [_function, _player];
+[_add, _remove, _message] remoteExecCall [_function, _player];
 _player setVariable["shop_var_inprogress", false, true];

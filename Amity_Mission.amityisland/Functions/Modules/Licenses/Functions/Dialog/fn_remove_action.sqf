@@ -30,7 +30,7 @@ if(_type == "REVOKE") exitWith {
       {
             _x params["_i", "_license_id", "", ""];
             if(_id == _i) exitWith {
-                  [_target getVariable["profile_id"], _license_id] remoteExec ["ServerModules_Licenses_fnc_revokeLicense", 2];
+                  [_target getVariable["profile_id"], _license_id] remoteExecCall ["ServerModules_Licenses_fnc_revokeLicense", 2];
                   closeDialog 0;
             };
       } forEach _licenses;

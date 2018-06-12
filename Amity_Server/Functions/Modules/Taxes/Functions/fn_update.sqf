@@ -11,5 +11,5 @@ publicVariable "taxes_var_all";
 
 if(!isNull _player) then {
       private _name = _player getVariable["name", ""];
-      [["%1 has changed tax(%2) from %3 to %4", _name, (_tax select 2), _previous, _percentage], true] remoteExec["Client_fnc_domsg", -2];
+      [["%1 has changed tax(%2) from %3 to %4", _name, (_tax select 2), _previous, _percentage], true] remoteExecCall["Client_fnc_domsg", -2];
 };

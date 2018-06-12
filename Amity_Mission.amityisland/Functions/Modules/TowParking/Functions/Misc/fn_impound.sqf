@@ -15,7 +15,7 @@ if(_target IN amity_var_vehicles) then {
                   _target setVariable["amity_remove", true, true];
                   ["STR_TOW_PARKING_SET_FOR_IMPOUND", true] call Client_fnc_domsg;
             } else {
-                  [_target] remoteExec ["Server_fnc_storeVehicle", 2];
+                  [_target] remoteExecCall ["Server_fnc_storeVehicle", 2];
                   ["STR_TOW_PARKING_IMPOUNDED", true] call Client_fnc_domsg;
             };
             _ret = true;

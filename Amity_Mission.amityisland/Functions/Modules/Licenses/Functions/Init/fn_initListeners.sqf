@@ -4,7 +4,7 @@
 private _onLoad = {
       private _faction_id = player getVariable["faction_id", -1];
       if(_faction_id == -1) exitWith {};
-      [_faction_id, player, "ClientModules_Licenses_fnc_receiveFaction"] remoteExec["ServerModules_Licenses_fnc_loadFaction", 2];
+      [_faction_id, player, "ClientModules_Licenses_fnc_receiveFaction"] remoteExecCall["ServerModules_Licenses_fnc_loadFaction", 2];
 };
 private _unLoad = {
       licenses_var_faction = [];

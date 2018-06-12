@@ -12,7 +12,7 @@ if(isNull _display) exitWith {};
       
 _display setVariable["faction_id", _faction_id];
 _display setVariable["changed", []];
-[_faction_id, player, "ClientModules_Permissions_fnc_permissions_receive"] remoteExec ["Server_fnc_factionGetMembers", 2];
+[_faction_id, player, "ClientModules_Permissions_fnc_permissions_receive"] remoteExecCall ["Server_fnc_factionGetMembers", 2];
 {
       _x params["_i", "_var", ""];
       private _index = -1;

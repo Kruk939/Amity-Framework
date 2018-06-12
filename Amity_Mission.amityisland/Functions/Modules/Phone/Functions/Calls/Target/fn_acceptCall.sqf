@@ -3,13 +3,13 @@ private _group = player getVariable["phone_call_group", []];
 if(player IN _group) exitWith {};
 if(count (player call TFAR_fnc_radiosList) isEqualTo 0) exitWith {
       if((count _group) == 1) then {
-            ["onReceiverReject", [player, player getVariable["phone_number", ""]]] remoteExec ["Client_fnc_eventCall", phone_var_caller];
+            ["onReceiverReject", [player, player getVariable["phone_number", ""]]] remoteExecCall ["Client_fnc_eventCall", phone_var_caller];
       };
       player setVariable["phone_calling", false];
       phone_var_caller = objNull;
 };
 private _group = player getVariable["phone_call_group", []];
-["onJoin", [player, player getVariable["phone_number", ""]]] remoteExec ["Client_fnc_eventCall", _group];
+["onJoin", [player, player getVariable["phone_number", ""]]] remoteExecCall ["Client_fnc_eventCall", _group];
 _group pushBack player;
 player setVariable["phone_call_group", _group];
 player setVariable["phone_calling", false];

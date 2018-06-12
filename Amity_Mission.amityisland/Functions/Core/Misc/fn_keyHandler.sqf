@@ -44,7 +44,7 @@ switch (_keyCode) do {
 				[_veh,0] remoteExecCall ["client_fnc_lock",_veh];
 			};
                   //play sound
-                  ["unlocked", true] remoteExec ["Client_fnc_domsg", player];
+                  ["unlocked", true] remoteExecCall ["Client_fnc_domsg", player];
             } else {
                   if(local _veh) then {
                         _veh lock 2;
@@ -52,7 +52,7 @@ switch (_keyCode) do {
                         [_veh,2] remoteExecCall ["client_fnc_lock",_veh];
                   };
                   //play sound
-                  ["Locked", true] remoteExec ["Client_fnc_domsg", player];
+                  ["Locked", true] remoteExecCall ["Client_fnc_domsg", player];
             };
       };
       };

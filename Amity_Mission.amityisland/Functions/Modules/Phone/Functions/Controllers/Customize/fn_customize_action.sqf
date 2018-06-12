@@ -70,7 +70,7 @@ switch(_type) do {
                   phone_var_data set[2, _ringtone];
                   phone_var_data set[3, _frame];
                   phone_var_data set[4, _background];
-                  [_phone_id, _ringtone, _frame, _background] remoteExec ["ServerModules_Phone_fnc_savePhone", 2];
+                  [_phone_id, _ringtone, _frame, _background] remoteExecCall ["ServerModules_Phone_fnc_savePhone", 2];
             } else {
                   hint format["You cannot change it, because you are not subscriber. Select different customizations."];
             };

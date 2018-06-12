@@ -16,13 +16,13 @@ if(_exists) then {
       private _query = format["phone_insert_message:%1:%2:%3", _message, _sender, _receiver];
       private _m = ([_query, 2] call ExternalS_fnc_ExtDBasync) select 0;
       if(!isNull _ret) then {
-            ["onMessageReceive", _m] remoteExec ['Client_fnc_eventCall', _ret];
+            ["onMessageReceive", _m] remoteExecCall ['Client_fnc_eventCall', _ret];
       };
       if(!isNull _player) then {
-            ["onMessageSend", _m] remoteExec ['Client_fnc_eventCall', _player];
+            ["onMessageSend", _m] remoteExecCall ['Client_fnc_eventCall', _player];
       };
 } else {
       if(!isNull _player) then {
-            ["onMessageFail", [-1, _message, _sender, _receiver]] remoteExec ['Client_fnc_eventCall', _player];
+            ["onMessageFail", [-1, _message, _sender, _receiver]] remoteExecCall ['Client_fnc_eventCall', _player];
       };
 };

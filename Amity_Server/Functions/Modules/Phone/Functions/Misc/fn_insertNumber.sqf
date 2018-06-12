@@ -20,6 +20,6 @@ while{_exists} do {
 };
 private _ret = [format["phone_insert_number:%1:%2:%3:%4", _profile_id, _number, _offer_id, _balance], 2] call ExternalS_fnc_ExtDBasync;
 if(!isNull _player && _function != "") exitWith {
-      [_ret] remoteExec[_function, _player];
+      [_ret] remoteExecCall[_function, _player];
 };
 _ret;

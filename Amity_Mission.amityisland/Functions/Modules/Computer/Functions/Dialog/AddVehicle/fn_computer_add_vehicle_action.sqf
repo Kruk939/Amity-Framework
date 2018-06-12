@@ -15,13 +15,13 @@ if(_type == "ADD") exitWith {
       private _index = lbCurSel 2100;
       if(_index == -1) exitWith {};
       private _wID = parseNumber(lbData[2100, _index]);
-      [[ctrlText 1400, player getVariable["profile_id", -1], _wID, ctrlText 1401], true] remoteExec["ServerModules_Computer_fnc_addCase", 2];
+      [[ctrlText 1400, player getVariable["profile_id", -1], _wID, ctrlText 1401], true] remoteExecCall["ServerModules_Computer_fnc_addCase", 2];
       [] call ClientModules_Computer_fnc_openLast;
 };
 if(_type == "ADD_CLOSE") exitWith {
       private _index = lbCurSel 2100;
       if(_index == -1) exitWith {};
       private _wID = parseNumber(lbData[2100, _index]);
-      [[ctrlText 1400, player getVariable["profile_id", -1], _wID, ctrlText 1401, player getVariable["profile_id", -1]], true] remoteExec["ServerModules_Computer_fnc_addCase", 2];
+      [[ctrlText 1400, player getVariable["profile_id", -1], _wID, ctrlText 1401, player getVariable["profile_id", -1]], true] remoteExecCall["ServerModules_Computer_fnc_addCase", 2];
       [] call ClientModules_Computer_fnc_openLast;
 };

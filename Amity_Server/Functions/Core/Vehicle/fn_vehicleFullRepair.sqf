@@ -21,10 +21,10 @@ if(!isNull _player) then {
 if(_repair) then {
       [format["core_garage_repair:%1", _id], 2] call ExternalS_fnc_ExtDBasync;
       if(!isNull _player) then {
-            [["You have repaired your car for $%1", _price], true] remoteExec["client_fnc_domsg", _player];
+            [["You have repaired your car for $%1", _price], true] remoteExecCall["client_fnc_domsg", _player];
       };
 } else {
       if(!isNull _player) then {
-            [["You don't have enough money, you neeed $%1 on one of yours bank accounts", _price], true] remoteExec["client_fnc_domsg", _player];
+            [["You don't have enough money, you neeed $%1 on one of yours bank accounts", _price], true] remoteExecCall["client_fnc_domsg", _player];
       };
 };

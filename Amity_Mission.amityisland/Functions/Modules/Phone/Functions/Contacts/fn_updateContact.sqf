@@ -9,6 +9,6 @@ if(_id == -1 || _name == "" || _number == "") exitWith { _found; };
       };
 } forEach phone_var_contacts;
 if(_found) then {
-      [_id, _name, _number] remoteExec ["ServerModules_Phone_fnc_updateContact", 2];
+      [_id, _name, _number] remoteExecCall ["ServerModules_Phone_fnc_updateContact", 2];
 };
 _found;

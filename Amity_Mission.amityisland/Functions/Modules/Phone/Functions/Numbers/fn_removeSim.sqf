@@ -11,5 +11,5 @@ private _index = -1;
 if(_index != -1) then {
       phone_var_numbers deleteAt _index;
 };
-[_id] remoteExec ["ServerModules_Phone_fnc_removeSim", 2];
+[_id] remoteExecCall ["ServerModules_Phone_fnc_removeSim", 2];
 _found;

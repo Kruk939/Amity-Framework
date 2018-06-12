@@ -5,6 +5,6 @@ if((count _faction) != 0) then {
       _faction = _faction select 0;
 };
 if(!isNull _player && _function != "") exitWith {
-      _faction remoteExec [_function, _player];
+      _faction remoteExecCall [_function, _player];
 };
 _faction;

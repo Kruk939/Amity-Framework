@@ -12,6 +12,6 @@ private _categories = [format["shop_get_categories:%1", _id], 2] call ExternalS_
 _shop pushBack _categories;
 
 if(!isNull _player && _function != "") exitWith {
-      [_shop] remoteExec [_function, _player];
+      [_shop] remoteExecCall [_function, _player];
 };
 _shop;

@@ -27,8 +27,8 @@ private _array = [_receiver, _callGroup, _player, _freq, _target];
 
 if(isNull _target) then {
       //target not found
-      ["onCallPlayerFoundFailed", _array] remoteExec ['Client_fnc_eventCall', _player];
+      ["onCallPlayerFoundFailed", _array] remoteExecCall ['Client_fnc_eventCall', _player];
 } else {
-      ["onCalling", _array] remoteExec ['Client_fnc_eventCall', _target];
-      ["onCallPlayerFound", _array] remoteExec ['Client_fnc_eventCall', _player];
+      ["onCalling", _array] remoteExecCall ['Client_fnc_eventCall', _target];
+      ["onCallPlayerFound", _array] remoteExecCall ['Client_fnc_eventCall', _player];
 };

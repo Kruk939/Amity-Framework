@@ -2,7 +2,7 @@ player setVariable["phone_in_call", false];
 private _group = player getVariable["phone_call_group", []];
 _group deleteAt (_group find player);
 if(count _group != 0) then {
-      ["onDisconnect", [player, player getVariable["phone_number", ""]]] remoteExec ["Client_fnc_eventCall", _group];
+      ["onDisconnect", [player, player getVariable["phone_number", ""]]] remoteExecCall ["Client_fnc_eventCall", _group];
 };
 player setVariable["phone_call_group", []];
 player setVariable["phone_calling", false];

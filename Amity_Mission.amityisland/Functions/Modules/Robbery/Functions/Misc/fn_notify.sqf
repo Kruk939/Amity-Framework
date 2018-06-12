@@ -18,5 +18,5 @@ private _notify = [];
       };
 } forEach _factions;
 if(count _notify != 0) then {
-      [_pos, _type] remoteExec["ClientModules_Robbery_fnc_notifyPlayer", _notify];
+      [_pos, _type] remoteExecCall["ClientModules_Robbery_fnc_notifyPlayer", _notify];
 };

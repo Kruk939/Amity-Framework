@@ -15,4 +15,4 @@ if(!_ok) exitWith {};
 private _display = findDisplay 1032;
 if(isNull _display) exitWith {};
 _display setVariable ["faction_id", _faction_id];
-[_faction_id, player, "Client_fnc_faction_members_receive"] remoteExec ["Server_fnc_factionGetMembers", 2];
+[_faction_id, player, "Client_fnc_faction_members_receive"] remoteExecCall ["Server_fnc_factionGetMembers", 2];

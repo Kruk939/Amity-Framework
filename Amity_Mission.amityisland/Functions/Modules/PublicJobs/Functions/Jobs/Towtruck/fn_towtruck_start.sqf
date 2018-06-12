@@ -1,4 +1,4 @@
-[player] remoteExec["ServerModules_TowParking_addWorker", 2];
+[player] remoteExecCall["ServerModules_TowParking_addWorker", 2];
 [] spawn {
       while{public_jobs_var_running} do {
             public_jobs_towtruck_var_enroute = false;

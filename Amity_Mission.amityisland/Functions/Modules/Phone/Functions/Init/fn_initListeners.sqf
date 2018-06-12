@@ -93,7 +93,7 @@ private _onSave = {
       private _number = player getVariable["phone_active_number", []];
       if(count _number != 0) then {
             _number params["_id", "", "", "_balance", ""];
-            [_id, _balance] remoteExec ["ServerModules_Phone_fnc_updateBalance", 2];
+            [_id, _balance] remoteExecCall ["ServerModules_Phone_fnc_updateBalance", 2];
       };
 };
 ["onSave", _onSave] call Client_fnc_eventAdd;

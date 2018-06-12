@@ -62,7 +62,7 @@ if(_type == "SAVE") exitWith {
             private _id = _garage select 0;
             private _access = call _fnc_access;
             private _owner = parseNumber(lbData[2100, lbCurSel 2100]);
-            [_id, _owner, _access] remoteExec ['Server_fnc_factionSaveVehicle', 2];
+            [_id, _owner, _access] remoteExecCall ['Server_fnc_factionSaveVehicle', 2];
             _garage set[18, _access];
             if(_owner == -1) then {
                   _owner = objNull;

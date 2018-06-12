@@ -18,7 +18,7 @@ private _select = switch(_type) do {
                               _object setVariable[_name, nil];
                         } else {
                               if(!isNull _player) then {
-                                    [_object, [_name, nil]] remoteExec["setVariable", _player];
+                                    [_object, [_name, nil]] remoteExecCall["setVariable", _player];
                               };
                         };
                   };

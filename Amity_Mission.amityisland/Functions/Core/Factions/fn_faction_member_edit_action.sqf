@@ -50,12 +50,12 @@ if(_type == "EDIT") exitWith {
             _salary = ""; //ExtDB3 changes "" to NULL in request
       };
       private _id = _member select 0;
-      [_id, _access, _salary, _desc] remoteExec ["Server_fnc_memberUpdate", 2];
+      [_id, _access, _salary, _desc] remoteExecCall ["Server_fnc_memberUpdate", 2];
       [(_display getVariable["faction_id", -1])] call Client_fnc_faction_members_open;
 };
 if(_type == "REMOVE") exitWith {
       private _id = _member select 0;
-      [_id] remoteExec ["Server_fnc_factionRemoveMember", 2];
+      [_id] remoteExecCall ["Server_fnc_factionRemoveMember", 2];
       [(_display getVariable["faction_id", -1])] call Client_fnc_faction_members_open;
 };
 if(_type == "EXIT") exitWith {

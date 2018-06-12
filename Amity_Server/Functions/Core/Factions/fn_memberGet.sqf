@@ -5,6 +5,6 @@ if((count _member) != 0) then {
       _member = _member select 0;
 };
 if(!isNull _player && _function != "") exitWith {
-      _member remoteExec [_function, _player];
+      _member remoteExecCall [_function, _player];
 };
 _member;

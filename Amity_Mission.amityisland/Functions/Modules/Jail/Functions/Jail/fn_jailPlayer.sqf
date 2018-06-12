@@ -35,5 +35,5 @@ if(count _securities != 0 && !(_security IN _securities)) exitWith {
 };
 
 
-[_target, getNumber(_jail >> "id"), player getVariable["profile_id", -1], _sentence, _security, _reason] remoteExec["ServerModules_Jail_fnc_jailPlayer", 2];
+[_target, getNumber(_jail >> "id"), player getVariable["profile_id", -1], _sentence, _security, _reason] remoteExecCall["ServerModules_Jail_fnc_jailPlayer", 2];
 _good;

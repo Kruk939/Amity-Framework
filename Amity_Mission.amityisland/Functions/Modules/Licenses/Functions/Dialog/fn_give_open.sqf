@@ -20,7 +20,7 @@ if(isNull _display) exitWith { closeDialog 0; };
             lbSetData[2100, _index, str(_x select 0)];
       };
 } forEach licenses_var_all;
-[player, "ClientModules_Licenses_fnc_give_receive"] remoteExec["ClientModules_Licenses_fnc_getLicenses", _target];
+[player, "ClientModules_Licenses_fnc_give_receive"] remoteExecCall["ClientModules_Licenses_fnc_getLicenses", _target];
 
 //setting varaibles
 _display setVariable["target", _target];

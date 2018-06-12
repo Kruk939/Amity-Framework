@@ -32,7 +32,7 @@ if(_can) then {
             [_vehicle] call Client_fnc_attachVehicle;
             _vehicle setOwner 2;
             if(!isNil "ClientModules_Mechanic_fnc_addActionsToCar") then {
-                  [_vehicle] remoteExec["ClientModules_Mechanic_fnc_addActionsToCar", -2];
+                  [_vehicle] remoteExecCall["ClientModules_Mechanic_fnc_addActionsToCar", -2];
             };
             private _variables = getArray(_config >> "variables");
             {

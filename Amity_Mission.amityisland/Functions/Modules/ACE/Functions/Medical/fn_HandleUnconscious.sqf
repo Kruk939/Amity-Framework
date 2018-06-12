@@ -16,7 +16,7 @@ if(_state) then {
                   if(_overAll > 0.5 || player getVariable ["ace_medical_inCardiacArrest",false]) exitWith {
                         uiSleep (getNumber(missionConfigFile >> "Medical" >> "Config" >> "requestMedicDelay"));
                         if(medical_deadPlayer) then {
-                              ["onMedicalRequest",[player]] remoteExec["Client_fnc_eventCall", -2];
+                              ["onMedicalRequest",[player]] remoteExecCall["Client_fnc_eventCall", -2];
                               [true] spawn ClientModules_Ace_fnc_update;
                         };
                   };
@@ -27,4 +27,4 @@ if(_state) then {
       player setVariable["tf_voiceVolume", 1, true];
       player setVariable["Unconscious_start", nil];
 };
-[player, _state] remoteExec["ServerModules_ACE_fnc_setDead", 2];
+[player, _state] remoteExecCall["ServerModules_ACE_fnc_setDead", 2];

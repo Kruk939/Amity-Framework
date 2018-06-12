@@ -40,7 +40,7 @@ if(_type == "apply") exitWith {
             mechanic_var_previous_texture = getText(configfile >> "CfgIvoryTextures" >> _texture >> "texture");
             mechanic_var_previous_material = getText(configfile >> "CfgIvoryMaterials" >> _material >> "material");
             [player, getText(missionConfigFile >> "Mechanic" >> "PaintJob" >> "paintCan")] call CBA_fnc_removeItem;
-            [mechanic_var_selected_car, _texture, _material] remoteExec ["ServerModules_Garage_fnc_setColor", 2];
+            [mechanic_var_selected_car, _texture, _material] remoteExecCall ["ServerModules_Garage_fnc_setColor", 2];
             ["You have painted a vehicle", true] spawn Client_fnc_domsg;
             closeDialog 0;
       };

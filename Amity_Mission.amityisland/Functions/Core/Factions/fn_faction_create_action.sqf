@@ -28,7 +28,7 @@ if(_type == "CREATE") exitWith {
       _data params["", "_type", ""];
       private _short = [ctrlText 1400] call _fnc;
       private _long = [ctrlText 1401] call _fnc;
-      [[_type, _short, _long], player, "Client_fnc_faction_create_action"] remoteExec["Server_fnc_factionCreate", 2];
+      [[_type, _short, _long], player, "Client_fnc_faction_create_action"] remoteExecCall["Server_fnc_factionCreate", 2];
       ctrlEnable[1601, false];
 };
 if(_type == "EXISTS") exitWith {

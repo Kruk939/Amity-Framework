@@ -16,7 +16,7 @@ if(_bank > 0) then {
       [_bankaccount, "ADD", _bank] call Server_fnc_handleBank;
       private _player = [_profile_id] call Client_fnc_getPlayerByProfile;
       if(!isNull _player) then {
-            [["You have been transfered $%1 on your account(%2) due to company removal", _bank, _bankaccount], true] remoteExec ["Client_fnc_domsg", _player];
+            [["You have been transfered $%1 on your account(%2) due to company removal", _bank, _bankaccount], true] remoteExecCall ["Client_fnc_domsg", _player];
       };
 } else {
       if(_bank < 0) then {

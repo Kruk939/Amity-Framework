@@ -6,4 +6,4 @@ if(!_ok) exitWith {};
 private _display = findDisplay 2000;
 _display setVariable["type", _type];
 if(isNull _display) exitWith {};
-[player getVariable["faction_id", -1], _type, player, "ClientModules_Showroom_fnc_receive"] remoteExec ["ServerModules_Showroom_fnc_getVehicles", 2];
+[player getVariable["faction_id", -1], _type, player, "ClientModules_Showroom_fnc_receive"] remoteExecCall ["ServerModules_Showroom_fnc_getVehicles", 2];

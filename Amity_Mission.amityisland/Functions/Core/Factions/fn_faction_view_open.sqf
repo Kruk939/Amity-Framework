@@ -11,4 +11,4 @@ private _ok = createDialog _dialog;
 if(!_ok) exitWith {};
 private _display = findDisplay 1034;
 _display setVariable ["faction_id", _faction_id];
-[_faction_id, player, "Client_fnc_faction_view_receive"] remoteExec ["Server_fnc_factionViewData", 2];
+[_faction_id, player, "Client_fnc_faction_view_receive"] remoteExecCall ["Server_fnc_factionViewData", 2];

@@ -6,4 +6,4 @@ if(!_ok) exitWith {};
 private _display = findDisplay 9900;
 if(isNull _display) exitWith { closeDialog 0; };
 _display setVariable["target", _target];
-[_id, player, "ClientModules_Shop_fnc_receive"] remoteExec ["ServerModules_Shop_fnc_getShop", 2];
+[_id, player, "ClientModules_Shop_fnc_receive"] remoteExecCall ["ServerModules_Shop_fnc_getShop", 2];

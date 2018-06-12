@@ -8,6 +8,6 @@ private _ret = ([_query, 2] call ExternalS_fnc_ExtDBasync) select 0;
 
 private _player = [_profile_id] call Client_fnc_getPlayerByProfile;
 if(!isNull _player) then {
-      ["onLicenseGive", [_ret]] remoteExec ["Client_fnc_eventCall", _player];
+      ["onLicenseGive", [_ret]] remoteExecCall ["Client_fnc_eventCall", _player];
 };
 _ret;

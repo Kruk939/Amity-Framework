@@ -8,5 +8,5 @@ if(count _data == 0) exitWith {};
 
 if(_faction_id != -1) then {
       private _members = [_faction_id] call Client_fnc_factionGetActivePlayers;
-      ["onFactionPermissionsChanged", [_data]] remoteExec["Client_fnc_eventCall", _members];
+      ["onFactionPermissionsChanged", [_data]] remoteExecCall["Client_fnc_eventCall", _members];
 };
