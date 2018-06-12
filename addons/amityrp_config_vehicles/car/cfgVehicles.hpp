@@ -1,4 +1,5 @@
 #include "Ambulance\cfgVehicles.hpp"
+#include "Bearcat\cfgVehicles.hpp"
 #include "CrownVictoria\cfgVehicles.hpp"
 #include "DodgeCharger\cfgVehicles.hpp"
 #include "FordExplorer\cfgVehicles.hpp"

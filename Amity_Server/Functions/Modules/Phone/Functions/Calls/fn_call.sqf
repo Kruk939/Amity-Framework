@@ -11,7 +11,14 @@ if(isNull _target) then {
                               _ret pushBack _x;
                         };
                   } forEach allPlayers;
-                  _target = _ret call BIS_fnc_selectRandom;
+                  private _distance = 999999999;
+                  {
+                        private _dst = _receiver distance _x;
+                        if(_dst < _distance) then {
+                              _target = _x;
+                              _distance = _dst;
+                        };
+                  } forEach _ret;
             };
       } forEach phone_var_faction_numbers;
 

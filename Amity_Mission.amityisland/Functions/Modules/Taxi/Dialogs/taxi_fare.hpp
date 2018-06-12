@@ -7,17 +7,17 @@ class taxi_fare {
       class controls {
             class FareGroup: RscControlsGroup {
             	idc = 2300;
-            	x = 11.5 * GUI_GRID_W + GUI_GRID_X;
-            	y = -10 * GUI_GRID_H + GUI_GRID_Y;
-            	w = 17 * GUI_GRID_W;
+            	x = ((safezoneW / 2) - 0.15) + safezoneX;
+            	y = 0.005 * safezoneH + safezoneY;
+            	w = 0.3 * safezoneW;
             	h = 6 * GUI_GRID_H;
             	class Controls {
                         class text_driver: RscText {
                         	idc = 1000;
                         	text = "John raven"; //--- ToDo: Localize;
-                        	x = 9 * GUI_GRID_W + GUI_GRID_X;
+                        	x = 9.25 * GUI_GRID_W + GUI_GRID_X;
                         	y = 1 * GUI_GRID_H + GUI_GRID_Y;
-                        	w = 8 * GUI_GRID_W;
+                        	w = 7.75 * GUI_GRID_W;
                         	h = 1 * GUI_GRID_H;
                         	colorBackground[] = {0,0,0,0.3};
                         };
@@ -26,7 +26,7 @@ class taxi_fare {
                         	text = "1/km"; //--- ToDo: Localize;
                         	x = 5.5 * GUI_GRID_W + GUI_GRID_X;
                         	y = 3 * GUI_GRID_H + GUI_GRID_Y;
-                        	w = 3.5 * GUI_GRID_W;
+                        	w = 3.75 * GUI_GRID_W;
                         	h = 1 * GUI_GRID_H;
                         	colorBackground[] = {0,0,0,0.3};
                         };
@@ -35,7 +35,7 @@ class taxi_fare {
                         	text = "1/m"; //--- ToDo: Localize;
                         	x = 5.5 * GUI_GRID_W + GUI_GRID_X;
                         	y = 4 * GUI_GRID_H + GUI_GRID_Y;
-                        	w = 3.5 * GUI_GRID_W;
+                        	w = 3.75 * GUI_GRID_W;
                         	h = 1 * GUI_GRID_H;
                         	colorBackground[] = {0,0,0,0.3};
                         };
@@ -44,7 +44,7 @@ class taxi_fare {
                         	text = "12.0 km"; //--- ToDo: Localize;
                         	x = 9.5 * GUI_GRID_W + GUI_GRID_X;
                         	y = 3 * GUI_GRID_H + GUI_GRID_Y;
-                        	w = 3.5 * GUI_GRID_W;
+                        	w = 3.75 * GUI_GRID_W;
                         	h = 1 * GUI_GRID_H;
                         	colorBackground[] = {0,0,0,0.3};
                         };
@@ -62,7 +62,7 @@ class taxi_fare {
                         	text = "12.0 km"; //--- ToDo: Localize;
                         	x = 9.5 * GUI_GRID_W + GUI_GRID_X;
                         	y = 4 * GUI_GRID_H + GUI_GRID_Y;
-                        	w = 3.5 * GUI_GRID_W;
+                        	w = 3.75 * GUI_GRID_W;
                         	h = 1 * GUI_GRID_H;
                         	colorBackground[] = {0,0,0,0.3};
                         };
@@ -89,7 +89,7 @@ class taxi_fare {
                         	text = "Minutes"; //--- ToDo: Localize;
                         	x = 0 * GUI_GRID_W + GUI_GRID_X;
                         	y = 4 * GUI_GRID_H + GUI_GRID_Y;
-                        	w = 5 * GUI_GRID_W;
+                        	w = 5.25 * GUI_GRID_W;
                         	h = 1 * GUI_GRID_H;
                         	colorBackground[] = {0,0,0,0.5};
                         };
@@ -107,7 +107,7 @@ class taxi_fare {
                         	text = "Driver"; //--- ToDo: Localize;
                         	x = 0 * GUI_GRID_W + GUI_GRID_X;
                         	y = 1 * GUI_GRID_H + GUI_GRID_Y;
-                        	w = 9 * GUI_GRID_W;
+                        	w = 9.25 * GUI_GRID_W;
                         	h = 1 * GUI_GRID_H;
                         	colorBackground[] = {0,0,0,0.5};
                         };
@@ -116,7 +116,7 @@ class taxi_fare {
                         	text = "Kilometers"; //--- ToDo: Localize;
                         	x = 0 * GUI_GRID_W + GUI_GRID_X;
                         	y = 3 * GUI_GRID_H + GUI_GRID_Y;
-                        	w = 5 * GUI_GRID_W;
+                        	w = 5.25 * GUI_GRID_W;
                         	h = 1 * GUI_GRID_H;
                         	colorBackground[] = {0,0,0,0.5};
                         };
@@ -125,7 +125,7 @@ class taxi_fare {
                         	text = "Fare"; //--- ToDo: Localize;
                         	x = 5.5 * GUI_GRID_W + GUI_GRID_X;
                         	y = 2 * GUI_GRID_H + GUI_GRID_Y;
-                        	w = 3.5 * GUI_GRID_W;
+                        	w = 3.75 * GUI_GRID_W;
                         	h = 1 * GUI_GRID_H;
                         	colorBackground[] = {0,0,0,0.5};
                         };
@@ -134,7 +134,7 @@ class taxi_fare {
                         	text = "Summary"; //--- ToDo: Localize;
                         	x = 0 * GUI_GRID_W + GUI_GRID_X;
                         	y = 2 * GUI_GRID_H + GUI_GRID_Y;
-                        	w = 5 * GUI_GRID_W;
+                        	w = 5.25 * GUI_GRID_W;
                         	h = 1 * GUI_GRID_H;
                         	colorBackground[] = {0,0,0,0.5};
                         };
@@ -158,27 +158,27 @@ class taxi_fare {
                         };
                         class block_1: RscText {
                         	idc = -1;
-                        	x = 9 * GUI_GRID_W + GUI_GRID_X;
+                        	x = 9.25 * GUI_GRID_W + GUI_GRID_X;
                         	y = 2 * GUI_GRID_H + GUI_GRID_Y;
-                        	w = 0.5 * GUI_GRID_W;
+                        	w = 0.25 * GUI_GRID_W;
                         	h = 3 * GUI_GRID_H;
-                        	colorBackground[] = {0,0,0,0.7};
+                        	colorBackground[] = {0.043,0.486,0.769,1};
                         };
                         class block_2: RscText {
                         	idc = -1;
-                        	x = 5 * GUI_GRID_W + GUI_GRID_X;
+                        	x = 5.25 * GUI_GRID_W + GUI_GRID_X;
                         	y = 2 * GUI_GRID_H + GUI_GRID_Y;
-                        	w = 0.5 * GUI_GRID_W;
+                        	w = 0.25 * GUI_GRID_W;
                         	h = 3 * GUI_GRID_H;
-                        	colorBackground[] = {0,0,0,0.7};
+                        	colorBackground[] = {0.043,0.486,0.769,1};
                         };
                         class block_3: RscText {
                         	idc = -1;
-                        	x = 13 * GUI_GRID_W + GUI_GRID_X;
+                        	x = 13.25 * GUI_GRID_W + GUI_GRID_X;
                         	y = 3 * GUI_GRID_H + GUI_GRID_Y;
-                        	w = 0.5 * GUI_GRID_W;
+                        	w = 0.25 * GUI_GRID_W;
                         	h = 2 * GUI_GRID_H;
-                        	colorBackground[] = {0,0,0,0.7};
+                        	colorBackground[] = {0.043,0.486,0.769,1};
                         };
             	};
             };
