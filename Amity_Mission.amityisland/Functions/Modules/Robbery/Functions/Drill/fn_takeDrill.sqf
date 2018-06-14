@@ -13,7 +13,7 @@ private _onFinish = {
       private _config = (missionConfigFile >> "Robbery" >> "Config" >> "Drill");
       private _item = getText(_config >> "item");
       if(_item != "") then {
-            [player, _item, true] call CBA_fnc_addItem;
+            player addItem _item;
       };
       private _target = _drill getVariable["robbery_drill_target", objNull];
       deleteVehicle _drill;

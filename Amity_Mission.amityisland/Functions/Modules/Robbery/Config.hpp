@@ -198,7 +198,7 @@ class Robbery {
             class Time {
                   min = 100;
                   max = 200;
-                  cooltime = 600;
+                  cooltime = 3600;
             };
             class Sound {
                   enabled = 1;

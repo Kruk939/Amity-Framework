@@ -29,7 +29,6 @@ if(_type == "LB") exitWith {
       if(_plate != "") then { _plate = format["[%1]", _plate]};
       private _text = format[localize "STR_CORE_AMITY_KEYS_INFO_TEXT", _id, _plate, _name, _seats, _engine];
       ctrlSetText[1001, _text];
-      [["STR_CORE_AMITY_KEYS_GIVEN", _name], true] call Client_fnc_domsg;
 
 };
 if(_type == "GIVE") exitWith {
@@ -41,5 +40,8 @@ if(_type == "GIVE") exitWith {
       if(_id == -1) exitWith {};
       private _veh = [_id] call _fnc_find_veh;
       if(isNull _veh) exitWith {};
+      private _class =  typeOf _veh;
+      private _name = getText(configFile >> "CfgVehicles" >> _class >> "displayName");
       [_veh, player] remoteExecCall ["Client_fnc_receive_key", _target];
+      [["STR_CORE_AMITY_KEYS_GIVEN", _name], true] call Client_fnc_domsg;
 };
