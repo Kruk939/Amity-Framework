@@ -46,6 +46,9 @@ if(_type == "EDIT") exitWith {
       private _access = [] call _fnc_access;
       private _salary = [] call _fnc_salary;
       private _desc = [] call _fnc_desc;
+      //permision check
+      if(!(["faction_member_update"] call Client_fnc_checkPermission)) exitWith { ["STR_CORE_PERMISSION_ACCESS_DENIED", true] call Client_fnc_domsg; };
+
       if(_salary == 0) then {
             _salary = ""; //ExtDB3 changes "" to NULL in request
       };
@@ -54,6 +57,9 @@ if(_type == "EDIT") exitWith {
       [(_display getVariable["faction_id", -1])] call Client_fnc_faction_members_open;
 };
 if(_type == "REMOVE") exitWith {
+      //permision check
+      if(!(["faction_member_remove"] call Client_fnc_checkPermission)) exitWith { ["STR_CORE_PERMISSION_ACCESS_DENIED", true] call Client_fnc_domsg; };
+
       private _id = _member select 0;
       [_id] remoteExecCall ["Server_fnc_factionRemoveMember", 2];
       [(_display getVariable["faction_id", -1])] call Client_fnc_faction_members_open;

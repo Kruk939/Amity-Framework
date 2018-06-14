@@ -12,3 +12,6 @@ if(_type == "VEHICLES") exitWith {
       private _faction_id = _display getVariable["faction_id", -1];
       [_faction_id] call Client_fnc_faction_manage_garage_open;
 };
+if(_type == "PERMS") exitWith {
+      [] call ClientModules_Permissions_fnc_permissions_open;
+};

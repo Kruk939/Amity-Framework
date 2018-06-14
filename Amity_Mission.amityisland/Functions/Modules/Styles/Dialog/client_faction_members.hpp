@@ -14,18 +14,18 @@ class styles_faction_members {
                   style = ST_MULTI;
                   text = "";
                   x = 20 * GUI_GRID_W + GUI_GRID_X;
-                  y = 2 * GUI_GRID_H + GUI_GRID_Y;
+                  y = 2.5 * GUI_GRID_H + GUI_GRID_Y;
                   w = 20 * GUI_GRID_W;
-                  h = 16 * GUI_GRID_H;
+                  h = 15.5 * GUI_GRID_H;
                   colorBackground[] = {0,0,0,0.3};
             };
             class listbox_members: RscListbox {
                   idc = 1500;
                   onLBSelChanged = " ['LB'] call Client_fnc_faction_members_action; ";
                   x = 0 * GUI_GRID_W + GUI_GRID_X;
-                  y = 2 * GUI_GRID_H + GUI_GRID_Y;
+                  y = 2.5 * GUI_GRID_H + GUI_GRID_Y;
                   w = 19.5 * GUI_GRID_W;
-                  h = 16 * GUI_GRID_H;
+                  h = 15.5 * GUI_GRID_H;
                   colorBackground[] = {0,0,0,0.3};
             };
             class button_exit: RscButton {
@@ -48,9 +48,9 @@ class styles_faction_members {
             };
             class title_manage: RscText {
                   idc = -1;
-                  text = "Manage Faction"; //--- ToDo: Localize;
+                  text = "Manage Members"; //--- ToDo: Localize;
                   x = 0 * GUI_GRID_W + GUI_GRID_X;
-                  y = -1 * GUI_GRID_H + GUI_GRID_Y;
+                  y = 0 * GUI_GRID_H + GUI_GRID_Y;
                   w = 40 * GUI_GRID_W;
                   h = 1 * GUI_GRID_H;
                   colorBackground[] = {0,0,0,0.7};
@@ -59,7 +59,7 @@ class styles_faction_members {
                   idc = -1;
                   text = "Member information"; //--- ToDo: Localize;
                   x = 20 * GUI_GRID_W + GUI_GRID_X;
-                  y = 0.5 * GUI_GRID_H + GUI_GRID_Y;
+                  y = 1.5 * GUI_GRID_H + GUI_GRID_Y;
                   w = 20 * GUI_GRID_W;
                   h = 1 * GUI_GRID_H;
                   colorBackground[] = {0,0,0,0.5};
@@ -68,7 +68,7 @@ class styles_faction_members {
                   idc = -1;
                   text = "Members"; //--- ToDo: Localize;
                   x = 0 * GUI_GRID_W + GUI_GRID_X;
-                  y = 1 * GUI_GRID_H + GUI_GRID_Y;
+                  y = 1.5 * GUI_GRID_H + GUI_GRID_Y;
                   w = 19.5 * GUI_GRID_W;
                   h = 1 * GUI_GRID_H;
                   colorBackground[] = {0,0,0,0.5};

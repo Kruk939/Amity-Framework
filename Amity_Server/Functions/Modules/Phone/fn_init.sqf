@@ -7,3 +7,4 @@ phone_var_faction_numbers = [];
 
 
 [] call ServerModules_Phone_fnc_load;
+["phone_dispatch_sign", "[Dispatch] Sign in"] call ServerModules_Permissions_fnc_insert;

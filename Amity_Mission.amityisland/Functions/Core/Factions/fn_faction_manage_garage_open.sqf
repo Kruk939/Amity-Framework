@@ -1,5 +1,9 @@
 params[["_faction_id", -1]];
 if(_faction_id == -1) exitWith {};
+
+//permision check
+if(!(["faction_garage_view"] call Client_fnc_checkPermission)) exitWith { ["STR_CORE_PERMISSION_ACCESS_DENIED", true] call Client_fnc_domsg; };
+
 if(dialog) then {
       closeDialog 0;
 };

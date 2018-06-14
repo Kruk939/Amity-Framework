@@ -1,6 +1,12 @@
 params[["_var", ""], ["_name", ""]];
 if(_var == "" || _name == "") exitWith { []; };
-waitUntil{permissions_var_inited};
+if(!isNil "_thisScript") then {
+      waitUntil{!isNil "permissions_var_inited"};
+      waitUntil{permissions_var_inited};
+};
+if(!(missionNamespace getVariable["permissions_var_inited", false])) exitWith {
+      _this spawn (call compile _fnc_scriptName);
+};
 
 if([_var] call ServerModules_Permissions_fnc_exists) exitWith { []; };
 

@@ -58,6 +58,9 @@ if(_type == "ACCESS") exitWith {
       ctrlSetText[1400, str([] call _fnc_access)];
 };
 if(_type == "SAVE") exitWith {
+      //permision check
+      if(!(["faction_garage_update"] call Client_fnc_checkPermission)) exitWith { ["STR_CORE_PERMISSION_ACCESS_DENIED", true] call Client_fnc_domsg; };
+
       if((count _garage) != 0) then {
             private _id = _garage select 0;
             private _access = call _fnc_access;
@@ -82,5 +85,5 @@ if(_type == "SAVE") exitWith {
       };
 };
 if(_type == "EXIT") exitWith {
-      [(_display getVariable["faction_id", -1])] call Client_fnc_faction_members_open;
+      [(_display getVariable["faction_id", -1])] call Client_fnc_faction_view_open;
 };

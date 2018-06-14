@@ -9,8 +9,9 @@ private _wantedVehicles = _display setVariable["wantedVehicles", []];
 private _messages = _display setVariable["messages", []];
 
 if(_type == "SEND") exitWith {
-      private _messageAccess = getNumber(missionConfigFile >> "Computer" >> "Messages" >> "access");
-      if(player getVariable["module_computer", -1] < _messageAccess) exitWith {}; //not allowed
+      //permision check
+      if(!(["computer_message_add"] call Client_fnc_checkPermission)) exitWith { ["STR_CORE_PERMISSION_ACCESS_DENIED", true] call Client_fnc_domsg; };
+
       private _message = ctrlText 1401;
       private _length = getNumber(missionConfigFile >> "Computer" >> "Messages" >> "length");
       if(count _message > _length) then { _message = format["%1...", ([_message, 0, _length - 1] call BIS_fnc_trimString)]; };
@@ -20,12 +21,18 @@ if(_type == "SEND") exitWith {
       [player, player getVariable["faction_id", -1], _message] remoteExecCall["ServerModules_Computer_fnc_addMessage", 2];
 };
 if(_type == "WANTED_PERSON_CHECK") exitWith {
+      //permision check
+      if(!(["computer_personal_view"] call Client_fnc_checkPermission)) exitWith { ["STR_CORE_PERMISSION_ACCESS_DENIED", true] call Client_fnc_domsg; };
+
       private _index = lbCurSel 1500;
       if(_index == -1) exitWith {}; //not selected
       private _id = parseNumber(lbData[1500, _index]);
       [_id] call ClientModules_Computer_fnc_computer_view_case_profile_open;
 };
 if(_type == "WANTED_VEHICLE_ADD") exitWith {
+      //permision check
+      if(!(["computer_case_add"] call Client_fnc_checkPermission)) exitWith { ["STR_CORE_PERMISSION_ACCESS_DENIED", true] call Client_fnc_domsg; };
+
       [] call ClientModules_Computer_fnc_computer_add_vehicle_open;
 };
 if(_type == "WANTED_VEHICLE_CHECK") exitWith {
@@ -35,6 +42,9 @@ if(_type == "WANTED_VEHICLE_CHECK") exitWith {
       [_id] call ClientModules_Computer_fnc_computer_view_case_vehicle_open;
 };
 if(_type == "QUICK_ADD") exitWith {
+      //permision check
+      if(!(["computer_case_add"] call Client_fnc_checkPermission)) exitWith { ["STR_CORE_PERMISSION_ACCESS_DENIED", true] call Client_fnc_domsg; };
+
       private _index = lbCurSel 2100;
       if(_index == -1) exitWith {}; //not selected
       private _id = parseNumber(lbData[2100, _index]);

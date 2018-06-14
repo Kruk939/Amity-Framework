@@ -81,8 +81,18 @@ class styles_faction_view {
                   h = 1 * GUI_GRID_H;
                   colorBackground[] = {0,0,0,0.4};
             };
-            class button_exit: RscButton {
+            class button_permissions: RscButton {
                   idc = 1603;
+                  action = " ['PERMS'] call Client_fnc_faction_view_action; ";
+                  text = "Permissions"; //--- ToDo: Localize;
+                  x = 19.5 * GUI_GRID_W + GUI_GRID_X;
+                  y = 17.5 * GUI_GRID_H + GUI_GRID_Y;
+                  w = 20.5 * GUI_GRID_W;
+                  h = 1 * GUI_GRID_H;
+                  colorBackground[] = {0,0,0,0.4};
+            };
+            class button_exit: RscButton {
+                  idc = 1605;
                   action = " closeDialog 0; ";
                   text = "Exit"; //--- ToDo: Localize;
                   x = 19.5 * GUI_GRID_W + GUI_GRID_X;

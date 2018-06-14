@@ -3,6 +3,8 @@ if(_faction_id == -1) then {
       _faction_id = player getVariable ["faction_id", -1];
 };
 if((count _member) == 0) exitWith {};
+//permision check
+if(!(["faction_member_view"] call Client_fnc_checkPermission)) exitWith { ["STR_CORE_PERMISSION_ACCESS_DENIED", true] call Client_fnc_domsg; };
 
 if(dialog) then {
       closeDialog 0;

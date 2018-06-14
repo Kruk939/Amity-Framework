@@ -137,6 +137,9 @@ if(_type == "buyCompany") exitWith {
       if(_faction_id == -1) exitWith {
             ["You can't buy a car when you are not signed to a faction", true] call Client_fnc_domsg;
       };
+      //permision check
+      if(!(["faction_garage_buy"] call Client_fnc_checkPermission)) exitWith { ["STR_CORE_PERMISSION_ACCESS_DENIED", true] call Client_fnc_domsg; };
+
       private _index = lbCurSel (1500);
       if(_index == -1) exitWith {};
       private _id = parseNumber(lbData[1500, _index]);

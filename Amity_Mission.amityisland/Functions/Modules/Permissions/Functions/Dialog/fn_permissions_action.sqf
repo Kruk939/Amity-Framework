@@ -68,6 +68,9 @@ if(_type == "ACCESS") exitWith {
 
 };
 if(_type == "APPLY") exitWith {
+      //permision check
+      if(!(["permissions_manage"] call Client_fnc_checkPermission)) exitWith { ["STR_CORE_PERMISSION_ACCESS_DENIED", true] call Client_fnc_domsg; };
+
       [] call _fnc_apply;
 };
 if(_type == "LB") exitWith {
@@ -88,10 +91,16 @@ if(_type == "LB") exitWith {
       ["ACCESS"] call ClientModules_Permissions_fnc_permissions_action;
 };
 if(_type == "REVERT") exitWith {
+      //permision check
+      if(!(["permissions_manage"] call Client_fnc_checkPermission)) exitWith { ["STR_CORE_PERMISSION_ACCESS_DENIED", true] call Client_fnc_domsg; };
+
       _display setVariable["changed", []];
       ["LB"] call ClientModules_Permissions_fnc_permissions_action;
 };
 if(_type == "SAVE") exitWith {
+      //permision check
+      if(!(["permissions_manage"] call Client_fnc_checkPermission)) exitWith { ["STR_CORE_PERMISSION_ACCESS_DENIED", true] call Client_fnc_domsg; };
+
       [_changed, _faciton_id] remoteExecCall["ServerModules_Permissions_fnc_update", 2];
       closeDialog 0;
 };

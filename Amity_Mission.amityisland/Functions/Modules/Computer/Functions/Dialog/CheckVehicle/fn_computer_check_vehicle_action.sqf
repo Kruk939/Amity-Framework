@@ -20,6 +20,9 @@ private _fnc_find = {
       _ret;
 };
 if(_type == "CB_CASES") exitWith {
+      //permision check
+      if(!(["computer_case_view"] call Client_fnc_checkPermission)) exitWith { ["STR_CORE_PERMISSION_ACCESS_DENIED", true] call Client_fnc_domsg; };
+
       private _idc = 2100;
       private _index = lbCurSel _idc;
       if(_index == -1) exitWith {};
@@ -33,6 +36,9 @@ if(_type == "CB_CASES") exitWith {
       ctrlSetText[1010, _text];
 };
 if(_type == "CHECK") exitWith {
+      //permision check
+      if(!(["computer_case_view"] call Client_fnc_checkPermission)) exitWith { ["STR_CORE_PERMISSION_ACCESS_DENIED", true] call Client_fnc_domsg; };
+
       private _idc = 2100;
       private _index = lbCurSel _idc;
       if(_index == -1) exitWith {};
@@ -41,5 +47,8 @@ if(_type == "CHECK") exitWith {
       [_id, _case] call ClientModules_Computer_fnc_computer_view_case_vehicle_open;
 };
 if(_type == "ADD") exitWith {
+      //permision check
+      if(!(["computer_case_add"] call Client_fnc_checkPermission)) exitWith { ["STR_CORE_PERMISSION_ACCESS_DENIED", true] call Client_fnc_domsg; };
+
       [_vehicle select 6] call ClientModules_Computer_fnc_computer_add_vehicle_open;
 };

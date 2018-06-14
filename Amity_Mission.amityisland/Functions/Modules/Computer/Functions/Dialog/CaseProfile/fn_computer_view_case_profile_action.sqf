@@ -8,6 +8,9 @@ private _id = _display getVariable["id", -1];
 private _data = _display getVariable["data", []];
 
 if(_type == "SAVE") exitWith {
+      //permision check
+      if(!(["computer_case_update"] call Client_fnc_checkPermission)) exitWith { ["STR_CORE_PERMISSION_ACCESS_DENIED", true] call Client_fnc_domsg; };
+
       private _index = lbCurSel 2100;
       if(_index == -1) exitWith {};
       private _wID = parseNumber(lbData[2100, _index]);

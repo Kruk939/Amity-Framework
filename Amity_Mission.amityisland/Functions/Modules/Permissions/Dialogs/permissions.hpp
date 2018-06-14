@@ -1,6 +1,14 @@
 class faction_permissions {
       idd = 3000;
       class controlsBackground {
+            class Background: RscPicture {
+            	idc = -1;
+            	text = "\amityrp_data\gui\faction\faction.paa";
+            	x = -11 * GUI_GRID_W + GUI_GRID_X;
+            	y = -11.25 * GUI_GRID_H + GUI_GRID_Y;
+            	w = 62 * GUI_GRID_W;
+            	h = 47 * GUI_GRID_H;
+            };
             class title_main: RscText {
                   idc = -1;
                   text = "Edit permissions"; //--- ToDo: Localize;

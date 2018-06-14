@@ -196,3 +196,10 @@
             <Polish>Otrzymałeś klucze do %1</Polish>
       </Key>
 </Container>
+<Container name="AMITY_CORE_PERMISSION">
+      <Key ID="STR_CORE_PERMISSION_ACCESS_DENIED">
+            <Original>[Permissions] Access Denied</Original>
+            <English>[Permissions] Access Denied</English>
+            <Polish>[Uprawnienia] Odmowa dostępu</Polish>
+      </Key>
+</container>

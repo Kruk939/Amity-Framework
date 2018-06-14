@@ -13,6 +13,9 @@ if(_type == "REASON") exitWith {
       ctrlSetText[1400, _text];
 };
 if(_type == "ADD") exitWith {
+      //permision check
+      if(!(["computer_case_add"] call Client_fnc_checkPermission)) exitWith { ["STR_CORE_PERMISSION_ACCESS_DENIED", true] call Client_fnc_domsg; };
+
       private _index = lbCurSel 2100;
       if(_index == -1) exitWith {};
       private _wID = parseNumber(lbData[2100, _index]);
@@ -20,6 +23,9 @@ if(_type == "ADD") exitWith {
       [] call ClientModules_Computer_fnc_openLast;
 };
 if(_type == "ADD_CLOSE") exitWith {
+      //permision check
+      if(!(["computer_case_add"] call Client_fnc_checkPermission)) exitWith { ["STR_CORE_PERMISSION_ACCESS_DENIED", true] call Client_fnc_domsg; };
+
       private _index = lbCurSel 2100;
       if(_index == -1) exitWith {};
       private _wID = parseNumber(lbData[2100, _index]);

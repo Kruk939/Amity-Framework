@@ -2,6 +2,10 @@ params[["_faction_id", player getVariable["faction_id", -1]]];
 if(_faction_id == -1) exitWith {};
 private _dispatch = [_faction_id] call ClientModules_Dispatch_fnc_getFaction;
 if(count _dispatch == 0) exitWith {};
+
+//permision check
+if(!(["phone_dispatch_sign"] call Client_fnc_checkPermission)) exitWith { ["STR_CORE_PERMISSION_ACCESS_DENIED", true] call Client_fnc_domsg; };
+
 disableSerialization;
 if(dialog) then { closeDialog 0; };
 private _ok = createDialog "phone_dispatch";

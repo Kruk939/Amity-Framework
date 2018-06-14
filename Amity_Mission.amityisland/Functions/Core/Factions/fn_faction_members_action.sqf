@@ -26,6 +26,9 @@ if(_type == "LB") exitWith {
       ctrlSetText[1000, _text];
 };
 if(_type == "EDIT") exitWith {
+      //permision check
+      if(!(["faction_member_view"] call Client_fnc_checkPermission)) exitWith { ["STR_CORE_PERMISSION_ACCESS_DENIED", true] call Client_fnc_domsg; };
+
       if((count _member) != 0) then {
             closeDialog 0;
             [_member, (_display getVariable["faction_id", -1])] call Client_fnc_faction_member_edit_open;
