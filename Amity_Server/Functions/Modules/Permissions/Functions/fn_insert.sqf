@@ -12,7 +12,7 @@ if([_var] call ServerModules_Permissions_fnc_exists) exitWith { []; };
 
 private _ret = [format["permission_insert:%1:%2", _var, _name], 2] call ExternalS_fnc_ExtDBasync;
 if(count _ret != 0) then {
-      permissions_var_all pushBack _ret;
+      permissions_var_all pushBack (_ret select 0);
       publicVariable "permissions_var_all";
 };
 _ret;
