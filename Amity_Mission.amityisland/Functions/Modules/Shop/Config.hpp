@@ -2,11 +2,11 @@ class Shop {
       basic[] = {
             {"STR_SHOP_CLOTHES", 1, "openrp_vendor_clothingstore"},
             {"STR_SHOP_WEAPON", 2, "openrp_vendor_gunshop"},
-            {"STR_SHOP_GENERAL", 3, "openrp_vendor_shop"},
             {"STR_SHOP_FOOD", 4, "openrp_vendor_foodshop"},
             {"STR_SHOP_BLACK_MARKET", 5, "openrp_vendor_blackmarket"},
             {"STR_SHOP_BLACK_DILER", 6, "openrp_vendor_blackmarket", {954.816,7346.03,0.164162}},
             {"STR_SHOP_INGOTS", 7, "openrp_vendor_shop", {3986.71,2581.35,0.195323}},
+            {"STR_SHOP_GENERAL", 3, "openrp_vendor_shop"},
             {"STR_SHOP_FISHING", 11, "rmair_MediaKiosk", {3414.32,4146.35,0}}
       };
       faction[] = {
