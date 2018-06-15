@@ -1,6 +1,6 @@
 params[["_house", objNull], ["_module", []]];
 if((count _module) == 0 || isNull _house) exitWith {};
-_module params["_mod_id", "_m_id", "_position", "_dir", "_access"];
+_module params["_mod_id", "_m_id", "_position", "_dir", "_access", "_data"];
 if(typeName _access == "OBJECT") then { _access = -1; };
 private _type = [_m_id] call ServerModules_Housing_fnc_getModule;
 if((count _type) != 0) then {
@@ -13,4 +13,5 @@ if((count _type) != 0) then {
       _obj setVariable["house_module_variable", _var, true];
       _obj setVariable["house_object", _house, true];
       _obj setVariable["house_module_access", _access, true];
+      _obj setVariable["house_module_data", _data, true];
 };

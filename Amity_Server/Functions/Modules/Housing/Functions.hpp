@@ -5,6 +5,11 @@ class ServerModules_Housing {
       };
       class Furniture {
             file = "Amity_Server\Functions\Modules\Housing\Functions\Furniture";
+            class deleteFurniture {};
+            class isSpawned {};
+            class saveFurniture {};
+            class spawnFurniture {};
+            class spawnFurnitures {};
       };
       class House {
             file = "Amity_Server\Functions\Modules\Housing\Functions\House";
@@ -22,6 +27,6 @@ class ServerModules_Housing {
             file = "Amity_Server\Functions\Modules\Housing\Functions\Modules";
             class getModule {};
             class initModule {};
+            class moduleUpdate {};
       };
-
 };

@@ -1,0 +1,10 @@
+params[["_object", objNull]];
+if(isNull _object) exitWith {};
+private _id = _object getVariable["house_module_id", -1];
+private _data = _object getVariable["house_module_data", []];
+private _access = _object getVariable["house_module_access", -1];
+if(_access == -1) then { _access = ""; };
+if(_id == -1) exitWith {};
+private _position = getPosATL _object;
+private _dir = getDir _object;
+[0, format["housing_update_module_id:%1:%2:%3:%4:%5", _id, _position, _dir, _access, _data]] call ExternalS_fnc_ExtDBquery;
