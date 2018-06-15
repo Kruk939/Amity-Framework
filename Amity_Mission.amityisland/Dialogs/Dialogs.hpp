@@ -12,3 +12,4 @@
 #include "client_faction_manage_garage.hpp"
 #include "client_faction_view.hpp"
 #include "client_give_keys.hpp"
+#include "client_faction_atm.hpp"

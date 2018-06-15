@@ -4,6 +4,7 @@ class Amity_store {
       movingEnable = 0;
       enableSimulation = 1;
       onLoad = "";
+      onUnload = "[] call ClientModules_Shop_fnc_terminateCamera;";
       class controlsBackground {
 		class background_additional: RscPicture {
 			idc = 1200;

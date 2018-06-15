@@ -30,6 +30,7 @@ class CfgFunctions {
                   class bankRemove {};
                   class bankTransfer {};
                   class bankGetAccount {};
+                  class bankGetFaction {};
             };
             class Profile {
                   file = "Amity_Server\Functions\Core\Profile"
@@ -68,6 +69,7 @@ class CfgFunctions {
                   class factionGetGarage {};
                   class factionSaveVehicle {};
                   class factionViewData {};
+                  class factionGetAll {};
             };
             class Variables {
                   file = "Amity_Server\Functions\Core\Variables"

@@ -75,7 +75,6 @@ while{_timeOut < 12 && _vehicle distance player > 5} do {
       player playaction (_animations select 2);
 };
 playSound3D [_sounds select 1, player, false, getPosASL player, 5, 1, 45];
-player addmagazine (getArray(missionConfigFile >> "Resources" >> "Fishing" >> "Bait"));
 deletevehicle _vehicle;
 
 if(Resources_var_reacted == 3) then {
@@ -100,6 +99,7 @@ if(Resources_var_reacted == 3) then {
       hint "You've catch something!";
       [player, _myFish, true] call CBA_fnc_addItem;
 } else {
+      [player, _myFish, true] call CBA_fnc_addItem;
       hint "You were too slow.";
 };
 Resources_var_is_fishing = false;

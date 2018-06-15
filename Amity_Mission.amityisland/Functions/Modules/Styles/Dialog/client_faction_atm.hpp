@@ -1,6 +1,14 @@
-class client_faction_atm {
+class styles_faction_atm {
       idd = 1011;
       class controls {
+            class Background: RscPicture {
+            	idc = -1;
+            	text = "\amityrp_data\gui\atm\atm.paa";
+            	x = -11 * GUI_GRID_W + GUI_GRID_X;
+            	y = -11.5 * GUI_GRID_H + GUI_GRID_Y;
+            	w = 62 * GUI_GRID_W;
+            	h = 47 * GUI_GRID_H;
+            };
             class text_cash: RscText {
                   idc = 1000;
                   text = "0"; //--- ToDo: Localize;

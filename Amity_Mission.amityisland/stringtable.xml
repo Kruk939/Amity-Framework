@@ -103,6 +103,11 @@
             <English>ATM</English>
             <Polish>Bankomat</Polish>
       </Key>
+      <Key ID="STR_CORE_FACTION_ATM">
+            <Original>Faction ATM</Original>
+            <English>Faction ATM</English>
+            <Polish>Bankomat Firmy</Polish>
+      </Key>
       <Key ID="STR_CORE_ATM_CASH">
             <Original>Cash:</Original>
             <English>Cash:</English>

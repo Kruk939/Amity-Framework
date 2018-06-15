@@ -23,6 +23,7 @@ class Amity {
             };
             class Dialogs {
                   atm = "styles_atm"; //idd = 1010;
+                  faction_atm = "styles_faction_atm"; //idd = 1011;
                   interaction = "client_interaction"; //idd = 1020;
                   profile = "client_profile"; //idd = 1000;
                   createProfile = "client_profile_create"; //idd = 1001;

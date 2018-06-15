@@ -6,3 +6,4 @@
 #include "Dialog\client_faction_sign.hpp"
 #include "Dialog\client_faction_manage_garage.hpp"
 #include "Dialog\client_faction_view.hpp"
+#include "Dialog\client_faction_atm.hpp"

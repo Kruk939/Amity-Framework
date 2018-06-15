@@ -87,6 +87,9 @@ class Money {
       class atm_action {};
       class atm_open {};
       class atm_receive {};
+      class faction_atm_open {};
+      class faction_atm_receive {};
+      class faction_atm_action {};
 };
 class Profile {
       file="Functions\Core\Profile";
