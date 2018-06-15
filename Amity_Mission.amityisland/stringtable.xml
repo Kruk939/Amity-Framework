@@ -138,6 +138,11 @@
             <English>You don not have enough money to withdraw</English>
             <Polish>Nie masz wystarczającej ilości aby wypłacić</Polish>
       </Key>
+      <Key ID="STR_CORE_ATM_ACTION_TRANSFER_NO_MONEY">
+            <Original>You don not have enough money to transfer</Original>
+            <English>You don not have enough money to transfer</English>
+            <Polish>Nie masz wystarczającej ilości aby przelać</Polish>
+      </Key>
       <Key ID="STR_CORE_ATM_ACTION_DEPOSIT">
             <Original>You have deposited $%1</Original>
             <English>You have deposited $%1</English>
@@ -162,6 +167,11 @@
             <Original>You have wire transfered $%1 between your accounts.</Original>
             <English>You have wire transfered $%1 between your accounts.</English>
             <Polish>Przelałeś $%1 pomiędzy swoimi kontami</Polish>
+      </Key>
+      <Key ID="STR_CORE_ATM_FACTION_ACTION_TRANSFER_SEND">
+            <Original>You have wire transfered $%1</Original>
+            <English>You have wire transfered $%1</English>
+            <Polish>Przelałeś $%1</Polish>
       </Key>
 </Container>
 <Container name="AMITY_CORE_KEYS">

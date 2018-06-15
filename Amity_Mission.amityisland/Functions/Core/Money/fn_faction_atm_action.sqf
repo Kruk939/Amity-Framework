@@ -26,15 +26,16 @@ if(_type == "AMOUNT_2") exitWith {
       [1402] call _check_amount_fnc;
 };
 if(_type == "WITHDRAW") exitWith {
+      //permision check
+      if(!(["faction_atm_withdraw"] call Client_fnc_checkPermission)) exitWith { ["STR_CORE_PERMISSION_ACCESS_DENIED", true] call Client_fnc_domsg; };
+
       if(time - amity_var_cash_last_action < getNumber(missionConfigFile >> "Amity" >> "Setup" >> "timeLock")) exitWith {};
       private _index = lbCurSel 2100;
       if(_index == -1) exitWith {};
-      private _account = [parseNumber(lbData[2100, _index])] call _find_account_fnc;
-      if(count _account == 0) exitWith {};
       private _amount = parseNumber(ctrlText 1400);
       if(_amount <= 0) exitWith {};
       private _player_cash = player getVariable["cash", -1];
-      if(_bank <= _amount) then {
+      if(_bank >= _amount) then {
             amity_var_cash_last_action = time;
             ctrlEnable[1600, false];
             ctrlEnable[1601, false];
@@ -52,15 +53,15 @@ if(_type == "WITHDRAW") exitWith {
       };
 };
 if(_type == "DEPOSIT") exitWith {
+      //permision check
+      if(!(["faction_atm_payin"] call Client_fnc_checkPermission)) exitWith { ["STR_CORE_PERMISSION_ACCESS_DENIED", true] call Client_fnc_domsg; };
+
       if(time - amity_var_cash_last_action < getNumber(missionConfigFile >> "Amity" >> "Setup" >> "timeLock")) exitWith {};
       private _index = lbCurSel 2100;
       if(_index == -1) exitWith {};
-      private _account = [parseNumber(lbData[2100, _index])] call _find_account_fnc;
-      if(count _account == 0) exitWith {};
       private _amount = parseNumber(ctrlText 1400);
       if(_amount <= 0) exitWith {};
       private _player_cash = player getVariable["cash", -1];
-      _account params ["_id", "_account_number","","_cash"];
       if ([_amount] call Client_fnc_checkMoney) then {
       amity_var_cash_last_action = time;
             ctrlEnable[1600, false];
@@ -78,19 +79,22 @@ if(_type == "DEPOSIT") exitWith {
       };
 };
 if(_type == "TRANSFER") exitWith {
+      //permision check
+      if(!(["faction_atm_transfer"] call Client_fnc_checkPermission)) exitWith { ["STR_CORE_PERMISSION_ACCESS_DENIED", true] call Client_fnc_domsg; };
+
       if(time - amity_var_cash_last_action < getNumber(missionConfigFile >> "Amity" >> "Setup" >> "timeLock")) exitWith {};
       private _index = lbCurSel 2100;
       if(_index == -1) exitWith {};
       private _account = parseNumber(lbData[2100, _index]);
       if(_account < 0) exitWith {};
-      private _amount = parseNumber(ctrlText 1402);
+      private _amount = parseNumber(ctrlText 1401);
       if(_amount <= 0) exitWith {};
       if(_bank < _amount) exitWith { ["STR_CORE_ATM_ACTION_TRANSFER_NO_MONEY", true] call Client_fnc_domsg; };
       amity_var_cash_last_action = time;
 
       [_faction_id, "SUB", _amount] remoteExecCall ["Server_fnc_factionBankTransfer", 2];
       [_account, "ADD", _amount] remoteExecCall ["Server_fnc_factionBankTransfer", 2];
-
+      [["STR_CORE_ATM_FACTION_ACTION_TRANSFER_SEND", _amount]] call Client_fnc_domsg;
       ctrlSetText[1001, format["$%1", _bank - _amount]];
       _display setVariable["bank", _bank - _amount];
       closeDialog 0;

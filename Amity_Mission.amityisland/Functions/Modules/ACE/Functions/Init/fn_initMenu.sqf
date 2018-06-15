@@ -37,8 +37,16 @@ private _array = [
             ["class",["Land_Centrelink", 0, []]]
       ],
       [
+            ["ARP_MenuBank","Bank", "", {true},{true},{},"","",4],
+            ["class",["Land_Wallet_01_F", 0, []]]
+      ],
+      [
             ["ARP_ATM_2","ATM", "", {[] call Client_fnc_atm_open;},{},{},"","",4],
-            ["class",["Land_Wallet_01_F", 0, ["ORP_MenuBank"]]]
+            ["class",["Land_Wallet_01_F", 0, ["ARP_MenuBank"]]]
+      ],
+      [
+            ["ARP_ATM_FACTION","Faction ATM", "", {[] call Client_fnc_faction_atm_open;},{ (player getVariable["faction_id", -1]) != -1},{},"","",4],
+            ["class",["Land_Wallet_01_F", 0, ["ARP_MenuBank"]]]
       ],
 	[
 		["ARP_VEHICLE_DROP","Drop Car", "", {[cursorTarget] spawn Client_fnc_detachVehicle;},{count attachedObjects player > 0 && !isNull amity_var_attachedVehicle}],
