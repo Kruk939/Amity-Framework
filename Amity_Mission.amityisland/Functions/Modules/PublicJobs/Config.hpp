@@ -50,7 +50,7 @@ class PublicJobs {
                   variable = "mechanic";
                   paycheck = 50; //paycheck
                   show = 1; //show in phone book
-                  uniform = "CUP_U_C_Mechanic_01";
+                  uniform = "C_uniform_survivor3_l";
                   class Functions {
                         start = "ClientModules_PublicJobs_fnc_mechanic_start";
                         tick = "";
@@ -67,13 +67,13 @@ class PublicJobs {
                         variables[] = {};
                         class Items {
                               items[] = {
-                                    {"CUP_U_C_Mechanic_01", 1},
+                                    {"C_uniform_survivor3_l", 1},
                                     {"CG_wheel", 8},
                                     {"openrp_mechanic_enigne_part", 4},
                                     {"openrp_mechanic_hull_part", 8},
                                     {"openrp_mechanic_glass", 6},
                                     {"H_Construction_basic_orange_F", 1},
-                                    {"V_Safety_orange_F", 1}
+                                    {"PATHuK_belt", 1}
                               };
                               backpack = "";
                         };
@@ -89,7 +89,7 @@ class PublicJobs {
                   variable = "towtruck";
                   paycheck = 100; //paycheck
                   show = 1; //show in phone book
-                  uniform = "CUP_U_C_Mechanic_01";
+                  uniform = "C_uniform_survivor3_l";
                   class Functions {
                         start = "ClientModules_PublicJobs_fnc_towtruck_start";
                         tick = "";
@@ -106,7 +106,9 @@ class PublicJobs {
                         variables[] = {};
                         class Items {
                               items[] = {
-                                    {"CG_wheel", 2}
+                                    {"CG_wheel", 2},
+                                    {"C_uniform_survivor3_l", 1},
+                                    {"H_Construction_basic_orange_F", 1}
                               };
                               backpack = "";
                         };
@@ -121,7 +123,7 @@ class PublicJobs {
                   variable = "delivery";
                   paycheck = 50; //paycheck
                   show = 0; //show in phone book
-                  uniform = "CUP_U_C_Mechanic_01";
+                  uniform = "C_uniform_survivor3_l";
                   class Functions {
                         start = "ClientModules_PublicJobs_fnc_delivery_start";
                         tick = "";
@@ -138,7 +140,8 @@ class PublicJobs {
                         variables[] = {{"delivery_vehicle", 1, 1, "BOOL"}};
                         class Items {
                               items[] = {
-                                    {"CG_wheel", 2}
+                                    {"CG_wheel", 2},
+                                    {"C_uniform_survivor3_l", 1}
                               };
                               backpack = "";
                         };
