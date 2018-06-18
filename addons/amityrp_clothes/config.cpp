@@ -2,13 +2,13 @@ class CfgPatches
 { 
     class amityrp_clothes
     { 
-		name = "AmityRP Clothes";
-		author = "Soukyan";
-		url = "https://amityrp.pl/";
+		name="AmityRP Clothes";
+		author="Soukyan";
+		url="https://amityrp.pl/";
 		units[]={};
 		weapons[]={};
         requiredVersion=0.1; 
-		requiredAddons[]={"A3_Weapons_F","A3_Characters_F","A3_Characters_F_Orange"};
+		requiredAddons[]={"A3_Weapons_F","A3_Characters_F","A3_Characters_F_Orange","A3_Characters_F_bootcamp"};
     }; 
 }; 
 class CfgVehicles
@@ -55,6 +55,22 @@ class CfgVehicles
 		hiddenSelections[]={"camo"};
 		hiddenSelectionsTextures[]={"\amityrp_clothes\data\textures\uniforms\aipd\amityrp_u_pd_maj_ie.paa"};
 	};
+	class amityrp_u_pd_maj: B_RangeMaster_F
+	{
+		scope=1;
+		displayName="AIPD Major";
+		uniformClass="amityrp_u_pd_maj";
+		hiddenSelections[]={"camo"};
+		hiddenSelectionsTextures[]={"\amityrp_clothes\data\textures\uniforms\aipd\amityrp_u_pd_maj.paa"};
+	};
+	class amityrp_u_pd_maj_fto: B_RangeMaster_F
+	{
+		scope=1;
+		displayName="AIPD Major (F.T.O)";
+		uniformClass="amityrp_u_pd_maj_fto";
+		hiddenSelections[]={"camo"};
+		hiddenSelectionsTextures[]={"\amityrp_clothes\data\textures\uniforms\aipd\amityrp_u_pd_maj_fto.paa"};
+	};
 	class amityrp_u_pd_cpt_bw: B_RangeMaster_F
 	{
 		scope=1;
@@ -63,6 +79,38 @@ class CfgVehicles
 		hiddenSelections[]={"camo"};
 		hiddenSelectionsTextures[]={"\amityrp_clothes\data\textures\uniforms\aipd\amityrp_u_pd_cpt_bw.paa"};
 	};
+	class amityrp_u_pd_cpt: B_RangeMaster_F
+	{
+		scope=1;
+		displayName="AIPD Captain";
+		uniformClass="amityrp_u_pd_cpt";
+		hiddenSelections[]={"camo"};
+		hiddenSelectionsTextures[]={"\amityrp_clothes\data\textures\uniforms\aipd\amityrp_u_pd_cpt.paa"};
+	};
+	class amityrp_u_pd_cpt_fto: B_RangeMaster_F
+	{
+		scope=1;
+		displayName="AIPD Captain (F.T.O)";
+		uniformClass="amityrp_u_pd_cpt_fto";
+		hiddenSelections[]={"camo"};
+		hiddenSelectionsTextures[]={"\amityrp_clothes\data\textures\uniforms\aipd\amityrp_u_pd_cpt_fto.paa"};
+	};
+	class amityrp_u_pd_lt: B_RangeMaster_F
+	{
+		scope=1;
+		displayName="AIPD Lieutenant";
+		uniformClass="amityrp_u_pd_lt";
+		hiddenSelections[]={"camo"};
+		hiddenSelectionsTextures[]={"\amityrp_clothes\data\textures\uniforms\aipd\amityrp_u_pd_lt.paa"};
+	};
+	class amityrp_u_pd_lt_fto: B_RangeMaster_F
+	{
+		scope=1;
+		displayName="AIPD Lieutenant (F.T.O)";
+		uniformClass="amityrp_u_pd_lt_fto";
+		hiddenSelections[]={"camo"};
+		hiddenSelectionsTextures[]={"\amityrp_clothes\data\textures\uniforms\aipd\amityrp_u_pd_lt_fto.paa"};
+	};
 	class amityrp_u_pd_ssgt_mt: B_RangeMaster_F
 	{
 		scope=1;
@@ -70,6 +118,22 @@ class CfgVehicles
 		uniformClass="amityrp_u_pd_ssgt_mt";
 		hiddenSelections[]={"camo"};
 		hiddenSelectionsTextures[]={"\amityrp_clothes\data\textures\uniforms\aipd\amityrp_u_pd_ssgt_mt.paa"};
+	};
+	class amityrp_u_pd_ssgt_ks: B_RangeMaster_F
+	{
+		scope=1;
+		displayName="AIPD Staff Sergeant (K. Severide)";
+		uniformClass="amityrp_u_pd_sgt_ks";
+		hiddenSelections[]={"camo"};
+		hiddenSelectionsTextures[]={"\amityrp_clothes\data\textures\uniforms\aipd\amityrp_u_pd_ssgt_ks.paa"};
+	};
+	class amityrp_u_pd_ssgt_rs: B_RangeMaster_F
+	{
+		scope=1;
+		displayName="AIPD Staff Sergeant (R. Shepherd)";
+		uniformClass="amityrp_u_pd_sgt_rs";
+		hiddenSelections[]={"camo"};
+		hiddenSelectionsTextures[]={"\amityrp_clothes\data\textures\uniforms\aipd\amityrp_u_pd_ssgt_rs.paa"};
 	};
 	class amityrp_u_pd_ssgt: B_RangeMaster_F
 	{
@@ -86,22 +150,6 @@ class CfgVehicles
 		uniformClass="amityrp_u_pd_ssgt_fto";
 		hiddenSelections[]={"camo"};
 		hiddenSelectionsTextures[]={"\amityrp_clothes\data\textures\uniforms\aipd\amityrp_u_pd_ssgt_fto.paa"};
-	};
-	class amityrp_u_pd_sgt_ks: B_RangeMaster_F
-	{
-		scope=1;
-		displayName="AIPD Sergeant (K. Severide)";
-		uniformClass="amityrp_u_pd_sgt_ks";
-		hiddenSelections[]={"camo"};
-		hiddenSelectionsTextures[]={"\amityrp_clothes\data\textures\uniforms\aipd\amityrp_u_pd_sgt_ks.paa"};
-	};
-	class amityrp_u_pd_sgt_rs: B_RangeMaster_F
-	{
-		scope=1;
-		displayName="AIPD Sergeant (R. Shepherd)";
-		uniformClass="amityrp_u_pd_sgt_rs";
-		hiddenSelections[]={"camo"};
-		hiddenSelectionsTextures[]={"\amityrp_clothes\data\textures\uniforms\aipd\amityrp_u_pd_sgt_rs.paa"};
 	};
 	class amityrp_u_pd_sgt: B_RangeMaster_F
 	{
@@ -151,6 +199,57 @@ class CfgVehicles
 		hiddenSelections[]={"camo","insignia"};
 		hiddenSelectionsTextures[]={"\amityrp_clothes\data\textures\uniforms\aipd\amityrp_u_pd_pilot.paa","\amityrp_clothes\data\textures\aipd_insignia.paa"};
 	};
+	class amityrp_u_pd_swat_ds: B_Soldier_base_F
+	{
+		scope=1;
+		displayName="AIPD SWAT (D. Shepherd)";
+		model="\A3\characters_F\BLUFOR\b_soldier_02.p3d";
+		hiddenSelections[]={"camo","camo2"};
+		hiddenSelectionsTextures[]={"\amityrp_clothes\data\textures\uniforms\aipd\amityrp_u_pd_swat_pants.paa","\amityrp_clothes\data\textures\uniforms\aipd\amityrp_u_pd_swat_shirt_ds.paa"};
+	};
+	class amityrp_u_pd_swat_mb: B_Soldier_base_F
+	{
+		scope=1;
+		displayName="AIPD SWAT (M. Braun)";
+		model="\A3\characters_F\BLUFOR\b_soldier_02.p3d";
+		hiddenSelections[]={"camo","camo2"};
+		hiddenSelectionsTextures[]={"\amityrp_clothes\data\textures\uniforms\aipd\amityrp_u_pd_swat_pants.paa","\amityrp_clothes\data\textures\uniforms\aipd\amityrp_u_pd_swat_shirt_mb.paa"};
+	};
+	class amityrp_u_pd_swat: B_Soldier_base_F
+	{
+		scope=1;
+		displayName="AIPD SWAT";
+		model="\A3\characters_F\BLUFOR\b_soldier_02.p3d";
+		hiddenSelections[]={"camo","camo2"};
+		hiddenSelectionsTextures[]={"\amityrp_clothes\data\textures\uniforms\aipd\amityrp_u_pd_swat_pants.paa","\amityrp_clothes\data\textures\uniforms\aipd\amityrp_u_pd_swat_shirt.paa","\amityrp_clothes\data\textures\swat_insignia.paa"};
+	};
+	class amityrp_u_ems_rru_sweater_pl: B_Soldier_base_F
+	{
+		scope=1;
+		displayName="AIEMS RRU Sweater (Purple)";
+		model="\A3\Characters_F_bootcamp\Guerrilla\ig_guerrilla_6_1.p3d";
+		uniformClass="amityrp_u_ems_rru_sweater_pl";
+		hiddenSelections[]={"camo"};
+		hiddenSelectionsTextures[]={"\amityrp_clothes\data\textures\uniforms\aiems\amityrp_u_ems_rru_sweater_pl.paa"};
+	};
+	class amityrp_u_ems_rru_sweater_bl: B_Soldier_base_F
+	{
+		scope=1;
+		displayName="AIEMS RRU Sweater (Blue)";
+		model="\A3\Characters_F_bootcamp\Guerrilla\ig_guerrilla_6_1.p3d";
+		uniformClass="amityrp_u_ems_rru_sweater_bl";
+		hiddenSelections[]={"camo"};
+		hiddenSelectionsTextures[]={"\amityrp_clothes\data\textures\uniforms\aiems\amityrp_u_ems_rru_sweater_bl.paa"};
+	};
+	class amityrp_u_ems_rru_sweater_rd: B_Soldier_base_F
+	{
+		scope=1;
+		displayName="AIEMS RRU Sweater (Red)";
+		model="\A3\Characters_F_bootcamp\Guerrilla\ig_guerrilla_6_1.p3d";
+		uniformClass="amityrp_u_ems_rru_sweater_rd";
+		hiddenSelections[]={"camo"};
+		hiddenSelectionsTextures[]={"\amityrp_clothes\data\textures\uniforms\aiems\amityrp_u_ems_rru_sweater_rd.paa"};
+	};
 };
 class CfgWeapons 
 {
@@ -158,6 +257,8 @@ class CfgWeapons
 	class Uniform_Base;
 	class UniformItem;
 	class HeadgearItem;
+	class Vest_Camo_Base;
+	class VestItem;
 	class U_Rangemaster;
 	class U_B_CombatUniform_mcam;
 	class H_Cap_red;
@@ -243,6 +344,38 @@ class CfgWeapons
 			mass=5;
 		};
 	};
+	class amityrp_u_pd_maj: U_Rangemaster
+	{
+		scope=2;
+		displayName="AIPD Major Uniform";
+		author="Bohemia Interactive & Soukyan";
+		picture="\A3\Weapons_F\Data\clear_empty.paa";
+		hiddenSelections[]={"camo"};
+		hiddenSelectionsTextures[]={"\amityrp_clothes\data\textures\uniforms\aipd\amityrp_u_pd_maj.paa"};
+		class ItemInfo: UniformItem
+		{
+			uniformModel="-";
+			uniformClass="amityrp_u_pd_maj";
+			containerClass="supply200";
+			mass=5;
+		};
+	};
+	class amityrp_u_pd_maj_fto: U_Rangemaster
+	{
+		scope=2;
+		displayName="AIPD Major Uniform (F.T.O)";
+		author="Bohemia Interactive & Soukyan";
+		picture="\A3\Weapons_F\Data\clear_empty.paa";
+		hiddenSelections[]={"camo"};
+		hiddenSelectionsTextures[]={"\amityrp_clothes\data\textures\uniforms\aipd\amityrp_u_pd_maj_fto.paa"};
+		class ItemInfo: UniformItem
+		{
+			uniformModel="-";
+			uniformClass="amityrp_u_pd_maj_fto";
+			containerClass="supply200";
+			mass=5;
+		};
+	};
 	class amityrp_u_pd_cpt_bw: U_Rangemaster
 	{
 		scope=2;
@@ -259,6 +392,70 @@ class CfgWeapons
 			mass=5;
 		};
 	};
+	class amityrp_u_pd_cpt: U_Rangemaster
+	{
+		scope=2;
+		displayName="AIPD Captain Uniform";
+		author="Bohemia Interactive & Soukyan";
+		picture="\A3\Weapons_F\Data\clear_empty.paa";
+		hiddenSelections[]={"camo"};
+		hiddenSelectionsTextures[]={"\amityrp_clothes\data\textures\uniforms\aipd\amityrp_u_pd_cpt.paa"};
+		class ItemInfo: UniformItem
+		{
+			uniformModel="-";
+			uniformClass="amityrp_u_pd_cpt";
+			containerClass="supply200";
+			mass=5;
+		};
+	};
+	class amityrp_u_pd_cpt_fto: U_Rangemaster
+	{
+		scope=2;
+		displayName="AIPD Captain Uniform (F.T.O)";
+		author="Bohemia Interactive & Soukyan";
+		picture="\A3\Weapons_F\Data\clear_empty.paa";
+		hiddenSelections[]={"camo"};
+		hiddenSelectionsTextures[]={"\amityrp_clothes\data\textures\uniforms\aipd\amityrp_u_pd_cpt_fto.paa"};
+		class ItemInfo: UniformItem
+		{
+			uniformModel="-";
+			uniformClass="amityrp_u_pd_cpt_fto";
+			containerClass="supply200";
+			mass=5;
+		};
+	};
+	class amityrp_u_pd_lt: U_Rangemaster
+	{
+		scope=2;
+		displayName="AIPD Lieutenant Uniform";
+		author="Bohemia Interactive & Soukyan";
+		picture="\A3\Weapons_F\Data\clear_empty.paa";
+		hiddenSelections[]={"camo"};
+		hiddenSelectionsTextures[]={"\amityrp_clothes\data\textures\uniforms\aipd\amityrp_u_pd_lt.paa"};
+		class ItemInfo: UniformItem
+		{
+			uniformModel="-";
+			uniformClass="amityrp_u_pd_lt";
+			containerClass="supply200";
+			mass=5;
+		};
+	};
+	class amityrp_u_pd_lt_fto: U_Rangemaster
+	{
+		scope=2;
+		displayName="AIPD Lieutenant Uniform (F.T.O)";
+		author="Bohemia Interactive & Soukyan";
+		picture="\A3\Weapons_F\Data\clear_empty.paa";
+		hiddenSelections[]={"camo"};
+		hiddenSelectionsTextures[]={"\amityrp_clothes\data\textures\uniforms\aipd\amityrp_u_pd_lt_fto.paa"};
+		class ItemInfo: UniformItem
+		{
+			uniformModel="-";
+			uniformClass="amityrp_u_pd_lt_fto";
+			containerClass="supply200";
+			mass=5;
+		};
+	};
 	class amityrp_u_pd_ssgt_mt: U_Rangemaster
 	{
 		scope=2;
@@ -271,6 +468,38 @@ class CfgWeapons
 		{
 			uniformModel="-";
 			uniformClass="amityrp_u_pd_ssgt_mt";
+			containerClass="supply200";
+			mass=5;
+		};
+	};
+	class amityrp_u_pd_ssgt_ks: U_Rangemaster
+	{
+		scope=2;
+		displayName="AIPD Staff Sergeant Uniform (K. Severide)";
+		author="Bohemia Interactive & Soukyan";
+		picture="\A3\Weapons_F\Data\clear_empty.paa";
+		hiddenSelections[]={"camo"};
+		hiddenSelectionsTextures[]={"\amityrp_clothes\data\textures\uniforms\aipd\amityrp_u_pd_ssgt_ks.paa"};
+		class ItemInfo: UniformItem
+		{
+			uniformModel="-";
+			uniformClass="amityrp_u_pd_ssgt_ks";
+			containerClass="supply200";
+			mass=5;
+		};
+	};
+	class amityrp_u_pd_ssgt_rs: U_Rangemaster
+	{
+		scope=2;
+		displayName="AIPD Staff Sergeant Uniform (R. Shepherd)";
+		author="Bohemia Interactive & Soukyan";
+		picture="\A3\Weapons_F\Data\clear_empty.paa";
+		hiddenSelections[]={"camo"};
+		hiddenSelectionsTextures[]={"\amityrp_clothes\data\textures\uniforms\aipd\amityrp_u_pd_ssgt_rs.paa"};
+		class ItemInfo: UniformItem
+		{
+			uniformModel="-";
+			uniformClass="amityrp_u_pd_ssgt_rs";
 			containerClass="supply200";
 			mass=5;
 		};
@@ -303,38 +532,6 @@ class CfgWeapons
 		{
 			uniformModel="-";
 			uniformClass="amityrp_u_pd_ssgt_fto";
-			containerClass="supply200";
-			mass=5;
-		};
-	};
-	class amityrp_u_pd_sgt_ks: U_Rangemaster
-	{
-		scope=2;
-		displayName="AIPD Sergeant Uniform (K. Severide)";
-		author="Bohemia Interactive & Soukyan";
-		picture="\A3\Weapons_F\Data\clear_empty.paa";
-		hiddenSelections[]={"camo"};
-		hiddenSelectionsTextures[]={"\amityrp_clothes\data\textures\uniforms\aipd\amityrp_u_pd_sgt_ks.paa"};
-		class ItemInfo: UniformItem
-		{
-			uniformModel="-";
-			uniformClass="amityrp_u_pd_sgt_ks";
-			containerClass="supply200";
-			mass=5;
-		};
-	};
-	class amityrp_u_pd_sgt_rs: U_Rangemaster
-	{
-		scope=2;
-		displayName="AIPD Sergeant Uniform (R. Shepherd)";
-		author="Bohemia Interactive & Soukyan";
-		picture="\A3\Weapons_F\Data\clear_empty.paa";
-		hiddenSelections[]={"camo"};
-		hiddenSelectionsTextures[]={"\amityrp_clothes\data\textures\uniforms\aipd\amityrp_u_pd_sgt_rs.paa"};
-		class ItemInfo: UniformItem
-		{
-			uniformModel="-";
-			uniformClass="amityrp_u_pd_sgt_rs";
 			containerClass="supply200";
 			mass=5;
 		};
@@ -425,7 +622,7 @@ class CfgWeapons
 		displayName="AIPD Pilot Uniform";
 		author="Bohemia Interactive & Soukyan";
 		picture="\A3\Weapons_F\Data\clear_empty.paa";
-		model = "\A3\Characters_F\Common\Suitpacks\suitpack_original_F.p3d";
+		model="\A3\Characters_F\Common\Suitpacks\suitpack_original_F.p3d";
 		hiddenSelections[]={"camo"};
 		hiddenSelectionsTextures[]={"\amityrp_clothes\data\textures\uniforms\aipd\amityrp_u_pd_pilot.paa"};
 		class ItemInfo: UniformItem
@@ -433,6 +630,102 @@ class CfgWeapons
 			uniformModel="-";
 			uniformClass="amityrp_u_pd_pilot";
 			containerClass="supply200";
+			mass=5;
+		};
+	};
+	class amityrp_u_pd_swat_ds: Uniform_Base
+	{
+		scope=2;
+		displayName="AIPD Swat Tactical Uniform (D. Shepherd)";
+		author="Bohemia Interactive & Soukyan";
+		picture="\A3\Weapons_F\Data\clear_empty.paa";
+		model="\A3\Characters_F\Common\Suitpacks\suitpack_original_F.p3d";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="-";
+			uniformClass="amityrp_u_pd_swat_ds";
+			containerClass="Supply40";
+			mass=10;
+		};
+	};
+	class amityrp_u_pd_swat_mb: Uniform_Base
+	{
+		scope=2;
+		displayName="AIPD Swat Tactical Uniform (M. Braun)";
+		author="Bohemia Interactive & Soukyan";
+		picture="\A3\Weapons_F\Data\clear_empty.paa";
+		model="\A3\Characters_F\Common\Suitpacks\suitpack_original_F.p3d";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="-";
+			uniformClass="amityrp_u_pd_swat_mb";
+			containerClass="Supply40";
+			mass=10;
+		};
+	};
+	class amityrp_u_pd_swat: Uniform_Base
+	{
+		scope=2;
+		displayName="AIPD Swat Tactical Uniform";
+		author="Bohemia Interactive & Soukyan";
+		picture="\A3\Weapons_F\Data\clear_empty.paa";
+		model="\A3\Characters_F\Common\Suitpacks\suitpack_original_F.p3d";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="-";
+			uniformClass="amityrp_u_pd_swat";
+			containerClass="Supply40";
+			mass=10;
+		};
+	};
+	class amityrp_u_ems_rru_sweater_pl: Uniform_Base
+	{
+		scope=2;
+		displayName="AIEMS RRU Sweater Uniform (Purple)";
+		author="Bohemia Interactive & Starglay";
+		picture="\A3\Weapons_F\Data\clear_empty.paa";
+		model="\A3\Characters_F\Common\Suitpacks\suitpack_civilian_F.p3d";
+		hiddenSelections[]={"camo"};
+		hiddenSelectionsTextures[]={"\amityrp_clothes\data\textures\uniforms\aiems\amityrp_u_ems_rru_sweater_pl.paa"};
+		class ItemInfo: UniformItem
+		{
+			uniformModel="-";
+			uniformClass="amityrp_u_ems_rru_sweater_pl";
+			containerClass="Supply200";
+			mass=5;
+		};
+	};
+	class amityrp_u_ems_rru_sweater_bl: Uniform_Base
+	{
+		scope=2;
+		displayName="AIEMS RRU Sweater Uniform (Blue)";
+		author="Bohemia Interactive & Starglay";
+		picture="\A3\Weapons_F\Data\clear_empty.paa";
+		model="\A3\Characters_F\Common\Suitpacks\suitpack_civilian_F.p3d";
+		hiddenSelections[]={"camo"};
+		hiddenSelectionsTextures[]={"\amityrp_clothes\data\textures\uniforms\aiems\amityrp_u_ems_rru_sweater_bl.paa"};
+		class ItemInfo: UniformItem
+		{
+			uniformModel="-";
+			uniformClass="amityrp_u_ems_rru_sweater_bl";
+			containerClass="Supply200";
+			mass=5;
+		};
+	};
+	class amityrp_u_ems_rru_sweater_rd: Uniform_Base
+	{
+		scope=2;
+		displayName="AIEMS RRU Sweater Uniform (Red)";
+		author="Bohemia Interactive & Starglay";
+		picture="\A3\Weapons_F\Data\clear_empty.paa";
+		model="\A3\Characters_F\Common\Suitpacks\suitpack_civilian_F.p3d";
+		hiddenSelections[]={"camo"};
+		hiddenSelectionsTextures[]={"\amityrp_clothes\data\textures\uniforms\aiems\amityrp_u_ems_rru_sweater_rd.paa"};
+		class ItemInfo: UniformItem
+		{
+			uniformModel="-";
+			uniformClass="amityrp_u_ems_rru_sweater_rd";
+			containerClass="Supply200";
 			mass=5;
 		};
 	};
@@ -631,7 +924,7 @@ class CfgWeapons
 		class ItemInfo: HeadgearItem
 		{
 			mass=10;
-			uniformModel = "\A3\Characters_F_Orange\Headgear\H_HeadSet_F.p3d";
+			uniformModel="\A3\Characters_F_Orange\Headgear\H_HeadSet_F.p3d";
 			modelSides[]={3};
 			hiddenSelections[]={"camo"};
 		};
