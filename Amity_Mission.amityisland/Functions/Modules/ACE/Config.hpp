@@ -593,7 +593,7 @@ class ACE_Settings {
 		force = 1;
 	};
 	class ace_medical_menu_useMenu {
-		value = 0;
+		value = 1;
 		typeName = "SCALAR";
 		force = 1;
 	};
@@ -1483,7 +1483,7 @@ class ACE_Settings {
 		force = 1;
 	};
 	class ace_advanced_ballistics_enabled {
-		value = 0;
+		value = 1;
 		typeName = "BOOL";
 		force = 1;
 	};
@@ -1493,12 +1493,12 @@ class ACE_Settings {
 		force = 1;
 	};
 	class ace_advanced_ballistics_simulateForGroupMembers {
-		value = 0;
+		value = 1;
 		typeName = "BOOL";
 		force = 1;
 	};
 	class ace_advanced_ballistics_simulateForEveryone {
-		value = 0;
+		value = 1;
 		typeName = "BOOL";
 		force = 1;
 	};
