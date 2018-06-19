@@ -1,0 +1,82 @@
+<Container name="HOUSING">
+      <Key ID="STR_HOUSING_DIALOG_BUY_TITLE">
+            <Original>Buy house</Original>
+            <English>Buy house</English>
+            <Polish>Kup budynek</Polish>
+      </Key>
+      <Key ID="STR_HOUSING_DIALOG_OWNER">
+            <Original>Owner:</Original>
+            <English>Owner:</English>
+            <Polish>Właścicel:</Polish>
+      </Key>
+      <Key ID="STR_HOUSING_DIALOG_PRICE">
+            <Original>Price:</Original>
+            <English>Price:</English>
+            <Polish>Cena:</Polish>
+      </Key>
+      <Key ID="STR_HOUSING_DIALOG_INFORMATION">
+            <Original>Information:</Original>
+            <English>Information:</English>
+            <Polish>Informacje:</Polish>
+      </Key>
+      <Key ID="STR_HOUSING_DIALOG_BUY">
+            <Original>Buy</Original>
+            <English>Buy</English>
+            <Polish>Kup</Polish>
+      </Key>
+      <Key ID="STR_HOUSING_DIALOG_BUY_FACTION">
+            <Original>Buy(Faction)</Original>
+            <English>Buy(Faction)</English>
+            <Polish>Kup(Fakcja)</Polish>
+      </Key>
+      <Key ID="STR_HOUSING_DIALOG_SELL_TITLE">
+            <Original>Sell house</Original>
+            <English>Sell house</English>
+            <Polish>Sprzedaj budynek</Polish>
+      </Key>
+      <Key ID="STR_HOUSING_DIALOG_SELL">
+            <Original>Sell</Original>
+            <English>Sell</English>
+            <Polish>Sprzedaj</Polish>
+      </Key>
+      <Key ID="STR_HOUSING_DIALOG_CANCEL">
+            <Original>Cancel</Original>
+            <English>Cancel</English>
+            <Polish>Anuluj</Polish>
+      </Key>
+      <Key ID="STR_HOUSING_DIALOG_MANAGE_TITLE">
+            <Original>Building Managment</Original>
+            <English>Building Managment</English>
+            <Polish>Zarządzanie Obiektem</Polish>
+      </Key>
+      <Key ID="STR_HOUSING_DIALOG_MANAGE_MODULES">
+            <Original>Modules</Original>
+            <English>Modules</English>
+            <Polish>Moduły</Polish>
+      </Key>
+      <Key ID="STR_HOUSING_DIALOG_MANAGE_FURNITURES">
+            <Original>Furnitures</Original>
+            <English>Furnitures</English>
+            <Polish>Meble</Polish>
+      </Key>
+      <Key ID="STR_HOUSING_DIALOG_MANAGE_ACCESS">
+            <Original>Access:</Original>
+            <English>Access:</English>
+            <Polish>Dostęp:</Polish>
+      </Key>
+      <Key ID="STR_HOUSING_DIALOG_MANAGE_NOT_SPAWNED">
+            <Original>Not spawned</Original>
+            <English>Not spawned</English>
+            <Polish>Nie zrespione</Polish>
+      </Key>
+      <Key ID="STR_HOUSING_DIALOG_MANAGE_SPAWNED">
+            <Original>Spawned</Original>
+            <English>Spawned</English>
+            <Polish>Zrespawnione</Polish>
+      </Key>
+      <Key ID="STR_HOUSING_DIALOG_MANAGE_ACTIONS">
+            <Original>Actions</Original>
+            <English>Actions</English>
+            <Polish>Akcje</Polish>
+      </Key>
+</Container>

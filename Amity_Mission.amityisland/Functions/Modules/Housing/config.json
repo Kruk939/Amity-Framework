@@ -1,6 +1,6 @@
 {
-      "module": "#Example",
-      "namespace": "ClientModules_Example",
+      "module": "Housing",
+      "namespace": "ClientModules_Housing",
       "version": "0.1",
       "require": {
             "amity-framework": ">=0.0.1"
