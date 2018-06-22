@@ -79,4 +79,34 @@
             <English>Actions</English>
             <Polish>Akcje</Polish>
       </Key>
+      <Key ID="STR_HOUSING_DIALOG_MANAGE_SPAWN">
+            <Original>Spawn</Original>
+            <English>Spawn</English>
+            <Polish>Zresp</Polish>
+      </Key>
+      <Key ID="STR_HOUSING_DIALOG_MANAGE_DESPAWN">
+            <Original>Despawn</Original>
+            <English>Despawn</English>
+            <Polish>Despawn</Polish>
+      </Key>
+      <Key ID="STR_HOUSING_DIALOG_MANAGE_SPAWN_ALL_CARGO">
+            <Original>Spawn all cargo</Original>
+            <English>Spawn all cargo</English>
+            <Polish>Zresp wszystkie skrzynki</Polish>
+      </Key>
+      <Key ID="STR_HOUSING_DIALOG_MANAGE_DESPAWN_ALL_CARGO">
+            <Original>Despawn all cargo</Original>
+            <English>Despawn all cargo</English>
+            <Polish>Zdespawnuj wszystkie skrzynki</Polish>
+      </Key>
+      <Key ID="STR_HOUSING_DIALOG_MANAGE_SET_SELL">
+            <Original>Set house for sell</Original>
+            <English>Set house for sell</English>
+            <Polish>Wystaw na sprzedaż</Polish>
+      </Key>
+      <Key ID="STR_HOUSING_DIALOG_MANAGE_DELETE">
+            <Original>Delete</Original>
+            <English>Delete</English>
+            <Polish>Usuń</Polish>
+      </Key>
 </Container>
