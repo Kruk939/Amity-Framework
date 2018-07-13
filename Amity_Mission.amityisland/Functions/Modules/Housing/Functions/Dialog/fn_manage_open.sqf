@@ -1,0 +1,10 @@
+disableSerialization;
+params[["_house", ([25] call ClientModules_Housing_fnc_getNearestOwnHouse)]];
+if(isNull _house) exitWith {};
+if(dialog) then { closeDialog 0; };
+private _ok = createDialog "house_manage";
+if(!_ok) exitWith {};
+private _display = findDisplay 1110000;
+if(isNull _display) exitWith { closeDialog 0; };
+_display setVariable["house", _house];
+[_house, player, "ClientModules_Housing_fnc_manage_receive"] remoteExec["ServerModules_Housing_fnc_getHouse", 2];

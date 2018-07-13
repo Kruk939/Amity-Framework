@@ -11,6 +11,10 @@ class ClientModules_Housing {
             file="Functions\Modules\Housing\Functions\Misc";
             class isCargo {};
             class isFurniture {};
+            class getModule {};
+            class getNearestHouse {};
+            class getNearestOwnHouse {};
+            class getModuleObject {};
       };
       class Dialog {
             file="Functions\Modules\Housing\Functions\Dialog";

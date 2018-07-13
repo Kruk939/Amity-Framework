@@ -109,4 +109,19 @@
             <English>Delete</English>
             <Polish>Usuń</Polish>
       </Key>
+      <Key ID="STR_HOUSING_DIALOG_MANAGE_CHANGE">
+            <Original>Change</Original>
+            <English>Change</English>
+            <Polish>Zmień</Polish>
+      </Key>
+      <Key ID="STR_HOUSING_DIALOG_MANAGE_MODULE_INFO_BOUGHT">
+            <Original>Name: %1\nBought: %2\nAccess: %3</Original>
+            <English>Name: %1\nBought: %2\nAccess: %3</English>
+            <Polish>Nazwa: %1\nKupione: %2\nPoziom: %3</Polish>
+      </Key>
+      <Key ID="STR_HOUSING_DIALOG_MANAGE_MODULE_INFO">
+            <Original>Name: %1\nBought: %2\nPrice: $%3</Original>
+            <English>Name: %1\nBought: %2\nPrice: $%3</English>
+            <Polish>Nazwa: %1\nKupione: %2\nCena: $%3</Polish>
+      </Key>
 </Container>

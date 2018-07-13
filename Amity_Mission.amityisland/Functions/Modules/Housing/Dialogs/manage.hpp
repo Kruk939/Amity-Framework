@@ -58,7 +58,7 @@ class house_manage {
 		};
 		class title_furniture_spawned: RscText {
 			idc = -1;
-			text = $STR_HOUSING_DIALOG_MANAGE_NOT_SPAWNED; //--- ToDo: Localize;
+			text = $STR_HOUSING_DIALOG_MANAGE_SPAWNED; //--- ToDo: Localize;
 			x = 27 * GUI_GRID_W + GUI_GRID_X;
 			y = 3 * GUI_GRID_H + GUI_GRID_Y;
 			w = 13 * GUI_GRID_W;
@@ -111,6 +111,7 @@ class house_manage {
 		};
 		class edit_module_access: RscEdit {
 			idc = 1400;
+			onKeyDown = " ['MOD_ACCESS'] call ClientModules_Housing_fnc_manage_action; ";
 			text = "";
 			x = 6 * GUI_GRID_W + GUI_GRID_X;
 			y = 18 * GUI_GRID_H + GUI_GRID_Y;
@@ -120,6 +121,7 @@ class house_manage {
 		};
 		class list_modules: RscListbox {
 			idc = 1500;
+			onLbSelChanged = " ['LB_MOD_SEL'] call ClientModules_Housing_fnc_manage_action; ";
 			x = 0 * GUI_GRID_W + GUI_GRID_X;
 			y = 2.5 * GUI_GRID_H + GUI_GRID_Y;
 			w = 12.5 * GUI_GRID_W;
@@ -144,6 +146,7 @@ class house_manage {
 		};
 		class button_module_action: RscButton {
 			idc = 1600;
+			action = "['MOD_ACTION'] call ClientModules_Housing_fnc_manage_action";
 			text = $STR_HOUSING_DIALOG_BUY; //--- ToDo: Localize;
 			x = 6 * GUI_GRID_W + GUI_GRID_X;
 			y = 19 * GUI_GRID_H + GUI_GRID_Y;

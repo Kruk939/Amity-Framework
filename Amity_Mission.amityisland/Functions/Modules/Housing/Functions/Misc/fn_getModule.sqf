@@ -1,4 +1,4 @@
-params[["_id", -1], ["_player", objNull], ["_function", ""]];
+params[["_id", -1]];
 private _ret = [];
 if(_id == -1) exitWith { _ret; };
 {
@@ -6,7 +6,4 @@ if(_id == -1) exitWith { _ret; };
             _ret = _x;
       };
 } forEach housing_var_modules;
-if(!isNull _player && _function != "") exitWith {
-      [_ret] remoteExecCall[_function, _player];
-};
 _ret;
