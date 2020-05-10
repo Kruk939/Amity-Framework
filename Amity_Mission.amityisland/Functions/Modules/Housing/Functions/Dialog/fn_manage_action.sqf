@@ -60,7 +60,7 @@ if(_type == "MOD_ACTION") exitWith {
       _module params["_i", "", "", "", "", ""];
       private _mod = _i call _is_bought_module;
       if(count _mod == 0) then {
-            //buy module
+            [_house, _i] remoteExec["ServerModules_Housing_fnc_buyModule", 2];
       } else {
             private _access = round(parseNumber(ctrlText 1400));
             if(_access == 0) then { _access = -1; };

@@ -27,5 +27,6 @@ class ServerModules_Housing {
             file = "Amity_Server\Functions\Modules\Housing\Functions\Modules";
             class initModule {};
             class moduleUpdate {};
+            class buyModule {};
       };
 };

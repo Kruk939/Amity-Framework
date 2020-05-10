@@ -124,4 +124,14 @@
             <English>Name: %1\nBought: %2\nPrice: $%3</English>
             <Polish>Nazwa: %1\nKupione: %2\nCena: $%3</Polish>
       </Key>
+      <Key ID="STR_HOUSING_DIALOG_MANAGE_MODULE_NOT_ENOUGH_MONEY">
+            <Original>You dont have enough money to buy this module.</Original>
+            <English>You dont have enough money to buy this module.</English>
+            <Polish>Nie masz wystarczająco pieniędzy aby kupić ten moduł.</Polish>
+      </Key>
+      <Key ID="STR_HOUSING_DIALOG_MANAGE_MODULE_BOUGHT">
+            <Original>You have bought a housing module for: $%1.</Original>
+            <English>You have bought a housing module for: $%1.</English>
+            <Polish>Kupiłeś moduł za: $%1.</Polish>
+      </Key>
 </Container>

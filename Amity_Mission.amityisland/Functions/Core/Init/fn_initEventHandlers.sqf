@@ -11,3 +11,4 @@
 ["onFactionWorkingStart"] call Client_fnc_eventRegister;
 ["onFactionWorkingStop"] call Client_fnc_eventRegister;
 ["onSpawn"] call Client_fnc_eventRegister;
+["onObjectAttachedDetach"] call Client_fnc_eventRegister;

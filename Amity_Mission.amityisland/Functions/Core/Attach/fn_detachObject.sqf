@@ -8,5 +8,6 @@ if (count attachedObjects player > 0) then {
       if(!isNull _vehicle) then {
             _vehicle allowDamage true;
       };
+      ["onObjectAttachedDetach", amity_var_attachedObject] call Client_fnc_eventCall;
 };
 amity_var_attachedObject = objNull;
