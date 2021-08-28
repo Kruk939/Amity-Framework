@@ -1,28 +1,15 @@
 {
-      "mission": "Amity_Mission.amityisland",
-      "server": "Amity_Server",
+      "mission": "data/in/Amity_Mission.amityisland",
+      "server": "data/in/Amity_Server",
       "extDB": {
-            "dir": "@extDB_Amity",
+            "dir": "data/in@extDB_Amity",
             "ini": "amity_framework.ini"
       },
-      "output": "E:\\Temp\\Mission_output",
-      "addons": "addons",
+      "output": "",
+      "addons": "data/in/addons",
       "environment": {
             "local": {
-                  "arma3": "G:\\Steam\\steamapps\\common\\Arma 3",
-                  "arma3Tools": "G:\\Steam\\steamapps\\common\\Arma 3 Tools",
-                  "temp": "C:\\Users\\kajet\\AppData\\Local\\Temp",
-                  "arma3_rpt": "C:\\Users\\kajet\\AppData\\Local\\Arma 3",
-                  "notepad": "D:\\Program Files (x86)\\Notepad++\\notepad++.exe",
-                  "server": {
-                        "exe": "G:\\Steam\\steamapps\\common\\Arma 3\\arma3server.exe",
-                        "config": "G:\\Steam\\steamapps\\common\\Arma 3\\TADST\\Amity_test\\TADST_config.cfg",
-                        "cfg": "G:\\Steam\\steamapps\\common\\Arma 3\\TADST\\Amity_test\\TADST_basic.cfg",
-                        "profiles": "G:\\Steam\\steamapps\\common\\Arma 3\\TADST\\Amity_test",
-                        "name": "Amity_test",
-                        "port": 2302,
-                        "mod": "@AmityRP;@Amity_Server;@extDB_Amity"
-                  }
+                  "temp": "/tmp"
             }
       }
 }
