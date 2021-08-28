@@ -85,13 +85,13 @@ class Amity {
 
 
       public function __construct($config_file) {
-            $this->path = dirname(__FILE__);
             $this->config = json_decode(file_get_contents($config_file));
-            $this->mission = $this->path . DIRECTORY_SEPARATOR . $this->config->mission;
-            $this->server = $this->path . DIRECTORY_SEPARATOR . $this->config->server;
+            $this->path = $this->config->work_dir;
+            $this->mission = $this->path . DIRECTORY_SEPARATOR . $this->config->data_dir . DIRECTORY_SEPARATOR . $this->config->mission;
+            $this->server = $this->path . DIRECTORY_SEPARATOR . $this->config->data_dir . DIRECTORY_SEPARATOR . $this->config->server;
             $this->output = $this->config->output;
-            $this->addons = $this->path . DIRECTORY_SEPARATOR . $this->config->addons;
-            $this->extDB_dir = $this->path . DIRECTORY_SEPARATOR . $this->config->extDB->dir;
+            $this->addons = $this->path . DIRECTORY_SEPARATOR . $this->config->data_dir . DIRECTORY_SEPARATOR . $this->config->addons;
+            $this->extDB_dir = $this->path . DIRECTORY_SEPARATOR . $this->config->data_dir . DIRECTORY_SEPARATOR . $this->config->extDB->dir;
             $this->extDB_ini = $this->config->extDB->ini;
             $this->environment = $this->config->environment;
       }

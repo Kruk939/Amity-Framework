@@ -1,11 +1,13 @@
 {
-      "mission": "data/in/Amity_Mission.amityisland",
-      "server": "data/in/Amity_Server",
+      "work_dir": "/usr/src/app",
+      "data_dir": "data/in",
+      "mission": "Amity_Mission.amityisland",
+      "server": "Amity_Server",
       "extDB": {
-            "dir": "data/in@extDB_Amity",
+            "dir": "@extDB_Amity",
             "ini": "amity_framework.ini"
       },
-      "output": "",
+      "output": "/usr/src/app/data/out",
       "addons": "data/in/addons",
       "environment": {
             "local": {

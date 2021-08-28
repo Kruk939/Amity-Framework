@@ -1,0 +1,18 @@
+version: "3.9"
+services:
+  amity:
+    build: .
+    volumes:
+      - './output:/usr/src/app/data/out'
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: EEE
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./data:/var/lib/mysql
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    ports:
+      - 8080:80
