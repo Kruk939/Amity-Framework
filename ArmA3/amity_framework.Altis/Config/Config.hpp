@@ -1,7 +1,7 @@
 class Amity {
       class Setup {
             modules[] = {
-            };
+		};
             loopTick = 60;
             genders[] = {
                   {"Male", "0"},
@@ -12,6 +12,11 @@ class Amity {
                   cash = 10000;
             };
             timeLock = 2;
+            spawns[] = {
+                  {{14618.8,16729.8,0.001}, "Altis Terminal", ""},
+                  {{14618.8,16732.8,0.001}, "Altis Terminal 2", ""}
+
+            };
       };
       class Custamization {
             class Functions {
@@ -22,19 +27,19 @@ class Amity {
                   spawn = "";
             };
             class Dialogs {
-                  atm = "styles_atm"; //idd = 1010;
-                  faction_atm = "styles_faction_atm"; //idd = 1011;
+                  atm = "client_atm"; //idd = 1010;
+                  faction_atm = "client_faction_atm"; //idd = 1011;
                   interaction = "client_interaction"; //idd = 1020;
                   profile = "client_profile"; //idd = 1000;
                   createProfile = "client_profile_create"; //idd = 1001;
-                  garage = "styles_garage"; //idd = 1005;
+                  garage = "client_garage"; //idd = 1005;
                   giveKeys = "client_give_keys"; //idd = 1006;
-                  factionCreate = "styles_faction_create"; //idd = 1030
-                  factionSign = "styles_faction_sign"; //idd = 1031
-                  factionMembers = "styles_faction_members"; //idd = 1032
-                  factionMemberEdit = "styles_faction_member_edit"; //idd = 1033
-                  factionView = "styles_faction_view"; //idd = 1034
-                  factionManageGarage = "styles_faction_manage_garage"; //idd 1035
+                  factionCreate = "client_faction_create"; //idd = 1030
+                  factionSign = "client_faction_sign"; //idd = 1031
+                  factionMembers = "client_faction_members"; //idd = 1032
+                  factionMemberEdit = "client_faction_member_edit"; //idd = 1033
+                  factionView = "client_faction_view"; //idd = 1034
+                  factionManageGarage = "client_faction_manage_garage"; //idd 1035
             };
             class Sounds {
                   class Vehicle {
