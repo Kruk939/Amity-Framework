@@ -1,7 +1,7 @@
 {
       "work_dir": "/usr/src/app",
       "data_dir": "data/in",
-      "mission": "Amity_Mission.amityisland",
+      "mission": "amity_framework.Altis",
       "server": "Amity_Server",
       "extDB": {
             "dir": "@extDB_Amity",

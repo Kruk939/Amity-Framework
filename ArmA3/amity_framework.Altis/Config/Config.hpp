@@ -43,8 +43,8 @@ class Amity {
             };
             class Sounds {
                   class Vehicle {
-                        open = "amityrp_data\sounds\door_lock.ogg";
-                        close = "amityrp_data\sounds\door_lock.ogg";
+                        open = "";
+                        close = "";
                   };
             };
       };
